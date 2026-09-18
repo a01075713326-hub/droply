@@ -1,0 +1,10 @@
+node_modules/
+.next/
+.env
+.env.local
+*.exe
+*.msi
+*.winmd
+*.zip
+*-debug.html
+scripts/*.backup.js

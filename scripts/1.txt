@@ -1,0 +1,566 @@
+PS C:\Users\Sasa\Desktop\ввв> (Get-Content .\scripts\sync.js -Raw) -replace 'date: "",','updated: "",' | Set-Content .\scripts\sync.js
+PS C:\Users\Sasa\Desktop\ввв> $file=".\scripts\sync.js"
+PS C:\Users\Sasa\Desktop\ввв>
+PS C:\Users\Sasa\Desktop\ввв> $content=Get-Content $file -Raw
+PS C:\Users\Sasa\Desktop\ввв>
+PS C:\Users\Sasa\Desktop\ввв> $content=$content -replace `
+>> 'const logo =', `
+>> 'const updatedMatch = block.match(/Updated\s+(today|yesterday|\d+\s+days?\s+ago|\d+\s+weeks?\s+ago)/i);`n`n      const updated = updatedMatch ? updatedMatch[1] : "";`n`n      const logo ='
+PS C:\Users\Sasa\Desktop\ввв>
+PS C:\Users\Sasa\Desktop\ввв> $content=$content -replace `
+>> 'date: "",', `
+>> 'updated,'
+PS C:\Users\Sasa\Desktop\ввв>
+PS C:\Users\Sasa\Desktop\ввв> Set-Content $file $content
+PS C:\Users\Sasa\Desktop\ввв> node .\scripts\sync.js
+(node:29724) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Sasa/Desktop/%D0%B2%D0%B2%D0%B2/scripts/sync.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Sasa\Desktop\ввв\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+file:///C:/Users/Sasa/Desktop/%D0%B2%D0%B2%D0%B2/scripts/sync.js:500
+      const updatedMatch = block.match(/Updated\s+(today|yesterday|\d+\s+days?\s+ago|\d+\s+weeks?\s+ago)/i);`n`n      const updated = updatedMatch ? updatedMatch[1] : "";`n`n      const logo =
+                                                                                                               ^
+
+SyntaxError: Unexpected identifier 'n'
+    at compileSourceTextModule (node:internal/modules/esm/utils:319:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:89:18)
+    at #translate (node:internal/modules/esm/loader:438:20)
+    at afterLoad (node:internal/modules/esm/loader:506:29)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:511:12)
+    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:564:36)
+    at afterResolve (node:internal/modules/esm/loader:611:52)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:617:12)
+    at node:internal/modules/esm/loader:636:32
+    at TracingChannel.tracePromise (node:diagnostics_channel:362:14)
+
+Node.js v24.21.0
+PS C:\Users\Sasa\Desktop\ввв> Select-String -Path .\data\projects.generated.ts -Pattern "updated"
+PS C:\Users\Sasa\Desktop\ввв> Get-ChildItem -Recurse -File | Select-String "\.date"
+
+fix-date.ps1:59:            project.date =
+fix-date2.ps1:59:            project.date =
+mojibake_check.txt:12:  const week = projects.filter((p) => p.date && p.date >= new Date().toISOString().slice(0, 10)).length;
+.next\server\app\page.js:44:eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Home),\n/*
+harmony export */   dynamic: () => (/* binding */ dynamic)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \
+"(rsc)/./node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_
+require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ \"(rsc)/./node_modules/next/dist/client/app-d
+ir/link.js\");\n/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _barrel_optimize_names
+_ArrowRight_Zap_lucide_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! __barrel_optimize__?names=ArrowRight,Zap!=!lucide-react */ \"(rsc)/./node_modules/lucide-react/dist/esm/icons/arrow-right.js\");\n
+/* harmony import */ var _barrel_optimize_names_ArrowRight_Zap_lucide_react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! __barrel_optimize__?names=ArrowRight,Zap!=!lucide-react */ \"(rsc)/./node_modules/l
+ucide-react/dist/esm/icons/zap.js\");\n/* harmony import */ var _lib_projects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/lib/projects */ \"(rsc)/./lib/projects.ts\");\n/* harmony import */ var _compon
+ents_ProjectTable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/components/ProjectTable */ \"(rsc)/./components/ProjectTable.tsx\");\n/* harmony import */ var _components_CalendarCard__WEBPACK_IMPORTED_M
+ODULE_4__ = __webpack_require__(/*! @/components/CalendarCard */ \"(rsc)/./components/CalendarCard.tsx\");\n\n\n\n\n\n\nconst dynamic = \"force-dynamic\";\nasync function Home() {\n    const projects = await (0,_li
+b_projects__WEBPACK_IMPORTED_MODULE_2__.getProjects)();\n    const live = projects.filter((p)=>p.status === \"Live\").length;\n    const week = projects.filter((p)=>p.date && p.date >= new Date().toISOString().slic
+e(0, 10)).length;\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"main\", {\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODUL
+E_0__.jsxDEV)(\"section\", {\n                className: \"hero container\",\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\
+n                        className: \"hero-copy\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n
+                       className: \"eyebrow\",\n                                children: [\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\",
+ {\n                                        className: \"pulse-dot\"\n                                    }, void 0, false, {\n                                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\в
+вв\\\\app\\\\page.tsx\",\n                                        lineNumber: 16,\n                                        columnNumber: 34\n                                    }, this),\n
+          \" The crypto drop tracker\"\n                                ]\n                            }, void 0, true, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\
+\page.tsx\",\n                                lineNumber: 16,\n                                columnNumber: 9\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runt
+ime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h1\", {\n                                children: [\n                                    \"Track what's\",\n                                    /*#__PURE__*/ (0,react_jsx
+_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"br\", {}, void 0, false, {\n                                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n
+                   lineNumber: 17,\n                                        columnNumber: 25\n                                    }, this),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtim
+e__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"em\", {\n                                        children: \"dropping.\"\n                                    }, void 0, false, {\n                                        fi
+leName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                        lineNumber: 17,\n                                        columnNumber: 30\n
+        }, this)\n                                ]\n                            }, void 0, true, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n
+                        lineNumber: 17,\n                                columnNumber: 9\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_
+MODULE_0__.jsxDEV)(\"p\", {\n                                children: [\n                                    \"Discover upcoming airdrops, snapshots,\",\n                                    /*#__PURE__*/ (0,react_
+jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"br\", {\n                                        className: \"desktop\"\n                                    }, void 0, false, {\n
+           fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                        lineNumber: 18,\n                                        columnNumber: 50\n
+                     }, this),\n                                    \" TGE and token claims. All in one place.\"\n                                ]\n                            }, void 0, true, {\n
+               fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                lineNumber: 18,\n                                columnNumber: 9\n
+}, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"hero-actions\",\n
+       children: [\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {\n
+             href: \"/airdrops\",\n                                        className: \"primary-btn\",\n                                        children: [\n                                            \"Explore dro
+ps \",\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_barrel_optimize_names_ArrowRight_Zap_lucide_react__WEBPACK_IMPORTED_MODULE_5__[\"defa
+ult\"], {\n                                                size: 16\n                                            }, void 0, false, {\n                                                fileName: \"C:\\\\Users\\\\Sasa\
+\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                                lineNumber: 19,\n                                                columnNumber: 100\n
+   }, this)\n                                        ]\n                                    }, void 0, true, {\n                                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\pa
+ge.tsx\",\n                                        lineNumber: 19,\n                                        columnNumber: 39\n                                    }, this),\n                                    /*#__
+PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {\n                                        href: \"/calendar\",\n
+              className: \"glass-btn\",\n                                        children: \"View calendar\"\n                                    }, void 0, false, {\n                                        fileNam
+e: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                        lineNumber: 19,\n                                        columnNumber: 130\n
+    }, this)\n                                ]\n                            }, void 0, true, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n
+                    lineNumber: 19,\n                                columnNumber: 9\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODU
+LE_0__.jsxDEV)(\"div\", {\n                                className: \"stats\",\n                                children: [\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMP
+ORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                        children: [\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"b\
+", {\n                                                children: projects.length.toLocaleString()\n                                            }, void 0, false, {\n                                                fil
+eName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                                lineNumber: 20,\n                                                columnNumber: 37\n
+                               }, this),\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n
+         children: \"Tracked Drops\"\n                                            }, void 0, false, {\n                                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\pag
+e.tsx\",\n                                                lineNumber: 20,\n                                                columnNumber: 78\n                                            }, this)\n
+                     ]\n                                    }, void 0, true, {\n                                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n
+                   lineNumber: 20,\n                                        columnNumber: 32\n                                    }, this),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtim
+e__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                        children: [\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0_
+_.jsxDEV)(\"b\", {\n                                                children: week.toLocaleString()\n                                            }, void 0, false, {\n
+fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                                lineNumber: 20,\n                                                columnNumber: 115\n
+                                   }, this),\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n
+             children: \"Upcoming\"\n                                            }, void 0, false, {\n                                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page
+.tsx\",\n                                                lineNumber: 20,\n                                                columnNumber: 145\n                                            }, this)\n
+                     ]\n                                    }, void 0, true, {\n                                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n
+                   lineNumber: 20,\n                                        columnNumber: 110\n                                    }, this),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runti
+me__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                        children: [\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0
+__.jsxDEV)(\"b\", {\n                                                children: live.toLocaleString()\n                                            }, void 0, false, {\n
+ fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                                lineNumber: 20,\n                                                columnNumber: 177\n
+                                    }, this),\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n
+              children: \"Live Drops\"\n                                            }, void 0, false, {\n                                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\p
+age.tsx\",\n                                                lineNumber: 20,\n                                                columnNumber: 207\n                                            }, this)\n
+                        ]\n                                    }, void 0, true, {\n                                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n
+                      lineNumber: 20,\n                                        columnNumber: 172\n                                    }, this)\n                                ]\n                            }, void
+ 0, true, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                lineNumber: 20,\n                                columnNumber: 9
+\n                            }, this)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n
+              lineNumber: 15,\n                        columnNumber: 7\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n
+                     className: \"hero-orb\",\n                        \"aria-hidden\": \"true\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IM
+PORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"orb\"\n                            }, void 0, false, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\
+\\\ввв\\\\app\\\\page.tsx\",\n                                lineNumber: 22,\n                                columnNumber: 52\n                            }, this),\n                            /*#__PURE__*/ (0,r
+eact_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"orb-ring ring-one\"\n                            }, void 0, false, {\n
+   fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                lineNumber: 22,\n                                columnNumber: 74\n                            }, this),\n
+                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"orb-ring ring-two\"\n                            }, v
+oid 0, false, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                lineNumber: 22,\n                                columnNumbe
+r: 110\n                            }, this)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n
+                    lineNumber: 22,\n                        columnNumber: 7\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\",
+{\n                        className: \"hero-side\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n
+                         className: \"glass-card newsletter\",\n                                children: [\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.j
+sxDEV)(\"h3\", {\n                                        children: \"Never miss a drop.\"\n                                    }, void 0, false, {\n                                        fileName: \"C:\\\\Users\\
+\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                        lineNumber: 24,\n                                        columnNumber: 48\n                                    }, this),\n
+                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                        children: \"Get the latest updates and verified informat
+ion directly in your inbox.\"\n                                    }, void 0, false, {\n                                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n
+                           lineNumber: 24,\n                                        columnNumber: 75\n                                    }, this),\n                                    /*#__PURE__*/ (0,react_jsx_de
+v_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                        className: \"email-box\",\n                                        children: [\n
+         /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"input\", {\n                                                placeholder: \"Your email address\"\n
+              }, void 0, false, {\n                                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                                lineNumber
+: 24,\n                                                columnNumber: 180\n                                            }, this),\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__W
+EBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                                children: \"→\"\n                                            }, void 0, false, {\n
+              fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                                lineNumber: 24,\n                                                columnNumber:
+221\n                                            }, this)\n                                        ]\n                                    }, void 0, true, {\n                                        fileName: \"C:\\
+\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                        lineNumber: 24,\n                                        columnNumber: 153\n                                    }, th
+is),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                        className: \"quick-links\",\n
+                         children: [\n                                            [\n                                                \"Airdrops\",\n                                                \"/airdrops\"\n
+                                         ],\n                                            [\n                                                \"TGE\",\n                                                \"/calendar\"\n
+                                           ],\n                                            [\n                                                \"Snapshots\",\n                                                \"/calen
+dar\"\n                                            ],\n                                            [\n                                                \"Claims\",\n                                                \"/
+airdrops?event=claim\"\n                                            ]\n                                        ].map(([x, y])=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link_
+_WEBPACK_IMPORTED_MODULE_1___default()), {\n                                                href: y,\n                                                children: [\n
+ /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                                                        children: \"○\"\n
+ }, void 0, false, {\n                                                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                                        lineNum
+ber: 24,\n                                                        columnNumber: 419\n                                                    }, this),\n                                                    x\n
+                                     ]\n                                            }, x, true, {\n                                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.ts
+x\",\n                                                lineNumber: 24,\n                                                columnNumber: 396\n                                            }, this))\n
+               }, void 0, false, {\n                                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                        lineNumber: 24,\n
+                                columnNumber: 245\n                                    }, this)\n                                ]\n                            }, void 0, true, {\n                                fi
+leName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                lineNumber: 24,\n                                columnNumber: 9\n                            }, this),\n
+                      /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_CalendarCard__WEBPACK_IMPORTED_MODULE_4__[\"default\"], {}, void 0, false, {\n
+      fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                lineNumber: 25,\n                                columnNumber: 9\n                            }, this)\
+n                        ]\n                    }, void 0, true, {\n                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                        lineNumber: 23,\n
+                columnNumber: 7\n                    }, this)\n                ]\n            }, void 0, true, {\n                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n
+     lineNumber: 14,\n                columnNumber: 5\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"section\", {\n                className: \"con
+tainer\",\n                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    className: \"networks\",\n                    children: [\n
+              /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"section-kicker\",\n                            children: [\n
+                     /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                                    children: \"◈\"\n                                }, void 0, false, {
+\n                                    fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                    lineNumber: 28,\n                                    columnNumber:
+94\n                                }, this),\n                                \" TOP NETWORKS\"\n                            ]\n                        }, void 0, true, {\n                            fileName: \"C
+:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                            lineNumber: 28,\n                            columnNumber: 62\n                        }, this),\n                        /*#_
+_PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"network-marquee\",\n                            children: /*#__PURE__*/ (0,react_jsx_dev_
+runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"network-track\",\n                                children: [\n                                    ...[\n
+                                 \"Base\",\n                                        \"Ethereum\",\n                                        \"Solana\",\n                                        \"Arbitrum\",\n
+                                 \"Aptos\",\n                                        \"TON\"\n                                    ],\n                                    ...[\n
+  \"Base\",\n                                        \"Ethereum\",\n                                        \"Solana\",\n                                        \"Arbitrum\",\n
+  \"Aptos\",\n                                        \"TON\"\n                                    ]\n                                ].map((x, i)=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0_
+_.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {\n                                        href: `/airdrops?chain=${x}`,\n                                        className: \"network-card\",\n
+                                children: [\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"img\", {\n
+           src: `https://icons.llamao.fi/icons/chains/rsz_${x.toLowerCase()}.jpg`,\n                                                alt: x,\n                                                className: \"chain-icon-i
+mg\"\n                                            }, void 0, false, {\n                                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n
+                          lineNumber: 28,\n                                                columnNumber: 390\n                                            }, this),\n                                            /*#__
+PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                                children: [\n                                                    /*#__PURE__*/ (0,r
+eact_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"b\", {\n                                                        children: x\n                                                    }, void 0, false, {\n
+                                                    fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                                        lineNumber: 28,\n
+                                        columnNumber: 508\n                                                    }, this),\n                                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__
+WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"small\", {\n                                                        children: \"Explore projects\"\n                                                    }, void 0, false, {\n
+                                                     fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                                        lineNumber: 28,\n
+                                         columnNumber: 518\n                                                    }, this)\n                                                ]\n
+   }, void 0, true, {\n                                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                                lineNumber: 28,\n
+                                           columnNumber: 503\n                                            }, this),\n                                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPOR
+TED_MODULE_0__.jsxDEV)(_barrel_optimize_names_ArrowRight_Zap_lucide_react__WEBPACK_IMPORTED_MODULE_5__[\"default\"], {\n                                                size: 14\n
+        }, void 0, false, {\n                                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                                lineNumber: 28,\
+n                                                columnNumber: 555\n                                            }, this)\n                                        ]\n                                    }, x + i, tru
+e, {\n                                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                        lineNumber: 28,\n
+  columnNumber: 319\n                                    }, this))\n                            }, void 0, false, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.
+tsx\",\n                                lineNumber: 28,\n                                columnNumber: 160\n                            }, this)\n                        }, void 0, false, {\n
+     fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                            lineNumber: 28,\n                            columnNumber: 127\n                        }, this)\n
+          ]\n                }, void 0, true, {\n                    fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                    lineNumber: 28,\n                    columnNumber: 3
+6\n                }, this)\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                lineNumber: 28,\n                columnNumber:
+5\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"section\", {\n                className: \"container content-grid\",\n                children: /*
+#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx
+DEV)(\"div\", {\n                            className: \"section-heading\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE
+_0__.jsxDEV)(\"div\", {\n                                    children: [\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n
+                                className: \"section-kicker\",\n                                            children: [\n                                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPA
+CK_IMPORTED_MODULE_0__.jsxDEV)(_barrel_optimize_names_ArrowRight_Zap_lucide_react__WEBPACK_IMPORTED_MODULE_6__[\"default\"], {\n                                                    size: 16\n
+                        }, void 0, false, {\n                                                    fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n
+        lineNumber: 29,\n                                                    columnNumber: 124\n                                                }, this),\n                                                \" LATEST D
+ROPS\"\n                                            ]\n                                        }, void 0, true, {\n                                            fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\ap
+p\\\\page.tsx\",\n                                            lineNumber: 29,\n                                            columnNumber: 92\n                                        }, this),\n
+                  /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h2\", {\n                                            children: \"What's happening next.\"\n
+             }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                            lineNumber: 29,\n
+                                          columnNumber: 159\n                                        }, this)\n                                    ]\n                                }, void 0, true, {\n
+                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                    lineNumber: 29,\n                                    columnNumber: 87\n
+                      }, this),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {\n
+                  href: \"/airdrops\",\n                                    children: \"View all →\"\n                                }, void 0, false, {\n                                    fileName: \"C:\\\\Users
+\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                    lineNumber: 29,\n                                    columnNumber: 196\n                                }, this)\n
+              ]\n                        }, void 0, true, {\n                            fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                            lineNumber: 29,\n
+                     columnNumber: 54\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_components_ProjectTable__WEBPACK_IMPORT
+ED_MODULE_3__[\"default\"], {\n                            items: projects.slice(0, 12)\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\
+\app\\\\page.tsx\",\n                            lineNumber: 29,\n                            columnNumber: 242\n                        }, this)\n                    ]\n                }, void 0, true, {\n
+            fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                    lineNumber: 29,\n                    columnNumber: 49\n                }, this)\n            }, void 0, false
+, {\n                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                lineNumber: 29,\n                columnNumber: 5\n            }, this),\n            /*#__PURE__*/ (0,re
+act_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"footer\", {\n                className: \"footer container\",\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEB
+PACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"brand\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_
+MODULE_0__.jsxDEV)(\"span\", {\n                                className: \"brand-mark\",\n                                children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"sp
+an\", {}, void 0, false, {\n                                    fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                    lineNumber: 30,\n
+            columnNumber: 94\n                                }, this)\n                            }, void 0, false, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\p
+age.tsx\",\n                                lineNumber: 30,\n                                columnNumber: 65\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runti
+me__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                                children: \"Droply\"\n                            }, void 0, false, {\n                                fileName: \"C:\\\\Users\\\
+\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                lineNumber: 30,\n                                columnNumber: 108\n                            }, this)\n                        ]\n
+                  }, void 0, true, {\n                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                        lineNumber: 30,\n                        columnNumber:
+42\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                        children: \"Track what's dropping.\"\n
+            }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                        lineNumber: 30,\n                        columnNumber: 133\n
+                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"footer-links\",\n
+   children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {\n                                href: \
+"/airdrops\",\n                                children: \"Airdrops\"\n                            }, void 0, false, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\pa
+ge.tsx\",\n                                lineNumber: 30,\n                                columnNumber: 198\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runti
+me__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {\n                                href: \"/calendar\",\n                                children: \"Calendar\"\n
+                   }, void 0, false, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                lineNumber: 30,\n
+            columnNumber: 236\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_1___
+default()), {\n                                href: \"/airdrops\",\n                                children: \"Projects\"\n                            }, void 0, false, {\n                                fileName
+: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                                lineNumber: 30,\n                                columnNumber: 274\n                            }, this),\n
+                  /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {\n                                href: \"/airdrops\",\n
+                     children: \"Resources\"\n                            }, void 0, false, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n
+                  lineNumber: 30,\n                                columnNumber: 312\n                            }, this)\n                        ]\n                    }, void 0, true, {\n
+ fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                        lineNumber: 30,\n                        columnNumber: 168\n                    }, this),\n                    /*#__
+PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"small\", {\n                        children: \"\\xa9 2026 Droply.digital\"\n                    }, void 0, false, {\n
+ fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                        lineNumber: 30,\n                        columnNumber: 357\n                    }, this)\n                ]\n
+     }, void 0, true, {\n                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n                lineNumber: 30,\n                columnNumber: 5\n            }, this)\n        ]\n
+   }, void 0, true, {\n        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\page.tsx\",\n        lineNumber: 13,\n        columnNumber: 10\n    }, this);\n}\n//# sourceURL=[module]\n//# sourceMapping
+URL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9hcHAvcGFnZS50c3giLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7O0FBQTZCO0FBQ2tCO0FBQ0Y7QUFDUTtBQUNBO0FBRTlDLE1BQU1NLFVBQVUsZ0JBQWdCO0FBRXh
+CLGVBQWVDO0lBQzVCLE1BQU1DLFdBQVcsTUFBTUwsMERBQVdBO0lBQ2xDLE1BQU1NLE9BQU9ELFNBQVNFLE1BQU0sQ0FBQyxDQUFDQyxJQUFNQSxFQUFFQyxNQUFNLEtBQUssUUFBUUMsTUFBTTtJQUMvRCxNQUFNQyxPQUFPTixTQUFTRSxNQUFNLENBQUMsQ0FBQ0MsSUFBTUEsRUFBR
+UksSUFBSSxJQUFJSixFQUFFSSxJQUFJLElBQUksSUFBSUMsT0FBT0MsV0FBVyxHQUFHQyxLQUFLLENBQUMsR0FBRyxLQUFLTCxNQUFNO0lBQ3JHLHFCQUFPLDhEQUFDTTs7MEJBQ04sOERBQUNDO2dCQUFRQyxXQUFVOztrQ0FDakIsOERBQUNDO3dCQUFJRCxXQUFVOzswQ0FDYiw4REF
+BQ0M7Z0NBQUlELFdBQVU7O2tEQUFVLDhEQUFDRTt3Q0FBS0YsV0FBVTs7Ozs7O29DQUFhOzs7Ozs7OzBDQUN0RCw4REFBQ0c7O29DQUFHO2tEQUFZLDhEQUFDQzs7Ozs7a0RBQUksOERBQUNDO2tEQUFHOzs7Ozs7Ozs7Ozs7MENBQ3pCLDhEQUFDZjs7b0NBQUU7a0RBQXNDLDhEQUFDY
+zt3Q0FBR0osV0FBVTs7Ozs7O29DQUFXOzs7Ozs7OzBDQUNsRSw4REFBQ0M7Z0NBQUlELFdBQVU7O2tEQUFlLDhEQUFDckIsa0RBQUlBO3dDQUFDMkIsTUFBSzt3Q0FBWU4sV0FBVTs7NENBQWM7MERBQWMsOERBQUNwQiwwRkFBVUE7Z0RBQUMyQixNQUFNOzs7Ozs7Ozs7Ozs7a0RBQVk
+sOERBQUM1QixrREFBSUE7d0NBQUMyQixNQUFLO3dDQUFZTixXQUFVO2tEQUFZOzs7Ozs7Ozs7Ozs7MENBQ3RLLDhEQUFDQztnQ0FBSUQsV0FBVTs7a0RBQVEsOERBQUNDOzswREFBSSw4REFBQ087MERBQUdyQixTQUFTSyxNQUFNLENBQUNpQixjQUFjOzs7Ozs7MERBQU8sOERBQUNQO
+zBEQUFLOzs7Ozs7Ozs7Ozs7a0RBQTBCLDhEQUFDRDs7MERBQUksOERBQUNPOzBEQUFHZixLQUFLZ0IsY0FBYzs7Ozs7OzBEQUFPLDhEQUFDUDswREFBSzs7Ozs7Ozs7Ozs7O2tEQUFxQiw4REFBQ0Q7OzBEQUFJLDhEQUFDTzswREFBR3BCLEtBQUtxQixjQUFjOzs7Ozs7MERBQU8sOER
+BQUNQOzBEQUFLOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7a0NBRTlNLDhEQUFDRDt3QkFBSUQsV0FBVTt3QkFBV1UsZUFBWTs7MENBQU8sOERBQUNUO2dDQUFJRCxXQUFVOzs7Ozs7MENBQU8sOERBQUNDO2dDQUFJRCxXQUFVOzs7Ozs7MENBQXFCLDhEQUFDQztnQ0FBSUQsV0FBVTs7O
+zs7Ozs7Ozs7O2tDQUN0SCw4REFBQ0M7d0JBQUlELFdBQVU7OzBDQUNiLDhEQUFDQztnQ0FBSUQsV0FBVTs7a0RBQXdCLDhEQUFDVztrREFBRzs7Ozs7O2tEQUF1Qiw4REFBQ3JCO2tEQUFFOzs7Ozs7a0RBQTJFLDhEQUFDVzt3Q0FBSUQsV0FBVTs7MERBQVksOERBQUNZO2dEQUFNQyx
+hQUFZOzs7Ozs7MERBQXNCLDhEQUFDQzswREFBTzs7Ozs7Ozs7Ozs7O2tEQUFnQiw4REFBQ2I7d0NBQUlELFdBQVU7a0RBQWU7NENBQUM7Z0RBQUM7Z0RBQVc7NkNBQVk7NENBQUM7Z0RBQUM7Z0RBQU07NkNBQVk7NENBQUM7Z0RBQUM7Z0RBQVk7NkNBQVk7NENBQUM7Z0RBQUM7Z0RBQ
+VM7NkNBQXdCO3lDQUFDLENBQUNlLEdBQUcsQ0FBQyxDQUFDLENBQUNDLEdBQUVDLEVBQUUsaUJBQUcsOERBQUN0QyxrREFBSUE7Z0RBQUMyQixNQUFNVzs7a0VBQVcsOERBQUNmO2tFQUFLOzs7Ozs7b0RBQVNjOzsrQ0FBbEJBOzs7Ozs7Ozs7Ozs7Ozs7OzBDQUN2Wiw4REFBQ2hDLGd
+FQUFZQTs7Ozs7Ozs7Ozs7Ozs7Ozs7MEJBR2pCLDhEQUFDZTtnQkFBUUMsV0FBVTswQkFBWSw0RUFBQ0M7b0JBQUlELFdBQVU7O3NDQUFXLDhEQUFDQzs0QkFBSUQsV0FBVTs7OENBQWlCLDhEQUFDRTs4Q0FBSzs7Ozs7O2dDQUFROzs7Ozs7O3NDQUFtQiw4REFBQ0Q7NEJBQUlELFdBQ
+VU7c0NBQWtCLDRFQUFDQztnQ0FBSUQsV0FBVTswQ0FBaUI7dUNBQUk7d0NBQUM7d0NBQU87d0NBQVc7d0NBQVM7d0NBQVc7d0NBQVE7cUNBQU07dUNBQUk7d0NBQUM7d0NBQU87d0NBQVc7d0NBQVM7d0NBQVc7d0NBQVE7cUNBQU07aUNBQUMsQ0FBQ2UsR0FBRyxDQUFDLENBQUNDLEd
+BQUVFLGtCQUFJLDhEQUFDdkMsa0RBQUlBO3dDQUFDMkIsTUFBTSxDQUFDLGdCQUFnQixFQUFFVSxHQUFHO3dDQUFFaEIsV0FBVTs7MERBQXlCLDhEQUFDbUI7Z0RBQUlDLEtBQUssQ0FBQyx5Q0FBeUMsRUFBRUosRUFBRUssV0FBVyxHQUFHLElBQUksQ0FBQztnREFBRUMsS0FBS047Z
+0RBQUdoQixXQUFVOzs7Ozs7MERBQWtCLDhEQUFDQzs7a0VBQUksOERBQUNPO2tFQUFHUTs7Ozs7O2tFQUFNLDhEQUFDTztrRUFBTTs7Ozs7Ozs7Ozs7OzBEQUE4Qiw4REFBQzNDLDBGQUFVQTtnREFBQzJCLE1BQU07Ozs7Ozs7dUNBQTVMUyxJQUFFRTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs
+7Ozs7Ozs7MEJBQzlYLDhEQUFDbkI7Z0JBQVFDLFdBQVU7MEJBQXlCLDRFQUFDQzs7c0NBQUksOERBQUNBOzRCQUFJRCxXQUFVOzs4Q0FBa0IsOERBQUNDOztzREFBSSw4REFBQ0E7NENBQUlELFdBQVU7OzhEQUFpQiw4REFBQ25CLDBGQUFHQTtvREFBQzBCLE1BQU07Ozs7OztnREFBS
+zs7Ozs7OztzREFBbUIsOERBQUNpQjtzREFBRzs7Ozs7Ozs7Ozs7OzhDQUFpQyw4REFBQzdDLGtEQUFJQTtvQ0FBQzJCLE1BQUs7OENBQVk7Ozs7Ozs7Ozs7OztzQ0FBdUIsOERBQUN2QixnRUFBWUE7NEJBQUMwQyxPQUFPdEMsU0FBU1UsS0FBSyxDQUFDLEdBQUc7Ozs7Ozs7Ozs7Ozs
+7Ozs7OzBCQUNwUiw4REFBQzZCO2dCQUFPMUIsV0FBVTs7a0NBQW1CLDhEQUFDQzt3QkFBSUQsV0FBVTs7MENBQVEsOERBQUNFO2dDQUFLRixXQUFVOzBDQUFhLDRFQUFDRTs7Ozs7Ozs7OzswQ0FBYSw4REFBQ0E7MENBQUs7Ozs7Ozs7Ozs7OztrQ0FBbUIsOERBQUNBO2tDQUFLOzs7O
+zs7a0NBQTZCLDhEQUFDRDt3QkFBSUQsV0FBVTs7MENBQWUsOERBQUNyQixrREFBSUE7Z0NBQUMyQixNQUFLOzBDQUFZOzs7Ozs7MENBQWUsOERBQUMzQixrREFBSUE7Z0NBQUMyQixNQUFLOzBDQUFZOzs7Ozs7MENBQWUsOERBQUMzQixrREFBSUE7Z0NBQUMyQixNQUFLOzBDQUFZOzs
+7Ozs7MENBQWUsOERBQUMzQixrREFBSUE7Z0NBQUMyQixNQUFLOzBDQUFZOzs7Ozs7Ozs7Ozs7a0NBQXNCLDhEQUFDaUI7a0NBQU07Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUUzVyIsInNvdXJjZXMiOlsiQzpcXFVzZXJzXFxTYXNhXFxEZXNrdG9wXFzQstCy0LJcXGFwcFxccGFnZS50c3giX
+Swic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IExpbmsgZnJvbSBcIm5leHQvbGlua1wiO1xuaW1wb3J0IHsgQXJyb3dSaWdodCwgWmFwIH0gZnJvbSBcImx1Y2lkZS1yZWFjdFwiO1xuaW1wb3J0IHsgZ2V0UHJvamVjdHMgfSBmcm9tIFwiQC9saWIvcHJvamVjdHNcIjtcbmltcG9ydCB
+Qcm9qZWN0VGFibGUgZnJvbSBcIkAvY29tcG9uZW50cy9Qcm9qZWN0VGFibGVcIjtcbmltcG9ydCBDYWxlbmRhckNhcmQgZnJvbSBcIkAvY29tcG9uZW50cy9DYWxlbmRhckNhcmRcIjtcblxuZXhwb3J0IGNvbnN0IGR5bmFtaWMgPSBcImZvcmNlLWR5bmFtaWNcIjtcblxuZXhwb3J0I
+GRlZmF1bHQgYXN5bmMgZnVuY3Rpb24gSG9tZSgpIHtcbiAgY29uc3QgcHJvamVjdHMgPSBhd2FpdCBnZXRQcm9qZWN0cygpO1xuICBjb25zdCBsaXZlID0gcHJvamVjdHMuZmlsdGVyKChwKSA9PiBwLnN0YXR1cyA9PT0gXCJMaXZlXCIpLmxlbmd0aDtcbiAgY29uc3Qgd2VlayA9IHB
+yb2plY3RzLmZpbHRlcigocCkgPT4gcC5kYXRlICYmIHAuZGF0ZSA+PSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCkuc2xpY2UoMCwgMTApKS5sZW5ndGg7XG4gIHJldHVybiA8bWFpbj5cbiAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJoZXJvIGNvbnRhaW5lclwiPlxuICAgICAgPGRpd
+iBjbGFzc05hbWU9XCJoZXJvLWNvcHlcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJleWVicm93XCI+PHNwYW4gY2xhc3NOYW1lPVwicHVsc2UtZG90XCIvPiBUaGUgY3J5cHRvIGRyb3AgdHJhY2tlcjwvZGl2PlxuICAgICAgICA8aDE+VHJhY2sgd2hhdCdzPGJyLz48ZW0+ZHJ
+vcHBpbmcuPC9lbT48L2gxPlxuICAgICAgICA8cD5EaXNjb3ZlciB1cGNvbWluZyBhaXJkcm9wcywgc25hcHNob3RzLDxiciBjbGFzc05hbWU9XCJkZXNrdG9wXCIvPiBUR0UgYW5kIHRva2VuIGNsYWltcy4gQWxsIGluIG9uZSBwbGFjZS48L3A+XG4gICAgICAgIDxkaXYgY2xhc3NOY
+W1lPVwiaGVyby1hY3Rpb25zXCI+PExpbmsgaHJlZj1cIi9haXJkcm9wc1wiIGNsYXNzTmFtZT1cInByaW1hcnktYnRuXCI+RXhwbG9yZSBkcm9wcyA8QXJyb3dSaWdodCBzaXplPXsxNn0vPjwvTGluaz48TGluayBocmVmPVwiL2NhbGVuZGFyXCIgY2xhc3NOYW1lPVwiZ2xhc3MtYnR
+uXCI+VmlldyBjYWxlbmRhcjwvTGluaz48L2Rpdj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJzdGF0c1wiPjxkaXY+PGI+e3Byb2plY3RzLmxlbmd0aC50b0xvY2FsZVN0cmluZygpfTwvYj48c3Bhbj5UcmFja2VkIERyb3BzPC9zcGFuPjwvZGl2PjxkaXY+PGI+e3dlZWsudG9Mb
+2NhbGVTdHJpbmcoKX08L2I+PHNwYW4+VXBjb21pbmc8L3NwYW4+PC9kaXY+PGRpdj48Yj57bGl2ZS50b0xvY2FsZVN0cmluZygpfTwvYj48c3Bhbj5MaXZlIERyb3BzPC9zcGFuPjwvZGl2PjwvZGl2PlxuICAgICAgPC9kaXY+XG4gICAgICA8ZGl2IGNsYXNzTmFtZT1cImhlcm8tb3J
+iXCIgYXJpYS1oaWRkZW49XCJ0cnVlXCI+PGRpdiBjbGFzc05hbWU9XCJvcmJcIi8+PGRpdiBjbGFzc05hbWU9XCJvcmItcmluZyByaW5nLW9uZVwiLz48ZGl2IGNsYXNzTmFtZT1cIm9yYi1yaW5nIHJpbmctdHdvXCIvPjwvZGl2PlxuICAgICAgPGRpdiBjbGFzc05hbWU9XCJoZXJvL
+XNpZGVcIj5cbiAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJnbGFzcy1jYXJkIG5ld3NsZXR0ZXJcIj48aDM+TmV2ZXIgbWlzcyBhIGRyb3AuPC9oMz48cD5HZXQgdGhlIGxhdGVzdCB1cGRhdGVzIGFuZCB2ZXJpZmllZCBpbmZvcm1hdGlvbiBkaXJlY3RseSBpbiB5b3VyIGluYm94Ljw
+vcD48ZGl2IGNsYXNzTmFtZT1cImVtYWlsLWJveFwiPjxpbnB1dCBwbGFjZWhvbGRlcj1cIllvdXIgZW1haWwgYWRkcmVzc1wiLz48YnV0dG9uPuKGkjwvYnV0dG9uPjwvZGl2PjxkaXYgY2xhc3NOYW1lPVwicXVpY2stbGlua3NcIj57W1tcIkFpcmRyb3BzXCIsXCIvYWlyZHJvcHNcI
+l0sW1wiVEdFXCIsXCIvY2FsZW5kYXJcIl0sW1wiU25hcHNob3RzXCIsXCIvY2FsZW5kYXJcIl0sW1wiQ2xhaW1zXCIsXCIvYWlyZHJvcHM/ZXZlbnQ9Y2xhaW1cIl1dLm1hcCgoW3gseV0pPT48TGluayBocmVmPXt5fSBrZXk9e3h9PjxzcGFuPuKXizwvc3Bhbj57eH08L0xpbms+KX0
+8L2Rpdj48L2Rpdj5cbiAgICAgICAgPENhbGVuZGFyQ2FyZC8+XG4gICAgICA8L2Rpdj5cbiAgICA8L3NlY3Rpb24+XG4gICAgPHNlY3Rpb24gY2xhc3NOYW1lPVwiY29udGFpbmVyXCI+PGRpdiBjbGFzc05hbWU9XCJuZXR3b3Jrc1wiPjxkaXYgY2xhc3NOYW1lPVwic2VjdGlvbi1ra
+WNrZXJcIj48c3Bhbj7il4g8L3NwYW4+IFRPUCBORVRXT1JLUzwvZGl2PjxkaXYgY2xhc3NOYW1lPVwibmV0d29yay1tYXJxdWVlXCI+PGRpdiBjbGFzc05hbWU9XCJuZXR3b3JrLXRyYWNrXCI+e1suLi5bXCJCYXNlXCIsXCJFdGhlcmV1bVwiLFwiU29sYW5hXCIsXCJBcmJpdHJ1bVw
+iLFwiQXB0b3NcIixcIlRPTlwiXSwuLi5bXCJCYXNlXCIsXCJFdGhlcmV1bVwiLFwiU29sYW5hXCIsXCJBcmJpdHJ1bVwiLFwiQXB0b3NcIixcIlRPTlwiXV0ubWFwKCh4LGkpPT48TGluayBocmVmPXtgL2FpcmRyb3BzP2NoYWluPSR7eH1gfSBjbGFzc05hbWU9XCJuZXR3b3JrLWNhc
+mRcIiBrZXk9e3graX0+PGltZyBzcmM9e2BodHRwczovL2ljb25zLmxsYW1hby5maS9pY29ucy9jaGFpbnMvcnN6XyR7eC50b0xvd2VyQ2FzZSgpfS5qcGdgfSBhbHQ9e3h9IGNsYXNzTmFtZT1cImNoYWluLWljb24taW1nXCIvPjxkaXY+PGI+e3h9PC9iPjxzbWFsbD5FeHBsb3JlIHB
+yb2plY3RzPC9zbWFsbD48L2Rpdj48QXJyb3dSaWdodCBzaXplPXsxNH0vPjwvTGluaz4pfTwvZGl2PjwvZGl2PjwvZGl2Pjwvc2VjdGlvbj5cbiAgICA8c2VjdGlvbiBjbGFzc05hbWU9XCJjb250YWluZXIgY29udGVudC1ncmlkXCI+PGRpdj48ZGl2IGNsYXNzTmFtZT1cInNlY3Rpb
+24taGVhZGluZ1wiPjxkaXY+PGRpdiBjbGFzc05hbWU9XCJzZWN0aW9uLWtpY2tlclwiPjxaYXAgc2l6ZT17MTZ9Lz4gTEFURVNUIERST1BTPC9kaXY+PGgyPldoYXQncyBoYXBwZW5pbmcgbmV4dC48L2gyPjwvZGl2PjxMaW5rIGhyZWY9XCIvYWlyZHJvcHNcIj5WaWV3IGFsbCDihpI
+8L0xpbms+PC9kaXY+PFByb2plY3RUYWJsZSBpdGVtcz17cHJvamVjdHMuc2xpY2UoMCwgMTIpfS8+PC9kaXY+PC9zZWN0aW9uPlxuICAgIDxmb290ZXIgY2xhc3NOYW1lPVwiZm9vdGVyIGNvbnRhaW5lclwiPjxkaXYgY2xhc3NOYW1lPVwiYnJhbmRcIj48c3BhbiBjbGFzc05hbWU9X
+CJicmFuZC1tYXJrXCI+PHNwYW4vPjwvc3Bhbj48c3Bhbj5Ecm9wbHk8L3NwYW4+PC9kaXY+PHNwYW4+VHJhY2sgd2hhdCdzIGRyb3BwaW5nLjwvc3Bhbj48ZGl2IGNsYXNzTmFtZT1cImZvb3Rlci1saW5rc1wiPjxMaW5rIGhyZWY9XCIvYWlyZHJvcHNcIj5BaXJkcm9wczwvTGluaz4
+8TGluayBocmVmPVwiL2NhbGVuZGFyXCI+Q2FsZW5kYXI8L0xpbms+PExpbmsgaHJlZj1cIi9haXJkcm9wc1wiPlByb2plY3RzPC9MaW5rPjxMaW5rIGhyZWY9XCIvYWlyZHJvcHNcIj5SZXNvdXJjZXM8L0xpbms+PC9kaXY+PHNtYWxsPsKpIDIwMjYgRHJvcGx5LmRpZ2l0YWw8L3NtY
+WxsPjwvZm9vdGVyPlxuICA8L21haW4+O1xufVxuIl0sIm5hbWVzIjpbIkxpbmsiLCJBcnJvd1JpZ2h0IiwiWmFwIiwiZ2V0UHJvamVjdHMiLCJQcm9qZWN0VGFibGUiLCJDYWxlbmRhckNhcmQiLCJkeW5hbWljIiwiSG9tZSIsInByb2plY3RzIiwibGl2ZSIsImZpbHRlciIsInAiLCJ
+zdGF0dXMiLCJsZW5ndGgiLCJ3ZWVrIiwiZGF0ZSIsIkRhdGUiLCJ0b0lTT1N0cmluZyIsInNsaWNlIiwibWFpbiIsInNlY3Rpb24iLCJjbGFzc05hbWUiLCJkaXYiLCJzcGFuIiwiaDEiLCJiciIsImVtIiwiaHJlZiIsInNpemUiLCJiIiwidG9Mb2NhbGVTdHJpbmciLCJhcmlhLWhpZ
+GRlbiIsImgzIiwiaW5wdXQiLCJwbGFjZWhvbGRlciIsImJ1dHRvbiIsIm1hcCIsIngiLCJ5IiwiaSIsImltZyIsInNyYyIsInRvTG93ZXJDYXNlIiwiYWx0Iiwic21hbGwiLCJoMiIsIml0ZW1zIiwiZm9vdGVyIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VSb290IjoiIn0=\n//# s
+ourceURL=webpack-internal:///(rsc)/./app/page.tsx\n");
+.next\server\app\page.js:132:eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   cardActions: () => (/* binding */ cardAction
+s),\n/* harmony export */   formatDate: () => (/* binding */ formatDate),\n/* harmony export */   getProject: () => (/* binding */ getProject),\n/* harmony export */   getProjects: () => (/* binding */ getProjects)
+,\n/* harmony export */   initials: () => (/* binding */ initials),\n/* harmony export */   shortAction: () => (/* binding */ shortAction),\n/* harmony export */   truncate: () => (/* binding */ truncate)\n/* harmo
+ny export */ });\n/* harmony import */ var _data_projects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/data/projects */ \"(rsc)/./data/projects.ts\");\n\nasync function getProjects() {\n    return _data
+_projects__WEBPACK_IMPORTED_MODULE_0__.projects;\n}\nasync function getProject(slug) {\n    const items = await getProjects();\n    return items.find((project)=>project.slug === slug);\n}\nfunction formatDate(date)
+ {\n    if (!date) return \"TBA\";\n    const parsed = new Date(`${date}T12:00:00`);\n    if (Number.isNaN(parsed.getTime())) return \"TBA\";\n    return new Intl.DateTimeFormat(\"en-US\", {\n        month: \"short
+\",\n        day: \"numeric\",\n        year: \"numeric\"\n    }).format(parsed);\n}\nfunction initials(name) {\n    return name.slice(0, 2).toUpperCase();\n}\nfunction truncate(text, max) {\n    if (!text || text.
+length <= max) return text;\n    const cut = text.slice(0, max);\n    const lastSpace = cut.lastIndexOf(' ');\n    return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut).trim() + '...';\n}\nfunction shortAction(tex
+t) {\n    const parts = text.split(\":\");\n    if (parts.length >= 2) return parts[1].trim();\n    return text.length > 30 ? text.slice(0, 30).trim() + \"...\" : text;\n}\nfunction cardActions(actions) {\n    if (
+!actions || !actions.length) return \"\";\n    return actions.slice(0, 3).map(shortAction).join(\", \");\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozL
+CJmaWxlIjoiKHJzYykvLi9saWIvcHJvamVjdHMudHMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBd0U7QUFFakUsZUFBZUU7SUFDcEIsT0FBT0Qsb0RBQVdBO0FBQ3BCO0FBRU8sZUFBZUUsV0FBV0MsSUFBWTtJQUMzQyxNQUFNQyxRQUFRLE1BQU1IO0lBQ3BCLE9BQU9HLE1BQU1
+DLElBQUksQ0FBQyxDQUFDQyxVQUFZQSxRQUFRSCxJQUFJLEtBQUtBO0FBQ2xEO0FBRU8sU0FBU0ksV0FBV0MsSUFBWTtJQUNyQyxJQUFJLENBQUNBLE1BQU0sT0FBTztJQUNsQixNQUFNQyxTQUFTLElBQUlDLEtBQUssR0FBR0YsS0FBSyxTQUFTLENBQUM7SUFDMUMsSUFBSUcsT0FBT
+0MsS0FBSyxDQUFDSCxPQUFPSSxPQUFPLEtBQUssT0FBTztJQUMzQyxPQUFPLElBQUlDLEtBQUtDLGNBQWMsQ0FBQyxTQUFTO1FBQUVDLE9BQU87UUFBU0MsS0FBSztRQUFXQyxNQUFNO0lBQVUsR0FBR0MsTUFBTSxDQUFDVjtBQUN0RztBQUVPLFNBQVNXLFNBQVNDLElBQVk7SUFBSSx
+PQUFPQSxLQUFLQyxLQUFLLENBQUMsR0FBRyxHQUFHQyxXQUFXO0FBQUk7QUFDekUsU0FBU0MsU0FBU0MsSUFBWSxFQUFFQyxHQUFXO0lBQ2hELElBQUksQ0FBQ0QsUUFBUUEsS0FBS0UsTUFBTSxJQUFJRCxLQUFLLE9BQU9EO0lBQ3hDLE1BQU1HLE1BQU1ILEtBQUtILEtBQUssQ0FBQ
+yxHQUFHSTtJQUMxQixNQUFNRyxZQUFZRCxJQUFJRSxXQUFXLENBQUM7SUFDbEMsT0FBTyxDQUFDRCxZQUFZLElBQUlELElBQUlOLEtBQUssQ0FBQyxHQUFHTyxhQUFhRCxHQUFFLEVBQUdHLElBQUksS0FBSztBQUNsRTtBQUVPLFNBQVNDLFlBQVlQLElBQVk7SUFDdEMsTUFBTVEsUUF
+BUVIsS0FBS1MsS0FBSyxDQUFDO0lBQ3pCLElBQUlELE1BQU1OLE1BQU0sSUFBSSxHQUFHLE9BQU9NLEtBQUssQ0FBQyxFQUFFLENBQUNGLElBQUk7SUFDM0MsT0FBT04sS0FBS0UsTUFBTSxHQUFHLEtBQUtGLEtBQUtILEtBQUssQ0FBQyxHQUFHLElBQUlTLElBQUksS0FBSyxRQUFRT
+jtBQUMvRDtBQUVPLFNBQVNVLFlBQVlDLE9BQWtCO0lBQzVDLElBQUksQ0FBQ0EsV0FBVyxDQUFDQSxRQUFRVCxNQUFNLEVBQUUsT0FBTztJQUN4QyxPQUFPUyxRQUFRZCxLQUFLLENBQUMsR0FBRyxHQUFHZSxHQUFHLENBQUNMLGFBQWFNLElBQUksQ0FBQztBQUNuRCIsInNvdXJjZXM
+iOlsiQzpcXFVzZXJzXFxTYXNhXFxEZXNrdG9wXFzQstCy0LJcXGxpYlxccHJvamVjdHMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgcHJvamVjdHMgYXMgYWxsUHJvamVjdHMsIHR5cGUgUHJvamVjdCB9IGZyb20gXCJAL2RhdGEvcHJvamVjdHNcIjtcclxuXHJcbmV4c
+G9ydCBhc3luYyBmdW5jdGlvbiBnZXRQcm9qZWN0cygpOiBQcm9taXNlPFByb2plY3RbXT4ge1xyXG4gIHJldHVybiBhbGxQcm9qZWN0cztcclxufVxyXG5cclxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldFByb2plY3Qoc2x1Zzogc3RyaW5nKSB7XHJcbiAgY29uc3QgaXRlbXMgPSB
+hd2FpdCBnZXRQcm9qZWN0cygpO1xyXG4gIHJldHVybiBpdGVtcy5maW5kKChwcm9qZWN0KSA9PiBwcm9qZWN0LnNsdWcgPT09IHNsdWcpO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gZm9ybWF0RGF0ZShkYXRlOiBzdHJpbmcpIHtcclxuICBpZiAoIWRhdGUpIHJldHVybiBcI
+lRCQVwiO1xyXG4gIGNvbnN0IHBhcnNlZCA9IG5ldyBEYXRlKGAke2RhdGV9VDEyOjAwOjAwYCk7XHJcbiAgaWYgKE51bWJlci5pc05hTihwYXJzZWQuZ2V0VGltZSgpKSkgcmV0dXJuIFwiVEJBXCI7XHJcbiAgcmV0dXJuIG5ldyBJbnRsLkRhdGVUaW1lRm9ybWF0KFwiZW4tVVNcIiw
+geyBtb250aDogXCJzaG9ydFwiLCBkYXk6IFwibnVtZXJpY1wiLCB5ZWFyOiBcIm51bWVyaWNcIiB9KS5mb3JtYXQocGFyc2VkKTtcclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIGluaXRpYWxzKG5hbWU6IHN0cmluZykgeyByZXR1cm4gbmFtZS5zbGljZSgwLCAyKS50b1VwcGVyQ
+2FzZSgpOyB9XHJcbmV4cG9ydCBmdW5jdGlvbiB0cnVuY2F0ZSh0ZXh0OiBzdHJpbmcsIG1heDogbnVtYmVyKSB7XHJcbiAgaWYgKCF0ZXh0IHx8IHRleHQubGVuZ3RoIDw9IG1heCkgcmV0dXJuIHRleHQ7XHJcbiAgY29uc3QgY3V0ID0gdGV4dC5zbGljZSgwLCBtYXgpO1xyXG4gIGN
+vbnN0IGxhc3RTcGFjZSA9IGN1dC5sYXN0SW5kZXhPZignICcpO1xyXG4gIHJldHVybiAobGFzdFNwYWNlID4gMCA/IGN1dC5zbGljZSgwLCBsYXN0U3BhY2UpIDogY3V0KS50cmltKCkgKyAnLi4uJztcclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIHNob3J0QWN0aW9uKHRleHQ6I
+HN0cmluZykge1xyXG4gIGNvbnN0IHBhcnRzID0gdGV4dC5zcGxpdChcIjpcIik7XHJcbiAgaWYgKHBhcnRzLmxlbmd0aCA+PSAyKSByZXR1cm4gcGFydHNbMV0udHJpbSgpO1xyXG4gIHJldHVybiB0ZXh0Lmxlbmd0aCA+IDMwID8gdGV4dC5zbGljZSgwLCAzMCkudHJpbSgpICsgXCI
+uLi5cIiA6IHRleHQ7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBjYXJkQWN0aW9ucyhhY3Rpb25zPzogc3RyaW5nW10pIHtcclxuICBpZiAoIWFjdGlvbnMgfHwgIWFjdGlvbnMubGVuZ3RoKSByZXR1cm4gXCJcIjtcclxuICByZXR1cm4gYWN0aW9ucy5zbGljZSgwLCAzKS5tY
+XAoc2hvcnRBY3Rpb24pLmpvaW4oXCIsIFwiKTtcclxufVxyXG4iXSwibmFtZXMiOlsicHJvamVjdHMiLCJhbGxQcm9qZWN0cyIsImdldFByb2plY3RzIiwiZ2V0UHJvamVjdCIsInNsdWciLCJpdGVtcyIsImZpbmQiLCJwcm9qZWN0IiwiZm9ybWF0RGF0ZSIsImRhdGUiLCJwYXJzZWQ
+iLCJEYXRlIiwiTnVtYmVyIiwiaXNOYU4iLCJnZXRUaW1lIiwiSW50bCIsIkRhdGVUaW1lRm9ybWF0IiwibW9udGgiLCJkYXkiLCJ5ZWFyIiwiZm9ybWF0IiwiaW5pdGlhbHMiLCJuYW1lIiwic2xpY2UiLCJ0b1VwcGVyQ2FzZSIsInRydW5jYXRlIiwidGV4dCIsIm1heCIsImxlbmd0a
+CIsImN1dCIsImxhc3RTcGFjZSIsImxhc3RJbmRleE9mIiwidHJpbSIsInNob3J0QWN0aW9uIiwicGFydHMiLCJzcGxpdCIsImNhcmRBY3Rpb25zIiwiYWN0aW9ucyIsIm1hcCIsImpvaW4iXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack
+-internal:///(rsc)/./lib/projects.ts\n");
+.next\server\app\page.js:195:eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ ProjectTab
+le)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-dev-runtime */ \"(ssr)/./node_modules/next/dist/server/route-modules/ap
+p-page/vendored/ssr/react-jsx-dev-runtime.js\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MOD
+ULE_0__);\n/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ \"(ssr)/./node_modules/next/dist/client/app-dir/link.js\");\n/* harmony import */ var next_link__WEB
+PACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _barrel_optimize_names_ChevronRight_lucide_react__WEBPACK_IMPORTED_MODULE_3__
+ = __webpack_require__(/*! __barrel_optimize__?names=ChevronRight!=!lucide-react */ \"(ssr)/./node_modules/lucide-react/dist/esm/icons/chevron-right.js\");\n/* harmony import */ var _lib_projects__WEBPACK_IMPORTED_
+MODULE_2__ = __webpack_require__(/*! @/lib/projects */ \"(ssr)/./lib/projects.ts\");\n/* __next_internal_client_entry_do_not_use__ default auto */ \n\n\n\nfunction ProjectTable({ items }) {\n    return /*#__PURE__*
+/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n        className: \"table-card\",\n        children: [\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.j
+sxDEV)(\"div\", {\n                className: \"table-head\",\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n
+           children: \"Project\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                        lin
+eNumber: 11,\n                        columnNumber: 35\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n
+      children: \"Blockchain\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                        lineN
+umber: 11,\n                        columnNumber: 55\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n
+    children: \"Type\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                        lineNumber: 1
+1,\n                        columnNumber: 78\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                        chil
+dren: \"Reward\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                        lineNumber: 11,\n
+                      columnNumber: 95\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                        children:
+\"Date\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                        lineNumber: 11,\n
+              columnNumber: 114\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                        children: \"Statu
+s\"\n                    }, void 0, false, {\n                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                        lineNumber: 11,\n
+         columnNumber: 131\n                    }, this),\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {}, void 0, false, {\n                        fil
+eName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                        lineNumber: 11,\n                        columnNumber: 150\n                    }, this)\n
+ ]\n            }, void 0, true, {\n                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                lineNumber: 11,\n                columnNumber: 7\n
+    }, this),\n            items.map((p)=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {\n                    className: \"project-
+row\",\n                    href: `/project/${p.slug}`,\n                    children: [\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n
+                className: \"project-cell\",\n                            children: [\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n
+                             className: \"project-icon\",\n                                    children: [\n                                        p.logo ? /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_
+MODULE_0__.jsxDEV)(\"img\", {\n                                            src: p.logo,\n                                            alt: p.name,\n                                            loading: \"lazy\",\n
+                                         onError: (e)=>{\n                                                e.currentTarget.style.display = \"none\";\n                                                e.currentTarget.n
+extElementSibling?.classList.remove(\"hidden\");\n                                            }\n                                        }, void 0, false, {\n                                            fileName: \"
+C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                                            lineNumber: 16,\n                                            columnNumber: 17\n
+                         }, this) : null,\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n
+  className: p.logo ? \"hidden\" : \"\",\n                                            children: (0,_lib_projects__WEBPACK_IMPORTED_MODULE_2__.initials)(p.name)\n                                        }, void 0, fa
+lse, {\n                                            fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                                            lineNumber: 26,\n
+                               columnNumber: 15\n                                        }, this)\n                                    ]\n                                }, void 0, true, {\n
+            fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                                    lineNumber: 14,\n                                    columnNumber: 41\n
+                         }, this),\n                                /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                    children: [\n
+                               /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"strong\", {\n                                            children: p.name\n
+          }, void 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                                            lineNum
+ber: 27,\n                                            columnNumber: 24\n                                        }, this),\n                                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMP
+ORTED_MODULE_0__.jsxDEV)(\"small\", {\n                                            children: (0,_lib_projects__WEBPACK_IMPORTED_MODULE_2__.truncate)(p.description, 40)\n                                        }, vo
+id 0, false, {\n                                            fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                                            lineNumber: 27,\n
+                                       columnNumber: 49\n                                        }, this)\n                                    ]\n                                }, void 0, true, {\n
+                    fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                                    lineNumber: 27,\n                                    columnNumber: 19\
+n                                }, this)\n                            ]\n                        }, void 0, true, {\n                            fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\P
+rojectTable.tsx\",\n                            lineNumber: 14,\n                            columnNumber: 11\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBP
+ACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"muted\",\n                            children: p.chain\n                        }, void 0, false, {\n
+ fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                            lineNumber: 28,\n                            columnNumber: 11\n                        }, this),\
+n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE
+_0__.jsxDEV)(\"span\", {\n                                className: \"type-pill\",\n                                children: p.event\n                            }, void 0, false, {\n
+   fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                                lineNumber: 29,\n                                columnNumber: 16\n
+    }, this)\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                            lineNumber:
+ 29,\n                            columnNumber: 11\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n
+             className: \"muted\",\n                            children: p.symbol ? \"$\" + p.symbol : \"TBA\"\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\S
+asa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                            lineNumber: 30,\n                            columnNumber: 11\n                        }, this),\n                        /*#_
+_PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                            className: \"muted\",\n                            children: (0,_lib_projects__WEBPACK_IMPORTED_MODULE
+_2__.formatDate)(p.date)\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n
+ lineNumber: 31,\n                            columnNumber: 11\n                        }, this),\n                        /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n
+                         children: /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                                className: `status-pill ${p.status.toLowerCase()}`,\n
+                           children: p.status\n                            }, void 0, false, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",
+\n                                lineNumber: 32,\n                                columnNumber: 16\n                            }, this)\n                        }, void 0, false, {\n                            fi
+leName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                            lineNumber: 32,\n                            columnNumber: 11\n                        }, this),\n
+                      /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(_barrel_optimize_names_ChevronRight_lucide_react__WEBPACK_IMPORTED_MODULE_3__[\"default\"], {\n
+       className: \"row-arrow\",\n                            size: 17\n                        }, void 0, false, {\n                            fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\Pr
+ojectTable.tsx\",\n                            lineNumber: 33,\n                            columnNumber: 11\n                        }, this)\n                    ]\n                }, p.id, true, {\n
+       fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n                    lineNumber: 13,\n                    columnNumber: 9\n                }, this))\n        ]\n    },
+void 0, true, {\n        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\components\\\\ProjectTable.tsx\",\n        lineNumber: 10,\n        columnNumber: 5\n    }, this);\n}\n//# sourceURL=[module]\n//# sourc
+eMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHNzcikvLi9jb21wb25lbnRzL1Byb2plY3RUYWJsZS50c3giLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFFNkI7QUFDZTtBQUVvQjtBQUVqRCxTQUFTSyxhQUFhLEVBQUV
+DLEtBQUssRUFBd0I7SUFDbEUscUJBQ0UsOERBQUNDO1FBQUlDLFdBQVU7OzBCQUNiLDhEQUFDRDtnQkFBSUMsV0FBVTs7a0NBQWEsOERBQUNDO2tDQUFLOzs7Ozs7a0NBQWMsOERBQUNBO2tDQUFLOzs7Ozs7a0NBQWlCLDhEQUFDQTtrQ0FBSzs7Ozs7O2tDQUFXLDhEQUFDQTtrQ0FBS
+zs7Ozs7O2tDQUFhLDhEQUFDQTtrQ0FBSzs7Ozs7O2tDQUFXLDhEQUFDQTtrQ0FBSzs7Ozs7O2tDQUFhLDhEQUFDQTs7Ozs7Ozs7Ozs7WUFDL0lILE1BQU1JLEdBQUcsQ0FBQyxDQUFDQyxrQkFDViw4REFBQ1gsa0RBQUlBO29CQUFDUSxXQUFVO29CQUFjSSxNQUFNLENBQUMsU0FBUyx
+FQUFFRCxFQUFFRSxJQUFJLEVBQUU7O3NDQUN0RCw4REFBQ047NEJBQUlDLFdBQVU7OzhDQUFlLDhEQUFDRDtvQ0FBSUMsV0FBVTs7d0NBQ3hDRyxFQUFFRyxJQUFJLGlCQUNMLDhEQUFDQzs0Q0FDQ0MsS0FBS0wsRUFBRUcsSUFBSTs0Q0FDWEcsS0FBS04sRUFBRU8sSUFBSTs0Q0FDW
+EMsU0FBUTs0Q0FDUkMsU0FBUyxDQUFDQztnREFDUkEsRUFBRUMsYUFBYSxDQUFDQyxLQUFLLENBQUNDLE9BQU8sR0FBRztnREFDaENILEVBQUVDLGFBQWEsQ0FBQ0csa0JBQWtCLEVBQUVDLFVBQVVDLE9BQU87NENBQ3ZEOzs7OzttREFFQTtzREFDSiw4REFBQ2xCOzRDQUFLRCxXQUF
+XRyxFQUFFRyxJQUFJLEdBQUcsV0FBVztzREFBS1gsdURBQVFBLENBQUNRLEVBQUVPLElBQUk7Ozs7Ozs7Ozs7Ozs4Q0FDckQsOERBQUNYOztzREFBSSw4REFBQ3FCO3NEQUFRakIsRUFBRU8sSUFBSTs7Ozs7O3NEQUFVLDhEQUFDVztzREFBT3pCLHVEQUFRQSxDQUFDTyxFQUFFbUIsV
+0FBVyxFQUFFOzs7Ozs7Ozs7Ozs7Ozs7Ozs7c0NBQ3RFLDhEQUFDdkI7NEJBQUlDLFdBQVU7c0NBQVNHLEVBQUVvQixLQUFLOzs7Ozs7c0NBQy9CLDhEQUFDeEI7c0NBQUksNEVBQUNFO2dDQUFLRCxXQUFVOzBDQUFhRyxFQUFFcUIsS0FBSzs7Ozs7Ozs7Ozs7c0NBQ3pDLDhEQUFDekI
+7NEJBQUlDLFdBQVU7c0NBQVNHLEVBQUVzQixNQUFNLEdBQUcsTUFBTXRCLEVBQUVzQixNQUFNLEdBQUc7Ozs7OztzQ0FDcEQsOERBQUMxQjs0QkFBSUMsV0FBVTtzQ0FBU04seURBQVVBLENBQUNTLEVBQUV1QixJQUFJOzs7Ozs7c0NBQ3pDLDhEQUFDM0I7c0NBQUksNEVBQUNFO2dDQ
+UFLRCxXQUFXLENBQUMsWUFBWSxFQUFFRyxFQUFFd0IsTUFBTSxDQUFDQyxXQUFXLElBQUk7MENBQUd6QixFQUFFd0IsTUFBTTs7Ozs7Ozs7Ozs7c0NBQ3hFLDhEQUFDbEMsd0ZBQVlBOzRCQUFDTyxXQUFVOzRCQUFZNkIsTUFBTTs7Ozs7OzttQkFwQm1CMUIsRUFBRTJCLEVBQUU7Ozs
+7Ozs7Ozs7O0FBeUIzRSIsInNvdXJjZXMiOlsiQzpcXFVzZXJzXFxTYXNhXFxEZXNrdG9wXFzQstCy0LJcXGNvbXBvbmVudHNcXFByb2plY3RUYWJsZS50c3giXSwic291cmNlc0NvbnRlbnQiOlsiXCJ1c2UgY2xpZW50XCI7XG5cbmltcG9ydCBMaW5rIGZyb20gXCJuZXh0L2xpbmtcI
+jtcbmltcG9ydCB7IENoZXZyb25SaWdodCB9IGZyb20gXCJsdWNpZGUtcmVhY3RcIjtcbmltcG9ydCB7IFByb2plY3QgfSBmcm9tIFwiQC9kYXRhL3Byb2plY3RzXCI7XG5pbXBvcnQgeyBmb3JtYXREYXRlLCBpbml0aWFscywgdHJ1bmNhdGUgfSBmcm9tIFwiQC9saWIvcHJvamVjdHN
+cIjtcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gUHJvamVjdFRhYmxlKHsgaXRlbXMgfTogeyBpdGVtczogUHJvamVjdFtdIH0pIHtcbiAgcmV0dXJuIChcbiAgICA8ZGl2IGNsYXNzTmFtZT1cInRhYmxlLWNhcmRcIj5cbiAgICAgIDxkaXYgY2xhc3NOYW1lPVwidGFibGUtaGVhZ
+FwiPjxzcGFuPlByb2plY3Q8L3NwYW4+PHNwYW4+QmxvY2tjaGFpbjwvc3Bhbj48c3Bhbj5UeXBlPC9zcGFuPjxzcGFuPlJld2FyZDwvc3Bhbj48c3Bhbj5EYXRlPC9zcGFuPjxzcGFuPlN0YXR1czwvc3Bhbj48c3Bhbj48L3NwYW4+PC9kaXY+XG4gICAgICB7aXRlbXMubWFwKChwKSA
+9PiAoXG4gICAgICAgIDxMaW5rIGNsYXNzTmFtZT1cInByb2plY3Qtcm93XCIgaHJlZj17YC9wcm9qZWN0LyR7cC5zbHVnfWB9IGtleT17cC5pZH0+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJwcm9qZWN0LWNlbGxcIj48ZGl2IGNsYXNzTmFtZT1cInByb2plY3QtaWNvblwiP
+lxuICAgICAgICAgICAgICB7cC5sb2dvID8gKFxuICAgICAgICAgICAgICAgIDxpbWdcbiAgICAgICAgICAgICAgICAgIHNyYz17cC5sb2dvfVxuICAgICAgICAgICAgICAgICAgYWx0PXtwLm5hbWV9XG4gICAgICAgICAgICAgICAgICBsb2FkaW5nPVwibGF6eVwiXG4gICAgICAgICA
+gICAgICAgICBvbkVycm9yPXsoZSkgPT4ge1xuICAgICAgICAgICAgICAgICAgICBlLmN1cnJlbnRUYXJnZXQuc3R5bGUuZGlzcGxheSA9IFwibm9uZVwiO1xuICAgICAgICAgICAgICAgICAgICBlLmN1cnJlbnRUYXJnZXQubmV4dEVsZW1lbnRTaWJsaW5nPy5jbGFzc0xpc3QucmVtb
+3ZlKFwiaGlkZGVuXCIpO1xuICAgICAgICAgICAgICAgICAgfX1cbiAgICAgICAgICAgICAgICAvPlxuICAgICAgICAgICAgICApIDogbnVsbH1cbiAgICAgICAgICAgICAgPHNwYW4gY2xhc3NOYW1lPXtwLmxvZ28gPyBcImhpZGRlblwiIDogXCJcIn0+e2luaXRpYWxzKHAubmFtZSl
+9PC9zcGFuPlxuICAgICAgICAgICAgPC9kaXY+PGRpdj48c3Ryb25nPntwLm5hbWV9PC9zdHJvbmc+PHNtYWxsPnt0cnVuY2F0ZShwLmRlc2NyaXB0aW9uLCA0MCl9PC9zbWFsbD48L2Rpdj48L2Rpdj5cbiAgICAgICAgICA8ZGl2IGNsYXNzTmFtZT1cIm11dGVkXCI+e3AuY2hhaW59P
+C9kaXY+XG4gICAgICAgICAgPGRpdj48c3BhbiBjbGFzc05hbWU9XCJ0eXBlLXBpbGxcIj57cC5ldmVudH08L3NwYW4+PC9kaXY+XG4gICAgICAgICAgPGRpdiBjbGFzc05hbWU9XCJtdXRlZFwiPntwLnN5bWJvbCA/IFwiJFwiICsgcC5zeW1ib2wgOiBcIlRCQVwifTwvZGl2PlxuICA
+gICAgICAgIDxkaXYgY2xhc3NOYW1lPVwibXV0ZWRcIj57Zm9ybWF0RGF0ZShwLmRhdGUpfTwvZGl2PlxuICAgICAgICAgIDxkaXY+PHNwYW4gY2xhc3NOYW1lPXtgc3RhdHVzLXBpbGwgJHtwLnN0YXR1cy50b0xvd2VyQ2FzZSgpfWB9PntwLnN0YXR1c308L3NwYW4+PC9kaXY+XG4gI
+CAgICAgICAgPENoZXZyb25SaWdodCBjbGFzc05hbWU9XCJyb3ctYXJyb3dcIiBzaXplPXsxN30vPlxuICAgICAgICA8L0xpbms+XG4gICAgICApKX1cbiAgICA8L2Rpdj5cbiAgKTtcbn1cclxuXHJcblxyXG4iXSwibmFtZXMiOlsiTGluayIsIkNoZXZyb25SaWdodCIsImZvcm1hdER
+hdGUiLCJpbml0aWFscyIsInRydW5jYXRlIiwiUHJvamVjdFRhYmxlIiwiaXRlbXMiLCJkaXYiLCJjbGFzc05hbWUiLCJzcGFuIiwibWFwIiwicCIsImhyZWYiLCJzbHVnIiwibG9nbyIsImltZyIsInNyYyIsImFsdCIsIm5hbWUiLCJsb2FkaW5nIiwib25FcnJvciIsImUiLCJjdXJyZ
+W50VGFyZ2V0Iiwic3R5bGUiLCJkaXNwbGF5IiwibmV4dEVsZW1lbnRTaWJsaW5nIiwiY2xhc3NMaXN0IiwicmVtb3ZlIiwic3Ryb25nIiwic21hbGwiLCJkZXNjcmlwdGlvbiIsImNoYWluIiwiZXZlbnQiLCJzeW1ib2wiLCJkYXRlIiwic3RhdHVzIiwidG9Mb3dlckNhc2UiLCJzaXp
+lIiwiaWQiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(ssr)/./components/ProjectTable.tsx\n");
+.next\server\app\page.js:228:eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   cardActions: () => (/* binding */ cardAction
+s),\n/* harmony export */   formatDate: () => (/* binding */ formatDate),\n/* harmony export */   getProject: () => (/* binding */ getProject),\n/* harmony export */   getProjects: () => (/* binding */ getProjects)
+,\n/* harmony export */   initials: () => (/* binding */ initials),\n/* harmony export */   shortAction: () => (/* binding */ shortAction),\n/* harmony export */   truncate: () => (/* binding */ truncate)\n/* harmo
+ny export */ });\n/* harmony import */ var _data_projects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/data/projects */ \"(ssr)/./data/projects.ts\");\n\nasync function getProjects() {\n    return _data
+_projects__WEBPACK_IMPORTED_MODULE_0__.projects;\n}\nasync function getProject(slug) {\n    const items = await getProjects();\n    return items.find((project)=>project.slug === slug);\n}\nfunction formatDate(date)
+ {\n    if (!date) return \"TBA\";\n    const parsed = new Date(`${date}T12:00:00`);\n    if (Number.isNaN(parsed.getTime())) return \"TBA\";\n    return new Intl.DateTimeFormat(\"en-US\", {\n        month: \"short
+\",\n        day: \"numeric\",\n        year: \"numeric\"\n    }).format(parsed);\n}\nfunction initials(name) {\n    return name.slice(0, 2).toUpperCase();\n}\nfunction truncate(text, max) {\n    if (!text || text.
+length <= max) return text;\n    const cut = text.slice(0, max);\n    const lastSpace = cut.lastIndexOf(' ');\n    return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut).trim() + '...';\n}\nfunction shortAction(tex
+t) {\n    const parts = text.split(\":\");\n    if (parts.length >= 2) return parts[1].trim();\n    return text.length > 30 ? text.slice(0, 30).trim() + \"...\" : text;\n}\nfunction cardActions(actions) {\n    if (
+!actions || !actions.length) return \"\";\n    return actions.slice(0, 3).map(shortAction).join(\", \");\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozL
+CJmaWxlIjoiKHNzcikvLi9saWIvcHJvamVjdHMudHMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBd0U7QUFFakUsZUFBZUU7SUFDcEIsT0FBT0Qsb0RBQVdBO0FBQ3BCO0FBRU8sZUFBZUUsV0FBV0MsSUFBWTtJQUMzQyxNQUFNQyxRQUFRLE1BQU1IO0lBQ3BCLE9BQU9HLE1BQU1
+DLElBQUksQ0FBQyxDQUFDQyxVQUFZQSxRQUFRSCxJQUFJLEtBQUtBO0FBQ2xEO0FBRU8sU0FBU0ksV0FBV0MsSUFBWTtJQUNyQyxJQUFJLENBQUNBLE1BQU0sT0FBTztJQUNsQixNQUFNQyxTQUFTLElBQUlDLEtBQUssR0FBR0YsS0FBSyxTQUFTLENBQUM7SUFDMUMsSUFBSUcsT0FBT
+0MsS0FBSyxDQUFDSCxPQUFPSSxPQUFPLEtBQUssT0FBTztJQUMzQyxPQUFPLElBQUlDLEtBQUtDLGNBQWMsQ0FBQyxTQUFTO1FBQUVDLE9BQU87UUFBU0MsS0FBSztRQUFXQyxNQUFNO0lBQVUsR0FBR0MsTUFBTSxDQUFDVjtBQUN0RztBQUVPLFNBQVNXLFNBQVNDLElBQVk7SUFBSSx
+PQUFPQSxLQUFLQyxLQUFLLENBQUMsR0FBRyxHQUFHQyxXQUFXO0FBQUk7QUFDekUsU0FBU0MsU0FBU0MsSUFBWSxFQUFFQyxHQUFXO0lBQ2hELElBQUksQ0FBQ0QsUUFBUUEsS0FBS0UsTUFBTSxJQUFJRCxLQUFLLE9BQU9EO0lBQ3hDLE1BQU1HLE1BQU1ILEtBQUtILEtBQUssQ0FBQ
+yxHQUFHSTtJQUMxQixNQUFNRyxZQUFZRCxJQUFJRSxXQUFXLENBQUM7SUFDbEMsT0FBTyxDQUFDRCxZQUFZLElBQUlELElBQUlOLEtBQUssQ0FBQyxHQUFHTyxhQUFhRCxHQUFFLEVBQUdHLElBQUksS0FBSztBQUNsRTtBQUVPLFNBQVNDLFlBQVlQLElBQVk7SUFDdEMsTUFBTVEsUUF
+BUVIsS0FBS1MsS0FBSyxDQUFDO0lBQ3pCLElBQUlELE1BQU1OLE1BQU0sSUFBSSxHQUFHLE9BQU9NLEtBQUssQ0FBQyxFQUFFLENBQUNGLElBQUk7SUFDM0MsT0FBT04sS0FBS0UsTUFBTSxHQUFHLEtBQUtGLEtBQUtILEtBQUssQ0FBQyxHQUFHLElBQUlTLElBQUksS0FBSyxRQUFRT
+jtBQUMvRDtBQUVPLFNBQVNVLFlBQVlDLE9BQWtCO0lBQzVDLElBQUksQ0FBQ0EsV0FBVyxDQUFDQSxRQUFRVCxNQUFNLEVBQUUsT0FBTztJQUN4QyxPQUFPUyxRQUFRZCxLQUFLLENBQUMsR0FBRyxHQUFHZSxHQUFHLENBQUNMLGFBQWFNLElBQUksQ0FBQztBQUNuRCIsInNvdXJjZXM
+iOlsiQzpcXFVzZXJzXFxTYXNhXFxEZXNrdG9wXFzQstCy0LJcXGxpYlxccHJvamVjdHMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgcHJvamVjdHMgYXMgYWxsUHJvamVjdHMsIHR5cGUgUHJvamVjdCB9IGZyb20gXCJAL2RhdGEvcHJvamVjdHNcIjtcclxuXHJcbmV4c
+G9ydCBhc3luYyBmdW5jdGlvbiBnZXRQcm9qZWN0cygpOiBQcm9taXNlPFByb2plY3RbXT4ge1xyXG4gIHJldHVybiBhbGxQcm9qZWN0cztcclxufVxyXG5cclxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldFByb2plY3Qoc2x1Zzogc3RyaW5nKSB7XHJcbiAgY29uc3QgaXRlbXMgPSB
+hd2FpdCBnZXRQcm9qZWN0cygpO1xyXG4gIHJldHVybiBpdGVtcy5maW5kKChwcm9qZWN0KSA9PiBwcm9qZWN0LnNsdWcgPT09IHNsdWcpO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gZm9ybWF0RGF0ZShkYXRlOiBzdHJpbmcpIHtcclxuICBpZiAoIWRhdGUpIHJldHVybiBcI
+lRCQVwiO1xyXG4gIGNvbnN0IHBhcnNlZCA9IG5ldyBEYXRlKGAke2RhdGV9VDEyOjAwOjAwYCk7XHJcbiAgaWYgKE51bWJlci5pc05hTihwYXJzZWQuZ2V0VGltZSgpKSkgcmV0dXJuIFwiVEJBXCI7XHJcbiAgcmV0dXJuIG5ldyBJbnRsLkRhdGVUaW1lRm9ybWF0KFwiZW4tVVNcIiw
+geyBtb250aDogXCJzaG9ydFwiLCBkYXk6IFwibnVtZXJpY1wiLCB5ZWFyOiBcIm51bWVyaWNcIiB9KS5mb3JtYXQocGFyc2VkKTtcclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIGluaXRpYWxzKG5hbWU6IHN0cmluZykgeyByZXR1cm4gbmFtZS5zbGljZSgwLCAyKS50b1VwcGVyQ
+2FzZSgpOyB9XHJcbmV4cG9ydCBmdW5jdGlvbiB0cnVuY2F0ZSh0ZXh0OiBzdHJpbmcsIG1heDogbnVtYmVyKSB7XHJcbiAgaWYgKCF0ZXh0IHx8IHRleHQubGVuZ3RoIDw9IG1heCkgcmV0dXJuIHRleHQ7XHJcbiAgY29uc3QgY3V0ID0gdGV4dC5zbGljZSgwLCBtYXgpO1xyXG4gIGN
+vbnN0IGxhc3RTcGFjZSA9IGN1dC5sYXN0SW5kZXhPZignICcpO1xyXG4gIHJldHVybiAobGFzdFNwYWNlID4gMCA/IGN1dC5zbGljZSgwLCBsYXN0U3BhY2UpIDogY3V0KS50cmltKCkgKyAnLi4uJztcclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIHNob3J0QWN0aW9uKHRleHQ6I
+HN0cmluZykge1xyXG4gIGNvbnN0IHBhcnRzID0gdGV4dC5zcGxpdChcIjpcIik7XHJcbiAgaWYgKHBhcnRzLmxlbmd0aCA+PSAyKSByZXR1cm4gcGFydHNbMV0udHJpbSgpO1xyXG4gIHJldHVybiB0ZXh0Lmxlbmd0aCA+IDMwID8gdGV4dC5zbGljZSgwLCAzMCkudHJpbSgpICsgXCI
+uLi5cIiA6IHRleHQ7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBjYXJkQWN0aW9ucyhhY3Rpb25zPzogc3RyaW5nW10pIHtcclxuICBpZiAoIWFjdGlvbnMgfHwgIWFjdGlvbnMubGVuZ3RoKSByZXR1cm4gXCJcIjtcclxuICByZXR1cm4gYWN0aW9ucy5zbGljZSgwLCAzKS5tY
+XAoc2hvcnRBY3Rpb24pLmpvaW4oXCIsIFwiKTtcclxufVxyXG4iXSwibmFtZXMiOlsicHJvamVjdHMiLCJhbGxQcm9qZWN0cyIsImdldFByb2plY3RzIiwiZ2V0UHJvamVjdCIsInNsdWciLCJpdGVtcyIsImZpbmQiLCJwcm9qZWN0IiwiZm9ybWF0RGF0ZSIsImRhdGUiLCJwYXJzZWQ
+iLCJEYXRlIiwiTnVtYmVyIiwiaXNOYU4iLCJnZXRUaW1lIiwiSW50bCIsIkRhdGVUaW1lRm9ybWF0IiwibW9udGgiLCJkYXkiLCJ5ZWFyIiwiZm9ybWF0IiwiaW5pdGlhbHMiLCJuYW1lIiwic2xpY2UiLCJ0b1VwcGVyQ2FzZSIsInRydW5jYXRlIiwidGV4dCIsIm1heCIsImxlbmd0a
+CIsImN1dCIsImxhc3RTcGFjZSIsImxhc3RJbmRleE9mIiwidHJpbSIsInNob3J0QWN0aW9uIiwicGFydHMiLCJzcGxpdCIsImNhcmRBY3Rpb25zIiwiYWN0aW9ucyIsIm1hcCIsImpvaW4iXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack
+-internal:///(ssr)/./lib/projects.ts\n");
+.next\server\app\calendar\page.js:22:eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Ca
+lendar),\n/* harmony export */   metadata: () => (/* binding */ metadata)\n/* harmony export */ });\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react/jsx-d
+ev-runtime */ \"(rsc)/./node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js\");\n/* harmony import */ var react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0___default = /*#__PUR
+E__*/__webpack_require__.n(react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _data_projects__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/data/projects */ \"(rsc)/./data/proj
+ects.ts\");\n/* harmony import */ var _lib_projects__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/lib/projects */ \"(rsc)/./lib/projects.ts\");\n\n\n\nconst metadata = {\n    title: \"Calendar\"\n};\nfun
+ction Calendar() {\n    return /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"main\", {\n        className: \"page container\",\n        children: [\n            /*#__PURE__*/ (0,reac
+t_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"page-head\",\n                children: [\n                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTE
+D_MODULE_0__.jsxDEV)(\"div\", {\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n
+    className: \"section-kicker\",\n                                children: \"DROP CALENDAR\"\n                            }, void 0, false, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\D
+esktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n                                lineNumber: 7,\n                                columnNumber: 75\n                            }, this),\n
+/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h1\", {\n                                children: \"September 2026\"\n                            }, void 0, false, {\n
+                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n                                lineNumber: 7,\n                                columnNumber: 126\n
+              }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"p\", {\n                                children: \"Snapshots, TGE dates, claims an
+d airdrop events.\"\n                            }, void 0, false, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n
+     lineNumber: 7,\n                                columnNumber: 149\n                            }, this)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"C
+:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n                        lineNumber: 7,\n                        columnNumber: 70\n                    }, this),\n                    /*#__PURE
+__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"calendar-nav large\",\n                        children: [\n                            /*#__PURE_
+_*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                children: \"←\"\n                            }, void 0, false, {\n                                fil
+eName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n                                lineNumber: 7,\n                                columnNumber: 246\n                            }, th
+is),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"button\", {\n                                children: \"→\"\n                            }, void 0, f
+alse, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n                                lineNumber: 7,\n                                columnNu
+mber: 264\n                            }, this)\n                        ]\n                    }, void 0, true, {\n                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\pa
+ge.tsx\",\n                        lineNumber: 7,\n                        columnNumber: 210\n                    }, this)\n                ]\n            }, void 0, true, {\n                fileName: \"C:\\\\Users
+\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n                lineNumber: 7,\n                columnNumber: 43\n            }, this),\n            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMP
+ORTED_MODULE_0__.jsxDEV)(\"div\", {\n                className: \"event-list\",\n                children: _data_projects__WEBPACK_IMPORTED_MODULE_1__.projects.map((p)=>/*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPA
+CK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                        className: \"event-card\",\n                        children: [\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORT
+ED_MODULE_0__.jsxDEV)(\"div\", {\n                                className: \"event-date-big\",\n                                children: [\n                                    /*#__PURE__*/ (0,react_jsx_dev_runt
+ime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"b\", {\n                                        children: p.date ? new Date(p.date + \"T12:00:00\").getDate() : \"TBA\"\n                                    }, void 0, fal
+se, {\n                                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n                                        lineNumber: 7,\n
+              columnNumber: 410\n                                    }, this),\n                                    p.date && /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\
+n                                        children: new Date(p.date + \"T12:00:00\").toLocaleString(\"en-US\", {\n                                            month: \"short\"\n
+ }).toUpperCase()\n                                    }, void 0, false, {\n                                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n
+                           lineNumber: 7,\n                                        columnNumber: 479\n                                    }, this)\n                                ]\n                            },
+void 0, true, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n                                lineNumber: 7,\n
+columnNumber: 378\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"div\", {\n                                children
+: [\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"h3\", {\n                                        children: p.name\n
+        }, void 0, false, {\n                                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n                                        lineNumber: 7,\n
+                                    columnNumber: 588\n                                    }, this),\n                                    /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(
+\"p\", {\n                                        children: [\n                                            p.event,\n                                            \" \\xb7 \",\n
+     p.chain\n                                        ]\n                                    }, void 0, true, {\n                                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\c
+alendar\\\\page.tsx\",\n                                        lineNumber: 7,\n                                        columnNumber: 605\n                                    }, this)\n
+   ]\n                            }, void 0, true, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n                                lineNumber:
+ 7,\n                                columnNumber: 583\n                            }, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n
+                              className: `status-pill ${p.status.toLowerCase()}`,\n                                children: p.status\n                            }, void 0, false, {\n
+  fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n                                lineNumber: 7,\n                                columnNumber: 639\n
+}, this),\n                            /*#__PURE__*/ (0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxDEV)(\"span\", {\n                                className: \"muted\",\n
+ children: (0,_lib_projects__WEBPACK_IMPORTED_MODULE_2__.formatDate)(p.date)\n                            }, void 0, false, {\n                                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\ap
+p\\\\calendar\\\\page.tsx\",\n                                lineNumber: 7,\n                                columnNumber: 714\n                            }, this)\n                        ]\n
+}, p.id, true, {\n                        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n                        lineNumber: 7,\n                        columnNumber: 339\n
+                }, this))\n            }, void 0, false, {\n                fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n                lineNumber: 7,\n                colum
+nNumber: 294\n            }, this)\n        ]\n    }, void 0, true, {\n        fileName: \"C:\\\\Users\\\\Sasa\\\\Desktop\\\\ввв\\\\app\\\\calendar\\\\page.tsx\",\n        lineNumber: 7,\n        columnNumber: 10\n
+    }, this);\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9hcHAvY2FsZW5kYXIvcGFnZS50c3giLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQUEyQztB
+QUNDO0FBRXJDLE1BQU1FLFdBQVc7SUFBRUMsT0FBTztBQUFXLEVBQUU7QUFFL0IsU0FBU0M7SUFDdEIscUJBQU8sOERBQUNDO1FBQUtDLFdBQVU7OzBCQUFpQiw4REFBQ0M7Z0JBQUlELFdBQVU7O2tDQUFZLDhEQUFDQzs7MENBQUksOERBQUNBO2dDQUFJRCxXQUFVOzBDQUFpQjs7Oz
+s7OzBDQUFtQiw4REFBQ0U7MENBQUc7Ozs7OzswQ0FBbUIsOERBQUNDOzBDQUFFOzs7Ozs7Ozs7Ozs7a0NBQTBELDhEQUFDRjt3QkFBSUQsV0FBVTs7MENBQXFCLDhEQUFDSTswQ0FBTzs7Ozs7OzBDQUFVLDhEQUFDQTswQ0FBTzs7Ozs7Ozs7Ozs7Ozs7Ozs7OzBCQUFzQiw4REFBQ0g7
+Z0JBQUlELFdBQVU7MEJBQWNOLG9EQUFRQSxDQUFDVyxHQUFHLENBQUNGLENBQUFBLGtCQUFHLDhEQUFDRjt3QkFBSUQsV0FBVTs7MENBQXdCLDhEQUFDQztnQ0FBSUQsV0FBVTs7a0RBQWlCLDhEQUFDTTtrREFBR0gsRUFBRUksSUFBSSxHQUFDLElBQUlDLEtBQUtMLEVBQUVJLElBQU
+ksR0FBQyxhQUFhRSxPQUFPLEtBQUc7Ozs7OztvQ0FBV04sRUFBRUksSUFBSSxrQkFBRSw4REFBQ0c7a0RBQU0sSUFBSUYsS0FBS0wsRUFBRUksSUFBSSxHQUFDLGFBQWFJLGNBQWMsQ0FBQyxTQUFROzRDQUFDQyxPQUFNO3dDQUFPLEdBQUdDLFdBQVc7Ozs7Ozs7Ozs7OzswQ0FBaUIs
+OERBQUNaOztrREFBSSw4REFBQ2E7a0RBQUlYLEVBQUVZLElBQUk7Ozs7OztrREFBTSw4REFBQ1o7OzRDQUFHQSxFQUFFYSxLQUFLOzRDQUFDOzRDQUFJYixFQUFFYyxLQUFLOzs7Ozs7Ozs7Ozs7OzBDQUFXLDhEQUFDUDtnQ0FBS1YsV0FBVyxDQUFDLFlBQVksRUFBRUcsRUFBRWUsTU
+FBTSxDQUFDQyxXQUFXLElBQUk7MENBQUdoQixFQUFFZSxNQUFNOzs7Ozs7MENBQVEsOERBQUNSO2dDQUFLVixXQUFVOzBDQUFTTCx5REFBVUEsQ0FBQ1EsRUFBRUksSUFBSTs7Ozs7Ozt1QkFBaFlKLEVBQUVpQixFQUFFOzs7Ozs7Ozs7Ozs7Ozs7O0FBQ3ZYIiwic291cmNlcyI6WyJD
+OlxcVXNlcnNcXFNhc2FcXERlc2t0b3BcXNCy0LLQslxcYXBwXFxjYWxlbmRhclxccGFnZS50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgcHJvamVjdHMgfSBmcm9tIFwiQC9kYXRhL3Byb2plY3RzXCI7XG5pbXBvcnQgeyBmb3JtYXREYXRlIH0gZnJvbSBcIkAvbGliL3
+Byb2plY3RzXCI7XG5cbmV4cG9ydCBjb25zdCBtZXRhZGF0YSA9IHsgdGl0bGU6IFwiQ2FsZW5kYXJcIiB9O1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBDYWxlbmRhcigpIHtcbiAgcmV0dXJuIDxtYWluIGNsYXNzTmFtZT1cInBhZ2UgY29udGFpbmVyXCI+PGRpdiBjbGFzc05h
+bWU9XCJwYWdlLWhlYWRcIj48ZGl2PjxkaXYgY2xhc3NOYW1lPVwic2VjdGlvbi1raWNrZXJcIj5EUk9QIENBTEVOREFSPC9kaXY+PGgxPlNlcHRlbWJlciAyMDI2PC9oMT48cD5TbmFwc2hvdHMsIFRHRSBkYXRlcywgY2xhaW1zIGFuZCBhaXJkcm9wIGV2ZW50cy48L3A+PC9kaXY+PG
+RpdiBjbGFzc05hbWU9XCJjYWxlbmRhci1uYXYgbGFyZ2VcIj48YnV0dG9uPuKGkDwvYnV0dG9uPjxidXR0b24+4oaSPC9idXR0b24+PC9kaXY+PC9kaXY+PGRpdiBjbGFzc05hbWU9XCJldmVudC1saXN0XCI+e3Byb2plY3RzLm1hcChwPT48ZGl2IGNsYXNzTmFtZT1cImV2ZW50LWNh
+cmRcIiBrZXk9e3AuaWR9PjxkaXYgY2xhc3NOYW1lPVwiZXZlbnQtZGF0ZS1iaWdcIj48Yj57cC5kYXRlP25ldyBEYXRlKHAuZGF0ZStcIlQxMjowMDowMFwiKS5nZXREYXRlKCk6XCJUQkFcIn08L2I+e3AuZGF0ZSYmPHNwYW4+e25ldyBEYXRlKHAuZGF0ZStcIlQxMjowMDowMFwiKS
+50b0xvY2FsZVN0cmluZyhcImVuLVVTXCIse21vbnRoOlwic2hvcnRcIn0pLnRvVXBwZXJDYXNlKCl9PC9zcGFuPn08L2Rpdj48ZGl2PjxoMz57cC5uYW1lfTwvaDM+PHA+e3AuZXZlbnR9IMK3IHtwLmNoYWlufTwvcD48L2Rpdj48c3BhbiBjbGFzc05hbWU9e2BzdGF0dXMtcGlsbCAk
+e3Auc3RhdHVzLnRvTG93ZXJDYXNlKCl9YH0+e3Auc3RhdHVzfTwvc3Bhbj48c3BhbiBjbGFzc05hbWU9XCJtdXRlZFwiPntmb3JtYXREYXRlKHAuZGF0ZSl9PC9zcGFuPjwvZGl2Pil9PC9kaXY+PC9tYWluPlxufSJdLCJuYW1lcyI6WyJwcm9qZWN0cyIsImZvcm1hdERhdGUiLCJtZX
+RhZGF0YSIsInRpdGxlIiwiQ2FsZW5kYXIiLCJtYWluIiwiY2xhc3NOYW1lIiwiZGl2IiwiaDEiLCJwIiwiYnV0dG9uIiwibWFwIiwiYiIsImRhdGUiLCJEYXRlIiwiZ2V0RGF0ZSIsInNwYW4iLCJ0b0xvY2FsZVN0cmluZyIsIm1vbnRoIiwidG9VcHBlckNhc2UiLCJoMyIsIm5hbWUi
+LCJldmVudCIsImNoYWluIiwic3RhdHVzIiwidG9Mb3dlckNhc2UiLCJpZCJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///(rsc)/./app/calendar/page.tsx\n");
+.next\server\app\calendar\page.js:110:eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   cardActions: () => (/* binding */ c
+ardActions),\n/* harmony export */   formatDate: () => (/* binding */ formatDate),\n/* harmony export */   getProject: () => (/* binding */ getProject),\n/* harmony export */   getProjects: () => (/* binding */ get
+Projects),\n/* harmony export */   initials: () => (/* binding */ initials),\n/* harmony export */   shortAction: () => (/* binding */ shortAction),\n/* harmony export */   truncate: () => (/* binding */ truncate)\
+n/* harmony export */ });\n/* harmony import */ var _data_projects__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/data/projects */ \"(rsc)/./data/projects.ts\");\n\nasync function getProjects() {\n    ret
+urn _data_projects__WEBPACK_IMPORTED_MODULE_0__.projects;\n}\nasync function getProject(slug) {\n    const items = await getProjects();\n    return items.find((project)=>project.slug === slug);\n}\nfunction formatD
+ate(date) {\n    if (!date) return \"TBA\";\n    const parsed = new Date(`${date}T12:00:00`);\n    if (Number.isNaN(parsed.getTime())) return \"TBA\";\n    return new Intl.DateTimeFormat(\"en-US\", {\n        month
+: \"short\",\n        day: \"numeric\",\n        year: \"numeric\"\n    }).format(parsed);\n}\nfunction initials(name) {\n    return name.slice(0, 2).toUpperCase();\n}\nfunction truncate(text, max) {\n    if (!text
+ || text.length <= max) return text;\n    const cut = text.slice(0, max);\n    const lastSpace = cut.lastIndexOf(' ');\n    return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut).trim() + '...';\n}\nfunction shortA
+ction(text) {\n    const parts = text.split(\":\");\n    if (parts.length >= 2) return parts[1].trim();\n    return text.length > 30 ? text.slice(0, 30).trim() + \"...\" : text;\n}\nfunction cardActions(actions) {\
+n    if (!actions || !actions.length) return \"\";\n    return actions.slice(0, 3).map(shortAction).join(\", \");\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJz
+aW9uIjozLCJmaWxlIjoiKHJzYykvLi9saWIvcHJvamVjdHMudHMiLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7QUFBd0U7QUFFakUsZUFBZUU7SUFDcEIsT0FBT0Qsb0RBQVdBO0FBQ3BCO0FBRU8sZUFBZUUsV0FBV0MsSUFBWTtJQUMzQyxNQUFNQyxRQUFRLE1BQU1IO0lBQ3BCLE9BQU
+9HLE1BQU1DLElBQUksQ0FBQyxDQUFDQyxVQUFZQSxRQUFRSCxJQUFJLEtBQUtBO0FBQ2xEO0FBRU8sU0FBU0ksV0FBV0MsSUFBWTtJQUNyQyxJQUFJLENBQUNBLE1BQU0sT0FBTztJQUNsQixNQUFNQyxTQUFTLElBQUlDLEtBQUssR0FBR0YsS0FBSyxTQUFTLENBQUM7SUFDMUMsSUFB
+SUcsT0FBT0MsS0FBSyxDQUFDSCxPQUFPSSxPQUFPLEtBQUssT0FBTztJQUMzQyxPQUFPLElBQUlDLEtBQUtDLGNBQWMsQ0FBQyxTQUFTO1FBQUVDLE9BQU87UUFBU0MsS0FBSztRQUFXQyxNQUFNO0lBQVUsR0FBR0MsTUFBTSxDQUFDVjtBQUN0RztBQUVPLFNBQVNXLFNBQVNDLElBQV
+k7SUFBSSxPQUFPQSxLQUFLQyxLQUFLLENBQUMsR0FBRyxHQUFHQyxXQUFXO0FBQUk7QUFDekUsU0FBU0MsU0FBU0MsSUFBWSxFQUFFQyxHQUFXO0lBQ2hELElBQUksQ0FBQ0QsUUFBUUEsS0FBS0UsTUFBTSxJQUFJRCxLQUFLLE9BQU9EO0lBQ3hDLE1BQU1HLE1BQU1ILEtBQUtILEtB
+QUssQ0FBQyxHQUFHSTtJQUMxQixNQUFNRyxZQUFZRCxJQUFJRSxXQUFXLENBQUM7SUFDbEMsT0FBTyxDQUFDRCxZQUFZLElBQUlELElBQUlOLEtBQUssQ0FBQyxHQUFHTyxhQUFhRCxHQUFFLEVBQUdHLElBQUksS0FBSztBQUNsRTtBQUVPLFNBQVNDLFlBQVlQLElBQVk7SUFDdEMsTU
+FBTVEsUUFBUVIsS0FBS1MsS0FBSyxDQUFDO0lBQ3pCLElBQUlELE1BQU1OLE1BQU0sSUFBSSxHQUFHLE9BQU9NLEtBQUssQ0FBQyxFQUFFLENBQUNGLElBQUk7SUFDM0MsT0FBT04sS0FBS0UsTUFBTSxHQUFHLEtBQUtGLEtBQUtILEtBQUssQ0FBQyxHQUFHLElBQUlTLElBQUksS0FB
+SyxRQUFRTjtBQUMvRDtBQUVPLFNBQVNVLFlBQVlDLE9BQWtCO0lBQzVDLElBQUksQ0FBQ0EsV0FBVyxDQUFDQSxRQUFRVCxNQUFNLEVBQUUsT0FBTztJQUN4QyxPQUFPUyxRQUFRZCxLQUFLLENBQUMsR0FBRyxHQUFHZSxHQUFHLENBQUNMLGFBQWFNLElBQUksQ0FBQztBQUNuRCIsIn
+NvdXJjZXMiOlsiQzpcXFVzZXJzXFxTYXNhXFxEZXNrdG9wXFzQstCy0LJcXGxpYlxccHJvamVjdHMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHsgcHJvamVjdHMgYXMgYWxsUHJvamVjdHMsIHR5cGUgUHJvamVjdCB9IGZyb20gXCJAL2RhdGEvcHJvamVjdHNcIjtcclxu
+XHJcbmV4cG9ydCBhc3luYyBmdW5jdGlvbiBnZXRQcm9qZWN0cygpOiBQcm9taXNlPFByb2plY3RbXT4ge1xyXG4gIHJldHVybiBhbGxQcm9qZWN0cztcclxufVxyXG5cclxuZXhwb3J0IGFzeW5jIGZ1bmN0aW9uIGdldFByb2plY3Qoc2x1Zzogc3RyaW5nKSB7XHJcbiAgY29uc3QgaX
+RlbXMgPSBhd2FpdCBnZXRQcm9qZWN0cygpO1xyXG4gIHJldHVybiBpdGVtcy5maW5kKChwcm9qZWN0KSA9PiBwcm9qZWN0LnNsdWcgPT09IHNsdWcpO1xyXG59XHJcblxyXG5leHBvcnQgZnVuY3Rpb24gZm9ybWF0RGF0ZShkYXRlOiBzdHJpbmcpIHtcclxuICBpZiAoIWRhdGUpIHJl
+dHVybiBcIlRCQVwiO1xyXG4gIGNvbnN0IHBhcnNlZCA9IG5ldyBEYXRlKGAke2RhdGV9VDEyOjAwOjAwYCk7XHJcbiAgaWYgKE51bWJlci5pc05hTihwYXJzZWQuZ2V0VGltZSgpKSkgcmV0dXJuIFwiVEJBXCI7XHJcbiAgcmV0dXJuIG5ldyBJbnRsLkRhdGVUaW1lRm9ybWF0KFwiZW
+4tVVNcIiwgeyBtb250aDogXCJzaG9ydFwiLCBkYXk6IFwibnVtZXJpY1wiLCB5ZWFyOiBcIm51bWVyaWNcIiB9KS5mb3JtYXQocGFyc2VkKTtcclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIGluaXRpYWxzKG5hbWU6IHN0cmluZykgeyByZXR1cm4gbmFtZS5zbGljZSgwLCAyKS50
+b1VwcGVyQ2FzZSgpOyB9XHJcbmV4cG9ydCBmdW5jdGlvbiB0cnVuY2F0ZSh0ZXh0OiBzdHJpbmcsIG1heDogbnVtYmVyKSB7XHJcbiAgaWYgKCF0ZXh0IHx8IHRleHQubGVuZ3RoIDw9IG1heCkgcmV0dXJuIHRleHQ7XHJcbiAgY29uc3QgY3V0ID0gdGV4dC5zbGljZSgwLCBtYXgpO1
+xyXG4gIGNvbnN0IGxhc3RTcGFjZSA9IGN1dC5sYXN0SW5kZXhPZignICcpO1xyXG4gIHJldHVybiAobGFzdFNwYWNlID4gMCA/IGN1dC5zbGljZSgwLCBsYXN0U3BhY2UpIDogY3V0KS50cmltKCkgKyAnLi4uJztcclxufVxyXG5cclxuZXhwb3J0IGZ1bmN0aW9uIHNob3J0QWN0aW9u
+KHRleHQ6IHN0cmluZykge1xyXG4gIGNvbnN0IHBhcnRzID0gdGV4dC5zcGxpdChcIjpcIik7XHJcbiAgaWYgKHBhcnRzLmxlbmd0aCA+PSAyKSByZXR1cm4gcGFydHNbMV0udHJpbSgpO1xyXG4gIHJldHVybiB0ZXh0Lmxlbmd0aCA+IDMwID8gdGV4dC5zbGljZSgwLCAzMCkudHJpbS
+gpICsgXCIuLi5cIiA6IHRleHQ7XHJcbn1cclxuXHJcbmV4cG9ydCBmdW5jdGlvbiBjYXJkQWN0aW9ucyhhY3Rpb25zPzogc3RyaW5nW10pIHtcclxuICBpZiAoIWFjdGlvbnMgfHwgIWFjdGlvbnMubGVuZ3RoKSByZXR1cm4gXCJcIjtcclxuICByZXR1cm4gYWN0aW9ucy5zbGljZSgw
+LCAzKS5tYXAoc2hvcnRBY3Rpb24pLmpvaW4oXCIsIFwiKTtcclxufVxyXG4iXSwibmFtZXMiOlsicHJvamVjdHMiLCJhbGxQcm9qZWN0cyIsImdldFByb2plY3RzIiwiZ2V0UHJvamVjdCIsInNsdWciLCJpdGVtcyIsImZpbmQiLCJwcm9qZWN0IiwiZm9ybWF0RGF0ZSIsImRhdGUiLC
+JwYXJzZWQiLCJEYXRlIiwiTnVtYmVyIiwiaXNOYU4iLCJnZXRUaW1lIiwiSW50bCIsIkRhdGVUaW1lRm9ybWF0IiwibW9udGgiLCJkYXkiLCJ5ZWFyIiwiZm9ybWF0IiwiaW5pdGlhbHMiLCJuYW1lIiwic2xpY2UiLCJ0b1VwcGVyQ2FzZSIsInRydW5jYXRlIiwidGV4dCIsIm1heCIs
+Imxlbmd0aCIsImN1dCIsImxhc3RTcGFjZSIsImxhc3RJbmRleE9mIiwidHJpbSIsInNob3J0QWN0aW9uIiwicGFydHMiLCJzcGxpdCIsImNhcmRBY3Rpb25zIiwiYWN0aW9ucyIsIm1hcCIsImpvaW4iXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceUR
+L=webpack-internal:///(rsc)/./lib/projects.ts\n");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

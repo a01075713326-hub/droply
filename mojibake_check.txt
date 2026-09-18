@@ -1,0 +1,33 @@
+﻿import Link from "next/link";
+import { ArrowRight, Zap } from "lucide-react";
+import { getProjects } from "@/lib/projects";
+import ProjectTable from "@/components/ProjectTable";
+import CalendarCard from "@/components/CalendarCard";
+
+export const dynamic = "force-dynamic";
+
+export default async function Home() {
+  const projects = await getProjects();
+  const live = projects.filter((p) => p.status === "Live").length;
+  const week = projects.filter((p) => p.date && p.date >= new Date().toISOString().slice(0, 10)).length;
+  return <main>
+    <section className="hero container">
+      <div className="hero-copy">
+        <div className="eyebrow"><span className="pulse-dot"/> The crypto drop tracker</div>
+        <h1>Track what's<br/><em>dropping.</em></h1>
+        <p>Discover upcoming airdrops, snapshots,<br className="desktop"/> TGE and token claims. All in one place.</p>
+        <div className="hero-actions"><Link href="/airdrops" className="primary-btn">Explore drops <ArrowRight size={16}/></Link><Link href="/calendar" className="glass-btn">View calendar</Link></div>
+        <div className="stats"><div><b>{projects.length.toLocaleString()}</b><span>Tracked Drops</span></div><div><b>{week.toLocaleString()}</b><span>Upcoming</span></div><div><b>{live.toLocaleString()}</b><span>Live Drops</span></div></div>
+      </div>
+      <div className="hero-orb" aria-hidden="true"><div className="orb"/><div className="orb-ring ring-one"/><div className="orb-ring ring-two"/></div>
+      <div className="hero-side">
+        <div className="glass-card newsletter"><h3>Never miss a drop.</h3><p>Get the latest updates and verified information directly in your inbox.</p><div className="email-box"><input placeholder="Your email address"/><button>Р Р†РІР‚В РІР‚в„ў</button></div><div className="quick-links">{[["Airdrops","/airdrops"],["TGE","/calendar"],["Snapshots","/calendar"],["Claims","/airdrops?event=claim"]].map(([x,y])=><Link href={y} key={x}><span>Р Р†РІР‚вЂќР Р‰</span>{x}</Link>)}</div></div>
+        <CalendarCard/>
+      </div>
+    </section>
+    <section className="container"><div className="networks"><div className="section-kicker"><span>Р Р†РІР‚вЂќРІвЂљВ¬</span> TOP NETWORKS</div><div className="network-marquee"><div className="network-track">{[...["Base","Ethereum","Solana","Arbitrum","Aptos","TON"],...["Base","Ethereum","Solana","Arbitrum","Aptos","TON"]].map((x,i)=><Link href={`/airdrops?chain=${x}`} className="network-card" key={x+i}><img src={`https://icons.llamao.fi/icons/chains/rsz_${x.toLowerCase()}.jpg`} alt={x} className="chain-icon-img"/><div><b>{x}</b><small>Explore projects</small></div><ArrowRight size={14}/></Link>)}</div></div></div></section>
+    <section className="container content-grid"><div><div className="section-heading"><div><div className="section-kicker"><Zap size={16}/> LATEST DROPS</div><h2>What's happening next.</h2></div><Link href="/airdrops">View all Р Р†РІР‚В РІР‚в„ў</Link></div><ProjectTable items={projects.slice(0, 12)}/></div></section>
+    <footer className="footer container"><div className="brand"><span className="brand-mark"><span/></span><span>Droply</span></div><span>Track what's dropping.</span><div className="footer-links"><Link href="/airdrops">Airdrops</Link><Link href="/calendar">Calendar</Link><Link href="/airdrops">Projects</Link><Link href="/airdrops">Resources</Link></div><small>Р вЂ™Р’В© 2026 Droply.digital</small></footer>
+  </main>;
+}
+

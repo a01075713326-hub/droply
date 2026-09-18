@@ -1,0 +1,37 @@
+import Link from "next/link";
+import { ChevronDown, Search, Wallet } from "lucide-react";
+import DroplyMark from "./DroplyMark";
+
+export default function Header() {
+  return (
+    <header className="site-header">
+      <Link href="/" className="brand"><DroplyMark /><span>Droply</span></Link>
+      <nav className="desktop-nav">
+        <div className="nav-dropdown">
+          <button className="glass-btn nav-btn">Airdrops <ChevronDown size={15}/></button>
+          <div className="dropdown-panel">
+            <div className="drop-group-label">AIRDROPS</div>
+            <Link href="/airdrops?status=potential">◉ Potential Airdrops</Link>
+            <Link href="/airdrops?status=upcoming">◌ Upcoming Airdrops</Link>
+            <Link href="/airdrops?status=live">● Live Airdrops</Link>
+            <Link href="/airdrops?event=claim">✓ Claims</Link>
+            <div className="divider"/>
+            <div className="drop-group-label">BY BLOCKCHAIN</div>
+            {["Base","Solana","Ethereum","Arbitrum","Hyperliquid","Aptos","Sui","TON","ZKsync","Blast"].map((chain) =>
+              <Link href={`/airdrops?chain=${encodeURIComponent(chain)}`} key={chain}>{chain}</Link>
+            )}
+            <Link href="/airdrops" className="show-all">↗ Show all</Link>
+          </div>
+        </div>
+        <Link href="/calendar">Calendar</Link>
+        <Link href="/favorites">Favorites</Link>
+        <Link href="/airdrops">Projects</Link>
+        <Link href="/airdrops">Resources</Link>
+      </nav>
+      <div className="header-actions">
+        <button className="search-pill"><Search size={16}/><span>Search projects, chains, or keywords...</span><kbd>⌘K</kbd></button>
+        <button className="glass-btn wallet-btn"><Wallet size={15}/> Connect Wallet</button>
+      </div>
+    </header>
+  );
+}
