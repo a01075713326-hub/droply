@@ -1,4 +1,4 @@
-import path from "node:path";
+﻿import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -48,19 +48,19 @@ const NAMED_ENTITIES = {
   gt: ">",
   nbsp: " ",
   ndash: "-",
-  mdash: "—",
-  rarr: "→",
-  larr: "←",
-  hellip: "…",
+  mdash: "вЂ”",
+  rarr: "в†’",
+  larr: "в†ђ",
+  hellip: "вЂ¦",
   lsquo: "'",
   rsquo: "'",
   ldquo: '"',
   rdquo: '"',
-  trade: "™",
-  reg: "®",
-  copy: "©",
-  times: "×",
-  deg: "°",
+  trade: "в„ў",
+  reg: "В®",
+  copy: "В©",
+  times: "Г—",
+  deg: "В°",
 };
 
 const decode = (v) =>
@@ -120,7 +120,7 @@ const cleanTextKeepLinks = (value) => {
 
 // Guide steps are stored as "title\u2029body" (a paragraph-separator
 // character, not part of any real title/body) so the UI can split
-// them apart safely — a plain ": " would break on any title or body
+// them apart safely вЂ” a plain ": " would break on any title or body
 // that itself contains a colon.
 const STEP_SEP = "\u2029";
 
@@ -262,76 +262,68 @@ const normalizeSymbol = (value) => {
 ========================= */
 
 async function cryptoRank() {
-  if (!process.env.CRYPTORANK_API_KEY) {
-    console.log("CryptoRank: skipped (API key not configured)");
-    return [];
-  }
+  const url =
+    "https://api.parse.bot/scraper/3888881d-79db-46c9-8892-13115f4f0ab6/list_activities?limit=30&offset=0&order_by=STATUS_UPDATE&order_direction=DESC&is_archive=false";
 
   try {
-    const r = await fetch(CR, {
+    const r = await fetch(url, {
       headers: {
-        "X-Api-Key": process.env.CRYPTORANK_API_KEY,
+        Accept: "application/json",
+        "X-API-Key": process.env.PARSE_API_KEY,
       },
     });
 
     if (!r.ok) {
       const text = await r.text();
-
-      if (r.status === 403) {
-        console.warn(
-          "CryptoRank: skipped (Drophunting endpoint is not available on the current API plan)"
-        );
-      } else {
-        console.warn(`CryptoRank: skipped (HTTP ${r.status})`);
-        console.warn(text.slice(0, 300));
-      }
-
+      console.warn(`CryptoRank: skipped (HTTP ${r.status})`);
+      console.warn(text.slice(0, 300));
       return [];
     }
 
     const j = await r.json();
+    const activities = j?.data?.activities || [];
 
-    return (j.data || []).map((x, i) => {
-      const name = x?.coin?.name || x?.name || `Project ${i + 1}`;
+    console.log(`CryptoRank: fetched ${activities.length} activities`);
 
-      const slug = slugify(x?.coin?.key || name);
+    return activities.map((x, i) => {
+      const name = x?.project_name || `Project ${i + 1}`;
+      const projectKey = x?.project_key || x?.key || name;
+      const slug = slugify(projectKey);
 
-      const d = x?.rewardDate || x?.lastStatusUpdate;
+      const d = x?.status_updated_at || x?.created_at;
 
       const date = d
-        ? new Date(Number(d) < 1e10 ? Number(d) * 1000 : Number(d))
-            .toISOString()
-            .slice(0, 10)
+        ? new Date(d).toISOString().slice(0, 10)
         : "";
-
-      const chain =
-        x?.tasks?.flatMap((t) => t?.blockchains || [])?.[0]?.name || "Multiple";
 
       return {
         id: i + 1,
         slug,
         name,
-        symbol: normalizeSymbol(x?.coin?.symbol),
-        chain: normalizeChain(chain) || "Multiple",
-        event: eventCR(x?.reward),
+        symbol: normalizeSymbol(x?.project_symbol),
+        chain: "Multiple",
+        event: eventCR(x?.reward_type),
         status: statusCR(x?.status),
         date,
         description: `${name} drop activity tracked from CryptoRank.`,
-        funding: x?.coin?.totalRaise ? `$${x.coin.totalRaise}` : undefined,
-        website: x?.links?.verify || x?.links?.claim,
-        logo: x?.coin?.images?.x150 || x?.coin?.images?.native,
-        claimUrl: x?.links?.claim || x?.links?.verify,
+        funding:
+          x?.funding?.total_raise != null
+            ? `$${x.funding.total_raise}`
+            : undefined,
+        website: undefined,
+        logo: x?.logo_url,
+        claimUrl: x?.link_to_claim || x?.check_link,
         source: "CryptoRank",
         sourceUrl: `https://cryptorank.io/drophunting/${x?.key || slug}`,
       };
     });
   } catch (error) {
-    console.warn(`CryptoRank: skipped (${error?.message || "request failed"})`);
-
+    console.warn(
+      `CryptoRank: skipped (${error?.message || "request failed"})`
+    );
     return [];
   }
 }
-
 /* =========================
    Airdrops.io
 ========================= */
@@ -448,7 +440,7 @@ async function airdropsIo() {
   };
 
   // The rendered page's own step widget (h3.is-step-item + a sibling
-  // div.step-body) has the real prose *with* its <a href> links —
+  // div.step-body) has the real prose *with* its <a href> links вЂ”
   // the JSON-LD HowToStep block above is only a stripped-down copy
   // for search engines and never carries links. Prefer this when
   // it's there; extractGuideSteps stays as a fallback for pages that
@@ -738,7 +730,7 @@ async function airdropsIo() {
       // "airdrop_flags" tells us how certain the drop is;
       // "airdrop_status" (ongoing/upcoming) tells us its timing.
       // A confirmed airdrop stays "Confirmed" even while it's
-      // actively ongoing — the confirmed flag wins over timing.
+      // actively ongoing вЂ” the confirmed flag wins over timing.
       if (isConfirmed) {
         project.status = "Confirmed";
         if (networkStatus === "ongoing") {
@@ -1022,7 +1014,7 @@ export function parseAirdropAlert(html) {
     ].map(([, a, b]) => [cleanText(a), cleanText(b)]);
 
     const footerText = pairs
-      .map(([a, b]) => [a, b].filter(Boolean).join(" — "))
+      .map(([a, b]) => [a, b].filter(Boolean).join(" вЂ” "))
       .filter(Boolean)
       .join(". ");
 
@@ -1168,7 +1160,7 @@ async function airdropAlert() {
           block.match(/<h3[^>]*>([\s\S]*?)<\/h3>/i)?.[1]
         );
         // These <li> blocks have real <a href> links in the body
-        // (Galxe campaigns, Discord invites, etc.) — keep them as
+        // (Galxe campaigns, Discord invites, etc.) вЂ” keep them as
         // "[label](url)" instead of stripping them.
         const body = cleanTextKeepLinks(
           block.replace(/<h3[^>]*>[\s\S]*?<\/h3>/i, "")
@@ -1288,7 +1280,88 @@ async function airdropAlert() {
    Sync
 ========================= */
 
+// Reads the previously generated file (as plain text) and pulls out
+// { slug -> firstSeenAt } so re-running sync doesn't reset "how long
+// has this drop been tracked" every hour. Parsed with a regex instead
+// of importing the .ts file directly, since this script runs under
+// plain Node and can't load TypeScript modules.
+async function loadPreviousFirstSeen() {
+  const filePath = path.join(__dirname, "..", "data", "projects.generated.ts");
+  const map = new Map();
+
+  try {
+    const content = await fs.readFile(filePath, "utf8");
+
+    // Each project object has no nested `{ }` of its own (only arrays),
+    // so a non-greedy match from `{` to the next `}` safely captures
+    // one whole project object at a time.
+    const objectRegex = /\{[^{}]*\}/g;
+    let match;
+
+    while ((match = objectRegex.exec(content))) {
+      const block = match[0];
+      const slug = block.match(/"slug":\s*"([^"]+)"/)?.[1];
+      const firstSeenAt = block.match(/"firstSeenAt":\s*"([^"]+)"/)?.[1];
+
+      if (slug && firstSeenAt) {
+        map.set(slug, firstSeenAt);
+      }
+    }
+  } catch {
+    // No previous file yet (first ever run) вЂ” that's fine, everything
+    // will just be marked as seen for the first time today.
+  }
+
+  return map;
+}
+
+async function loadCryptoRankHistory() {
+  const filePath = path.join(
+    __dirname,
+    "..",
+    "data",
+    "cryptorank.history.json"
+  );
+
+  try {
+    const content = await fs.readFile(filePath, "utf8");
+    const items = JSON.parse(content);
+
+    if (!Array.isArray(items)) {
+      return new Map();
+    }
+
+    return new Map(
+      items
+        .filter((p) => p && p.slug)
+        .map((p) => [p.slug, p])
+    );
+  } catch {
+    return new Map();
+  }
+}
+
+async function saveCryptoRankHistory(history) {
+  const filePath = path.join(
+    __dirname,
+    "..",
+    "data",
+    "cryptorank.history.json"
+  );
+
+  const items = [...history.values()];
+
+  await fs.writeFile(
+    filePath,
+    JSON.stringify(items, null, 2),
+    "utf8"
+  );
+}
+
 async function sync() {
+  const previousFirstSeen = await loadPreviousFirstSeen();
+  const cryptoRankHistory = await loadCryptoRankHistory();
+
   const [a, b, c] = await Promise.allSettled([
     cryptoRank(),
     airdropsIo(),
@@ -1299,8 +1372,31 @@ async function sync() {
   const airdropsProjects = b.status === "fulfilled" ? b.value : [];
   const airdropAlertProjects = c.status === "fulfilled" ? c.value : [];
 
+  // Update persistent CryptoRank history.
+  // Existing projects are updated by slug, new projects are inserted.
+  for (const p of cryptoRankProjects) {
+    const previous = cryptoRankHistory.get(p.slug) || {};
+    cryptoRankHistory.set(p.slug, {
+      ...previous,
+      ...p,
+    });
+  }
+
+  await saveCryptoRankHistory(cryptoRankHistory);
+
+  // Current CryptoRank 30 first, then historical CryptoRank projects
+  // that are not in the current 30, then the other sources.
+  const currentCryptoRankSlugs = new Set(
+    cryptoRankProjects.map((p) => p.slug)
+  );
+
+  const historicalCryptoRankProjects = [
+    ...cryptoRankHistory.values(),
+  ].filter((p) => !currentCryptoRankSlugs.has(p.slug));
+
   const all = [
     ...cryptoRankProjects,
+    ...historicalCryptoRankProjects,
     ...airdropsProjects,
     ...airdropAlertProjects,
   ];
@@ -1323,7 +1419,15 @@ async function sync() {
     map.set(p.slug, merged);
   }
 
-  const projects = [...map.values()].map((p, i) => ({ ...p, id: i + 1 }));
+  const syncRunAt = new Date().toISOString();
+
+  const projects = [...map.values()].map((p, i) => ({
+    ...p,
+    id: i + 1,
+    // Keep the original first-seen date if we've tracked this slug
+    // before; otherwise this is the first time we've ever seen it.
+    firstSeenAt: previousFirstSeen.get(p.slug) || syncRunAt,
+  }));
 
   await fs.writeFile(
     path.join(__dirname, "..", "data", "projects.generated.ts"),
@@ -1343,10 +1447,14 @@ export const generatedProjects: Project[] = ${JSON.stringify(
   console.log("=================================");
   console.log("Droply sync complete");
   console.log("=================================");
+  const newThisRun = projects.filter((p) => p.firstSeenAt === syncRunAt).length;
+
   console.log(`Total projects: ${projects.length}`);
   console.log(`CryptoRank:     ${cryptoRankProjects.length}`);
+  console.log(`CryptoRank all: ${cryptoRankHistory.size}`);
   console.log(`Airdrops.io:    ${airdropsProjects.length}`);
   console.log(`AirdropAlert:   ${airdropAlertProjects.length}`);
+  console.log(`New this run:   ${newThisRun}`);
   console.log("=================================");
 
   if (b.status === "rejected") {
@@ -1370,4 +1478,7 @@ if (
 ) {
   sync();
 }
+
+
+
 
