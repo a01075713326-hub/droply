@@ -2223,8 +2223,11 @@ async function sync() {
   const previousFirstSeen = await loadPreviousFirstSeen();
   const cryptoRankHistory = await loadCryptoRankHistory();
 
+  // SYNC_SOURCES=free skips the paid CryptoRank (Parse.bot) call.
+  const skipCryptoRank = process.env.SYNC_SOURCES === "free";
+
   const [a, b, c] = await Promise.allSettled([
-    cryptoRank(),
+    skipCryptoRank ? Promise.resolve([]) : cryptoRank(),
     airdropsIo(),
     airdropAlert(),
   ]);
@@ -2247,16 +2250,35 @@ async function sync() {
 
   // Current CryptoRank 30 first, then historical CryptoRank projects
   // that are not in the current 30, then the other sources.
-  const currentCryptoRankSlugs = new Set(
-    cryptoRankProjects.map((p) => p.slug)
+  // Remember which CryptoRank projects were "current" in the last full
+  // run, so free runs (and failed CryptoRank calls) keep the same order.
+  const currentSlugsFile = path.join(
+    __dirname,
+    "..",
+    "data",
+    ".cryptorank-current.json"
   );
+  let currentSlugList = cryptoRankProjects.map((p) => p.slug);
+
+  try {
+    if (currentSlugList.length) {
+      await fs.writeFile(currentSlugsFile, JSON.stringify(currentSlugList), "utf8");
+    } else {
+      currentSlugList = JSON.parse(await fs.readFile(currentSlugsFile, "utf8"));
+    }
+  } catch {}
+
+  const currentCryptoRankSlugs = new Set(currentSlugList);
+  const currentCryptoRankProjects = cryptoRankProjects.length
+    ? cryptoRankProjects
+    : currentSlugList.map((s) => cryptoRankHistory.get(s)).filter(Boolean);
 
   const historicalCryptoRankProjects = [
     ...cryptoRankHistory.values(),
   ].filter((p) => !currentCryptoRankSlugs.has(p.slug));
 
   const all = [
-    ...cryptoRankProjects,
+    ...currentCryptoRankProjects,
     ...historicalCryptoRankProjects,
     ...airdropsProjects,
     ...airdropAlertProjects,
