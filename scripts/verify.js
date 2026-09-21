@@ -538,7 +538,10 @@ async function loadProjects() {
   // object contains a nested object/array of objects (e.g. CryptoRank
   // task details), because the regex cannot match braces-within-braces.
   // Parse the actual JSON array instead so every project is captured.
-  const start = content.indexOf("[");
+  // Find the "[" that opens the actual array (after "= "), not the
+  // "[]" inside the "Project[]" type annotation earlier in the file.
+  const marker = content.indexOf("= [");
+  const start = marker === -1 ? -1 : marker + 2;
   const end = content.lastIndexOf("]");
 
   if (start === -1 || end === -1) return [];
