@@ -532,37 +532,35 @@ async function verifyProject(project, llama) {
 // can't import a .ts module.
 async function loadProjects() {
   const content = await fs.readFile(GENERATED, "utf8");
-  const projects = [];
 
-  const objectRegex = /\{[^{}]*\}/g;
-  let match;
+  // The file is `export const generatedProjects: Project[] = [ ... ];`.
+  // A regex-based {...} scan used to silently drop any project whose
+  // object contains a nested object/array of objects (e.g. CryptoRank
+  // task details), because the regex cannot match braces-within-braces.
+  // Parse the actual JSON array instead so every project is captured.
+  const start = content.indexOf("[");
+  const end = content.lastIndexOf("]");
 
-  const field = (block, name) =>
-    block.match(new RegExp(`"${name}":\\s*"([^"]*)"`))?.[1] || "";
+  if (start === -1 || end === -1) return [];
 
-  while ((match = objectRegex.exec(content))) {
-    const block = match[0];
-    const slug = field(block, "slug");
+  const raw = JSON.parse(content.slice(start, end + 1));
 
-    if (!slug) continue;
-
-    projects.push({
-      slug,
-      name: field(block, "name"),
-      website: field(block, "website"),
-      x: field(block, "x"),
-      discord: field(block, "discord"),
-      telegram: field(block, "telegram"),
-      docs: field(block, "docs"),
-      whitepaper: field(block, "whitepaper"),
-      claimUrl: field(block, "claimUrl"),
-      funding: field(block, "funding"),
-      source: field(block, "source"),
-      sourceUrl: field(block, "sourceUrl"),
-    });
-  }
-
-  return projects;
+  return raw
+    .filter((p) => p && p.slug)
+    .map((p) => ({
+      slug: p.slug,
+      name: p.name || "",
+      website: p.website || "",
+      x: p.x || "",
+      discord: p.discord || "",
+      telegram: p.telegram || "",
+      docs: p.docs || "",
+      whitepaper: p.whitepaper || "",
+      claimUrl: p.claimUrl || "",
+      funding: p.funding || "",
+      source: p.source || "",
+      sourceUrl: p.sourceUrl || "",
+    }));
 }
 
 async function loadCache() {
