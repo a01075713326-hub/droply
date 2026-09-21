@@ -16,3 +16,4 @@ sync-log.txt
 out-*.txt
 
 data/projects.state.json
+*.rar
