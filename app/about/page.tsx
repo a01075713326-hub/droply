@@ -4,7 +4,7 @@ import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "About the Airdrop Tracker: Data and Verification",
-  description: "What Droply is, where its airdrop data comes from and how projects are checked.",
+  description: "What Droply is, where its crypto airdrop data comes from, how projects are verified and how often the tracker is updated.",
   alternates: { canonical: "/about" },
 };
 

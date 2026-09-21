@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     types: { "application/rss+xml": "https://droply.digital/feed.xml" },
   },
   description:
-    "Exchange listings, airdrop programs and updates on the projects Droply tracks, newest first.",
+    "Latest exchange listings, airdrop programs and project updates tracked by Droply, newest first. See what changed across crypto airdrops.",
 };
 
 const TYPE_LABELS: Record<string, string> = {
@@ -117,7 +117,7 @@ export default async function FeedPage({
         <div>
           <div className="section-kicker">EVENTS</div>
           <h1>Feed</h1>
-          <p>Exchange listings, airdrop programs and updates on the projects Droply tracks, newest first. <a className="feed-link" href="/feed.xml">RSS</a></p>
+          <p>Latest exchange listings, airdrop programs and project updates tracked by Droply, newest first. See what changed across crypto airdrops. <a className="feed-link" href="/feed.xml">RSS</a></p>
         </div>
       </div>
 

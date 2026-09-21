@@ -6,7 +6,7 @@ export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
   alternates: { canonical: "/stats" },
   title: "Crypto Airdrop Stats: New Drops and Active Chains",
-  description: "How many new airdrops appeared today and this week, and which chains are most active right now.",
+  description: "How many new crypto airdrops appeared today and this week, and which blockchains are most active right now. Based on the projects Droply tracks.",
 };
 
 export default async function StatsPage() {
@@ -63,6 +63,7 @@ export default async function StatsPage() {
           </span>
         ))}
       </div>
+      <p className="stats-note">These figures are calculated each time the page loads, from the projects currently in the Droply tracker, so they always match the project pages. Project data comes from CryptoRank and is supplemented with manually checked details for selected projects. A drop counts as new when it was first added to the Droply tracker within the last 24 hours or 7 days. The chart shows the ten most active chains, and a project on several chains is counted for each of them.</p>
     </main>
   );
 }
