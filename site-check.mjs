@@ -322,7 +322,7 @@ async function liveChecks() {
       const inS = inSitemap.has(p === "/" ? "/" : p);
       if (thin && inS) log("FAIL", `${p}: noindex, но есть в sitemap`);
       if (!thin && !inS && p.startsWith("/airdrops/")) log("WARN", `${p}: индексируется, но нет в sitemap`);
-      if (thin) log("INFO", `${p}: noindex (тонкий хаб < HUB_MIN)`);
+      if (thin) log("INFO", `${p}: noindex (по тегу robots)`);
     }
   }
   const home = await get(BASE + "/");
