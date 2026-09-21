@@ -48,10 +48,10 @@ const NAMED_ENTITIES = {
   gt: ">",
   nbsp: " ",
   ndash: "-",
-  mdash: "вЂ”",
+  mdash: "\u2014",
   rarr: "в†’",
   larr: "в†ђ",
-  hellip: "вЂ¦",
+  hellip: "\u2026",
   lsquo: "'",
   rsquo: "'",
   ldquo: '"',
@@ -120,7 +120,7 @@ const cleanTextKeepLinks = (value) => {
 
 // Guide steps are stored as "title\u2029body" (a paragraph-separator
 // character, not part of any real title/body) so the UI can split
-// them apart safely вЂ” a plain ": " would break on any title or body
+// them apart safely — a plain ": " would break on any title or body
 // that itself contains a colon.
 const STEP_SEP = "\u2029";
 
@@ -1262,7 +1262,7 @@ async function airdropsIo() {
   };
 
   // The rendered page's own step widget (h3.is-step-item + a sibling
-  // div.step-body) has the real prose *with* its <a href> links вЂ”
+  // div.step-body) has the real prose *with* its <a href> links —
   // the JSON-LD HowToStep block above is only a stripped-down copy
   // for search engines and never carries links. Prefer this when
   // it's there; extractGuideSteps stays as a fallback for pages that
@@ -1552,7 +1552,7 @@ async function airdropsIo() {
       // "airdrop_flags" tells us how certain the drop is;
       // "airdrop_status" (ongoing/upcoming) tells us its timing.
       // A confirmed airdrop stays "Confirmed" even while it's
-      // actively ongoing вЂ” the confirmed flag wins over timing.
+      // actively ongoing — the confirmed flag wins over timing.
       if (isConfirmed) {
         project.status = "Confirmed";
         if (networkStatus === "ongoing") {
@@ -1836,7 +1836,7 @@ export function parseAirdropAlert(html) {
     ].map(([, a, b]) => [cleanText(a), cleanText(b)]);
 
     const footerText = pairs
-      .map(([a, b]) => [a, b].filter(Boolean).join(" вЂ” "))
+      .map(([a, b]) => [a, b].filter(Boolean).join(" \u2014 "))
       .filter(Boolean)
       .join(". ");
 
@@ -1983,7 +1983,7 @@ async function airdropAlert() {
           block.match(/<h3[^>]*>([\s\S]*?)<\/h3>/i)?.[1]
         );
         // These <li> blocks have real <a href> links in the body
-        // (Galxe campaigns, Discord invites, etc.) вЂ” keep them as
+        // (Galxe campaigns, Discord invites, etc.) — keep them as
         // "[label](url)" instead of stripping them.
         const body = cleanTextKeepLinks(
           block.replace(/<h3[^>]*>[\s\S]*?<\/h3>/i, "")
