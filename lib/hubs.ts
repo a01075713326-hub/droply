@@ -248,17 +248,26 @@ export function getHubLinks(projects: Project[]): { href: string; label: string;
 /** JSON-LD ItemList for a list page: the projects shown on it (capped to keep the payload small). */
 export function itemListLd(name: string, path: string, items: Project[], max = 50) {
   const list = items.slice(0, max);
+  let latest = 0;
+  for (const p of items) {
+    const ts = p.firstSeenAt ? new Date(p.firstSeenAt).getTime() : NaN;
+    if (!Number.isNaN(ts) && ts > latest) latest = ts;
+  }
   return {
     "@context": "https://schema.org",
-    "@type": "ItemList",
+    "@type": "CollectionPage",
     name,
     url: SITE_URL + path,
-    numberOfItems: list.length,
-    itemListElement: list.map((p, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      url: `${SITE_URL}/project/${encodeURIComponent(p.slug)}`,
-      name: p.name,
-    })),
+    ...(latest ? { dateModified: new Date(latest).toISOString() } : {}),
+    mainEntity: {
+      "@type": "ItemList",
+      numberOfItems: list.length,
+      itemListElement: list.map((p, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        url: `${SITE_URL}/project/${encodeURIComponent(p.slug)}`,
+        name: p.name,
+      })),
+    },
   };
 }
