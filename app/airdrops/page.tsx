@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import AirdropsExplorer from "@/components/AirdropsExplorer";
 import { getProjects } from "@/lib/projects";
-import { getLiveProjects, SEGMENTS, type SegmentKey } from "@/lib/hubs";
+import { getLiveProjects, SEGMENTS, breadcrumbLd, itemListLd, type SegmentKey } from "@/lib/hubs";
 
 export const dynamic = "force-dynamic";
 export const metadata: Metadata = {
@@ -28,6 +28,14 @@ export default async function Airdrops() {
 
   return (
     <main className="page container">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd([{ name: "Home", path: "/" }, { name: "Airdrops", path: "/airdrops" }])).replace(/</g, "\\u003c") }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd("Crypto Airdrops", "/airdrops", projects)).replace(/</g, "\\u003c") }}
+      />
       <div className="page-head">
         <div>
           <div className="section-kicker">DROP DISCOVERY</div>

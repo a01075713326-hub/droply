@@ -233,6 +233,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   const jsonLd = steps.length ? {
     "@context": "https://schema.org",
     "@type": "HowTo",
+    ...(p.firstSeenAt ? { datePublished: new Date(p.firstSeenAt).toISOString() } : {}),
     "name": `How to participate in the ${p.name} airdrop`,
     "description": p.description,
     "step": steps.map((action, i) => ({
