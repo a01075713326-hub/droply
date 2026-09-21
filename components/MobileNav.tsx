@@ -51,6 +51,9 @@ export default function MobileNav({ chains }: { chains: Chain[] }) {
         <Link href="/airdrops?status=potential" onClick={close}>Potential airdrops</Link>
         <Link href="/airdrops?status=upcoming" onClick={close}>Upcoming airdrops</Link>
         <Link href="/airdrops/live" onClick={close}>Live airdrops</Link>
+        <Link href="/airdrops/confirmed" onClick={close}>Confirmed airdrops</Link>
+        <Link href="/airdrops/points" onClick={close}>Points programs</Link>
+        <Link href="/airdrops/no-token" onClick={close}>No-token projects</Link>
       </div>
 
       {chains.length ? (

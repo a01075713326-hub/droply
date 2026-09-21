@@ -42,6 +42,9 @@ export default async function Header() {
             <Link href="/airdrops?status=upcoming">&#9676; Upcoming Airdrops</Link>
             <Link href="/airdrops/live">&#9679; Live Airdrops</Link>
             <Link href="/airdrops?event=claim">&#10003; Claims</Link>
+            <Link href="/airdrops/confirmed">&#10004; Confirmed Airdrops</Link>
+            <Link href="/airdrops/points">&#9670; Points Programs</Link>
+            <Link href="/airdrops/no-token">&#9711; No-Token Projects</Link>
             <div className="divider"/>
             <div className="drop-group-label">BY BLOCKCHAIN</div>
             {menuChains.map((hub) =>
