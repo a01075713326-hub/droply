@@ -1,0 +1,188 @@
+{
+  "entries": {
+    "fables": {
+      "checkedAt": "2026-09-18",
+      "fingerprint": "https://fables.fi|https://x.com/fablesfi|https://discord.gg/QgeEq2rSv7|https://fables.fi",
+      "result": {
+        "slug": "fables",
+        "checkedAt": "2026-09-18",
+        "links": [
+          {
+            "kind": "website",
+            "url": "https://www.fables.fi/",
+            "status": "confirmed",
+            "note": "Site is reachable",
+            "sourceUrl": "https://www.fables.fi/",
+            "sourceLabel": "Site",
+            "checkedAt": "2026-09-18"
+          },
+          {
+            "kind": "x",
+            "url": "https://x.com/fablesfi",
+            "status": "unverified",
+            "note": "Listed by an aggregator, not found on the official site",
+            "sourceUrl": "https://airdrops.io/fables/",
+            "sourceLabel": "Airdrops.io",
+            "checkedAt": "2026-09-18"
+          },
+          {
+            "kind": "discord",
+            "url": "https://discord.gg/QgeEq2rSv7",
+            "status": "unverified",
+            "note": "From an aggregator listing, not found on the official site",
+            "sourceUrl": "https://airdrops.io/fables/",
+            "sourceLabel": "Airdrops.io",
+            "checkedAt": "2026-09-18"
+          },
+          {
+            "kind": "telegram",
+            "url": "https://t.me/fablesfi",
+            "status": "unverified",
+            "note": "From an aggregator listing, not found on the official site",
+            "sourceUrl": "https://airdrops.io/fables/",
+            "sourceLabel": "Airdrops.io",
+            "checkedAt": "2026-09-18"
+          },
+          {
+            "kind": "docs",
+            "status": "not_found",
+            "sourceUrl": "https://airdrops.io/fables/",
+            "sourceLabel": "Airdrops.io",
+            "checkedAt": "2026-09-18"
+          }
+        ],
+        "contracts": [
+          {
+            "status": "not_found",
+            "note": "No contract address on file",
+            "checkedAt": "2026-09-18"
+          }
+        ],
+        "audits": [
+          {
+            "status": "not_found",
+            "sourceUrl": "https://defillama.com",
+            "sourceLabel": "DefiLlama",
+            "checkedAt": "2026-09-18"
+          }
+        ],
+        "funding": [],
+        "signals": [
+          {
+            "code": "no_audit",
+            "label": "No public audit found",
+            "present": true,
+            "sourceUrl": "https://defillama.com/protocol/fables",
+            "sourceLabel": "DefiLlama",
+            "checkedAt": "2026-09-18"
+          }
+        ]
+      }
+    },
+    "baibai": {
+      "checkedAt": "2026-09-18",
+      "fingerprint": "https://baibai.cx|https://x.com/baibai_cx|https://discord.gg/UNnSJjWRBq|https://app.baibai.cx",
+      "result": {
+        "slug": "baibai",
+        "checkedAt": "2026-09-18",
+        "links": [
+          {
+            "kind": "website",
+            "url": "https://www.baibai.cx/",
+            "status": "confirmed",
+            "note": "Site is reachable",
+            "sourceUrl": "https://www.baibai.cx/",
+            "sourceLabel": "Site",
+            "checkedAt": "2026-09-18"
+          },
+          {
+            "kind": "x",
+            "url": "https://x.com/baibai_cx",
+            "status": "confirmed",
+            "note": "Profile links back to the official domain",
+            "sourceUrl": "https://www.baibai.cx/",
+            "sourceLabel": "Site",
+            "checkedAt": "2026-09-18"
+          },
+          {
+            "kind": "discord",
+            "url": "https://discord.gg/UNnSJjWRBq",
+            "status": "confirmed",
+            "note": "Linked from the official site",
+            "sourceUrl": "https://www.baibai.cx/",
+            "sourceLabel": "Site",
+            "checkedAt": "2026-09-18"
+          },
+          {
+            "kind": "telegram",
+            "url": "https://t.me/airdrops_io",
+            "status": "unverified",
+            "note": "From an aggregator listing, not found on the official site",
+            "sourceUrl": "https://airdrops.io/baibai/",
+            "sourceLabel": "Airdrops.io",
+            "checkedAt": "2026-09-18"
+          },
+          {
+            "kind": "docs",
+            "url": "https://docs.baibai.cx",
+            "status": "confirmed",
+            "note": "Linked from the official site",
+            "sourceUrl": "https://www.baibai.cx/",
+            "sourceLabel": "Site",
+            "checkedAt": "2026-09-18"
+          }
+        ],
+        "contracts": [
+          {
+            "status": "not_found",
+            "note": "No contract address on file",
+            "checkedAt": "2026-09-18"
+          }
+        ],
+        "audits": [
+          {
+            "status": "not_found",
+            "sourceUrl": "https://defillama.com",
+            "sourceLabel": "DefiLlama",
+            "checkedAt": "2026-09-18"
+          }
+        ],
+        "funding": [],
+        "signals": [
+          {
+            "code": "link_mismatch",
+            "label": "Site and listing point at the same X account",
+            "present": false,
+            "sourceUrl": "https://www.baibai.cx/",
+            "sourceLabel": "Site",
+            "checkedAt": "2026-09-18"
+          },
+          {
+            "code": "domain_very_new",
+            "label": "Domain registered 8 months ago",
+            "present": false,
+            "sourceUrl": "https://rdap.org/domain/baibai.cx",
+            "sourceLabel": "RDAP",
+            "checkedAt": "2026-09-18"
+          },
+          {
+            "code": "domain_new",
+            "label": "Domain age: 253 days",
+            "present": false,
+            "sourceUrl": "https://rdap.org/domain/baibai.cx",
+            "sourceLabel": "RDAP",
+            "checkedAt": "2026-09-18"
+          },
+          {
+            "code": "no_audit",
+            "label": "No public audit found",
+            "present": true,
+            "sourceUrl": "https://defillama.com",
+            "sourceLabel": "DefiLlama",
+            "checkedAt": "2026-09-18"
+          }
+        ]
+      }
+    }
+  }
+}

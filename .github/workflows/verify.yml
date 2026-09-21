@@ -1,0 +1,40 @@
+name: Verify projects
+
+on:
+  schedule:
+    # Daily, offset from the hourly sync so the two never race on data/.
+    - cron: "40 3 * * *"
+  workflow_dispatch:
+
+# Two runs writing data/ at the same time would fight over the commit.
+concurrency:
+  group: droply-data
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Run verification
+        env:
+          GOOGLE_SAFE_BROWSING_KEY: ${{ secrets.GOOGLE_SAFE_BROWSING_KEY }}
+          VERIFY_MAX_PER_RUN: 120
+        run: node scripts/verify.js
+
+      - name: Commit results
+        run: |
+          git config user.name "droply-bot"
+          git config user.email "bot@droply.digital"
+          git add data/verification.generated.ts data/.verify-cache.json
+          git diff --staged --quiet || git commit -m "chore: verification refresh"
+          git push

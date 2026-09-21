@@ -1,0 +1,96 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import ProjectCards from "@/components/ProjectCards";
+import ChainIcon from "@/components/ChainIcon";
+import { getProjects } from "@/lib/projects";
+import {
+  getChainHubs,
+  getLiveProjects,
+  describeHub,
+  clip,
+  breadcrumbLd,
+  itemListLd,
+  HUB_MIN,
+  SITE_URL,
+} from "@/lib/hubs";
+
+export const dynamic = "force-dynamic";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const projects = await getProjects();
+  const live = getLiveProjects(projects);
+  const description = clip(describeHub("live", "Live", live));
+  const url = `${SITE_URL}/airdrops/live`;
+  return {
+    title: "Live Airdrops",
+    description,
+    alternates: { canonical: url },
+    // A thin page (fewer than HUB_MIN projects) stays out of the index.
+    robots: { index: live.length >= HUB_MIN, follow: true },
+    openGraph: {
+      title: "Live Airdrops - Droply",
+      description,
+      url,
+    },
+  };
+}
+
+export default async function LiveAirdrops() {
+  const projects = await getProjects();
+  const live = getLiveProjects(projects);
+  const chains = getChainHubs(projects).slice(0, 12);
+  const intro = describeHub("live", "Live", live);
+  const ld = breadcrumbLd([
+    { name: "Home", path: "/" },
+    { name: "Airdrops", path: "/airdrops" },
+    { name: "Live Airdrops", path: "/airdrops/live" },
+  ]);
+
+  return (
+    <main className="page container">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ld) }}
+      />
+
+      {live.length > 0 ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd("Live Airdrops", "/airdrops/live", live)).replace(/</g, "\\u003c") }}
+        />
+      ) : null}
+
+      <Link href="/airdrops" className="back-link">&larr; All drops</Link>
+
+      <div className="page-head">
+        <div>
+          <div className="section-kicker">LIVE NOW</div>
+          <h1>Live Airdrops</h1>
+          <p>{intro}</p>
+        </div>
+      </div>
+
+      {live.length > 0 ? (
+        <ProjectCards items={live} />
+      ) : (
+        <p>
+          <Link href="/airdrops">Browse all airdrops</Link>
+        </p>
+      )}
+
+      <section style={{ marginTop: 40 }}>
+        <h2>Browse by chain</h2>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 12 }}>
+          <Link className="type-pill" href="/airdrops">
+            All airdrops
+          </Link>
+          {chains.map((h) => (
+            <Link className="type-pill" href={`/chain/${h.slug}`} key={h.slug}>
+              <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}><ChainIcon slug={h.slug} name={h.name} size={16} />{h.name} ({h.items.length})</span>
+            </Link>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}

@@ -1,0 +1,167 @@
+/* Styles for /feed. Every class is prefixed with "feed-" so nothing collides with globals.css.
+   Colors are neutral (inherit / semi-transparent grey) so they work on both light and dark themes. */
+
+.feed-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 28px;
+  margin: 8px 0 20px;
+}
+
+.feed-filter-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.feed-filter-label {
+  font-size: 13px;
+  opacity: 0.65;
+  margin-right: 4px;
+}
+
+.feed-filter {
+  padding: 4px 12px;
+  border: 1px solid rgba(128, 128, 128, 0.35);
+  border-radius: 999px;
+  font-size: 13px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.feed-filter:hover {
+  border-color: currentColor;
+}
+
+.feed-filter:focus-visible,
+.feed-title:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.feed-filter--active {
+  background: rgba(128, 128, 128, 0.22);
+  border-color: currentColor;
+}
+
+.feed-count,
+.feed-empty {
+  font-size: 14px;
+  opacity: 0.7;
+  margin: 0 0 8px;
+}
+
+.feed-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feed-row {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 6px 20px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+}
+
+.feed-when {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.feed-date {
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.7;
+}
+
+.feed-exchange {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.feed-main {
+  min-width: 0;
+}
+
+.feed-tickers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 6px;
+}
+
+.feed-chip,
+.feed-badge {
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(128, 128, 128, 0.18);
+}
+
+.feed-badge {
+  background: transparent;
+  border: 1px solid currentColor;
+}
+
+.feed-chip--cancelled {
+  text-decoration: line-through;
+  opacity: 0.65;
+}
+
+.feed-title {
+  display: block;
+  color: inherit;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  text-decoration: none;
+}
+
+a.feed-title:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .feed-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .feed-when {
+    flex-direction: row;
+    gap: 12px;
+    align-items: baseline;
+  }
+}
+
+/* "On Droply" links: soft matches between an announcement and projects we track */
+.feed-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 12px;
+  margin-top: 6px;
+  font-size: 13px;
+}
+
+.feed-links-label {
+  opacity: 0.65;
+}
+
+.feed-link {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.feed-link:hover {
+  text-decoration-thickness: 2px;
+}
+
+.feed-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}

@@ -1,9 +1,11 @@
-﻿import Link from "next/link";
+import type { Metadata } from "next";
+import Link from "next/link";
 import { ArrowRight, Zap } from "lucide-react";
 import { getProjects } from "@/lib/projects";
 import ProjectTable from "@/components/ProjectTable";
 import CalendarCard from "@/components/CalendarCard";
 import DroplyMark from "@/components/DroplyMark";
+import { getHubLinks, getChainHubs, slugify } from "@/lib/hubs";
 
 export const dynamic = "force-dynamic";
 
@@ -11,6 +13,9 @@ export default async function Home() {
   const projects = await getProjects();
   const live = projects.filter((p) => p.status === "Live" || p.isLive === true).length;
   const week = projects.filter((p) => p.date && p.date >= new Date().toISOString().slice(0, 10)).length;
+  const hubLinks = getHubLinks(projects);
+  const chainSlugs = new Set(getChainHubs(projects).map((h) => h.slug));
+  const netHref = (name: string) => chainSlugs.has(slugify(name)) ? `/chain/${slugify(name)}` : `/airdrops?chain=${name}`;
   return <main>
     <section className="hero container">
       <div className="hero-copy">
@@ -49,8 +54,17 @@ export default async function Home() {
         <CalendarCard/>
       </div>
     </section>
-    <section className="container"><div className="networks"><div className="section-kicker"><span>&#9670;</span> TOP NETWORKS</div><div className="network-marquee"><div className="network-track">{[...["Base","Ethereum","Solana","Arbitrum","Aptos","TON"],...["Base","Ethereum","Solana","Arbitrum","Aptos","TON"]].map((x,i)=><Link href={`/airdrops?chain=${x}`} className="network-card" key={x+i}><img src={`https://icons.llamao.fi/icons/chains/rsz_${x.toLowerCase()}.jpg`} alt={x} className="chain-icon-img"/><div><b>{x}</b><small>Explore projects</small></div><ArrowRight size={14}/></Link>)}</div></div></div></section>
+    <section className="container"><div className="networks"><div className="section-kicker"><span>&#9670;</span> TOP NETWORKS</div><div className="network-marquee"><div className="network-track">{[...["Base","Ethereum","Solana","Arbitrum","Aptos","TON"],...["Base","Ethereum","Solana","Arbitrum","Aptos","TON"]].map((x,i)=><Link href={netHref(x)} className="network-card" key={x+i}><img src={`https://icons.llamao.fi/icons/chains/rsz_${x.toLowerCase()}.jpg`} alt={x} className="chain-icon-img"/><div><b>{x}</b><small>Explore projects</small></div><ArrowRight size={14}/></Link>)}</div></div></div></section>
+    {hubLinks.length > 0 ? <section className="container">
+      <div className="section-heading"><div><div className="section-kicker"><span>&#9670;</span> AIRDROP LISTS</div><h2>Browse by type.</h2></div><Link href="/airdrops">View all &rarr;</Link></div>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 12 }}>
+        {hubLinks.map((h) => <Link className="type-pill" href={h.href} key={h.href}>{h.label} ({h.count})</Link>)}
+      </div>
+    </section> : null}
     <section className="container content-grid"><div><div className="section-heading"><div><div className="section-kicker"><Zap size={16}/> LATEST DROPS</div><h2>What's happening next.</h2></div><Link href="/airdrops">View all &rarr;</Link></div><ProjectTable items={projects.slice(0, 12)}/></div></section>
-    <footer className="footer container"><div className="brand"><DroplyMark/><span>Droply</span></div><span>Track what's dropping.</span><div className="footer-links"><Link href="/airdrops">Airdrops</Link><Link href="/calendar">Calendar</Link><Link href="/airdrops">Projects</Link><Link href="/airdrops">Resources</Link></div><small>&copy; 2026 Droply.digital</small></footer>
   </main>;
 }
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};

@@ -1,0 +1,60 @@
+async function cryptoRank() {
+  const url =
+    "https://api.parse.bot/scraper/3888881d-79db-46c9-8892-13115f4f0ab6/list_activities?limit=30&offset=0&order_by=STATUS_UPDATE&order_direction=DESC&is_archive=false";
+
+  try {
+    const r = await fetch(url, {
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (!r.ok) {
+      const text = await r.text();
+      console.warn(`CryptoRank: skipped (HTTP ${r.status})`);
+      console.warn(text.slice(0, 300));
+      return [];
+    }
+
+    const j = await r.json();
+    const activities = j?.data?.activities || [];
+
+    return activities.map((x, i) => {
+      const name = x?.project_name || `Project ${i + 1}`;
+      const projectKey = x?.project_key || x?.key || name;
+      const slug = slugify(projectKey);
+
+      const d = x?.status_updated_at || x?.created_at;
+
+      const date = d
+        ? new Date(d).toISOString().slice(0, 10)
+        : "";
+
+      return {
+        id: i + 1,
+        slug,
+        name,
+        symbol: normalizeSymbol(x?.project_symbol),
+        chain: "Multiple",
+        event: eventCR(x?.reward_type),
+        status: statusCR(x?.status),
+        date,
+        description: `${name} drop activity tracked from CryptoRank.`,
+        funding:
+          x?.funding?.total_raise != null
+            ? `$${x.funding.total_raise}`
+            : undefined,
+        website: undefined,
+        logo: x?.logo_url,
+        claimUrl: x?.link_to_claim || x?.check_link,
+        source: "CryptoRank",
+        sourceUrl: `https://cryptorank.io/drophunting/${x?.key || slug}`,
+      };
+    });
+  } catch (error) {
+    console.warn(
+      `CryptoRank: skipped (${error?.message || "request failed"})`
+    );
+    return [];
+  }
+}

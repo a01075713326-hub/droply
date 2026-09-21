@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { ChevronDown } from "lucide-react";
 import ProjectCards from "@/components/ProjectCards";
 import { Project } from "@/data/projects";
@@ -82,10 +83,18 @@ function FilterDropdown({
 }
 
 export default function AirdropsExplorer({ items }: { items: Project[] }) {
+  const searchParams = useSearchParams();
+
   const [search, setSearch] = useState("");
-  const [status, setStatus] = useState("All");
-  const [chain, setChain] = useState("All");
-  const [event, setEvent] = useState("All");
+  const [status, setStatus] = useState(searchParams.get("status") ?? "All");
+  const [chain, setChain] = useState(searchParams.get("chain") ?? "All");
+  const [event, setEvent] = useState(searchParams.get("event") ?? "All");
+
+  useEffect(() => {
+    setStatus(searchParams.get("status") ?? "All");
+    setChain(searchParams.get("chain") ?? "All");
+    setEvent(searchParams.get("event") ?? "All");
+  }, [searchParams]);
 
   const chains = useMemo(() => {
     const set = new Set<string>();
@@ -144,4 +153,5 @@ export default function AirdropsExplorer({ items }: { items: Project[] }) {
     </>
   );
 }
+
 

@@ -1,0 +1,53 @@
+﻿/* verify-faq-tone.css - hierarchy pass on FAQ + Verification blocks.
+   Loaded via import in page.tsx. Does not touch globals.css. */
+
+.faq-card__title {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.faq-item summary {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.faq-item[open] summary {
+  color: #ffffff;
+}
+
+.faq-item summary::after {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.faq-item[open] summary::after {
+  color: #b9a3ff;
+}
+
+.section-kicker {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Only rows whose status is "not_found" get the tone color -
+   confirmed / unverified rows in the same section are untouched. */
+
+.verify-section--danger .verify-icon.not_found {
+  border-color: rgba(255, 92, 110, 0.35);
+  background: rgba(255, 92, 110, 0.12);
+  color: #ff8a96;
+}
+
+.verify-section--danger .verify-icon.not_found ~ .verify-row-body .verify-row-title {
+  color: #ff8a96;
+}
+
+.verify-section--warning .verify-icon.not_found {
+  border-color: rgba(247, 195, 88, 0.3);
+  background: rgba(247, 195, 88, 0.12);
+  color: #f7c358;
+}
+
+.verify-section--warning .verify-icon.not_found ~ .verify-row-body .verify-row-title {
+  color: #f7c358;
+}

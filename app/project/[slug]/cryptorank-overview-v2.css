@@ -1,0 +1,77 @@
+﻿/* cryptorank-overview-v2.css - Overview redesign, variant 2 ("spec sheet"):
+   Moni score + status flags become a left sidebar, all fact tiles become
+   a plain row list on the right. Pure CSS, CryptoRankDetails.tsx untouched.
+   Falls back to the original stacked layout when there is no topbar. */
+
+@media (min-width: 561px) {
+  .crx-card:has(> .crx-topbar) {
+    grid-template-columns: 150px 1fr;
+    column-gap: 20px;
+  }
+
+  .crx-card:has(> .crx-topbar) > .crx-head {
+    grid-column: 1 / -1;
+  }
+
+  .crx-card:has(> .crx-topbar) > .crx-topbar {
+    grid-column: 1;
+    grid-row: 2;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    padding-right: 16px;
+    border-right: 1px solid var(--crx-border);
+  }
+
+  .crx-card:has(> .crx-topbar) > .crx-tiles {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .crx-card:has(> .crx-topbar) > .crx-group {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Tiles: boxes -> plain row list with a hairline divider */
+
+.crx-tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.crx-tile {
+  padding: 9px 0;
+  border-bottom: 1px solid var(--crx-border);
+  background: none;
+  border-radius: 0;
+}
+
+.crx-tile:last-child {
+  border-bottom: none;
+}
+
+.crx-tile__icon {
+  display: none;
+}
+
+.crx-tile__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 100%;
+  gap: 10px;
+}
+
+.crx-tile__label {
+  color: var(--crx-muted);
+  font-size: 13px;
+}
+
+.crx-tile__value {
+  font-size: 14px;
+  font-weight: 500;
+}

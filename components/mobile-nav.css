@@ -1,0 +1,122 @@
+/* Mobile / tablet menu. Prefix mnav- keeps it away from the existing styles. */
+
+.mnav-btn {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.045);
+  color: #eef2f8;
+  border-radius: 11px;
+  cursor: pointer;
+}
+.mnav-btn:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+.mnav-btn:focus-visible {
+  outline: 2px solid #8b5cf6;
+  outline-offset: 2px;
+}
+
+/* the desktop nav is hidden at this width, so the hamburger takes over */
+@media (max-width: 1050px) {
+  .mnav-btn {
+    display: inline-flex;
+  }
+}
+
+/* phones: bring the search back as an icon-only button */
+@media (max-width: 760px) {
+  .site-header .header-actions {
+    display: flex;
+    gap: 8px;
+  }
+  .site-header .search-pill {
+    width: 42px;
+    height: 42px;
+    padding: 0;
+    justify-content: center;
+  }
+  .site-header .search-pill span,
+  .site-header .search-pill kbd {
+    display: none;
+  }
+}
+
+.mnav-panel {
+  position: fixed;
+  top: 68px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 60;
+  overflow-y: auto;
+  padding: 12px 18px calc(40px + env(safe-area-inset-bottom, 0px));
+  background: rgba(5, 7, 10, 0.97);
+  backdrop-filter: blur(18px);
+  -webkit-overflow-scrolling: touch;
+}
+@media (min-width: 1051px) {
+  .mnav-panel {
+    display: none;
+  }
+}
+
+.mnav-label {
+  font-size: 12px;
+  color: #8a96ab;
+  letter-spacing: 1.3px;
+  padding: 16px 4px 6px;
+}
+.mnav-links {
+  display: grid;
+  gap: 2px;
+}
+.mnav-links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 10px;
+  border-radius: 10px;
+  color: #d5dae4;
+  font-size: 15px;
+  font-weight: 600;
+}
+.mnav-links a:hover,
+.mnav-links a:active {
+  background: rgba(255, 255, 255, 0.07);
+  color: #fff;
+}
+.mnav-chains {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 4px 0;
+}
+.mnav-chains a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 14px 0 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #d5dae4;
+  font-size: 14px;
+  font-weight: 600;
+}
+.mnav-chains a:hover,
+.mnav-chains a:active {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+.mnav-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 16px 0 6px;
+}

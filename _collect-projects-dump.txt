@@ -1,0 +1,181 @@
+﻿// Droply events: changes in tracked projects.
+//
+// Run it after every `npm run sync`:   node scripts\events\collect-projects.mjs
+// It compares data/projects.generated.ts with data/projects.state.json (what it saw last time) and
+// writes events to data/events.json: a new project, a status change (Potential -> Confirmed ...),
+// an event-type change (Points -> Airdrop ...) and a distribution date set or moved.
+// sync.js is not touched. The first run only records a baseline and writes no events.
+//
+//   --dry   show what would happen, write nothing
+
+import fs from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const HERE = path.dirname(fileURLToPath(import.meta.url));
+const GENERATED = path.join(HERE, "..", "..", "data", "projects.generated.ts");
+const STATE_FILE = path.join(HERE, "..", "..", "data", "projects.state.json");
+const SOURCE = "droply-projects";
+const DRY = process.argv.includes("--dry");
+
+// A run that adds this many projects at once looks like an initial import or a reset, not real news.
+const IMPORT_BATCH_SIZE = 15;
+
+// lib.mjs is shared with the other collectors. Check the names instead of assuming them.
+const lib = await import("./lib.mjs");
+for (const name of ["makeId", "loadEvents", "saveEvents", "mergeEvents"]) {
+  if (typeof lib[name] !== "function") {
+    console.error(`lib.mjs does not export ${name}(). It exports: ${Object.keys(lib).join(", ") || "(nothing)"}`);
+    process.exit(1);
+  }
+}
+const { makeId, loadEvents, saveEvents, mergeEvents } = lib;
+
+// projects.generated.ts is `export const generatedProjects: Project[] = [ ...JSON... ];`
+function extractArray(text, start) {
+  let depth = 0;
+  let inStr = false;
+  let esc = false;
+  for (let i = start; i < text.length; i++) {
+    const c = text[i];
+    if (inStr) {
+      if (esc) esc = false;
+      else if (c === "\\") esc = true;
+      else if (c === '"') inStr = false;
+      continue;
+    }
+    if (c === '"') inStr = true;
+    else if (c === "[") depth++;
+    else if (c === "]") {
+      depth--;
+      if (depth === 0) return text.slice(start, i + 1);
+    }
+  }
+  throw new Error("the project array in projects.generated.ts is not closed");
+}
+
+async function loadProjects() {
+  const text = await fs.readFile(GENERATED, "utf8");
+  const name = text.indexOf("generatedProjects");
+  if (name === -1) throw new Error("generatedProjects not found in projects.generated.ts");
+  const eq = text.indexOf("=", name);
+  const start = eq === -1 ? -1 : text.indexOf("[", eq);
+  if (start === -1) throw new Error("cannot find where the project array starts");
+  const list = JSON.parse(extractArray(text, start));
+  if (!Array.isArray(list)) throw new Error("the project array did not parse as an array");
+
+  const out = {};
+  for (const p of list) {
+    if (!p || !p.slug) continue;
+    out[p.slug] = {
+      name: String(p.name || p.slug),
+      status: String(p.status || ""),
+      event: String(p.event || ""),
+      chain: String(p.chain || ""),
+      distributeDate: p.distributeDate ? String(p.distributeDate).slice(0, 10) : "",
+    };
+  }
+  return out;
+}
+
+async function loadState() {
+  try {
+    const raw = await fs.readFile(STATE_FILE, "utf8");
+    const s = JSON.parse(raw.replace(/^\uFEFF/, ""));
+    return s && typeof s.projects === "object" && s.projects ? s.projects : null;
+  } catch {
+    return null;
+  }
+}
+
+function makeEvent(now, slug, cur, kind, from, to, title) {
+  const day = now.toISOString().slice(0, 10);
+  return {
+    id: makeId(["project", kind, slug, from, to, day]),
+    type: "project",
+    project: cur.name,
+    slug,
+    date: now.toISOString(),
+    title,
+    url: "",
+    source: SOURCE,
+    data: { kind, from, to, event: cur.event, chain: cur.chain, status: cur.status },
+  };
+}
+
+function diff(prev, curr, now) {
+  const events = [];
+  const added = Object.keys(curr).filter((slug) => !prev[slug]);
+  const skipNew = added.length >= IMPORT_BATCH_SIZE;
+
+  for (const [slug, c] of Object.entries(curr)) {
+    const p = prev[slug];
+    if (!p) {
+      if (!skipNew) {
+        const what = [c.event, c.chain].filter(Boolean).join(", ");
+        events.push(makeEvent(now, slug, c, "new", "", "", `${c.name} added to Droply${what ? ` (${what})` : ""}`));
+      }
+      continue;
+    }
+    if (p.status !== c.status && c.status) {
+      events.push(makeEvent(now, slug, c, "status", p.status, c.status, `${c.name}: status ${p.status || "unknown"} -> ${c.status}`));
+    }
+    if (p.event !== c.event && c.event) {
+      events.push(makeEvent(now, slug, c, "event", p.event, c.event, `${c.name}: type ${p.event || "unknown"} -> ${c.event}`));
+    }
+    if ((p.distributeDate || "") !== (c.distributeDate || "") && c.distributeDate) {
+      const title = p.distributeDate
+        ? `${c.name}: distribution date moved ${p.distributeDate} -> ${c.distributeDate}`
+        : `${c.name}: distribution date set to ${c.distributeDate}`;
+      events.push(makeEvent(now, slug, c, "distribution", p.distributeDate || "", c.distributeDate, title));
+    }
+  }
+  return { events, addedCount: added.length, skippedNew: skipNew };
+}
+
+async function main() {
+  const now = new Date();
+  const curr = await loadProjects();
+  const currCount = Object.keys(curr).length;
+  if (currCount === 0) throw new Error("no projects found in projects.generated.ts, refusing to continue");
+
+  const prev = await loadState();
+
+  console.log("Project changes collector" + (DRY ? " (dry run)" : ""));
+  console.log(`  projects now: ${currCount}`);
+
+  if (!prev) {
+    console.log("  no previous state: recording a baseline, no events this time");
+    if (!DRY) {
+      await fs.writeFile(STATE_FILE, JSON.stringify({ version: 1, updatedAt: now.toISOString(), projects: curr }, null, 2), "utf8");
+      console.log(`  saved: ${STATE_FILE}`);
+    }
+    return;
+  }
+
+  const prevCount = Object.keys(prev).length;
+  if (prevCount > 0 && currCount < prevCount * 0.5) {
+    throw new Error(`project count dropped from ${prevCount} to ${currCount}, looks like a broken sync; state not updated`);
+  }
+
+  const { events, addedCount, skippedNew } = diff(prev, curr, now);
+  console.log(`  projects before: ${prevCount}, new: ${addedCount}${skippedNew ? ` (>= ${IMPORT_BATCH_SIZE}, treated as an import, no "new" events)` : ""}`);
+  console.log(`  change events: ${events.length}`);
+  for (const e of events) console.log(`    ${e.data.kind.padEnd(12)} ${e.title}`);
+
+  if (DRY) return;
+
+  if (events.length) {
+    const existing = await loadEvents();
+    const merged = mergeEvents(existing, events);
+    await saveEvents(merged.events);
+    console.log(`  added to events.json: ${merged.added}, total: ${merged.events.length}`);
+  }
+  // State goes last, so a failed events write is retried on the next run.
+  await fs.writeFile(STATE_FILE, JSON.stringify({ version: 1, updatedAt: now.toISOString(), projects: curr }, null, 2), "utf8");
+}
+
+main().catch((e) => {
+  console.error("FAILED: " + (e?.message || e));
+  process.exit(1);
+});

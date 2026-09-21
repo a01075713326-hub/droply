@@ -1,0 +1,579 @@
+﻿--- sync.js строки 770-834 ---
+770: 
+771:     date,
+772: 
+773:     description:
+774:       x?.description ||
+775:       `${name} drop activity tracked from CryptoRank.`,
+776: 
+777:     sourceUrl,
+778: 
+779:     rating:
+780:       x?.rating != null
+781:         ? x.rating
+782:         : undefined,
+783: 
+784:     activityTypes:
+785:       Array.isArray(x?.activity_types)
+786:         ? x.activity_types
+787:         : undefined,
+788: 
+789:     activityPoints:
+790:       x?.activity_points != null
+791:         ? x.activity_points
+792:         : undefined,
+793: 
+794:     noActiveTask:
+795:       x?.no_active_task,
+796: 
+797:     isAuthProtected:
+798:       x?.is_auth_protected,
+799: 
+800:     claimUrl:
+801:       x?.link_to_claim ||
+802:       undefined,
+803: 
+804:     checkUrl:
+805:       x?.check_link ||
+806:       undefined,
+807: 
+808:     funding:
+809:       x?.funding?.total_raise != null
+810:         ? `$${x.funding.total_raise}`
+811:         : undefined,
+812: 
+813:     investorCount:
+814:       x?.funding?.investor_count != null
+815:         ? x.funding.investor_count
+816:         : undefined,
+817: 
+818:     topInvestors:
+819:       Array.isArray(x?.funding?.top_investors)
+820:         ? x.funding.top_investors
+821:         : undefined,
+822: 
+823:     twitterScore:
+824:       x?.twitter_score != null
+825:         ? x.twitter_score
+826:         : undefined,
+827: 
+828:     twitterFollowers:
+829:       x?.twitter_followers != null
+830:         ? x.twitter_followers
+831:         : undefined,
+832:   };
+833: });
+834:         // ---- get_activity_detail: tasks, links, ecosystems, claim URL, dates ----
+--- sync.js строки 966-1044 ---
+966:         }
+967:       }
+968: 
+969:       if (d.distribute_date) {
+970:         p.distributeDate = String(d.distribute_date).slice(0, 10);
+971:       }
+972: 
+973:       const claim = safeUrl(d.link_to_claim);
+974:       if (claim) p.claimUrl = claim;
+975: 
+976:       if (!p.costToFarm && Number(d.cost_usd) > 0) {
+977:         p.costToFarm = "$" + d.cost_usd;
+978:       }
+979:       if (!p.timeToFarm && Number(d.time_minutes) > 0) {
+980:         p.timeToFarm = d.time_minutes + " min";
+981:       }
+982: 
+983:       const links = d.links && typeof d.links === "object" ? d.links : {};
+984:       const website = firstUrl(links.web);
+985:       const twitter = firstUrl(links.twitter);
+986:       const telegram = firstUrl(links.telegram);
+987:       const discord = firstUrl(links.discord);
+988: 
+989:       if (website) p.website = website;
+990:       if (twitter) p.x = twitter;
+991:       if (telegram) p.telegram = telegram;
+992:       if (discord) p.discord = discord;
+993: 
+994:       const known = new Set(["web", "twitter", "telegram", "discord"]);
+995:       const extra = [];
+996:       for (const [label, urls] of Object.entries(links)) {
+997:         if (known.has(label)) continue;
+998:         for (const u of Array.isArray(urls) ? urls : []) {
+999:           const s = safeUrl(u);
+1000:           if (s) extra.push({ label, url: s });
+1001:         }
+1002:       }
+1003:       if (extra.length) p.extraLinks = extra.slice(0, 12);
+1004: 
+1005:       if (Array.isArray(d.tasks)) {
+1006:         const tasks = d.tasks
+1007:           .map((t) => ({
+1008:             id: t?.task_id,
+1009:             title: cleanText(t?.title),
+1010:             status: t?.status ? String(t.status) : undefined,
+1011:             types: Array.isArray(t?.types)
+1012:               ? t.types.map(String)
+1013:               : t?.type
+1014:                 ? [String(t.type)]
+1015:                 : undefined,
+1016:             startDate: t?.start_date
+1017:               ? String(t.start_date).slice(0, 10)
+1018:               : undefined,
+1019:             endDate: t?.end_date ? String(t.end_date).slice(0, 10) : undefined,
+1020:             isNew: t?.is_new === true ? true : undefined,
+1021:             exclusive: t?.exclusive === true ? true : undefined,
+1022:             instructions: htmlToLines(t?.description_html),
+1023:           }))
+1024:           .filter((t) => t.title);
+1025: 
+1026:         if (tasks.length) p.tasks = tasks;
+1027:       }
+1028: 
+1029:       // ---- real dates: prefer a real distribution date / task deadline ----
+1030:       {
+1031:         const today = new Date().toISOString().slice(0, 10);
+1032:         const upcomingEnds = (p.tasks || [])
+1033:           .map((t) => t.endDate)
+1034:           .filter((e) => e && e >= today)
+1035:           .sort();
+1036: 
+1037:         if (p.distributeDate) {
+1038:           p.date = p.distributeDate;
+1039:         } else if (upcomingEnds.length) {
+1040:           p.date = upcomingEnds[0];
+1041:         }
+1042:       }
+1043:       return true;
+1044:     };
+--- sync.js строки 2195-2262 ---
+2195:     ...cryptoRankHistory.values(),
+2196:   ].filter((p) => !currentCryptoRankSlugs.has(p.slug));
+2197: 
+2198:   const all = [
+2199:     ...cryptoRankProjects,
+2200:     ...historicalCryptoRankProjects,
+2201:     ...airdropsProjects,
+2202:     ...airdropAlertProjects,
+2203:   ];
+2204: 
+2205:   const map = new Map();
+2206: 
+2207:   for (const p of all) {
+2208:     const prev = map.get(p.slug) || {};
+2209: 
+2210:     // Later sources must not overwrite good values with empty ones.
+2211:     const merged = { ...prev };
+2212: 
+2213:     for (const [key, value] of Object.entries(p)) {
+2214:       if (value === undefined || value === null || value === "") continue;
+2215:       if (key === "id") continue;
+2216: 
+2217:       merged[key] = value;
+2218:     }
+2219: 
+2220:     map.set(p.slug, merged);
+2221:   }
+2222: 
+2223:   const syncRunAt = new Date().toISOString();
+2224: 
+2225:   const projects = [...map.values()].map((p, i) => ({
+2226:     ...p,
+2227:     id: i + 1,
+2228:     // Keep the original first-seen date if we've tracked this slug
+2229:     // before; otherwise this is the first time we've ever seen it.
+2230:     firstSeenAt: previousFirstSeen.get(p.slug) || syncRunAt,
+2231:   }));
+2232: 
+2233:   await fs.writeFile(
+2234:     path.join(__dirname, "..", "data", "projects.generated.ts"),
+2235:     `// AUTO-GENERATED. Do not edit.
+2236: import type { Project } from "./projects";
+2237: 
+2238: export const generatedProjects: Project[] = ${JSON.stringify(
+2239:       projects,
+2240:       null,
+2241:       2
+2242:     )};
+2243: `,
+2244:     "utf8"
+2245:   );
+2246: 
+2247:   console.log("");
+2248:   console.log("=================================");
+2249:   console.log("Droply sync complete");
+2250:   console.log("=================================");
+2251:   const newThisRun = projects.filter((p) => p.firstSeenAt === syncRunAt).length;
+2252: 
+2253:   console.log(`Total projects: ${projects.length}`);
+2254:   console.log(`CryptoRank:     ${cryptoRankProjects.length}`);
+2255:   console.log(`CryptoRank all: ${cryptoRankHistory.size}`);
+2256:   console.log(`Airdrops.io:    ${airdropsProjects.length}`);
+2257:   console.log(`AirdropAlert:   ${airdropAlertProjects.length}`);
+2258:   console.log(`New this run:   ${newThisRun}`);
+2259:   console.log("=================================");
+2260: 
+2261:   if (b.status === "rejected") {
+2262:     console.error("Airdrops.io error:", b.reason);
+--- где встречается life_cycle / has_funding_rounds ---
+app\project\[slug]\page.tsx:126: if (p.lifeCycle === "funding" || p.lifeCycle === "scheduled") {
+app\project\[slug]\page.tsx:132: p.lifeCycle +
+app\project\[slug]\page.tsx:289: {(p.lifeCycle === "funding" || p.lifeCycle === "scheduled") && (
+app\project\[slug]\page.tsx:307: No token yet · {p.lifeCycle === "funding" ? "Funding stage" : "Scheduled"}
+--- тип Project ---
+
+Name                                 Length
+----                                 ------
+projects.generated.ts                316159
+projects.generated.ts.backup         206921
+projects.generated.ts.before-history 226132
+projects.state.json                   17954
+projects.ts                            3927
+projects.ts.bak-details                3570
+projects.ts.bak-redesign2              3900
+
+
+
+export type Project = {
+  id: number;
+  slug: string;
+  name: string;
+  symbol?: string;
+  isLive?: boolean;
+  chain: string;
+  event: "Snapshot" | "TGE" | "Claim" | "Airdrop" | "Points";
+  status: "Potential" | "Upcoming" | "Live" | "Confirmed";
+  date?: string;
+  description: string;
+  funding?: string;
+  website?: string;
+  x?: string;
+  logo?: string;
+  source?: string;
+  sourceUrl?: string;
+  claimUrl?: string;
+
+  difficulty?: string;
+  costToFarm?: string;
+  timeToFarm?: string;
+  rewardType?: string;
+  rating?: number;
+  activityTypes?: string[];
+  activityPoints?: number;
+  noActiveTask?: boolean;
+  isAuthProtected?: boolean;
+  checkUrl?: string;
+  investorCount?: number;
+  topInvestors?: unknown[];
+  twitterScore?: number;
+  twitterFollowers?: number;
+  ecosystems?: string[];
+  category?: string;
+  distributeDate?: string;
+  tasks?: ProjectTask[];
+  extraLinks?: { label: string; url: string }[];
+
+  requirements?: string[];
+  actions?: string[];
+  reward?: string;
+  deadline?: string;
+  telegram?: string;
+  discord?: string;
+  whitepaper?: string;
+  docs?: string;
+
+  /** ISO timestamp of when this drop was first seen by the sync script. */
+  firstSeenAt?: string;
+};
+
+const demoProjects: Project[] = [
+  {
+    id: 1,
+    slug: "hyperliquid",
+export type Project = {
+  id: number;
+  slug: string;
+  name: string;
+  symbol?: string;
+  isLive?: boolean;
+  chain: string;
+  event: "Snapshot" | "TGE" | "Claim" | "Airdrop" | "Points";
+  status: "Potential" | "Upcoming" | "Live" | "Confirmed";
+  date?: string;
+  description: string;
+  funding?: string;
+  website?: string;
+  x?: string;
+  logo?: string;
+  source?: string;
+  sourceUrl?: string;
+  claimUrl?: string;
+
+  difficulty?: string;
+  costToFarm?: string;
+  timeToFarm?: string;
+  rewardType?: string;
+  rating?: number;
+  activityTypes?: string[];
+  activityPoints?: number;
+  noActiveTask?: boolean;
+  isAuthProtected?: boolean;
+  checkUrl?: string;
+  investorCount?: number;
+  topInvestors?: unknown[];
+  twitterScore?: number;
+  twitterFollowers?: number;
+
+  requirements?: string[];
+  actions?: string[];
+  reward?: string;
+  deadline?: string;
+  telegram?: string;
+  discord?: string;
+  whitepaper?: string;
+  docs?: string;
+
+  /** ISO timestamp of when this drop was first seen by the sync script. */
+  firstSeenAt?: string;
+};
+
+const demoProjects: Project[] = [
+  {
+    id: 1,
+    slug: "hyperliquid",
+    name: "Hyperliquid",
+    symbol: "HYPE",
+    chain: "Hyperliquid",
+    event: "Snapshot",
+    status: "Potential",
+export type Project = {
+  id: number;
+  slug: string;
+  name: string;
+  symbol?: string;
+  isLive?: boolean;
+  chain: string;
+  event: "Snapshot" | "TGE" | "Claim" | "Airdrop" | "Points";
+  status: "Potential" | "Upcoming" | "Live" | "Confirmed";
+  date?: string;
+  description: string;
+  funding?: string;
+  website?: string;
+  x?: string;
+  logo?: string;
+  source?: string;
+  sourceUrl?: string;
+  claimUrl?: string;
+
+  difficulty?: string;
+  costToFarm?: string;
+  timeToFarm?: string;
+  rewardType?: string;
+  rating?: number;
+  activityTypes?: string[];
+  activityPoints?: number;
+  noActiveTask?: boolean;
+  isAuthProtected?: boolean;
+  checkUrl?: string;
+  investorCount?: number;
+  topInvestors?: unknown[];
+  twitterScore?: number;
+  twitterFollowers?: number;
+  ecosystems?: string[];
+  category?: string;
+  distributeDate?: string;
+  tasks?: ProjectTask[];
+  extraLinks?: { label: string; url: string }[];
+
+  requirements?: string[];
+  actions?: string[];
+  reward?: string;
+  deadline?: string;
+  telegram?: string;
+  discord?: string;
+  whitepaper?: string;
+  docs?: string;
+
+  /** ISO timestamp of when this drop was first seen by the sync script. */
+  firstSeenAt?: string;
+};
+
+const demoProjects: Project[] = [
+  {
+    id: 1,
+    slug: "hyperliquid",
+--- app\project\[slug]\page.tsx ---
+строк: 442
+--- page.tsx строки 1-40 ---
+1: import "./cryptorank-overview-v2.css";
+2: import "./badge-caution.css";
+3: import "./hero-redesign.css";
+4: import "./verify-faq-tone.css";
+5: import { notFound } from "next/navigation";
+6: import "./hero-status.css";
+7: import { getProjects, getProject, initials } from "@/lib/projects";
+8: import { getVerification } from "@/lib/verification";
+9: import { getOverride, isIndexable } from "@/lib/overrides";
+10: import Link from "next/link";
+11: import { ArrowUpRight, Rocket } from "lucide-react";
+12: import GuideSteps from "@/components/GuideSteps";
+13: import FavoriteButton from "@/components/FavoriteButton";
+14: import DeadlineBadge from "@/components/DeadlineBadge";
+15: import VerificationBlock from "@/components/VerificationBlock";
+16: import ProjectBadges, { type BadgeState } from "@/components/ProjectBadges";
+17: import LinksPanel, { type PanelLink } from "@/components/LinksPanel";
+18: import CryptoRankDetails from "@/components/CryptoRankDetails";
+19: import CryptoRankTasks from "@/components/CryptoRankTasks";
+20: import ChainIcon from "@/components/ChainIcon";
+21: import ProjectLogo from "@/components/ProjectLogo";
+22: 
+23: export async function generateStaticParams() {
+24:   const projects = await getProjects();
+25:   return projects.map((p) => ({ slug: p.slug }));
+26: }
+27: 
+28: const GENERIC_CHAINS = new Set(["other", "multiple", "testnet", ""]);
+29: 
+30: // Similar projects: same chain or same category, so every project page links
+31: // to a few others and is not an orphan. A match on status alone is not enough.
+32: function getRelated(p: any, all: any[], limit = 4): any[] {
+33:   const chain = String(p.chain || "").toLowerCase();
+34:   const category = String(p.category || "").toLowerCase();
+35:   const eco = new Set((p.ecosystems || []).map((e: any) => String(e).toLowerCase()));
+36: 
+37:   return all
+38:     .filter((o: any) => o.slug !== p.slug)
+39:     .map((o: any) => {
+40:       let score = 0;
+--- page.tsx строки 120-175 ---
+120:     out.push({
+121:       q: "Which blockchain does " + name + " use?",
+122:       a: name + " is listed on " + p.chain + ".",
+123:     });
+124:   }
+125: 
+126:   if (p.lifeCycle === "funding" || p.lifeCycle === "scheduled") {
+127:     out.push({
+128:       q: "Has " + name + " launched a token yet?",
+129:       a:
+130:         name +
+131:         " has not launched a token yet \u2014 it is currently in the " +
+132:         p.lifeCycle +
+133:         " stage.",
+134:     });
+135:   }
+136: 
+137:   const steps = Array.isArray(p.actions) && p.actions.length ? p.actions.length : tasks.length;
+138:   if (steps) {
+139:     out.push({
+140:       q: "How do I participate in the " + name + " airdrop?",
+141:       a: "The guide above lists " + steps + (steps === 1 ? " step" : " steps") + " to follow.",
+142:     });
+143:   }
+144: 
+145:   return out;
+146: }
+147: export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+148:   const p = await getProject((await params).slug);
+149:   if (!p) return { title: "Project" };
+150: 
+151:   const title = `${p.name} Airdrop \u2014 Guide, Steps & Rewards`;
+152:   const ov = getOverride(p.slug);
+153:   const description = ov?.summary
+154:     ? ov.summary.length > 158
+155:       ? ov.summary.slice(0, 155).trimEnd() + "\u2026"
+156:       : ov.summary
+157:     : buildDescription(p);
+158:   const url = `https://droply.digital/project/${p.slug}`;
+159: 
+160:   return {
+161:     title,
+162:     description,
+163:     alternates: { canonical: url },
+164:     robots: isIndexable(p) ? { index: true, follow: true } : { index: false, follow: true },
+165:     openGraph: {
+166:       title,
+167:       description,
+168:       url,
+169:       type: "article",
+170:       
+171:     },
+172:     twitter: {
+173:       card: "summary_large_image",
+174:       title,
+175:       description,
+--- page.tsx строки 225-300 ---
+225:     ov?.updatedAt ? "Reviewed " + fmtLongDate(ov.updatedAt) : "",
+226:   ]
+227:     .filter(Boolean)
+228:     .join(" \u00b7 ");
+229:   const faqItems = buildFaq({ ...p, actions: steps });
+230: 
+231:   const jsonLd = steps.length ? {
+232:     "@context": "https://schema.org",
+233:     "@type": "HowTo",
+234:     "name": `How to participate in the ${p.name} airdrop`,
+235:     "description": p.description,
+236:     "step": steps.map((action, i) => ({
+237:       "@type": "HowToStep",
+238:       "position": i + 1,
+239:       "text": action,
+240:     })),
+241:   } : null;
+242: 
+243:   return (
+244:     <main className="page container project-page">
+245:       {jsonLd && (
+246:         <script
+247:           type="application/ld+json"
+248:           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+249:         />
+250:       )}
+251:       <script
+252:         type="application/ld+json"
+253:         dangerouslySetInnerHTML={{
+254:           __html: JSON.stringify({
+255:             "@context": "https://schema.org",
+256:             "@type": "BreadcrumbList",
+257:             itemListElement: [
+258:               { "@type": "ListItem", position: 1, name: "Home", item: "https://droply.digital/" },
+259:               { "@type": "ListItem", position: 2, name: "Airdrops", item: "https://droply.digital/airdrops" },
+260:               { "@type": "ListItem", position: 3, name: p.name, item: `https://droply.digital/project/${p.slug}` },
+261:             ],
+262:           }).replace(/</g, "\\u003c"),
+263:         }}
+264:       />
+265:       <Link href="/airdrops" className="back-link">&larr; All drops</Link>
+266: 
+267:       {/* A hard danger outranks everything else on the page, so it sits
+268:           above the hero rather than inside the verification block. */}
+269:       {verification?.alert ? (
+270:         <div className="verify-alert" role="alert">{verification.alert}</div>
+271:       ) : null}
+272: 
+273:       {/* --- Hero: logo + title + subtitle + badges on the left, single CTA on the right, same row --- */}
+274:       <section className="project-hero project-hero--split">
+275: 
+276:         <div className="big-project-icon project-hero__icon">
+277:           {p.logo ? <img src={p.logo} alt={`${p.name} logo`} /> : initials(p.name)}
+278:         </div>
+279: 
+280:         <div className="project-hero__main">
+281:           <div className="project-hero__status">
+282:           <span className={`status-pill ${p.status.toLowerCase()}`}>{p.status}</span>
+283:           {p.isLive && (
+284:             <span className="project-hero__live">
+285:               <span className="project-hero__live-dot" />
+286:               Live now
+287:             </span>
+288:           )}
+289:           {(p.lifeCycle === "funding" || p.lifeCycle === "scheduled") && (
+290:             <span
+291:               title="No token has launched for this project yet"
+292:               style={{
+293:                 display: "inline-flex",
+294:                 alignItems: "center",
+295:                 gap: 6,
+296:                 padding: "2px 10px",
+297:                 borderRadius: 999,
+298:                 fontSize: 12,
+299:                 fontWeight: 600,
+300:                 lineHeight: "18px",

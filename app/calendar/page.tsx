@@ -6,7 +6,7 @@ import { projects } from "@/data/projects";
 import { initials } from "@/lib/projects";
 import { ArrowUpRight } from "lucide-react";
 import FavoriteButton from "@/components/FavoriteButton";
-import DeadlineBadge from "@/components/DeadlineBadge";
+import MoniGauge from "@/components/MoniGauge";
 
 const STATUSES = ["All", "Potential", "Upcoming", "Live", "Confirmed"] as const;
 
@@ -85,7 +85,6 @@ export default function Calendar() {
             <div style={{ display: "flex", alignItems: "center", gap: 12, flexShrink: 0, marginLeft: "auto" }}>
               <span style={{ display: "flex", alignItems: "center", gap: 8 }}>
               <span className={`status-pill ${p.status.toLowerCase()}`}>{p.status}</span>
-              <DeadlineBadge deadline={p.deadline} date={p.date} />
               {p.isLive && (
                 <span style={{ display: "flex", alignItems: "center", gap: 4, fontSize: 11, color: "#5be0b5" }}>
                   <span style={{ width: 6, height: 6, borderRadius: "50%", background: "#5be0b5", display: "inline-block" }} />
@@ -93,6 +92,7 @@ export default function Calendar() {
                 </span>
               )}
             </span>
+              <span className="crx-gauge-slot">{p.twitterScore != null ? <MoniGauge score={Number(p.twitterScore)} compact /> : null}</span>
               <span onClick={(e) => e.stopPropagation()}><FavoriteButton slug={p.slug} /></span>
               <ArrowUpRight size={18} style={{ color: "#647083" }} />
             </div>

@@ -1,0 +1,56 @@
+﻿/* hero-redesign.css - top-aligns logo/title/CTA on one line and groups the
+   5 badges into "facts" (difficulty/cost/blockchain) + "security" (audit/contract).
+   Pure additive overrides via higher-specificity selectors; globals.css untouched. */
+
+.project-hero.project-hero--split {
+  align-items: flex-start;
+}
+
+.project-hero.project-hero--split .project-hero__icon {
+  align-self: flex-start;
+  margin-top: 2px;
+}
+
+.project-hero.project-hero--split .project-hero__main {
+  align-self: flex-start;
+  padding-top: 0;
+}
+
+.project-hero.project-hero--split .project-hero__cta {
+  align-self: flex-start;
+  margin-top: 2px;
+}
+
+/* Visual split between facts and security checks - the 4th badge (Audit)
+   starts the second group. Order is fixed in ProjectBadges.tsx: difficulty,
+   cost, chain, audit, contract. Desktop only - looks odd once wrapped. */
+
+@media (min-width: 761px) {
+  .project-hero--split .badges-row .badge-item:nth-child(4) {
+    margin-left: 8px;
+    padding-left: 16px;
+    border-left: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
+
+/* Real 2-per-row / 1-per-row badge stacking on small screens. The existing
+   globals.css rules for this target a ".badge" class that the markup no
+   longer uses (it renders "badge-item"), so they currently do nothing. */
+
+@media (max-width: 760px) {
+  .project-hero--split .badges-row {
+    width: 100%;
+    gap: 8px;
+  }
+
+  .project-hero--split .badges-row .badge-item {
+    flex: 1 1 calc(50% - 8px);
+    min-width: 0;
+  }
+}
+
+@media (max-width: 430px) {
+  .project-hero--split .badges-row .badge-item {
+    flex-basis: 100%;
+  }
+}

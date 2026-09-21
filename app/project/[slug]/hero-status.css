@@ -1,0 +1,14 @@
+/* Project hero: status pills ("Confirmed", "Live now") sit above the title in the main column.
+   Three-class selector so it wins over the older two-class rules in globals.css,
+   including the ones inside media queries. */
+.project-hero--split .project-hero__main > .project-hero__status {
+  position: static;
+  top: auto;
+  right: auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 0 0 10px;
+  align-self: auto;
+}

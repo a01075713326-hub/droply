@@ -1,0 +1,12 @@
+﻿/* badge-caution.css - amber tone for "no audit" in the hero badge row,
+   kept visually distinct from the red "no contract" tone. */
+
+.badge-item--caution {
+  border-color: rgba(247, 195, 88, 0.3);
+  background: rgba(247, 195, 88, 0.08);
+}
+
+.badge-item--caution .badge-item-label,
+.badge-item--caution .badge-item-value {
+  color: #f7c358;
+}

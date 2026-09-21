@@ -1,0 +1,90 @@
+﻿import { generatedProjects } from "./projects.generated";
+
+export type ProjectTask = {
+  id?: number;
+  title: string;
+  status?: string;
+  types?: string[];
+  startDate?: string;
+  endDate?: string;
+  isNew?: boolean;
+  exclusive?: boolean;
+  instructions?: string[];
+};
+export type Project = {
+  id: number;
+  slug: string;
+  name: string;
+  symbol?: string;
+  isLive?: boolean;
+  chain: string;
+  event: "Snapshot" | "TGE" | "Claim" | "Airdrop" | "Points";
+  status: "Potential" | "Upcoming" | "Live" | "Confirmed";
+  date?: string;
+  description: string;
+  funding?: string;
+  website?: string;
+  x?: string;
+  logo?: string;
+  source?: string;
+  sourceUrl?: string;
+  claimUrl?: string;
+
+  difficulty?: string;
+  costToFarm?: string;
+  timeToFarm?: string;
+  rewardType?: string;
+  rating?: number;
+  activityTypes?: string[];
+  activityPoints?: number;
+  noActiveTask?: boolean;
+  isAuthProtected?: boolean;
+  checkUrl?: string;
+  investorCount?: number;
+  topInvestors?: unknown[];
+  twitterScore?: number;
+  twitterFollowers?: number;
+  ecosystems?: string[];
+  category?: string;
+  distributeDate?: string;
+  lifeCycle?: string;
+  tasks?: ProjectTask[];
+  extraLinks?: { label: string; url: string }[];
+
+  requirements?: string[];
+  actions?: string[];
+  reward?: string;
+  deadline?: string;
+  telegram?: string;
+  discord?: string;
+  whitepaper?: string;
+  docs?: string;
+
+  /** ISO timestamp of when this drop was first seen by the sync script. */
+  firstSeenAt?: string;
+};
+
+const demoProjects: Project[] = [
+  {
+    id: 1,
+    slug: "hyperliquid",
+    name: "Hyperliquid",
+    symbol: "HYPE",
+    chain: "Hyperliquid",
+    event: "Snapshot",
+    status: "Potential",
+    date: "2026-09-30",
+    description: "A high-performance perpetual trading ecosystem with an active points and rewards narrative.",
+    funding: "вЂ”",
+    website: "https://hyperliquid.xyz"
+  },
+  {
+    id: 2,
+    slug: "dolomite",
+    name: "Dolomite",
+    symbol: "DOLO",
+    chain: "Base",
+    event: "Airdrop",
+    status: "Upcoming",
+    date: "2026-09-25",
+    description: "A DeFi money market and trading protocol built around flexible collateral and lending.",

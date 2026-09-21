@@ -8,3 +8,11 @@ node_modules/
 *.zip
 *-debug.html
 scripts/*.backup.js
+
+data/snapshots/
+data/events.json
+*.bak-*
+sync-log.txt
+out-*.txt
+
+data/projects.state.json

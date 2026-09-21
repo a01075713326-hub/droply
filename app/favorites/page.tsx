@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { getProjects } from "@/lib/projects";
 import FavoritesList from "@/components/FavoritesList";
 
@@ -10,3 +11,7 @@ export default async function FavoritesPage() {
     </main>
   );
 }
+
+export const metadata: Metadata = {
+  robots: { index: false, follow: true },
+};

@@ -1,0 +1,187 @@
+import { notFound } from "next/navigation";
+import { getProjects, getProject, initials } from "@/lib/projects";
+import { getVerification } from "@/lib/verification";
+import Link from "next/link";
+import { ArrowUpRight, Rocket } from "lucide-react";
+import GuideSteps from "@/components/GuideSteps";
+import FavoriteButton from "@/components/FavoriteButton";
+import DeadlineBadge from "@/components/DeadlineBadge";
+import VerificationBlock from "@/components/VerificationBlock";
+import ProjectBadges, { type BadgeState } from "@/components/ProjectBadges";
+import LinksPanel, { type PanelLink } from "@/components/LinksPanel";
+
+export async function generateStaticParams() {
+  const projects = await getProjects();
+  return projects.map((p) => ({ slug: p.slug }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const p = await getProject((await params).slug);
+  if (!p) return { title: "Project" };
+
+  const title = `${p.name} Airdrop \u2014 Guide, Steps & Rewards`;
+  const description = p.description;
+  const url = `https://droply.digital/project/${p.slug}`;
+
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: "article",
+      images: p.logo ? [{ url: p.logo }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: p.logo ? [p.logo] : undefined,
+    },
+  };
+}
+
+export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
+  const p = await getProject((await params).slug);
+  if (!p) notFound();
+
+  const verification = getVerification(p.slug);
+
+  // TODO: replace with real ProjectVerification fields once confirmed --
+  // this assumes an `audits` / `contracts` array with a `status` field.
+  const v = verification as any;
+  const auditState: BadgeState = !v
+    ? "unknown"
+    : v.audits?.some((a: any) => a.status === "confirmed")
+      ? "ok"
+      : v.audits?.length
+        ? "warn"
+        : "unknown";
+  const contractState: BadgeState = !v
+    ? "unknown"
+    : v.contracts?.some((c: any) => c.status === "confirmed")
+      ? "ok"
+      : v.contracts?.length
+        ? "warn"
+        : "unknown";
+
+  const official: PanelLink[] = [
+    p.website && { kind: "website", title: "Official Website", url: p.website },
+    p.claimUrl && { kind: "claim", title: "Airdrop / Claim Page", url: p.claimUrl },
+    p.docs && { kind: "docs", title: "Docs / Guide", url: p.docs },
+    p.whitepaper && { kind: "whitepaper", title: "Whitepaper", url: p.whitepaper },
+  ].filter(Boolean) as PanelLink[];
+
+  const social: PanelLink[] = [
+    p.x && { kind: "x", title: "X (Twitter)", url: p.x },
+    p.telegram && { kind: "telegram", title: "Telegram", url: p.telegram },
+    p.discord && { kind: "discord", title: "Discord", url: p.discord },
+  ].filter(Boolean) as PanelLink[];
+
+  const jsonLd = p.actions && p.actions.length ? {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": `How to participate in the ${p.name} airdrop`,
+    "description": p.description,
+    "step": p.actions.map((action, i) => ({
+      "@type": "HowToStep",
+      "position": i + 1,
+      "text": action,
+    })),
+  } : null;
+
+  return (
+    <main className="page container project-page">
+      {jsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      )}
+      <Link href="/airdrops" className="back-link">&larr; All drops</Link>
+
+      {/* A hard danger outranks everything else on the page, so it sits
+          above the hero rather than inside the verification block. */}
+      {verification?.alert ? (
+        <div className="verify-alert" role="alert">{verification.alert}</div>
+      ) : null}
+
+      {/* --- Hero: logo + title + subtitle + badges on the left, single CTA on the right, same row --- */}
+      <section className="project-hero project-hero--split">
+        <div className="project-hero__status">
+          <span className={`status-pill ${p.status.toLowerCase()}`}>{p.status}</span>
+          {p.isLive && (
+            <span className="project-hero__live">
+              <span className="project-hero__live-dot" />
+              Live now
+            </span>
+          )}
+        </div>
+
+        <div className="big-project-icon project-hero__icon">
+          {p.logo ? <img src={p.logo} alt="" /> : initials(p.name)}
+        </div>
+
+        <div className="project-hero__main">
+          <h1 className="project-hero__title">
+            {p.name}
+            {p.symbol ? <span className="ticker-tag">${p.symbol}</span> : null}
+          </h1>
+
+          <p className="project-hero__subtitle">{p.description}</p>
+
+          <ProjectBadges
+            difficulty={p.difficulty}
+            cost={p.costToFarm}
+            chain={p.chain}
+            audit={auditState}
+            contract={contractState}
+          />
+
+          {p.requirements && p.requirements.length ? (
+            <div className="req-pills">
+              {p.requirements.map((r) => <span key={r} className="type-pill">{r}</span>)}
+            </div>
+          ) : null}
+
+          {p.source && <small className="muted project-hero__source">Source: {p.source}</small>}
+        </div>
+
+        {p.claimUrl && (
+          <a
+            href={p.claimUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="primary-btn primary-btn--hero project-hero__cta"
+          >
+            <Rocket size={18} />
+            Start Now
+          </a>
+        )}
+      </section>
+
+      {(p.actions && p.actions.length) || official.length || social.length ? (
+        <div className="guide-layout">
+          {p.actions && p.actions.length ? (
+            <section className="article-card guide-layout__steps">
+              <GuideSteps actions={p.actions} slug={p.slug} />
+            </section>
+          ) : null}
+
+          {official.length || social.length ? (
+            <section className="article-card guide-layout__links">
+              <LinksPanel official={official} social={social} />
+            </section>
+          ) : null}
+        </div>
+      ) : null}
+
+      {/* Verification now sits after the guide: someone following the
+          steps has already seen the essentials up top (badges), this is
+          the deeper detail for those who want it. */}
+      <VerificationBlock verification={verification} />
+    </main>
+  );
+}

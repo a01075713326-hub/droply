@@ -1,4 +1,4 @@
-﻿import path from "node:path";
+import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -176,6 +176,7 @@ const CHAIN_MAP = {
   polygon: "Polygon",
   matic: "Polygon",
   bnb: "BNB Chain",
+  bsc: "BNB Chain",
   bnbchain: "BNB Chain",
   binance: "BNB Chain",
   avalanche: "Avalanche",
@@ -214,7 +215,10 @@ const normalizeChain = (value) => {
 
   if (!raw) return "";
 
-  const key = raw.toLowerCase().replace(/[\s_-]+/g, "");
+  const key = raw
+    .toLowerCase()
+    .replace(/\s+ecosystem$/, "")
+    .replace(/[\s_-]+/g, "");
 
   // Anything not in the map still gets Title Case instead of
   // being passed through as-is (avoids raw lowercase values
@@ -262,10 +266,408 @@ const normalizeSymbol = (value) => {
 ========================= */
 
 async function cryptoRank() {
-  const url =
+  const listUrl =
     "https://api.parse.bot/scraper/3888881d-79db-46c9-8892-13115f4f0ab6/list_activities?limit=30&offset=0&order_by=STATUS_UPDATE&order_direction=DESC&is_archive=false";
 
+  const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+
+  const fetchPage = async (url) => {
+    try {
+      const r = await fetch(url, {
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/142 Safari/537.36",
+          Accept: "text/html,application/xhtml+xml",
+        },
+      });
+
+      if (!r.ok) {
+        console.log(`CryptoRank: page ${r.status} ${url}`);
+        return "";
+      }
+
+      return await r.text();
+    } catch (error) {
+      console.log(
+        `CryptoRank: page fetch failed ${url}: ${
+          error?.message || "unknown error"
+        }`
+      );
+      return "";
+    }
+  };
+
+  const stripHtml = (value) =>
+    cleanText(
+      String(value || "")
+        .replace(/<script[\s\S]*?<\/script>/gi, " ")
+        .replace(/<style[\s\S]*?<\/style>/gi, " ")
+        .replace(/<[^>]+>/g, " ")
+    );
+
+  const extractMeta = (html, property) => {
+    const re = new RegExp(
+      `<meta[^>]+(?:name|property)=["']${property}["'][^>]+content=["']([^"']+)["']`,
+      "i"
+    );
+
+    return decode(re.exec(html)?.[1] || "");
+  };
+
+  const extractLinks = (html) => {
+    const links = [];
+
+    for (const match of String(html || "").matchAll(
+      /<a\b[^>]*href=["'](https?:\/\/[^"'#]+)["'][^>]*>([\s\S]*?)<\/a>/gi
+    )) {
+      const url = normalizeUrl(match[1]);
+      const label = cleanText(match[2]);
+
+      if (url) {
+        links.push({ url, label });
+      }
+    }
+
+    return links;
+  };
+
+  const getHost = (url) => {
+    try {
+      return new URL(url).hostname.toLowerCase();
+    } catch {
+      return "";
+    }
+  };
+
+  const isSocial = (url) => {
+    const host = getHost(url);
+
+    return (
+      host === "x.com" ||
+      host === "www.x.com" ||
+      host === "twitter.com" ||
+      host === "www.twitter.com" ||
+      host === "t.me" ||
+      host === "www.t.me" ||
+      host === "telegram.me" ||
+      host === "www.telegram.me" ||
+      host === "discord.gg" ||
+      host === "www.discord.gg" ||
+      host === "discord.com" ||
+      host === "www.discord.com"
+    );
+  };
+
+  const isCryptoRank = (url) => {
+    const host = getHost(url);
+    return host === "cryptorank.io" || host === "www.cryptorank.io";
+  };
+
+  const externalLinks = (html) =>
+    extractLinks(html).filter(
+      ({ url }) => !isCryptoRank(url) && !isBadWebsite(url)
+    );
+
+  const extractWebsite = (html) => {
+    const links = externalLinks(html);
+
+    const labelled = links.find(({ label }) =>
+      /^(website|official website|visit website)$/i.test(label)
+    );
+
+    if (labelled) {
+      return labelled.url;
+    }
+
+    const candidate = links.find(({ url }) => !isSocial(url));
+
+    return candidate?.url || "";
+  };
+
+  const extractSocial = (html, type) => {
+    const links = externalLinks(html);
+
+    for (const { url } of links) {
+      const host = getHost(url);
+
+      if (
+        type === "x" &&
+        (host === "x.com" ||
+          host === "www.x.com" ||
+          host === "twitter.com" ||
+          host === "www.twitter.com")
+      ) {
+        return url;
+      }
+
+      if (
+        type === "telegram" &&
+        (host === "t.me" ||
+          host === "www.t.me" ||
+          host === "telegram.me" ||
+          host === "www.telegram.me")
+      ) {
+        return url;
+      }
+
+      if (
+        type === "discord" &&
+        (host === "discord.gg" ||
+          host === "www.discord.gg" ||
+          host === "discord.com" ||
+          host === "www.discord.com")
+      ) {
+        return url;
+      }
+    }
+
+    return "";
+  };
+
+  const extractValue = (html, label) => {
+    const text = stripHtml(html);
+
+    const re = new RegExp(
+      `\\b${label}\\s*:\\s*([^|]{1,150})`,
+      "i"
+    );
+
+    return cleanText(re.exec(text)?.[1] || "");
+  };
+
+  const extractCost = (html) => {
+    const text = stripHtml(html);
+
+    const match = text.match(
+      /\bCost\s*:?\s*(\$[\d,.]+(?:\s*[KMB])?|\d+(?:\.\d+)?\s*(?:USD|USDT|USDC))\b/i
+    );
+
+    return cleanText(match?.[1] || "");
+  };
+
+  const extractTime = (html) => {
+    const text = stripHtml(html);
+
+    const match = text.match(
+      /\bTime\s*:?\s*(\d+(?:\.\d+)?)\s*(minutes?|mins?|hours?|hrs?)\b/i
+    );
+
+    return cleanText(match?.[1] ? `${match[1]} ${match[2]}` : "");
+  };
+
+  const extractRewardType = (html) => {
+    const text = stripHtml(html);
+
+    const match = text.match(
+      /\bReward Type\s*:?\s*(Airdrop|Points|Whitelist|NFT|Role|Ambassador|TGE|Claim)\b/i
+    );
+
+    return cleanText(match?.[1] || "");
+  };
+
+  const extractChain = (html) => {
+    const text = stripHtml(html).toLowerCase();
+
+    const chains = [
+      ["ethereum", "Ethereum"],
+      ["solana", "Solana"],
+      ["arbitrum", "Arbitrum"],
+      ["optimism", "Optimism"],
+      ["base", "Base"],
+      ["polygon", "Polygon"],
+      ["bnb chain", "BNB Chain"],
+      ["avalanche", "Avalanche"],
+      ["sui", "Sui"],
+      ["aptos", "Aptos"],
+      ["near", "NEAR"],
+      ["ton", "TON"],
+      ["tron", "TRON"],
+      ["zksync", "zkSync"],
+      ["starknet", "Starknet"],
+      ["linea", "Linea"],
+      ["scroll", "Scroll"],
+      ["blast", "Blast"],
+      ["mantle", "Mantle"],
+      ["monad", "Monad"],
+      ["hyperliquid", "Hyperliquid"],
+      ["bitcoin", "Bitcoin"],
+    ];
+
+    const found = [];
+
+    for (const [needle, value] of chains) {
+      if (text.includes(needle) && !found.includes(value)) {
+        found.push(value);
+      }
+    }
+
+    if (found.length === 1) return found[0];
+
+    if (found.length > 1) return "Multiple";
+
+    return "";
+  };
+
+  const extractDescription = (html, name) => {
+    const description =
+      extractMeta(html, "description") ||
+      extractMeta(html, "og:description");
+
+    if (description && description.length > 20) {
+      return description.slice(0, 500);
+    }
+
+    const text = stripHtml(html);
+
+    const marker = `Instructions for completing tasks and activities for ${name}`;
+
+    const index = text.indexOf(marker);
+
+    if (index >= 0) {
+      const value = text
+        .slice(index + marker.length)
+        .trim();
+
+      if (value) {
+        return value.slice(0, 500);
+      }
+    }
+
+    return "";
+  };
+
+  const extractSteps = (html) => {
+    const steps = [];
+
+    let text = String(html || "");
+
+    text = text.replace(
+      /<a\b[^>]*href=["'](https?:\/\/[^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi,
+      (_, href, inner) => {
+        const label = cleanText(inner);
+
+        return label ? `[${label}](${href})` : "";
+      }
+    );
+
+    text = text
+      .replace(/<script[\s\S]*?<\/script>/gi, " ")
+      .replace(/<style[\s\S]*?<\/style>/gi, " ")
+      .replace(/<[^>]+>/g, " ");
+
+    text = decode(text)
+      .replace(/\s+/g, " ")
+      .trim();
+
+    const re =
+      /(?:^|\s)(\d{1,2})\.\s+(.+?)(?=\s+\d{1,2}\.\s+|$)/g;
+
+    let match;
+
+    while ((match = re.exec(text))) {
+      const number = Number(match[1]);
+
+      if (number < 1 || number > 20) continue;
+
+      const body = cleanTextKeepLinks(match[2]);
+
+      if (!body || body.length < 10) continue;
+
+      steps.push(
+        joinStep(`Step ${number}`, body)
+      );
+    }
+
+    return [...new Set(steps)];
+  };
+
+  const enrichProject = async (project) => {
+    const html = await fetchPage(project.sourceUrl);
+
+    if (!html) {
+      return project;
+    }
+
+    const description = extractDescription(
+      html,
+      project.name
+    );
+
+    if (description) {
+      project.description = description;
+    }
+
+    const website = extractWebsite(html);
+
+    if (website) {
+      project.website = website;
+
+      if (!project.claimUrl) {
+        project.claimUrl = website;
+      }
+    }
+
+    const x = extractSocial(html, "x");
+
+    if (x) {
+      project.x = x;
+    }
+
+    const telegram = extractSocial(
+      html,
+      "telegram"
+    );
+
+    if (telegram) {
+      project.telegram = telegram;
+    }
+
+    const discord = extractSocial(
+      html,
+      "discord"
+    );
+
+    if (discord) {
+      project.discord = discord;
+    }
+
+    // Do not infer blockchain from the whole CryptoRank page.
+    // Page text can contain activity types such as "Mainnet Trading",
+    // which are not blockchain names.
+
+    const cost = extractCost(html);
+
+    if (cost) {
+      project.costToFarm = cost;
+    }
+
+    const time = extractTime(html);
+
+    if (time) {
+      project.timeToFarm = time;
+    }
+
+    const rewardType = extractRewardType(html);
+
+    if (rewardType) {
+      project.rewardType = rewardType;
+      project.event = eventCR(rewardType);
+    }
+
+    const steps = extractSteps(html);
+
+    if (steps.length) {
+      project.actions = steps;
+    }
+
+    return project;
+  };
+
   try {
+    const url =
+      "https://api.parse.bot/scraper/3888881d-79db-46c9-8892-13115f4f0ab6/list_activities?limit=30&offset=0&order_by=STATUS_UPDATE&order_direction=DESC&is_archive=false";
+
     const r = await fetch(url, {
       headers: {
         Accept: "application/json",
@@ -275,52 +677,471 @@ async function cryptoRank() {
 
     if (!r.ok) {
       const text = await r.text();
-      console.warn(`CryptoRank: skipped (HTTP ${r.status})`);
+
+      console.warn(
+        `CryptoRank: skipped (HTTP ${r.status})`
+      );
+
       console.warn(text.slice(0, 300));
+
       return [];
     }
 
     const j = await r.json();
-    const activities = j?.data?.activities || [];
 
-    console.log(`CryptoRank: fetched ${activities.length} activities`);
+    const activities =
+      j?.data?.activities || [];
 
-    return activities.map((x, i) => {
-      const name = x?.project_name || `Project ${i + 1}`;
-      const projectKey = x?.project_key || x?.key || name;
-      const slug = slugify(projectKey);
+    console.log(
+      `CryptoRank: fetched ${activities.length} activities`
+    );
 
-      const d = x?.status_updated_at || x?.created_at;
+    const projects = activities.map((x, i) => {
+  const name =
+    x?.project_name ||
+    `Project ${i + 1}`;
 
-      const date = d
-        ? new Date(d).toISOString().slice(0, 10)
-        : "";
+  const projectKey =
+    x?.project_key ||
+    x?.key ||
+    x?.slug ||
+    name;
 
-      return {
-        id: i + 1,
-        slug,
-        name,
-        symbol: normalizeSymbol(x?.project_symbol),
-        chain: "Multiple",
-        event: eventCR(x?.reward_type),
-        status: statusCR(x?.status),
-        date,
-        description: `${name} drop activity tracked from CryptoRank.`,
-        funding:
-          x?.funding?.total_raise != null
-            ? `$${x.funding.total_raise}`
-            : undefined,
-        website: undefined,
-        logo: x?.logo_url,
-        claimUrl: x?.link_to_claim || x?.check_link,
-        source: "CryptoRank",
-        sourceUrl: `https://cryptorank.io/drophunting/${x?.key || slug}`,
-      };
-    });
+  const slug = slugify(projectKey);
+
+  const d =
+    x?.status_updated_at ||
+    x?.created_at;
+
+  const date = d
+    ? new Date(d)
+        .toISOString()
+        .slice(0, 10)
+    : "";
+
+  const sourceUrl =
+    x?.link ||
+    x?.url ||
+    `https://cryptorank.io/drophunting/${
+      x?.key || slug
+    }`;
+
+  return {
+    id: i + 1,
+
+    source: "CryptoRank",
+
+    slug,
+
+    name,
+
+    symbol: normalizeSymbol(
+      x?.project_symbol ||
+      x?.symbol ||
+      x?.token_symbol
+    ),
+
+    logo:
+      x?.logo_url || undefined,
+
+    chain:
+      normalizeChain(
+        x?.blockchain ||
+        x?.network ||
+        x?.chain
+      ) || "Multiple",
+
+    event: eventCR(
+      x?.reward_type ||
+      x?.rewardType
+    ),
+
+    rewardType:
+      x?.reward_type ||
+      x?.rewardType,
+
+    costToFarm:
+      x?.cost_usd != null
+        ? `$${x.cost_usd}`
+        : undefined,
+
+    timeToFarm:
+      x?.time_minutes != null
+        ? `${x.time_minutes} min`
+        : undefined,
+
+    status: statusCR(x?.status),
+
+    date,
+
+    description:
+      x?.description ||
+      `${name} drop activity tracked from CryptoRank.`,
+
+    sourceUrl,
+
+    rating:
+      x?.rating != null
+        ? x.rating
+        : undefined,
+
+    activityTypes:
+      Array.isArray(x?.activity_types)
+        ? x.activity_types
+        : undefined,
+
+    activityPoints:
+      x?.activity_points != null
+        ? x.activity_points
+        : undefined,
+
+    noActiveTask:
+      x?.no_active_task,
+
+    isAuthProtected:
+      x?.is_auth_protected,
+
+    claimUrl:
+      x?.link_to_claim ||
+      undefined,
+
+    checkUrl:
+      x?.check_link ||
+      undefined,
+
+    funding:
+      x?.funding?.total_raise != null
+        ? `$${x.funding.total_raise}`
+        : undefined,
+
+    investorCount:
+      x?.funding?.investor_count != null
+        ? x.funding.investor_count
+        : undefined,
+
+    topInvestors:
+      Array.isArray(x?.funding?.top_investors)
+        ? x.funding.top_investors
+        : undefined,
+
+    twitterScore:
+      x?.twitter_score != null
+        ? x.twitter_score
+        : undefined,
+
+    lifeCycle: x?.life_cycle ? String(x.life_cycle).toLowerCase() : undefined,
+    twitterFollowers:
+      x?.twitter_followers != null
+        ? x.twitter_followers
+        : undefined,
+  };
+});
+        // ---- get_activity_detail: tasks, links, ecosystems, claim URL, dates ----
+    const detailBase =
+      "https://api.parse.bot/scraper/3888881d-79db-46c9-8892-13115f4f0ab6/get_activity_detail";
+
+    const previousHistory = await loadCryptoRankHistory();
+
+    const DETAIL_KEYS = [
+      "tasks",
+      "extraLinks",
+      "ecosystems",
+      "category",
+      "distributeDate",
+      "lifeCycle",
+      "website",
+      "x",
+      "telegram",
+      "discord",
+    ];
+
+    const safeUrl = (u) => {
+      const s = String(typeof u === "string" ? u : u?.url || "").trim();
+      return /^https?:\/\//i.test(s) ? s : "";
+    };
+
+    const firstUrl = (arr) => {
+      for (const u of Array.isArray(arr) ? arr : []) {
+        const s = safeUrl(u);
+        if (s) return s;
+      }
+      return "";
+    };
+
+    let creditsOut = false;
+    const fetchDetail = async (key) => {
+      for (let attempt = 0; attempt < 2; attempt++) {
+        try {
+          const res = await fetch(
+            `${detailBase}?activity_key=${encodeURIComponent(key)}`,
+            {
+              headers: {
+                Accept: "application/json",
+                "X-API-Key": process.env.PARSE_API_KEY,
+              },
+            }
+          );
+
+          if (res.ok) {
+            const body = await res.json();
+            return body?.data?.activity || body?.data || body?.activity || body;
+          }
+
+          if (res.status === 402) {
+            if (!creditsOut) console.warn("CryptoRank: Parse.bot credits exhausted (HTTP 402), skipping remaining detail requests");
+            creditsOut = true;
+            return null;
+          }
+
+          console.warn(`CryptoRank detail ${key}: HTTP ${res.status}`);
+
+          if (res.status < 500 && res.status !== 429) return null;
+        } catch (error) {
+          console.warn(
+            `CryptoRank detail ${key}: ${error?.message || "request failed"}`
+          );
+        }
+
+        await sleep(1000);
+      }
+
+      return null;
+    };
+
+    // Converts task instructions (HTML) into plain-text lines.
+    // Only text and http(s) links survive: links become "[label](url)",
+    // images, scripts and all other markup are dropped.
+    const htmlToLines = (html) => {
+      let s = String(html || "");
+      if (!s.trim()) return undefined;
+
+      s = s
+        .replace(/<(script|style)\b[\s\S]*?<\/\1>/gi, " ")
+        .replace(/<img\b[^>]*>/gi, " ");
+
+      s = s.replace(
+        /<a\b[^>]*?href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi,
+        (_, href, inner) => {
+          const label = inner
+            .replace(/<[^>]+>/g, " ")
+            .replace(/\s+/g, " ")
+            .trim()
+            .replace(/[\[\]]/g, "");
+          const url = safeUrl(decode(href)).replace(/\)/g, "%29");
+
+          if (!url) return label;
+          return label ? `[${label}](${url})` : url;
+        }
+      );
+
+      s = s.replace(/<ol\b[^>]*>([\s\S]*?)<\/ol>/gi, (_, inner) => {
+        let n = 0;
+        return (
+          "\n" + inner.replace(/<li\b[^>]*>/gi, () => `\n${++n}. `) + "\n"
+        );
+      });
+
+      s = s
+        .replace(/<li\b[^>]*>/gi, "\n\u2022 ")
+        .replace(/<br\s*\/?>/gi, "\n")
+        .replace(/<\/(p|div|li|h[1-6]|ul|ol|tr|table|blockquote)>/gi, "\n")
+        .replace(/<[^>]+>/g, " ");
+
+      const lines = decode(s)
+        .split(/\r?\n/)
+        .map((l) => l.replace(/\s+/g, " ").trim())
+        .filter((l) => l && l !== "\u2022");
+
+      if (!lines.length) return undefined;
+
+      return lines.slice(0, 60).map((l) => l.slice(0, 1200));
+    };
+    // Copies useful fields from the detail response onto the project.
+    // Raw HTML is never stored: task instructions are reduced to text lines with http(s) links.
+    const applyDetail = (p, d) => {
+      if (!d || typeof d !== "object") return false;
+
+      const valid =
+        d.activity_key || d.project_name || Array.isArray(d.tasks);
+      if (!valid) return false;
+
+      const short = cleanText(d.short_description);
+      if (short) p.description = short;
+
+      if (d.category) p.category = String(d.category);
+
+      if (Array.isArray(d.ecosystems)) {
+        const eco = d.ecosystems.map(String).filter(Boolean);
+        if (eco.length) {
+          p.ecosystems = eco;
+          p.chain =
+            eco.length === 1 ? normalizeChain(eco[0]) || eco[0] : "Multiple";
+        }
+      }
+
+      if (d.life_cycle) {
+        p.lifeCycle = String(d.life_cycle).toLowerCase();
+      }
+
+      if (d.distribute_date) {
+        p.distributeDate = String(d.distribute_date).slice(0, 10);
+      }
+
+      const claim = safeUrl(d.link_to_claim);
+      if (claim) p.claimUrl = claim;
+
+      if (!p.costToFarm && Number(d.cost_usd) > 0) {
+        p.costToFarm = "$" + d.cost_usd;
+      }
+      if (!p.timeToFarm && Number(d.time_minutes) > 0) {
+        p.timeToFarm = d.time_minutes + " min";
+      }
+
+      const links = d.links && typeof d.links === "object" ? d.links : {};
+      const website = firstUrl(links.web);
+      const twitter = firstUrl(links.twitter);
+      const telegram = firstUrl(links.telegram);
+      const discord = firstUrl(links.discord);
+
+      if (website) p.website = website;
+      if (twitter) p.x = twitter;
+      if (telegram) p.telegram = telegram;
+      if (discord) p.discord = discord;
+
+      const known = new Set(["web", "twitter", "telegram", "discord"]);
+      const extra = [];
+      for (const [label, urls] of Object.entries(links)) {
+        if (known.has(label)) continue;
+        for (const u of Array.isArray(urls) ? urls : []) {
+          const s = safeUrl(u);
+          if (s) extra.push({ label, url: s });
+        }
+      }
+      if (extra.length) p.extraLinks = extra.slice(0, 12);
+
+      if (Array.isArray(d.tasks)) {
+        const tasks = d.tasks
+          .map((t) => ({
+            id: t?.task_id,
+            title: cleanText(t?.title),
+            status: t?.status ? String(t.status) : undefined,
+            types: Array.isArray(t?.types)
+              ? t.types.map(String)
+              : t?.type
+                ? [String(t.type)]
+                : undefined,
+            startDate: t?.start_date
+              ? String(t.start_date).slice(0, 10)
+              : undefined,
+            endDate: t?.end_date ? String(t.end_date).slice(0, 10) : undefined,
+            isNew: t?.is_new === true ? true : undefined,
+            exclusive: t?.exclusive === true ? true : undefined,
+            instructions: htmlToLines(t?.description_html),
+          }))
+          .filter((t) => t.title);
+
+        if (tasks.length) p.tasks = tasks;
+      }
+
+      // ---- real dates: prefer a real distribution date / task deadline ----
+      {
+        const today = new Date().toISOString().slice(0, 10);
+        const upcomingEnds = (p.tasks || [])
+          .map((t) => t.endDate)
+          .filter((e) => e && e >= today)
+          .sort();
+
+        if (p.distributeDate) {
+          p.date = p.distributeDate;
+        } else if (upcomingEnds.length) {
+          p.date = upcomingEnds[0];
+        }
+      }
+      return true;
+    };
+
+    const DETAIL_TTL_MS = 30 * 24 * 60 * 60 * 1000;
+    const forceDetails = process.env.FORCE_DETAILS === "1";
+    const detailCache = await loadDetailCache();
+    let cacheDirty = false;
+    let cacheHits = 0;
+    let detailOk = 0;
+    let detailCursor = 0;
+    let shapeLogged = false;
+
+    const detailWorker = async () => {
+      while (true) {
+        const i = detailCursor++;
+        if (i >= projects.length) return;
+
+        const p = projects[i];
+        const key = activities[i]?.key || activities[i]?.activity_key;
+        if (!key) continue;
+
+        let fromCache = false;
+        const cacheEntry = detailCache[key];
+        const curStamp = activities[i]?.status_updated_at || null;
+        const cacheFresh =
+          cacheEntry && !forceDetails && Date.now() - cacheEntry.at < DETAIL_TTL_MS &&
+          (!curStamp || cacheEntry.su === curStamp);
+        let d = null;
+        if (cacheFresh) {
+          d = cacheEntry.d;
+          fromCache = true;
+          cacheHits++;
+        } else if (!creditsOut) {
+          d = await fetchDetail(key);
+        }
+        if (!d && cacheEntry) {
+          d = cacheEntry.d;
+          fromCache = true;
+        }
+
+        if (d && applyDetail(p, d)) {
+          detailOk++;
+          if (!fromCache) {
+            detailCache[key] = { at: Date.now(), su: curStamp, d };
+            cacheDirty = true;
+          }
+        } else {
+          if (d && !shapeLogged) {
+            shapeLogged = true;
+            console.warn(
+              "CryptoRank detail: unexpected response, keys: " +
+                Object.keys(d).join(", ")
+            );
+          }
+
+          // Keep what we already had from a previous sync.
+          const prev = previousHistory.get(p.slug);
+          if (prev) {
+            for (const k of DETAIL_KEYS) {
+              if (p[k] === undefined && prev[k] !== undefined) p[k] = prev[k];
+            }
+          }
+        }
+
+        await sleep(150);
+      }
+    };
+
+    await Promise.all(Array.from({ length: 3 }, detailWorker));
+    if (cacheDirty) await saveDetailCache(detailCache);
+    console.log(`CryptoRank detail cache: ${cacheHits} projects served from cache`);
+
+    console.log(
+      `CryptoRank: ${projects.length} projects, details loaded for ${detailOk}`
+    );
+
+    return projects;
   } catch (error) {
     console.warn(
-      `CryptoRank: skipped (${error?.message || "request failed"})`
+      `CryptoRank: skipped (${
+        error?.message ||
+        "request failed"
+      })`
     );
+
     return [];
   }
 }
@@ -335,6 +1156,7 @@ async function airdropsIo() {
   };
 
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 
   const fetchPage = async (url) => {
     try {
@@ -1087,6 +1909,7 @@ async function airdropAlert() {
 
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
+
   const fetchPage = async (url) => {
     try {
       const r = await fetch(url, { headers });
@@ -1292,27 +2115,65 @@ async function loadPreviousFirstSeen() {
   try {
     const content = await fs.readFile(filePath, "utf8");
 
-    // Each project object has no nested `{ }` of its own (only arrays),
-    // so a non-greedy match from `{` to the next `}` safely captures
-    // one whole project object at a time.
-    const objectRegex = /\{[^{}]*\}/g;
-    let match;
+    // Projects contain nested objects (investors, tasks), so a simple
+    // "{ ... }" regex is not enough. Walk the file, track brace depth
+    // (ignoring braces inside strings) and read one top-level object at a time.
+    let depth = 0;
+    let inStr = false;
+    let esc = false;
+    let start = -1;
 
-    while ((match = objectRegex.exec(content))) {
-      const block = match[0];
-      const slug = block.match(/"slug":\s*"([^"]+)"/)?.[1];
-      const firstSeenAt = block.match(/"firstSeenAt":\s*"([^"]+)"/)?.[1];
+    for (let i = 0; i < content.length; i++) {
+      const ch = content[i];
 
-      if (slug && firstSeenAt) {
-        map.set(slug, firstSeenAt);
+      if (inStr) {
+        if (esc) esc = false;
+        else if (ch === "\\") esc = true;
+        else if (ch === '"') inStr = false;
+        continue;
+      }
+
+      if (ch === '"') {
+        inStr = true;
+        continue;
+      }
+
+      if (ch === "{") {
+        if (depth === 0) start = i;
+        depth++;
+      } else if (ch === "}") {
+        depth--;
+
+        if (depth === 0 && start >= 0) {
+          const block = content.slice(start, i + 1);
+          const slug = block.match(/"slug":\s*"([^"]+)"/)?.[1];
+          const seen = block.match(/"firstSeenAt":\s*"([^"]+)"/)?.[1];
+
+          if (slug && seen) map.set(slug, seen);
+          start = -1;
+        }
       }
     }
   } catch {
-    // No previous file yet (first ever run) вЂ” that's fine, everything
-    // will just be marked as seen for the first time today.
+    // No previous file yet (first run) - everything is new.
   }
 
   return map;
+}
+
+async function loadDetailCache() {
+  const filePath = path.join(__dirname, "..", "data", "cryptorank.detail-cache.json");
+  try {
+    const obj = JSON.parse(await fs.readFile(filePath, "utf8"));
+    return obj && typeof obj === "object" && !Array.isArray(obj) ? obj : {};
+  } catch {
+    return {};
+  }
+}
+
+async function saveDetailCache(cache) {
+  const filePath = path.join(__dirname, "..", "data", "cryptorank.detail-cache.json");
+  await fs.writeFile(filePath, JSON.stringify(cache), "utf8");
 }
 
 async function loadCryptoRankHistory() {
@@ -1478,6 +2339,18 @@ if (
 ) {
   sync();
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

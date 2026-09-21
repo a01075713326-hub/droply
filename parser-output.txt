@@ -1,0 +1,174 @@
+﻿========== PARSER 1: sync.js ==========
+node : (node:32000) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Sasa/Desktop/zip/scripts/sync.js is not specified and it doesn't parse as CommonJS.
+строка:3 знак:6
++     (node .\scripts\sync.js 2>&1 | Out-String)
++      ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:32000) [M...se as CommonJS.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Sasa\Desktop\zip\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+Airdrops.io: found 32 project cards
+Airdrops.io: parsing 1/32 Memebook
+Airdrops.io: parsing 2/32 Kryvora Network
+Airdrops.io: parsing 3/32 Vibe Vibe
+Airdrops.io: parsing 4/32 BaiBai
+Airdrops.io: parsing 5/32 Fables
+AirdropAlert: found 50 project cards
+AirdropAlert: parsing 1/50 Touch Grass
+AirdropAlert: parsing 2/50 Bybit
+AirdropAlert: parsing 3/50 Fomo
+AirdropAlert: parsing 4/50 Aligned
+AirdropAlert: parsing 5/50 eCash
+Airdrops.io: parsing 6/32 Wick
+AirdropAlert: parsing 6/50 Bitunix
+Airdrops.io: parsing 7/32 Worldie
+Airdrops.io: parsing 8/32 Blackboard
+AirdropAlert: parsing 7/50 BONK
+Airdrops.io: parsing 9/32 Ammora
+AirdropAlert: parsing 8/50 Agg Market
+Airdrops.io: parsing 10/32 Acepyr
+AirdropAlert: parsing 9/50 OKX
+AirdropAlert: parsing 10/50 MEXC
+Airdrops.io: parsing 11/32 REP
+AirdropAlert: parsing 11/50 Hashcats
+Airdrops.io: parsing 12/32 Vangrid
+Airdrops.io: parsing 13/32 Reels
+AirdropAlert: parsing 12/50 Arc
+AirdropAlert: parsing 13/50 4Dlabs
+AirdropAlert: parsing 14/50 BR1 INFINITE
+Airdrops.io: parsing 14/32 Entropy
+Airdrops.io: parsing 15/32 Beldex
+AirdropAlert: parsing 15/50 Asentum
+Airdrops.io: parsing 16/32 DualMint
+AirdropAlert: parsing 16/50 Midas Markets
+Airdrops.io: parsing 17/32 C8ntinuum
+AirdropAlert: parsing 17/50 ORO
+AirdropAlert: parsing 18/50 QMS Network
+Airdrops.io: parsing 18/32 Amadeus Protocol
+AirdropAlert: parsing 19/50 REP
+AirdropAlert: parsing 20/50 Forecast
+Airdrops.io: parsing 19/32 Laptop
+Airdrops.io: parsing 20/32 Gyndore
+Airdrops.io: parsing 21/32 Flop Labs
+AirdropAlert: parsing 21/50 Entropy
+AirdropAlert: parsing 22/50 infiniFi
+AirdropAlert: parsing 23/50 Credifi
+Airdrops.io: parsing 22/32 TBook
+AirdropAlert: parsing 24/50 HertzFlow
+Airdrops.io: parsing 23/32 Omega
+AirdropAlert: parsing 25/50 Lighter Robinhood
+Airdrops.io: parsing 24/32 MINT
+AirdropAlert: parsing 26/50 Jurassic Finance
+Airdrops.io: parsing 25/32 HertzFlow
+Airdrops.io: parsing 26/32 Nowa
+AirdropAlert: parsing 27/50 Atoma
+AirdropAlert: parsing 28/50 Backyard Finance
+AirdropAlert: parsing 29/50 Tradoor0
+AirdropAlert: parsing 30/50 LitVMSwap
+Airdrops.io: parsing 27/32 Yakkamon
+Airdrops.io: parsing 28/32 Sweep Finance
+Airdrops.io: parsing 29/32 VOICE
+AirdropAlert: parsing 31/50 Kintara
+Airdrops.io: parsing 30/32 Wager Predict
+Airdrops.io: parsing 31/32 AlloX
+AirdropAlert: parsing 32/50 Captain & Company
+AirdropAlert: parsing 33/50 FarmTown
+AirdropAlert: parsing 34/50 Sleepagotchi
+AirdropAlert: parsing 35/50 Showdown
+Airdrops.io: parsing 32/32 Push Chain
+AirdropAlert: parsing 36/50 Calamity
+AirdropAlert: parsing 37/50 AI Arena
+AirdropAlert: parsing 38/50 Power Protocol
+AirdropAlert: parsing 39/50 Nexira
+AirdropAlert: parsing 40/50 RollerCoin
+CryptoRank: fetched 30 activities
+CryptoRank: using API data only (30 projects)
+AirdropAlert: parsing 41/50 Polymarket
+AirdropAlert: parsing 42/50 Hyperliquid
+AirdropAlert: parsing 43/50 Genius
+AirdropAlert: parsing 44/50 xStocks
+AirdropAlert: parsing 45/50 Dango
+AirdropAlert: parsing 46/50 Aster DEX
+AirdropAlert: parsing 47/50 Gate
+AirdropAlert: parsing 48/50 BloFin
+AirdropAlert: parsing 49/50 MetaMask
+AirdropAlert: parsing 50/50 EveDex
+
+=================================
+Droply sync complete
+=================================
+Total projects: 108
+CryptoRank:     30
+CryptoRank all: 30
+Airdrops.io:    32
+AirdropAlert:   50
+New this run:   13
+=================================
+
+========== PARSER 2: sync-cryptorank.js ==========
+node : Missing CRYPTORANK_API_KEY
+строка:6 знак:6
++     (node .\scripts\sync-cryptorank.js 2>&1 | Out-String)
++      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Missing CRYPTORANK_API_KEY:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+
+========== PARSER 3: 2.js ==========
+node : (node:11008) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Sasa/Desktop/zip/scripts/2.js is not specified and it doesn't parse as CommonJS.
+строка:9 знак:6
++     (node .\scripts\2.js 2>&1 | Out-String)
++      ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ((node:11008) [M...se as CommonJS.:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Sasa\Desktop\zip\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+CryptoRank: skipped (API key not configured)
+AirdropAlert: found 50 project cards
+Airdrops.io: found 32 project cards
+Airdrops.io: parsing 1/32 Memebook
+Airdrops.io: parsing 2/32 Kryvora Network
+Airdrops.io: parsing 3/32 Vibe Vibe
+Airdrops.io: parsing 4/32 BaiBai
+Airdrops.io: parsing 5/32 Fables
+Airdrops.io: parsing 6/32 Wick
+Airdrops.io: parsing 7/32 Worldie
+Airdrops.io: parsing 8/32 Blackboard
+Airdrops.io: parsing 9/32 Ammora
+Airdrops.io: parsing 10/32 Acepyr
+Airdrops.io: parsing 11/32 REP
+Airdrops.io: parsing 12/32 Vangrid
+Airdrops.io: parsing 13/32 Reels
+Airdrops.io: parsing 14/32 Entropy
+Airdrops.io: parsing 15/32 Beldex
+Airdrops.io: parsing 16/32 DualMint
+Airdrops.io: parsing 17/32 C8ntinuum
+Airdrops.io: parsing 18/32 Amadeus Protocol
+Airdrops.io: parsing 19/32 Laptop
+Airdrops.io: parsing 20/32 Gyndore
+Airdrops.io: parsing 21/32 Flop Labs
+Airdrops.io: parsing 22/32 TBook
+Airdrops.io: parsing 23/32 Omega
+Airdrops.io: parsing 24/32 MINT
+Airdrops.io: parsing 25/32 HertzFlow
+Airdrops.io: parsing 26/32 Nowa
+Airdrops.io: parsing 27/32 Yakkamon
+Airdrops.io: parsing 28/32 Sweep Finance
+Airdrops.io: parsing 29/32 VOICE
+Airdrops.io: parsing 30/32 Wager Predict
+Airdrops.io: parsing 31/32 AlloX
+Airdrops.io: parsing 32/32 Push Chain
+
+=================================
+Droply sync complete
+=================================
+Total projects: 80
+CryptoRank:     0
+Airdrops.io:    32
+AirdropAlert:   50
+=================================
+

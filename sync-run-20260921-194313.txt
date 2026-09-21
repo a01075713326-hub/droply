@@ -1,0 +1,106 @@
+(node:40880) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///C:/Users/Sasa/Desktop/zip/scripts/sync.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to \\?\C:\Users\Sasa\Desktop\zip\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+AirdropAlert: found 50 project cards
+AirdropAlert: parsing 1/50 Touch Grass
+AirdropAlert: parsing 2/50 Bybit
+AirdropAlert: parsing 3/50 Fomo
+AirdropAlert: parsing 4/50 Aligned
+AirdropAlert: parsing 5/50 eCash
+Airdrops.io: found 33 project cards
+Airdrops.io: parsing 1/33 Memebook
+Airdrops.io: parsing 2/33 Kryvora Network
+Airdrops.io: parsing 3/33 BaiBai
+Airdrops.io: parsing 4/33 Fables
+Airdrops.io: parsing 5/33 Wick
+AirdropAlert: parsing 6/50 Bitunix
+AirdropAlert: parsing 7/50 BONK
+AirdropAlert: parsing 8/50 Agg Market
+AirdropAlert: parsing 9/50 OKX
+AirdropAlert: parsing 10/50 MEXC
+AirdropAlert: parsing 11/50 Minds Games
+Airdrops.io: parsing 6/33 Worldie
+AirdropAlert: parsing 12/50 Hashcats
+AirdropAlert: parsing 13/50 4Dlabs
+AirdropAlert: parsing 14/50 Asentum
+AirdropAlert: parsing 15/50 Midas Markets
+Airdrops.io: parsing 7/33 Blackboard
+Airdrops.io: parsing 8/33 Ammora
+Airdrops.io: parsing 9/33 Acepyr
+Airdrops.io: parsing 10/33 REP
+AirdropAlert: parsing 16/50 ORO
+AirdropAlert: parsing 17/50 QMS Network
+AirdropAlert: parsing 18/50 REP
+AirdropAlert: parsing 19/50 Forecast
+Airdrops.io: parsing 11/33 Vangrid
+Airdrops.io: parsing 12/33 Reels
+Airdrops.io: parsing 13/33 Entropy
+Airdrops.io: parsing 14/33 Beldex
+Airdrops.io: parsing 15/33 DualMint
+AirdropAlert: parsing 20/50 $LAPTOP
+AirdropAlert: parsing 21/50 SUBFROST 
+AirdropAlert: parsing 22/50 Extended
+AirdropAlert: parsing 23/50 Arc
+Airdrops.io: parsing 16/33 C8ntinuum
+Airdrops.io: parsing 17/33 Amadeus Protocol
+Airdrops.io: parsing 18/33 NeoSoul
+Airdrops.io: parsing 19/33 Vibe Vibe
+Airdrops.io: parsing 20/33 Laptop
+AirdropAlert: 429 https://airdropalert.com/airdrops/extended-exchange-points-program/
+AirdropAlert: parsing 24/50 Robinhood Chain
+AirdropAlert: parsing 25/50 Ethena
+AirdropAlert: parsing 26/50 Entropy
+Airdrops.io: parsing 21/33 Gyndore
+AirdropAlert: parsing 27/50 infiniFi
+AirdropAlert: 429 https://airdropalert.com/airdrops/ethena-season-6/
+AirdropAlert: 429 https://airdropalert.com/airdrops/robinhood-chain/
+Airdrops.io: parsing 22/33 Flop Labs
+Airdrops.io: parsing 23/33 TBook
+AirdropAlert: parsing 28/50 Credifi
+AirdropAlert: parsing 29/50 HertzFlow
+AirdropAlert: parsing 30/50 Jurassic Finance
+AirdropAlert: parsing 31/50 BR1 INFINITE
+Airdrops.io: parsing 24/33 Omega
+CryptoRank: fetched 30 activities
+Airdrops.io: parsing 25/33 MINT
+Airdrops.io: parsing 26/33 HertzFlow
+Airdrops.io: parsing 27/33 Nowa
+Airdrops.io: parsing 28/33 Yakkamon
+AirdropAlert: parsing 32/50 Kintara
+AirdropAlert: parsing 33/50 Captain & Company
+AirdropAlert: parsing 34/50 FarmTown
+AirdropAlert: parsing 35/50 Sleepagotchi
+Airdrops.io: parsing 29/33 Sweep Finance
+Airdrops.io: parsing 30/33 VOICE
+Airdrops.io: parsing 31/33 Wager Predict
+Airdrops.io: parsing 32/33 AlloX
+Airdrops.io: parsing 33/33 Push Chain
+AirdropAlert: parsing 36/50 Showdown
+AirdropAlert: parsing 37/50 Calamity
+AirdropAlert: parsing 38/50 AI Arena
+AirdropAlert: parsing 39/50 Power Protocol
+AirdropAlert: parsing 40/50 Nexira
+AirdropAlert: parsing 41/50 Polymarket
+AirdropAlert: parsing 42/50 Hyperliquid
+AirdropAlert: parsing 43/50 Lighter Robinhood
+AirdropAlert: parsing 44/50 Genius
+AirdropAlert: parsing 45/50 xStocks
+AirdropAlert: parsing 46/50 Dango
+AirdropAlert: parsing 47/50 Aster DEX
+AirdropAlert: parsing 48/50 Gate
+AirdropAlert: parsing 49/50 BloFin
+AirdropAlert: parsing 50/50 MetaMask
+CryptoRank detail cache: 0 projects served from cache
+CryptoRank: 30 projects, details loaded for 30
+
+=================================
+Droply sync complete
+=================================
+Total projects: 110
+CryptoRank:     30
+CryptoRank all: 31
+Airdrops.io:    33
+AirdropAlert:   50
+New this run:   6
+=================================

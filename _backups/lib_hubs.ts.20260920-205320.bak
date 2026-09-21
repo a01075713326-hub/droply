@@ -1,0 +1,142 @@
+import type { Project } from "@/data/projects";
+
+/** A hub page is created only when a chain/category has at least this many projects. */
+export const HUB_MIN = 3;
+export const SITE_URL = "https://droply.digital";
+
+export type Hub = { slug: string; name: string; items: Project[] };
+
+export function slugify(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function groupBy(
+  projects: Project[],
+  pick: (p: Project) => string | undefined
+): Hub[] {
+  const map = new Map<string, Hub>();
+  for (const p of projects) {
+    const raw = (pick(p) || "").trim();
+    const slug = slugify(raw);
+    if (!slug) continue;
+    let hub = map.get(slug);
+    if (!hub) {
+      hub = { slug, name: raw, items: [] };
+      map.set(slug, hub);
+    }
+    hub.items.push(p);
+  }
+  return Array.from(map.values())
+    .filter((h) => h.items.length >= HUB_MIN)
+    .sort(
+      (a, b) => b.items.length - a.items.length || a.name.localeCompare(b.name)
+    );
+}
+
+export function getChainHubs(projects: Project[]): Hub[] {
+  return groupBy(projects, (p) => p.chain);
+}
+
+export function getCategoryHubs(projects: Project[]): Hub[] {
+  return groupBy(projects, (p) => p.category);
+}
+
+export function getLiveProjects(projects: Project[]): Project[] {
+  return projects.filter((p) => p.status === "Live");
+}
+
+const STATUS_ORDER = ["Live", "Upcoming", "Potential", "Confirmed"];
+
+function statusPart(items: Project[]): string {
+  const parts: string[] = [];
+  for (const s of STATUS_ORDER) {
+    const n = items.filter((p) => p.status === s).length;
+    if (n > 0) parts.push(`${n} ${s.toLowerCase()}`);
+  }
+  return parts.join(", ");
+}
+
+function difficultySentence(items: Project[]): string {
+  const counts = new Map<string, number>();
+  let total = 0;
+  for (const p of items) {
+    const d = (p.difficulty || "").trim();
+    if (!d) continue;
+    total += 1;
+    counts.set(d, (counts.get(d) || 0) + 1);
+  }
+  if (total < HUB_MIN) return "";
+  let bestName = "";
+  let bestCount = 0;
+  for (const [d, n] of Array.from(counts.entries())) {
+    if (n > bestCount) {
+      bestName = d;
+      bestCount = n;
+    }
+  }
+  if (!bestName) return "";
+  return `Of ${total} projects with a difficulty rating, ${bestCount} are rated ${bestName.toLowerCase()}.`;
+}
+
+function namesSentence(items: Project[]): string {
+  const rank = (s: string) => {
+    const i = STATUS_ORDER.indexOf(s);
+    return i === -1 ? STATUS_ORDER.length : i;
+  };
+  const sorted = [...items].sort((a, b) => rank(a.status) - rank(b.status));
+  const names = sorted.slice(0, 3).map((p) => p.name);
+  if (names.length === 0) return "";
+  if (names.length === 1) return `Includes ${names[0]}.`;
+  const last = names[names.length - 1];
+  return `Includes ${names.slice(0, -1).join(", ")} and ${last}.`;
+}
+
+/** Short intro built only from the data we actually have. */
+export function describeHub(
+  kind: "chain" | "category" | "live",
+  name: string,
+  items: Project[]
+): string {
+  const n = items.length;
+  const noun = n === 1 ? "airdrop" : "airdrops";
+  const sp = statusPart(items);
+  const spText = sp ? ` (${sp})` : "";
+
+  if (kind === "live" && n === 0) {
+    return "No airdrops are marked live at the moment. Check the full list for upcoming and potential drops.";
+  }
+
+  let first: string;
+  if (kind === "chain") {
+    first = `Droply tracks ${n} ${name} ${noun}${spText}.`;
+  } else if (kind === "category") {
+    first = `Droply tracks ${n} ${noun} in the ${name} category${spText}.`;
+  } else {
+    first = `${n} ${noun} ${n === 1 ? "is" : "are"} marked live right now.`;
+  }
+
+  return [first, difficultySentence(items), namesSentence(items)]
+    .filter(Boolean)
+    .join(" ");
+}
+
+export function clip(text: string, max = 155): string {
+  if (text.length <= max) return text;
+  return text.slice(0, max - 3).trimEnd() + "...";
+}
+
+export function breadcrumbLd(trail: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: trail.map((t, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: t.name,
+      item: SITE_URL + t.path,
+    })),
+  };
+}
