@@ -18,3 +18,5 @@ out-*.txt
 data/projects.state.json
 *.rar
 *.rar
+
+tsconfig.tsbuildinfo
