@@ -26,5 +26,12 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
-  return <html lang="en" className={inter.variable}><body><AuroraBackground/><Header/>{children}<Footer/></body></html>;
+  return (
+    <html lang="en" className={inter.variable}>
+      <head>
+        <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "4154b45fac604535bd8729e76bf00677"}'></script>
+      </head>
+      <body><AuroraBackground/><Header/>{children}<Footer/></body>
+    </html>
+  );
 }
