@@ -23,11 +23,17 @@ export default function Calendar() {
   }, []);
 
   const filtered = useMemo(() => {
-    return projects.filter((p) => {
+    const list = projects.filter((p) => {
             const matchesStatus =
         status === "All" || (status === "Live" ? p.status === "Live" || p.isLive === true : p.status === status);
       const matchesQuery = p.name.toLowerCase().includes(query.toLowerCase());
       return matchesStatus && matchesQuery;
+    });
+
+    return [...list].sort((a, b) => {
+      const ta = a.firstSeenAt ? new Date(a.firstSeenAt).getTime() : 0;
+      const tb = b.firstSeenAt ? new Date(b.firstSeenAt).getTime() : 0;
+      return tb - ta;
     });
   }, [status, query]);
 
