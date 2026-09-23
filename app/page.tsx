@@ -6,11 +6,15 @@ import ProjectTable from "@/components/ProjectTable";
 import CalendarCard from "@/components/CalendarCard";
 import DroplyMark from "@/components/DroplyMark";
 import { getHubLinks, getChainHubs, slugify } from "@/lib/hubs";
+import { getNearestReward, getHotActivities } from "@/lib/highlights";
+import { NearestRewardCard, HotActivitiesCard } from "@/components/HomeHighlights";
 
 export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const projects = await getProjects();
+  const nearestReward = getNearestReward(projects);
+  const hotActivities = getHotActivities(projects);
   const live = projects.filter((p) => p.status === "Live" || p.isLive === true).length;
   const week = projects.filter((p) => p.date && p.date >= new Date().toISOString().slice(0, 10)).length;
   const hubLinks = getHubLinks(projects);
@@ -50,6 +54,8 @@ export default async function Home() {
         <img src="/droplet-logo.png" alt="" className="hero-logo-img"/>
       </div>
       <div className="hero-side">
+        {nearestReward ? <NearestRewardCard project={nearestReward}/> : null}
+        {hotActivities.length ? <HotActivitiesCard projects={hotActivities}/> : null}
         <div className="glass-card newsletter"><h3>Never miss a drop.</h3><p>Get the latest updates and verified information directly in your inbox.</p><div className="email-box"><input placeholder="Your email address"/><button>&rarr;</button></div><div className="quick-links">{[["Airdrops","/airdrops"],["TGE","/calendar"],["Snapshots","/calendar"],["Claims","/airdrops?event=claim"]].map(([x,y])=><Link href={y} key={x}><span>&#9675;</span>{x}</Link>)}</div></div>
         <CalendarCard/>
       </div>
