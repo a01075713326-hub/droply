@@ -27,21 +27,6 @@
     ],
     "updatedAt": "2026-09-20"
   },
-  "amadeus-protocol": {
-    "tagline": "A confidential Layer 1 for AI agents, with a free points beta on AMA Hub.",
-    "summary": "Amadeus Protocol is a Layer 1 aimed at AI agents that trade and transact onchain while keeping their strategies private. It uses trusted execution environments and a consensus design called useful proof of work, which points mining power at AI computation. You can join the AMA Hub beta, link wallets, check in daily, run simple agents and finish social quests to earn PRIME Points. The points program is live, but as far as we could find the team has not published how, or whether, points convert into the AMA token.",
-    "risks": [
-      "Sources disagree on whether an airdrop is confirmed. We found no official commitment to convert PRIME Points into AMA.",
-      "We found no official TGE date, so any timeline you see elsewhere should be treated as unconfirmed.",
-      "Signing in with a Google account creates a real wallet with a recovery phrase. Store it safely and never share it, because losing it means losing access.",
-      "This is a young project with a short public track record."
-    ],
-    "notes": [
-      "Quests on AMA Hub reportedly close on a rolling basis through October 2026, so check the date on each quest.",
-      "The sample agents in the Hub are described as watch-only and need your wallet signature for each transaction. Still review what an agent is allowed to do before connecting a wallet."
-    ],
-    "updatedAt": "2026-09-20"
-  },
   "yakkamon": {
     "tagline": "A creature-collecting idle farming game on Ronin from the makers of Sunflower Land, with a free Season 0 pre-registration.",
     "summary": "Yakkamon is a creature collector and idle-farming game on Ronin, built by Thought Farm, the studio behind Sunflower Land. You catch monsters and put them to work farming while you are offline, and use your online time for hunting, crafting and arena battles. Season 0 pre-registration is free and needs only an email address. Points from daily activity decide your leaderboard rank, and rank decides which early-access wave you join in Q4 2026 and who receives a Monster NFT. There is no new token: the game uses $FLOWER, the token from the studio's other games.",
@@ -57,5 +42,36 @@
       "The free mint of 10,000 monsters is whitelist-only and scheduled for 1 October. Check the official site for the wallet verification requirement before then."
     ],
     "updatedAt": "2026-09-20"
+  },
+  "amadeus": {
+    "tagline": "A confidential Layer 1 for AI agents, with a free PRIME Points beta on AMA Hub ahead of a still-unconfirmed $AMA TGE.",
+    "summary": "Amadeus Protocol is a Layer 1 built for AI agents that trade and transact onchain while keeping their strategies private, using Trusted Execution Environments and a consensus design called Useful Proof of Work that points mining power at AI computation. You can join the AMA Hub Season 1 beta, link wallets, check in daily, run simple agents and finish social quests to earn PRIME Points. In February 2026 Amadeus acquired the AI-agent platform Bitte.ai for $1.7M paid in $AMA. Some trackers report a $AMA TGE targeted for September 2026, but we found no confirmation of that date on the official site, and the PRIME-to-$AMA conversion rate has not been announced.",
+    "risks": [
+      "Sources disagree on whether an airdrop is confirmed, and on whether a September 2026 TGE date is real; treat both as unconfirmed until the official site says otherwise.",
+      "We found no official commitment to convert PRIME Points into $AMA.",
+      "Signing in with a Google account creates a real wallet with a recovery phrase. Store it safely and never share it, because losing it means losing access.",
+      "This is a young project with a short public track record."
+    ],
+    "notes": [
+      "Quests on AMA Hub run in seasons and close on a rolling basis, so check the date on each quest rather than assuming it stays open.",
+      "The sample agents in the Hub are described as watch-only and need your wallet signature for each transaction. Still review what an agent is allowed to do before connecting a wallet.",
+      "The official X account we could confirm from a company press release is @amadeusprotocol; some third-party airdrop guides reference @ama_protocol instead. Verify on the official site before following either."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "gte": {
+    "tagline": "A CLOB, AMM and token-launchpad DEX built for MegaETH, now gating access through a waitlist points program ahead of a still-unannounced token.",
+    "summary": "GTE (Global Token Exchange) is a fully on-chain, non-custodial trading platform built exclusively for MegaETH, combining a central limit order book, an automated market maker and Takeoff, its token launchpad, with the goal of matching centralized-exchange speed. The project ran an open beta testnet through 2025, then moved to a waitlist: signing up earns points and a Bronze-to-Platinum rank ahead of the platform's full public launch. Liquid Labs, the team behind GTE, has raised roughly $25M from investors including Paradigm, Wintermute and GSR, and some of that funding reportedly included agreements with token warrants. No native $GTE token, TGE date, or points-to-token conversion has been officially announced.",
+    "risks": [
+      "No token, TGE date, or points-conversion rate has been confirmed; funding agreements with token warrants raise expectations but are not a commitment.",
+      "The public site currently only offers waitlist sign-up; we could not verify what access, if any, earlier testnet accounts retain.",
+      "We found no official Discord, Telegram or documentation link on the current site, so verify any community link independently before joining.",
+      "This is a fast-moving pre-launch product; guides describing the earlier open testnet may no longer reflect the current waitlist-only flow."
+    ],
+    "notes": [
+      "The waitlist ranks participants Bronze through Platinum by points; referrals are one of the ways to earn points.",
+      "MegaETH, the underlying chain, already completed its own MEGA token generation event in April 2026 — that is a separate token from any future GTE token."
+    ],
+    "updatedAt": "2026-09-24"
   }
 }
