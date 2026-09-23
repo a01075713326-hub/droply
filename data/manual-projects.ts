@@ -16,15 +16,16 @@ export const manualProjects: Project[] = [
     description: "GTE is a decentralized trading venue on MegaETH that unifies a central limit order book, an AMM and a token launchpad in one on-chain platform, aiming to rival Hyperliquid on speed.",
     funding: "$25M",
     website: "https://gte.xyz",
+    claimUrl: "https://waitlist.gte.xyz",
     logo: "https://images.cryptorank.io/coins/150x150.gte1737044153334.png",
     x: "https://x.com/GTE_XYZ",
     source: "Manual",
     category: "DeFi",
     requirements: ["Trading activity"],
     actions: [
-      "Sign up and connect a wallet at gte.xyz",
-      "Trade on the spot or perpetual order book to build volume",
-      "No official token or airdrop confirmed yet — this is a potential future reward, not a guaranteed one"
+      "Join the GTE waitlist at waitlist.gte.xyz and connect your wallet or X account",
+      "Complete point-earning tasks to climb the tiers (Bronze through Platinum)",
+      "No token, TGE date, or points-to-token conversion has been announced — treat all activity as speculative until GTE confirms terms"
     ]
   },
   {
@@ -39,6 +40,7 @@ export const manualProjects: Project[] = [
     description: "Amadeus Protocol is an open-source blockchain that replaces traditional mining with a useful proof-of-work model, where mining also trains AI models. The AMA token has a 1B max supply.",
     funding: "—",
     website: "https://ama.one",
+    claimUrl: "https://ama.one",
     logo: "https://ama.one/logos/ama-logo.png",
     source: "Manual",
     category: "AI",
