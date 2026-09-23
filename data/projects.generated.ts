@@ -3,28 +3,30 @@ import type { Project } from "./projects";
 
 export const generatedProjects: Project[] = [
   {
-    "source": "CryptoRank",
     "slug": "ekiden",
     "name": "Ekiden",
-    "logo": "https://images.cryptorank.io/coins/60x60.ekiden1788968491574.png",
     "chain": "Canton Ecosystem",
     "event": "Points",
+    "status": "Confirmed",
+    "date": "2026-09-23",
+    "description": "Ekiden is an institutional hybrid derivatives exchange on the Canton Network.",
+    "funding": "$2000000",
+    "logo": "https://images.cryptorank.io/coins/60x60.ekiden1788968491574.png",
+    "source": "CryptoRank",
+    "sourceUrl": "https://cryptorank.io/drophunting/ekiden-activity1207",
     "rewardType": "Points",
     "costToFarm": "$60",
     "timeToFarm": "25 min",
-    "status": "Confirmed",
-    "date": "2026-09-21",
-    "description": "Ekiden is an institutional hybrid derivatives exchange on the Canton Network.",
-    "sourceUrl": "https://cryptorank.io/drophunting/ekiden-activity1207",
-    "rating": 42,
     "activityTypes": [
       "Mainnet",
       "Trading"
     ],
     "activityPoints": 44.5,
+    "rating": 46,
+    "twitterFollowers": 2658,
+    "twitterScore": 475,
     "noActiveTask": false,
     "isAuthProtected": false,
-    "funding": "$2000000",
     "investorCount": 19,
     "topInvestors": [
       {
@@ -58,9 +60,6 @@ export const generatedProjects: Project[] = [
         "is_lead": false
       }
     ],
-    "twitterScore": 475,
-    "lifeCycle": "funding",
-    "twitterFollowers": 2658,
     "category": "Exchange",
     "ecosystems": [
       "Canton Ecosystem"
@@ -109,38 +108,38 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
+    "lifeCycle": "funding",
     "id": 1,
     "firstSeenAt": "2026-09-19T12:37:51.512Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "ecash-drivechains",
     "name": "eCash.com",
     "symbol": "ECX",
-    "logo": "https://images.cryptorank.io/coins/60x60.bitcoin_drivechains1788455749771.png",
     "chain": "Multiple",
     "event": "Airdrop",
+    "status": "Confirmed",
+    "date": "2026-10-31",
+    "description": "eCash is a Bitcoin hard fork that preserves its core architecture while adding native support for BIP-300",
+    "funding": "$8000000",
+    "logo": "https://images.cryptorank.io/coins/60x60.bitcoin_drivechains1788455749771.png",
+    "source": "CryptoRank",
+    "sourceUrl": "https://cryptorank.io/drophunting/ecash-drivechains-activity1307",
     "rewardType": "Airdrop",
     "costToFarm": "$0",
     "timeToFarm": "10 min",
-    "status": "Confirmed",
-    "date": "2026-09-21",
-    "description": "eCash is a Bitcoin hard fork that preserves its core architecture while adding native support for BIP-300",
-    "sourceUrl": "https://cryptorank.io/drophunting/ecash-drivechains-activity1307",
-    "rating": 24,
     "activityTypes": [
       "Wallet Airdrop Status",
       "Hold",
       "Testnet"
     ],
     "activityPoints": 2,
+    "rating": 30,
+    "twitterScore": 134,
     "noActiveTask": false,
     "isAuthProtected": false,
-    "funding": "$8000000",
     "investorCount": 0,
     "topInvestors": [],
-    "twitterScore": 134,
-    "lifeCycle": "funding",
     "category": "Blockchain",
     "website": "https://ecash.com/",
     "x": "https://x.com/BTCdrivechains?hzet=dszqupsbol",
@@ -157,16 +156,48 @@ export const generatedProjects: Project[] = [
     ],
     "tasks": [
       {
-        "id": 3742,
-        "title": "Getting $pECX",
+        "id": 3763,
+        "title": "Getting $pECX (Beta)",
         "status": "OPEN",
         "types": [
           "Testnet",
           "Hold",
           "Wallet Airdrop Status"
         ],
-        "startDate": "2026-08-23",
+        "startDate": "2026-09-21",
+        "endDate": "2026-10-31",
         "isNew": true,
+        "instructions": [
+          "eCash [has announced](https://x.com/BTCdrivechains/status/2101991285636686264?s=20) the start of the beta phase at block 967,680. You can receive $pECX test tokens for holding $BTC in your wallets up to block 963,648",
+          "The Mainnet launch is tentatively scheduled for 31 October 2026, at block 973,728",
+          "• During the current beta phase , the conversion rate has been increased to 1 $pECX = 0.02 $ECX",
+          "During the alpha phase , the rate was 1 $pECX = 0.01 $ECX",
+          "1. Go to the [website](https://ecash.com/download/) and download the eCash wallet installation package",
+          "2. Install the wallet on your chosen device and select the \"Light\" type",
+          "3. Click the \"Generate seed phrase\" button",
+          "4. Enter your seed phrase and continue creating your wallet",
+          "5. Confirm the creation of your wallet",
+          "6. Select the Betanet network",
+          "7. To carry out the following steps, you will need to copy the private key for your BTC wallet",
+          "Example using a UniSat wallet:",
+          "8. After you’ve copied the key, open your eCash wallet and go to the “Receive” section",
+          "Before proceeding to the next step, you can withdraw your BTC from wallet to another one if you’re concerned about the safety of your funds.",
+          "Importing a private key is safe for your main assets: it does not convert your $BTC, but merely grants the eCash wallet access to $pECX test coins created for your address at the time of the snapshot",
+          "9. Insert the key and press the claim button. You will then receive $pECX, which you can later convert to $ECX",
+          "$pECX is a test asset that currently has no value"
+        ]
+      },
+      {
+        "id": 3742,
+        "title": "Getting $pECX (Alpha)",
+        "status": "CLOSED",
+        "types": [
+          "Testnet",
+          "Hold",
+          "Wallet Airdrop Status"
+        ],
+        "startDate": "2026-08-23",
+        "endDate": "2026-09-21",
         "instructions": [
           "eCash [announced](https://x.com/BTCdrivechains) the launch of the Alpha phase. You can receive $pECX test tokens for holding $BTC in your wallets until block 963,648, and in the future, once the relevant functionality becomes available, burn them to receive $ECX tokens.",
           "Alpha stage was launched on August 23, 2026, at block 963,648. The first snapshot was taken at that very moment",
@@ -195,7 +226,2484 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
+    "lifeCycle": "funding",
     "id": 2,
+    "firstSeenAt": "2026-09-19T00:00:44.749Z"
+  },
+  {
+    "source": "CryptoRank",
+    "slug": "smart-x",
+    "name": "SmartX",
+    "logo": "https://images.cryptorank.io/coins/60x60.smart_x1787833873967.png",
+    "chain": "Multiple",
+    "event": "Airdrop",
+    "rewardType": "Whitelist/Waitlist",
+    "costToFarm": "$0",
+    "timeToFarm": "5 min",
+    "status": "Confirmed",
+    "date": "2026-09-22",
+    "description": "AI-driven personalized social trading platform for on-chain markets and prediction markets.",
+    "sourceUrl": "https://cryptorank.io/drophunting/smart-x-activity1318",
+    "rating": 0,
+    "activityTypes": [
+      "Bounty Platforms",
+      "Social"
+    ],
+    "activityPoints": 10.13,
+    "noActiveTask": false,
+    "isAuthProtected": false,
+    "funding": "$500000",
+    "investorCount": 1,
+    "topInvestors": [
+      {
+        "name": "YZi Labs (Prev. Binance Labs)",
+        "tier": 1,
+        "category": "Incubator",
+        "is_lead": false
+      }
+    ],
+    "twitterScore": 522,
+    "lifeCycle": "funding",
+    "category": "Social",
+    "website": "https://smartx.io/",
+    "x": "https://x.com/SmartXTerminal?hzet=dszqupsbol",
+    "telegram": "https://t.me/+CTeuBkpOxSNkN2Y0",
+    "extraLinks": [
+      {
+        "label": "blog",
+        "url": "https://smartx.io/blog/"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 3767,
+        "title": "Waitlist and Referral Program",
+        "status": "OPEN",
+        "types": [
+          "Social",
+          "Bounty Platforms"
+        ],
+        "startDate": "2026-09-21",
+        "isNew": true,
+        "instructions": [
+          "SmartX [have announced](https://x.com/SmartXTerminal/status/2102029641498423553) the launch of a waiting list. You can take the test, post your result on X and invite users to move up the leaderboard and be in with a chance of winning prizes",
+          "Prizes:",
+          "• First place will win a trip to Singapore, dinner with the founder and an iPhone Duo; second and third places will win a WHOOP wristband and a share of the $USDT prize pool",
+          "• The top 100 will receive Genesis 100 status, limited-edition merchandise and a permanent on-chain record of their X account.",
+          "• Participants ranked 2nd to 500th will share a pool ranging from 2,000 to 10,000 $USDT, the size of which depends on the number of eligible users. The higher the final ranking within their group, the larger the share of the reward",
+          "• The top 5,000 will receive discounts on trading fees depending on their rank",
+          "• The top 101–5,000 will be granted early access to the app",
+          "1. Go to the [website](https://www.smartx.io/waitlist/?invite=ro2ert23)and log in",
+          "2. Copy the link and invite other users"
+        ]
+      }
+    ],
+    "id": 3,
+    "firstSeenAt": "2026-09-23T16:00:37.049Z"
+  },
+  {
+    "slug": "miden",
+    "name": "Miden",
+    "chain": "Polygon",
+    "event": "Airdrop",
+    "status": "Potential",
+    "date": "2026-09-22",
+    "description": "Miden is a ZK-rollup L2 blockchain built on top of Ethereum enabling private, scalable smart contracts.",
+    "funding": "$25000000",
+    "logo": "https://images.cryptorank.io/coins/60x60.miden1745928072450.png",
+    "source": "CryptoRank",
+    "sourceUrl": "https://cryptorank.io/drophunting/miden-activity785",
+    "activityTypes": [
+      "Testnet",
+      "Mint Domain"
+    ],
+    "rating": 169,
+    "twitterFollowers": 18915,
+    "twitterScore": 2881,
+    "noActiveTask": false,
+    "isAuthProtected": false,
+    "investorCount": 18,
+    "topInvestors": [
+      {
+        "name": "Andreessen Horowitz (a16z crypto)",
+        "tier": 1,
+        "category": "Venture",
+        "is_lead": true
+      },
+      {
+        "name": "Sandeep Nailwal",
+        "tier": 1,
+        "category": "Angel Investor",
+        "is_lead": false
+      },
+      {
+        "name": "1kx",
+        "tier": 2,
+        "category": "Venture",
+        "is_lead": true
+      },
+      {
+        "name": "Hack VC",
+        "tier": 2,
+        "category": "Venture",
+        "is_lead": true
+      },
+      {
+        "name": "P2 Ventures (Polygon Ventures)",
+        "tier": 2,
+        "category": "Venture",
+        "is_lead": false
+      }
+    ],
+    "timeToFarm": "24 min",
+    "category": "Blockchain",
+    "ecosystems": [
+      "Polygon Ecosystem"
+    ],
+    "website": "https://miden.xyz/",
+    "x": "https://x.com/0xMiden?hzet=dszqupsbol",
+    "telegram": "https://t.me/BuildOnMiden",
+    "extraLinks": [
+      {
+        "label": "github",
+        "url": "https://github.com/0xPolygonMiden"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 2894,
+        "title": "Playground platform testing",
+        "status": "OPEN",
+        "types": [
+          "Testnet"
+        ],
+        "startDate": "2025-10-24",
+        "instructions": [
+          "Miden [shared](https://x.com/0xMiden/status/1981468313562861971)a link to the Playground platform, which offers lessons on on-chain interaction, from creating a wallet to creating smart contracts.",
+          "Update 16 September 2026",
+          "Miden [has announced](https://x.com/0xMiden/status/2099518055160205794) the latest version of the testnet ahead of the mainnet launch",
+          "1. Go to the [website](https://playground.miden.xyz/) and connect your wallet.",
+          "2. Click on the \"Start tutorial\" button for the lesson you like.",
+          "3. Follow the instructions to complete the steps on the platform and move on to the next lessons."
+        ]
+      },
+      {
+        "id": 3766,
+        "title": "Bread Wallet",
+        "status": "OPEN",
+        "types": [
+          "Testnet"
+        ],
+        "startDate": "2026-09-15",
+        "isNew": true,
+        "instructions": [
+          "Miden [have unveiled the](https://x.com/0xMiden/status/2099860964610908303) Bread wallet, which will replace the Miden Wallet. You can sign up to the waitlist to gain early access to the wallet on the mainnet",
+          "1. Go to the [website](https://www.miden.xyz/wallet), click on the lever, then fill in your details and submit application",
+          "2. Install and set up a Bread wallet. You can also get involved in the [testnet](https://cryptorank.io/drophunting/miden-activity785?id=2894)"
+        ]
+      },
+      {
+        "id": 2896,
+        "title": "Domain registration",
+        "status": "OPEN",
+        "types": [
+          "Testnet",
+          "Mint Domain"
+        ],
+        "instructions": [
+          "Miden has [announced](https://x.com/0xMiden/status/2003533643445338361)the launch of domain names. [Miden.name](https://x.com/midenname) allows you to receive and send assets via a domain name.",
+          "The website is unstable, so registering a domain may be difficult.",
+          "1. Go to the [website](https://miden.name/) and connect your wallet",
+          "2. Enter your preferred name and, if it is available, register it"
+        ]
+      },
+      {
+        "id": 1700,
+        "title": "Testnet (first activities)",
+        "status": "OPEN",
+        "types": [
+          "Testnet"
+        ],
+        "startDate": "2025-04-29",
+        "instructions": [
+          "Yesterday (April 29) Miden [raised](https://cryptorank.io/price/miden) $25M! The project will launch a testnet soon, but we can already perform the first activities and become early users. The faucet is not working at the moment. Keep an eye on [Telegram](https://t.me/BuildOnMiden) for announcements.",
+          "1. [Install](https://chromewebstore.google.com/detail/miden-wallet/ablmompanofnodfdkgchkpmphailefpb)Miden wallet.",
+          "2. Request test tokens from the [faucet](https://faucet.testnet.miden.io/) (at the time of writing this guide it does not work):",
+          "3. Or you can create your own faucet [here](https://miden.leo.app/faucet):",
+          "4. Then request tokens from it (if tokens are not credited to your wallet, click Receive -> Claim):",
+          "5. Send test tokens to any wallet (you can use yours or this one: 0x14d1d09e92a82a823131000008118ed54a9 ). In the Faucet ID field, enter the ID of your previously created faucet:"
+        ]
+      }
+    ],
+    "lifeCycle": "funding",
+    "rewardType": "Airdrop",
+    "costToFarm": "$0",
+    "activityPoints": 86.25,
+    "id": 4,
+    "firstSeenAt": "2026-09-19T12:37:51.512Z"
+  },
+  {
+    "source": "CryptoRank",
+    "slug": "d-3-global",
+    "name": "D3",
+    "logo": "https://images.cryptorank.io/coins/60x60.d_31693930028350.png",
+    "chain": "Multiple",
+    "event": "Airdrop",
+    "rewardType": "Airdrop",
+    "costToFarm": "$35",
+    "timeToFarm": "65 min",
+    "status": "Potential",
+    "date": "2026-09-22",
+    "description": "D3 is a project for tokenizing internet domains as RWAs in DomainFi.",
+    "sourceUrl": "https://cryptorank.io/drophunting/d-3-global-activity662",
+    "rating": 200,
+    "activityTypes": [
+      "Mainnet",
+      "Trading",
+      "Mint Domain",
+      "Predictions",
+      "Fill The Form",
+      "Social",
+      "Liquidity",
+      "Bounty Platforms",
+      "Hold",
+      "Getting a role",
+      "Testnet"
+    ],
+    "activityPoints": 89.5,
+    "noActiveTask": false,
+    "isAuthProtected": false,
+    "funding": "$30000000",
+    "investorCount": 16,
+    "topInvestors": [
+      {
+        "name": "Paradigm",
+        "tier": 1,
+        "category": "Venture",
+        "is_lead": true
+      },
+      {
+        "name": "Coinbase Ventures",
+        "tier": 1,
+        "category": "Venture",
+        "is_lead": false
+      },
+      {
+        "name": "Sandeep Nailwal",
+        "tier": 1,
+        "category": "Angel Investor",
+        "is_lead": false
+      },
+      {
+        "name": "C² Ventures",
+        "tier": 2,
+        "category": "Venture",
+        "is_lead": false
+      },
+      {
+        "name": "Maelstrom",
+        "tier": 3,
+        "category": "Venture",
+        "is_lead": false
+      }
+    ],
+    "twitterScore": 1327,
+    "lifeCycle": "funding",
+    "twitterFollowers": 99164,
+    "category": "RWA",
+    "website": "https://d3.inc/",
+    "x": "https://x.com/D3inc?hzet=dszqupsbol",
+    "extraLinks": [
+      {
+        "label": "linkedin",
+        "url": "https://www.linkedin.com/company/d3inc/"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 2690,
+        "title": "Doma Mainnet",
+        "status": "OPEN",
+        "types": [
+          "Mainnet"
+        ],
+        "startDate": "2025-11-25",
+        "instructions": [
+          "Doma [has announced](https://x.com/domaprotocol/status/1993348878934929489) the mainnet! You can continue being active after the testnet to qualify potential rewards.",
+          "1. Go to the [website](https://app.doma.xyz/join/hsku0dvjecday) and connect your wallet.",
+          "2. Click Bridge to bridge your assets to the Doma network.",
+          "3. Make swaps in the Swaps section.",
+          "4. Explore and engage with available activities in the app in the Explore and Earn sections. You can buy any of the available domains or provide liquidity to pools.",
+          "Note that creating your own domains is currently limited to the Whitelist at the time of writing this guide. Access is planned to be opened soon for all users."
+        ]
+      },
+      {
+        "id": 3223,
+        "title": "Season 1",
+        "status": "OPEN",
+        "types": [
+          "Trading",
+          "Mint Domain"
+        ],
+        "startDate": "2026-04-09",
+        "instructions": [
+          "Doma Protocol [has announced](https://x.com/domaprotocol/status/2042161703136453030) the launch of Season 1. You can trade on the platform and earn Season 1 points, which will determine your eligibility for the airdrop in the future.",
+          "Update: August 10, 2026. Doma [announced](https://x.com/domaprotocol/status/2086483148599398731?s=20) the upcoming launch of Applications.com. You can participate by purchasing tokens and holding them to qualify for the $APPLICATIONS airdrop. [Learn more](https://applications.com/#airdrop)",
+          "• Rewards amount to 2% of the total token supply",
+          "• Rewards will be distributed proportionally among wallets that trade during the bonding phase and hold tokens for 30 days after the phase ends",
+          "A level system was introduced in the first season:",
+          "• Tenant, Landlord, Developer, Mogul, Tycoon, and Baron. Each new level grants a point multiplier",
+          "Point System:",
+          "• Points are earned through swaps, paid commissions, and purchases on listings.",
+          "• You will receive additional points for ranking in the top 25% and top 50% each week. If you make it into the top 10, you will receive collectible rewards",
+          "• A referral program has been introduced. You will receive 10% of all points earned by your referrals",
+          "1. Go to the [platform](https://app.doma.xyz/join/hsku0dvjecday) and connect your wallet",
+          "2. Earn points by trading, providing liquidity, and registering domains",
+          "3. Copy the [referral link](https://app.doma.xyz/leaderboard?view=referrals) and invite other users"
+        ]
+      },
+      {
+        "id": 3503,
+        "title": "Doma on Solana Waitlist",
+        "status": "OPEN",
+        "types": [
+          "Fill The Form"
+        ],
+        "startDate": "2026-06-27",
+        "instructions": [
+          "Doma [announced](https://x.com/domaprotocol/status/2070603809030865335) the launch of a domain name marketplace on Solana. You can join the waitlist to get early access",
+          "1. Go to the [website](https://solana.doma.xyz/) and join the waiting list"
+        ]
+      },
+      {
+        "id": 3428,
+        "title": "Lucky 888",
+        "status": "OPEN",
+        "types": [
+          "Social"
+        ],
+        "startDate": "2026-05-28",
+        "instructions": [
+          "Doma [has announced](https://x.com/ShiftRWA/status/2060015424834785550) the launch of the Lucky 888 campaign. You can participate by inviting users and making transactions on the platform to be among the 5,000 winners who will receive tokenized domains",
+          "Campaign Terms:",
+          "Invite 8 users via your referral link",
+          "Each invited user must complete 8 transactions",
+          "The minimum amount for each transaction must be $88",
+          "1. Go to the [website](https://app.doma.xyz/join/hsku0dvjecday) and connect your wallet",
+          "2. Copy your referral link and invite other users"
+        ]
+      },
+      {
+        "id": 3396,
+        "title": "Doma Quests",
+        "status": "OPEN",
+        "types": [
+          "Liquidity",
+          "Trading",
+          "Mint Domain"
+        ],
+        "startDate": "2026-05-18",
+        "instructions": [
+          "The Doma Foundation [has announced](https://blog.doma.xyz/quests-are-live-on-doma-more-ways-to-earn-compete-and-climb/) the launch of the Quests section. You can complete quests to earn extra points and climb the leaderboard",
+          "1. Go to the [platform](https://app.doma.xyz/join/hsku0dvjecday) and connect your wallet",
+          "2. Open the [Quests section](https://app.doma.xyz/leaderboard?view=quests) and complete the available quests"
+        ]
+      },
+      {
+        "id": 3323,
+        "title": "Doma Agentic Engine Waitlist",
+        "status": "OPEN",
+        "types": [
+          "Fill The Form"
+        ],
+        "startDate": "2026-04-29",
+        "instructions": [
+          "Yf gDoma [has announced](https://x.com/domaprotocol/status/2049542829861724202) the launch of a waiting list for the Doma Agentic Engine. You can fill out the form and submit your application to gain early access to the product in the future",
+          "1. Go to the [form](https://tally.so/r/EkBO44), fill it out, and submit your application"
+        ]
+      },
+      {
+        "id": 3322,
+        "title": "DAV Waitlist",
+        "status": "OPEN",
+        "types": [
+          "Fill The Form"
+        ],
+        "startDate": "2026-04-29",
+        "instructions": [
+          "Doma [has announced](https://x.com/D3inc/status/2049540831472955542) the launch of its new DAV product. You can join the waitlist to gain access to the institutional domain management framework in the future",
+          "1. Go to the [website](https://tally.so/r/kd0e41) and fill out the form"
+        ]
+      },
+      {
+        "id": 3148,
+        "title": "Genesis Badges",
+        "status": "OPEN",
+        "types": [
+          "Trading",
+          "Mint Domain"
+        ],
+        "startDate": "2026-03-24",
+        "instructions": [
+          "Doma [has announced](https://blog.doma.xyz/genesis-badges-recognizing-the-first-domainfi-leaderboard-climbers/)the release of Genesis Badges for Season 0 participants. You can qualify for the Day One Badge and receive a lifetime points boost .",
+          "The Day One Badge is awarded for participating in the bonding process before the start of the first season. A minimum purchase amount of $10 USD and a minimum token holding period of 7 days are required. The badge grants a permanent +1% boost to the leaderboard. It can only be obtained for domains that are still in the bonding phase. Boosts are cumulative.",
+          "Founder Badge was awarded for participating in the launches of brag.com, boner.com, and software.ai",
+          "1. Go to the [website](https://app.doma.xyz/join/hsku0dvjecday) and make a purchase of at least $10. Hold the position for 7 days"
+        ]
+      },
+      {
+        "id": 3594,
+        "title": "Galxe: Doma AMA Raffle. Discord AMA",
+        "status": "CLOSED",
+        "types": [
+          "Social",
+          "Bounty Platforms"
+        ],
+        "startDate": "2026-08-04",
+        "endDate": "2026-08-05",
+        "instructions": [
+          "A new campaign is available on the Galxe platform. You can participate in an AMA session taking place on August 4, 2026, from 4:00 p.m. to 6:00 p.m. (UTC+0) and have a chance to win 5,000 Season 1 points.",
+          "1. Go to the [Discord](https://discord.com/invite/doma) and participate in the AMA",
+          "2. Open the [campaign](https://app.galxe.com/quest/D3/GCCjWtZe9u?refer=space_home) and complete the available tasks"
+        ]
+      },
+      {
+        "id": 3385,
+        "title": "Galxe: Ride the AI Bubble",
+        "status": "CLOSED",
+        "types": [
+          "Trading",
+          "Bounty Platforms"
+        ],
+        "startDate": "2026-05-13",
+        "endDate": "2026-05-20",
+        "instructions": [
+          "The \"Ride the AI Bubble\" campaign is now available on the Galxe platform. You can trade eligible tokens with the .ai domain extension and enter a giveaway with a prize pool of 5,000 Season 1 points",
+          "1. Go to the [website](https://app.galxe.com/quest/D3/GCf3KtZk8f), connect your wallet, and complete the available tasks. To complete the campaign, you must reach a trading volume of $25 in tokens within the .ai domain"
+        ]
+      },
+      {
+        "id": 3374,
+        "title": "Galxe: Doma AMA Raffle with Ish Milly",
+        "status": "CLOSED",
+        "types": [
+          "Social",
+          "Bounty Platforms"
+        ],
+        "startDate": "2026-05-14",
+        "endDate": "2026-05-15",
+        "instructions": [
+          "A new Doma AMA Raffle campaign featuring Ish Milly is now available on the Galxe platform: Domain Whale. You can participate in the AMA, which will take place on May 14, 2026, from 4:00 PM to 6:00 PM (UTC+0), and have a chance to win 5,000 Season 1 points.",
+          "1. Go to the project's [Discord](https://discord.com/invite/doma) and join the AMA",
+          "2. Open the [campaign](https://app.galxe.com/quest/D3/GC6HKtZdE9) and complete the available tasks"
+        ]
+      },
+      {
+        "id": 3242,
+        "title": "Galxe: GALXE 5-YEAR ANNIVERSARY",
+        "status": "CLOSED",
+        "types": [
+          "Liquidity",
+          "Trading",
+          "Social"
+        ],
+        "startDate": "2026-04-14",
+        "endDate": "2026-04-28",
+        "instructions": [
+          "Galxe is running a new campaign to celebrate the platform's fifth anniversary. You can generate $50 in trading volume and provide liquidity to the pool for a chance to win USDC",
+          "1. Go to the [Doma website](https://app.doma.xyz/join/hsku0dvjecday) and select any token, then reach a trading volume of $50",
+          "2. In the [Positions tab](https://app.doma.xyz/profile?tab=positions), deposit tokens into the pool in an amount equal to $25",
+          "3. Go to the [website](https://app.galxe.com/quest/D3/GC66JtYBKb?refer=quest_parent_collection) and complete the tasks"
+        ]
+      },
+      {
+        "id": 3147,
+        "title": "Galxe: Doma Point Farmer",
+        "status": "CLOSED",
+        "types": [
+          "Social",
+          "Trading"
+        ],
+        "startDate": "2026-03-24",
+        "endDate": "2026-03-31",
+        "instructions": [
+          "A new quest, \"Doma Point Farmer,\" is now available on the Galxe platform. You can compete on the leaderboard and earn 50 loyalty points",
+          "To complete the Galxe campaign, you must earn 25 points on the [leaderboard](https://app.doma.xyz/leaderboard) of Doma",
+          "You can earn points in the following ways:",
+          "Trading domain tokens",
+          "Providing liquidity",
+          "Staking domain tokens (for subdomains)",
+          "Selling subdomains or domains",
+          "1. Go to the [website](https://app.doma.xyz/explore) and connect your wallet. Start trading domain tokens"
+        ]
+      },
+      {
+        "id": 3115,
+        "title": "Galxe: Launch Week Trader",
+        "status": "CLOSED",
+        "types": [
+          "Social",
+          "Trading"
+        ],
+        "startDate": "2026-03-17",
+        "endDate": "2026-03-24",
+        "instructions": [
+          "A new quest, \"Launch Week Trader,\" is now available on the Galxe platform. You can complete 1 trade of $5 or more to earn 50 Season 0 points.",
+          "1. Open the [page](https://app.galxe.com/quest/D3/GCTmCtYTjg?refer=explore_all) and check the launch dates for new domains",
+          "2. Go to the [website](https://app.doma.xyz/) and connect your wallet",
+          "3. Enter the domain you're interested in into the search bar, click on it, and make a trade of $5 or more",
+          "4. Return to the [page](https://app.galxe.com/quest/D3/GCTmCtYTjg?refer=explore_all) and complete the remaining tasks"
+        ]
+      },
+      {
+        "id": 3078,
+        "title": "Galxe: Doma Pool Party",
+        "status": "CLOSED",
+        "types": [
+          "Liquidity"
+        ],
+        "startDate": "2026-03-10",
+        "endDate": "2026-03-17",
+        "instructions": [
+          "A new quest, Doma Pool Party, is available on the Galxe platform. You can deposit funds into any pool on Doma and receive 50 points for Season 0",
+          "1. Go to the [website](https://app.doma.xyz/) and connect your wallet",
+          "2. Open the [tab](https://app.doma.xyz/explore?tab=domains) and select the domain",
+          "3. Purchase the domain token",
+          "4. Click on the \"Add Liquidity\" button",
+          "5. Select Full Range and contribute at least 5 USDC to the pool to fulfill the Galxe quest requirements",
+          "6. Go to the [website](https://images.cryptorank.io/image-hub/dfasfga_1231773160699920.jpg) and complete the tasks",
+          "The final check will be carried out one hour before the end of the quest"
+        ]
+      },
+      {
+        "id": 3064,
+        "title": "Galxe: Doma AMA Raffle with InterNetX",
+        "status": "CLOSED",
+        "types": [
+          "Social"
+        ],
+        "startDate": "2026-03-11",
+        "endDate": "2026-03-12",
+        "instructions": [
+          "A new quest, Doma AMA Raffle with InterNetX, is available on the Galxe platform. You can attend the AMA session and complete social tasks to earn 50 points and move up the leaderboard.",
+          "1. Participate in AMA 2026/03/11 14:00-15:59 (UTC+0) on [Discord](https://discord.gg/doma)",
+          "2. Go to the quest [page](https://app.galxe.com/quest/D3/GCauAtYDBE?refer=explore_all), complete the tasks, and collect points."
+        ]
+      },
+      {
+        "id": 3038,
+        "title": "Galxe: Proof of Friends",
+        "status": "CLOSED",
+        "types": [
+          "Social"
+        ],
+        "startDate": "2026-03-03",
+        "endDate": "2026-03-10",
+        "instructions": [
+          "A new Proof of Friends quest is available on the Galxe platform. You can complete social tasks and invite 5 users to earn 50 points and move up the leaderboard.",
+          "1. Go to the [website](https://app.galxe.com/quest/D3/GCwS9tY3Q8?refer=explore_all) and connect your wallet. Complete the tasks."
+        ]
+      },
+      {
+        "id": 3034,
+        "title": "Discord Quest: Buyout Energy",
+        "status": "CLOSED",
+        "types": [
+          "Social"
+        ],
+        "startDate": "2026-03-02",
+        "endDate": "2026-03-10",
+        "instructions": [
+          "Doma [has launched](https://discord.com/channels/1146856811207606283/1383029317977641030/1478029345976094741) (to see the announcement, you need to join [Discord](https://discord.gg/doma)) a quest dedicated to domain redemption. You can tell X about a promising domain token to win a unique Dopaminter role or 300 points.",
+          "Reward : The top 10 participants will receive the role of Dopaminter",
+          "If you already have this role, you will receive 300 points",
+          "1. Go to X and write a post starting with the phrase \"People saw gains on past buyouts. The next one could be ___ because...\"",
+          "Tag @d3inc and @domaprotocol",
+          "Be sure to mention the following in your post:",
+          "Name quality",
+          "Brand strength",
+          "Market relevance",
+          "Subdomain potential",
+          "Why it deserves a premium exit",
+          "2. Send a link to your post to the [discord-quests](https://discord.com/channels/1146856811207606283/1387340415354671185) thread"
+        ]
+      },
+      {
+        "id": 3016,
+        "title": "Galxe: Doma Fresh Launch Hunter",
+        "status": "CLOSED",
+        "types": [
+          "Hold",
+          "Social"
+        ],
+        "startDate": "2026-02-24",
+        "endDate": "2026-03-03",
+        "instructions": [
+          "A new quest is available on the Galxe platform. You can complete social tasks and purchase 100 tokens from the newly launched domain to receive 50 points.",
+          "To participate:",
+          "Select one domain from those listed in the Galxe task",
+          "Purchase at least 100 tokens of that domain.",
+          "Hold them until the end of the quest.",
+          "1. Go to [Galxe](https://app.galxe.com/quest/D3/GCVCatYSgn)and complete the tasks.",
+          "2. Go to the [website](https://app.doma.xyz/), connect your wallet, and purchase 100 tokens for your chosen domain."
+        ]
+      },
+      {
+        "id": 2994,
+        "title": "Galxe: Doma AMA Raffle with Encirca CEO",
+        "status": "CLOSED",
+        "types": [
+          "Social"
+        ],
+        "startDate": "2026-02-24",
+        "endDate": "2026-02-25",
+        "instructions": [
+          "A new campaign, \"AMA Raffle with Encirca CEO,\" is available on the Galxe platform. You can participate in the AMA session, which will begin on 2026/02/24 at 14:00 UTC+0, and get a chance to win 50 points. The AMA will take place on the project's [Discord](https://discord.com/invite/doma).",
+          "1. Attend the AMA session on 2026/02/24 on the project's [Discord](https://discord.com/invite/doma) channel.",
+          "2. Go to the [website](https://app.galxe.com/quest/D3/GCFJPtYm5E?refer=explore_all), connect your wallet, and collect your points."
+        ]
+      },
+      {
+        "id": 2969,
+        "title": "Galxe: 888 Club – Lucky 8 Explorer",
+        "status": "CLOSED",
+        "types": [
+          "Social",
+          "Hold"
+        ],
+        "startDate": "2026-02-17",
+        "endDate": "2026-02-24",
+        "instructions": [
+          "A new campaign, \"888 Club - Lucky 8 Explorer,\" is now available on the Galxe platform. You can participate by holding tokens from 8 different domains and get a chance to win 50 points.",
+          "You must have tokens from 8 different domains",
+          "Each domain must have at least 88 tokens",
+          "Do not sell until the quest is complete",
+          "1. Go to the [website](https://app.galxe.com/quest/D3/GCKmHtYNja?refer=space_home)and connect your wallet. Start completing the tasks."
+        ]
+      },
+      {
+        "id": 2968,
+        "title": "Galxe: AMA Raffle with Doma",
+        "status": "CLOSED",
+        "types": [
+          "Social"
+        ],
+        "startDate": "2026-02-19",
+        "endDate": "2026-02-20",
+        "instructions": [
+          "A new campaign, \"AMA Raffle with Doma,\" is available on the Galxe platform. You can participate in the AMA session, which will begin on 2026/02/19 at 14:00 UTC+0, and get a chance to win 50 points. The AMA will take place on the project's [Discord](https://discord.com/invite/doma).",
+          "1. Attend the AMA session on 2026/02/19 on the project's [Discord](https://discord.com/invite/doma)",
+          "2. Go to the [website](https://app.galxe.com/quest/D3/GCmGHtYpPp?refer=space_home), connect your wallet, and collect points."
+        ]
+      },
+      {
+        "id": 2914,
+        "title": "New Galxe campaign \"Mint a Subdomain on Doma\"",
+        "status": "CLOSED",
+        "types": [
+          "Mint Domain"
+        ],
+        "startDate": "2026-02-04",
+        "endDate": "2026-02-10",
+        "instructions": [
+          "A new campaign, \"Mint a Subdomain on Doma!\", is now available on the Galxe platform.",
+          "1. Go to the [website](https://app.galxe.com/quest/D3/GC81rtYNa8) and connect your wallet.",
+          "2. Complete simple social tasks, then complete the main task by following the instructions."
+        ]
+      },
+      {
+        "id": 2869,
+        "title": "Galxe tasks (1)",
+        "status": "CLOSED",
+        "types": [
+          "Bounty Platforms"
+        ],
+        "startDate": "2026-01-26",
+        "endDate": "2026-02-02",
+        "instructions": [
+          "Doma has added a new task. We can complete it and earn 25 points in the Season 0 leaderboard. There will be a total of 10,000 winners.",
+          "1. Go to [Galxe](https://app.galxe.com/quest/D3/GCJ1DtYgAh) and connect your wallet (or social network).",
+          "2. Complete the task and earn points:"
+        ]
+      },
+      {
+        "id": 2807,
+        "title": "Discord Quest (Dopaminter role)",
+        "status": "CLOSED",
+        "types": [
+          "Getting a role"
+        ],
+        "startDate": "2026-01-05",
+        "endDate": "2026-01-10",
+        "instructions": [
+          "D3 [has announce](https://discord.com/channels/1146856811207606283/1383029317977641030/1457770636318343339)d a new giveaway on Discord. Winners will receive the Dopaminter role. To participate, create a meme with a real domain and post it on X.",
+          "1. Join [Discord](https://discord.gg/doma), read about the [giveaway](https://discord.com/channels/1146856811207606283/1383029317977641030/1457770636318343339), and try to win the role:"
+        ]
+      },
+      {
+        "id": 2691,
+        "title": "Galxe Task",
+        "status": "CLOSED",
+        "types": [
+          "Getting a role",
+          "Social",
+          "Bounty Platforms"
+        ],
+        "startDate": "2025-11-24",
+        "endDate": "2025-12-20",
+        "instructions": [
+          "Doma has launched new task on Galxe. Complete task and earn points, which can be one of the criteria for getting airdrop.",
+          "1. Go to the [Galxe](https://app.galxe.com/quest/D3/GCX1UtYzRz) and connect your wallet (or social account).",
+          "2. Complete task and earn points. Note that you need Dommer role to complete the task.",
+          "3. To get the Dommer role you need to participate in Meme contest in Discord. Create a meme about domains software ai or brag com. Create a tweet with your meme and tag a @domaprotocol. Share link to your tweet in discord-quests channel."
+        ]
+      },
+      {
+        "id": 2424,
+        "title": "Mizu Testnet",
+        "status": "CLOSED",
+        "types": [
+          "Testnet"
+        ],
+        "startDate": "2025-09-22",
+        "instructions": [
+          "Doma [has announced](https://x.com/domaprotocol/status/1970042505434661112) the launch of Mizu! You can participate in the testnet and be eligible for potential rewards.",
+          "1. Go to Mizu [website](https://mizu-testnet.doma.xyz/) and connect your walllet.",
+          "2. Go to [website](https://doma-dev-ix58nm4rnd-649e18ea30cd146c.testnets.rollbridge.app/) and Bridge Sepolia ETH to Doma Testnet. Use https://rpc-testnet.doma.xyz as rpc if default won't work.",
+          "3. Request Test USDT tokens.",
+          "4. Launch your own domain in Create a Launch section.",
+          "5. Trade test tokens in Discover section."
+        ]
+      },
+      {
+        "id": 2354,
+        "title": "Galxe Tasks (NFT) (6)",
+        "status": "CLOSED",
+        "types": [
+          "Testnet",
+          "Bounty Platforms"
+        ],
+        "startDate": "2025-09-15",
+        "endDate": "2025-09-30",
+        "instructions": [
+          "A new task has been added on Galxe. We can complete it and get a new NFT.",
+          "1. Go to the [Galxe](https://app.galxe.com/quest/D3/GCr8tt8nhV) and connect your wallet (or social account).",
+          "2. Complete tasks and claim NFT."
+        ]
+      },
+      {
+        "id": 2325,
+        "title": "Galxe Tasks (NFT) (5)",
+        "status": "CLOSED",
+        "types": [
+          "Testnet",
+          "Bounty Platforms"
+        ],
+        "startDate": "2025-09-08",
+        "endDate": "2025-09-30",
+        "instructions": [
+          "A new task has been added on Galxe. We can complete it and get a new NFT.",
+          "1. Go to the [Galxe](https://app.galxe.com/quest/D3/GCqvGt61Pi) and connect your wallet (or social account).",
+          "2. Complete tasks and claim NFT."
+        ]
+      },
+      {
+        "id": 2285,
+        "title": "Galxe Tasks (NFT) (4)",
+        "status": "CLOSED",
+        "types": [
+          "Testnet",
+          "Bounty Platforms"
+        ],
+        "startDate": "2025-09-01",
+        "endDate": "2025-09-30",
+        "instructions": [
+          "A new task has been added on Galxe. We can complete it and get a new NFT.",
+          "1. Go to the [Galxe](https://app.galxe.com/quest/D3/GCPw9t6X8o) and connect your wallet (or social account).",
+          "2. Complete tasks and claim NFT."
+        ]
+      },
+      {
+        "id": 2276,
+        "title": "Galxe Tasks (NFT) (3)",
+        "status": "CLOSED",
+        "types": [
+          "Testnet",
+          "Bounty Platforms"
+        ],
+        "startDate": "2025-08-27",
+        "endDate": "2025-09-30",
+        "instructions": [
+          "A new task has been added on Galxe. If you didn't get one of the 10,000 NFTs in the last campaign, you can grab it now.",
+          "1. Go to the [Galxe](https://app.galxe.com/quest/D3/GC64Rt6CAA) and connect your wallet (or social account).",
+          "2. Complete tasks and claim NFT."
+        ]
+      },
+      {
+        "id": 2259,
+        "title": "Dopaminter Role",
+        "status": "CLOSED",
+        "types": [
+          "Getting a role"
+        ],
+        "startDate": "2025-08-23",
+        "instructions": [
+          "Doma announced on Discord a shuffle of 10 Dopaminter roles for performing simple social actions.",
+          "1. Go to [Discord](https://discord.com/invite/doma) and pass the verification.",
+          "2. Follow the instructions in the community-announcements channel. Create an original tweet or thread on the topics and questions specified in the instructions."
+        ]
+      },
+      {
+        "id": 2229,
+        "title": "Galxe Tasks (NFT) (2)",
+        "status": "CLOSED",
+        "types": [
+          "Bounty Platforms",
+          "Testnet"
+        ],
+        "startDate": "2025-08-18",
+        "endDate": "2025-08-31",
+        "instructions": [
+          "A new task has been added on Galxe. If you didn't get one of the 10,000 NFTs in the last campaign, you can grab it now.",
+          "1. Go to the [Galxe](https://app.galxe.com/quest/D3/GCziSt6zBd) and connect your wallet (or social account).",
+          "2. Complete tasks and claim NFT ( Quiz Answer : A):"
+        ]
+      },
+      {
+        "id": 2192,
+        "title": "Galxe Tasks (NFT) (1)",
+        "status": "CLOSED",
+        "types": [
+          "Bounty Platforms",
+          "Testnet"
+        ],
+        "startDate": "2025-08-11",
+        "endDate": "2025-08-31",
+        "instructions": [
+          "A new task has been added on Galxe. If you didn't get one of the 10,000 NFTs in the last campaign, you can grab it now.",
+          "1. Go to the [Galxe](https://app.galxe.com/quest/D3/GCLq8t6Z42) and connect your wallet (or social account).",
+          "2. Complete tasks and claim NFT ( Quiz Answer : B):"
+        ]
+      },
+      {
+        "id": 2185,
+        "title": "Doma Division Campaign",
+        "status": "CLOSED",
+        "types": [
+          "Getting a role",
+          "Social"
+        ],
+        "startDate": "2025-08-07",
+        "endDate": "2025-08-13",
+        "instructions": [
+          "Doma [has announced](https://discord.com/channels/1146856811207606283/1383029317977641030/1402985021693755562) (join [Discord](https://discord.gg/VTGJYE9wEH) to see the announcement) a new campaign called Doma Division. This is similar to an ambassador program, in which they will select 25 users. If you are interested in promoting the project and are ready to create quality content, then apply before August 13! Selected users will also receive the Doma Raider role.",
+          "1. Send your application in the #raiders-apply channel:"
+        ]
+      },
+      {
+        "id": 2159,
+        "title": "Galxe Tasks (NFT)",
+        "status": "CLOSED",
+        "types": [
+          "Testnet",
+          "Bounty Platforms"
+        ],
+        "startDate": "2025-08-03",
+        "endDate": "2025-08-31",
+        "instructions": [
+          "A new task has been added on Galxe. We can complete it and claim 1 out of 10,000 NFTs.",
+          "1. Go to the [Galxe](https://app.galxe.com/quest/D3/GCwVkt6uNW) and connect your wallet (or social account).",
+          "2. Complete tasks and claim NFT ( Quiz Answer : D):"
+        ]
+      },
+      {
+        "id": 1988,
+        "title": "Nods Role (Galxe)",
+        "status": "CLOSED",
+        "types": [
+          "Bounty Platforms",
+          "Getting a role",
+          "Testnet"
+        ],
+        "startDate": "2025-07-02",
+        "instructions": [
+          "Doma are running a campaign in which we will be able to get a Nods role in Discord for simple actions in the testnet.",
+          "1. Go to [Galxe](https://app.galxe.com/quest/D3/GC7wRtfHwn) and connect your wallet (or social account).",
+          "2. Complete tasks and hold a minimum of 4 tokenized domains in Doma Testnet. You can get tokenized domains by exploring our Doma Testnet guide.",
+          "Please note that the number of roles is limited. A new campaign may be available."
+        ]
+      },
+      {
+        "id": 1977,
+        "title": "Doma Testnet",
+        "status": "CLOSED",
+        "types": [
+          "Testnet"
+        ],
+        "startDate": "2025-06-24",
+        "instructions": [
+          "Doma Protocol [has announced](https://x.com/domaprotocol/status/1937489068150939672) a testnet! We can follow simple steps and qualify for future rewards.",
+          "1. Go to the [website](https://testnet.d3.app/) and connect your wallet",
+          "2. Choose a free .ai domain and pay for it with a test card. You can find test cards by clicking the link in the dialog box.",
+          "3. Tokenize your domain with Sepolia Testnet. Tokenization takes some time. You can get Sepolia ETH using Faucet. You can find information about Faucet and Testnet Bridge in [Discord](https://discord.gg/doma) in the testnet-knowledge-base channel.",
+          "4. Go to the [website](https://start-testnet.doma.xyz?referralCode=p1t06offe2pz2) and Bridge domain in Doma Testnet.",
+          "5. Invite 3 referrals. You will be able to mint Day 1 Badge."
+        ]
+      },
+      {
+        "id": 1803,
+        "title": "Doma Protocol Badge",
+        "status": "CLOSED",
+        "types": [
+          "Social"
+        ],
+        "startDate": "2025-05-22",
+        "instructions": [
+          "Doma Protocol is a project from the D3 ecosystem. Earlier they [announced](https://x.com/domaprotocol/status/1925628499651354906) Day 1 Badge that we can get for registering and inviting 3 friends. Do this activity to become an early user.",
+          "1. Go to the [website](https://start.doma.xyz?referralCode=p1t06offe2pz2) and enter your email:",
+          "2. Fill out all the information:",
+          "3. Copy the referral link and invite 3 friends. After that you will receive your badge.",
+          "4. Scroll down and secure your account if you wish:"
+        ]
+      },
+      {
+        "id": 1800,
+        "title": "Galxe Tasks",
+        "status": "CLOSED",
+        "types": [
+          "Bounty Platforms"
+        ],
+        "startDate": "2025-05-16",
+        "instructions": [
+          "D3 launched tasks on Galxe. Complete them and earn points, which can be one of the criteria for getting airdrop.",
+          "1. Go to the [Galxe](https://app.galxe.com/quest/D3?sort=Trending) and connect your wallet (or social account).",
+          "2. Complete tasks and earn points:"
+        ]
+      },
+      {
+        "id": 1343,
+        "title": "Discord roles",
+        "status": "CLOSED",
+        "types": [
+          "Getting a role"
+        ],
+        "instructions": [
+          "Discord roles are currently available to all users (even without a domain), but in the future this may be changed and you will need to confirm your domain.",
+          "1. Join [Discord](https://discord.com/invite/doma) and get your roles in the #rules-and-roles channel:"
+        ]
+      },
+      {
+        "id": 1342,
+        "title": "Mint domains",
+        "status": "CLOSED",
+        "types": [
+          "Mint Domain"
+        ],
+        "instructions": [
+          "Yesterday (January 29) D3 [raised](https://cryptorank.io/ico/d-3-global) $25M investment from Tier-1 funds. On the project's website you can mint domains in 4 networks - ApeChain, Core, Shiba and Viction. We need to spend some money for this activity, but by doing it we can become early users and qualify for future airdrop from the project!",
+          "1. Go to the [site](https://d3.app/), connect your wallet and verify your email:",
+          "2. Enter the domain name (you can choose your preferred network in advance or search for the domain in all networks) and click Search:",
+          "3. Select your domain or send to cart any other from the suggested ones from below:",
+          "4. Open the cart and mint the domain:"
+        ]
+      }
+    ],
+    "id": 5,
+    "firstSeenAt": "2026-09-22T23:49:34.711Z"
+  },
+  {
+    "source": "CryptoRank",
+    "slug": "qfex",
+    "name": "QFEX",
+    "logo": "https://images.cryptorank.io/coins/60x60.qfex1772716138274.png",
+    "chain": "Multiple",
+    "event": "Airdrop",
+    "costToFarm": "$100",
+    "timeToFarm": "35 min",
+    "status": "Potential",
+    "date": "2026-03-06",
+    "description": "QFEX is the first hybrid perpetual futures exchange for traditional assets, offering high leverage and 24/7 trading.",
+    "sourceUrl": "https://cryptorank.io/drophunting/qfex-activity1117",
+    "rating": 23,
+    "activityTypes": [],
+    "isAuthProtected": true,
+    "funding": "$9500000",
+    "investorCount": 9,
+    "topInvestors": [
+      {
+        "name": "Y Combinator",
+        "tier": 1,
+        "category": "Incubator",
+        "is_lead": false
+      },
+      {
+        "name": "General Catalyst",
+        "tier": 3,
+        "category": "Venture",
+        "is_lead": true
+      },
+      {
+        "name": "Goodwater Capital",
+        "tier": 4,
+        "category": "Venture",
+        "is_lead": false
+      },
+      {
+        "name": "Liquid 2 Ventures",
+        "tier": 4,
+        "category": "Venture",
+        "is_lead": false
+      },
+      {
+        "name": "Moonfire Ventures",
+        "tier": 4,
+        "category": "Venture",
+        "is_lead": false
+      }
+    ],
+    "twitterScore": 2292,
+    "lifeCycle": "funding",
+    "category": "Exchange",
+    "x": "https://x.com/QFEX?hzet=dszqupsbol",
+    "extraLinks": [
+      {
+        "label": "gitbook",
+        "url": "https://docs.qfex.com/qfex/about"
+      },
+      {
+        "label": "github",
+        "url": "https://github.com/QFEX-org"
+      },
+      {
+        "label": "linkedin",
+        "url": "https://www.linkedin.com/company/qfex/"
+      },
+      {
+        "label": "referral",
+        "url": "https://www.qfex.com/signup?refCode=GetReward"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 3764,
+        "title": "Loss Refunds Campaign",
+        "status": "OPEN",
+        "types": [
+          "Trading"
+        ],
+        "startDate": "2026-09-22",
+        "isNew": true,
+        "instructions": [
+          "QFEX [has announced](https://x.com/QFEX/status/2102313364856926355) the launch of its Loss Refunds campaign. You could be eligible for a 100 per cent refund on realised losses on the platform, up to $2,000 per week",
+          "Terms and conditions:",
+          "• For users who registered after 21 September",
+          "• You must make a deposit of at least $100 and complete 1 trade before the start of the first week of the campaign",
+          "• The total realised PnL across all markets is taken into account: profits offset losses, and unrealised results are not taken",
+          "Only 20% of eligible participants will receive compensation . Participants are selected at random",
+          "1. Go to the [website](https://www.qfex.com/@GetReward) and sign up",
+          "If you sign up via a referral link, you’ll receive a 10% discount on fees",
+          "2. Click on the \"Deposit\" button and fill in the details",
+          "3. Select $USDC or $USDT and make a deposit",
+          "4. Start trading on the platform and increase your trading volume to be eligible for potential rewards in the future"
+        ]
+      },
+      {
+        "id": 3056,
+        "title": "Trading on the platform",
+        "status": "OPEN",
+        "types": [
+          "Trading"
+        ],
+        "instructions": [
+          "The QFEX hybrid perpetual futures exchange has been launched. You can get involved by trading traditional financial assets with high leverage and build up your trading volume at an early stage",
+          "Update: September 9, 2026.",
+          "QFEX [announced](https://x.com/QFEX/status/2097656268101931194) the launch of a leaderboard. Climb the leaderboard to be eligible for future rewards",
+          "1. Go to the [website](https://www.qfex.com/@GetReward) and register",
+          "By registering via a referral link, you will receive a 10% discount on commissions",
+          "2. Click on the deposit button and fill in the details",
+          "3. Select USDC and make a deposit",
+          "4. Start trading",
+          "5. In the Referrals tab, copy the link and invite other users",
+          "The project implements a multi-level referral system"
+        ]
+      }
+    ],
+    "id": 6,
+    "firstSeenAt": "2026-09-22T23:49:34.711Z"
+  },
+  {
+    "source": "CryptoRank",
+    "slug": "alkimiya",
+    "name": "42 (prev. Alkimiya)",
+    "logo": "https://images.cryptorank.io/coins/60x60.42_prev_alkimiya1763562325907.png",
+    "chain": "Base",
+    "event": "Airdrop",
+    "costToFarm": "$60",
+    "timeToFarm": "63 min",
+    "status": "Potential",
+    "date": "2025-05-12",
+    "description": "42 is a protocol designed to create, trade, and settle synthetic blockspace resources through peer-to-peer smart contracts.",
+    "sourceUrl": "https://cryptorank.io/drophunting/alkimiya-activity804",
+    "rating": 81,
+    "activityTypes": [],
+    "isAuthProtected": true,
+    "funding": "$7200000",
+    "investorCount": 8,
+    "topInvestors": [
+      {
+        "name": "Coinbase Ventures",
+        "tier": 1,
+        "category": "Venture",
+        "is_lead": false
+      },
+      {
+        "name": "YZi Labs (Prev. Binance Labs)",
+        "tier": 1,
+        "category": "Incubator",
+        "is_lead": false
+      },
+      {
+        "name": "Dragonfly",
+        "tier": 1,
+        "category": "Venture",
+        "is_lead": false
+      },
+      {
+        "name": "Circle",
+        "tier": 1,
+        "category": "Venture",
+        "is_lead": false
+      },
+      {
+        "name": "1kx",
+        "tier": 2,
+        "category": "Venture",
+        "is_lead": true
+      }
+    ],
+    "twitterScore": 5517,
+    "lifeCycle": "funding",
+    "category": "DeFi",
+    "ecosystems": [
+      "Base Ecosystem"
+    ],
+    "website": "https://42.space/join/DeeVWR6a",
+    "x": "https://x.com/42space?hzet=dszqupsbol",
+    "discord": "https://discord.com/invite/42space",
+    "tasks": [
+      {
+        "id": 3389,
+        "title": "Prediction Market",
+        "status": "OPEN",
+        "types": [
+          "Predictions"
+        ],
+        "startDate": "2026-05-18",
+        "instructions": [
+          "42 [announced](https://x.com/42space/status/2056223252561981535) the launch of a prediction market. You can participate in event trading and increase your trading volume to be eligible for a future airdrop",
+          "Update 22 September 2026",
+          "42 [have announced](https://x.com/42space/status/2102381811745620141) the launch of the Token Race 10 -Win Challenge with a prize pool of $10,000 USDT. You can trade using the Binance Wallet; every 10 profitable rounds will earn you one share of the prize pool, with a minimum trade amount of 1 USDT.",
+          "The challenge will run from 22 September to 2 October",
+          "To take part, you must register on [the site](https://leaderboard.42-toolkit.space/token-race-wins-campaign)",
+          "1. Go to the [site](https://42.space/join/DeeVWR6a) and connect wallet",
+          "2. Make a deposit",
+          "3. Select an event and your preferred outcome",
+          "4. Select the bet amount for the outcome and place your bet"
+        ]
+      },
+      {
+        "id": 3701,
+        "title": "Token Race",
+        "status": "OPEN",
+        "types": [
+          "Predictions"
+        ],
+        "startDate": "2026-09-03",
+        "instructions": [
+          "42 [announced](https://blogs.42.space/introducing-token-race42-a6efa4e1e8c8)the launch of the Token Race game. You can predict whether the prices of ETH, SOL, or BNB will rise in 30-second rounds to earn tickets.",
+          "You can also participate in Blitz using the Binance Wallet to earn extra points in Binance Alpha from September 3 to 9, 2026. [Learn more](https://x.com/42space/status/2095744620722270254)",
+          "• Every day at 00:00 UTC, a pool of 10,000 tickets is distributed. You receive a portion of this pool based on your trading volume in Blitz",
+          "1. Go to the [website](https://42.space/join/DeeVWR6a) and connect your wallet",
+          "2. Open the [Blitz section.](https://www.42.space/blitz/live) Select the token you think will appreciate the most to participate in the round"
+        ]
+      },
+      {
+        "id": 3639,
+        "title": "Tickets",
+        "status": "OPEN",
+        "types": [
+          "Predictions",
+          "Bounty Platforms"
+        ],
+        "startDate": "2026-08-18",
+        "instructions": [
+          "42 [announced](https://x.com/42space/status/2089627901918634212) the launch of the Tickets system. You can complete tasks, trade on the platform, and help grow the community to earn tickets, which you can later use to stake on the markets",
+          "How to Earn Tickets:",
+          "• Open positions in the markets and hold them until settlement. The longer the market is open and the more active it is, the more tickets you’ll earn",
+          "• Share your PnL cards and create content about Project 42 on X",
+          "1. Go to the [42 Tickets page](https://ticket.42.space/) and connect your wallet",
+          "2. Scroll down to claim your welcome bonus",
+          "3. Keep an eye out for new markets and use your tickets to use them to seed"
+        ]
+      },
+      {
+        "id": 2672,
+        "title": "Discord roles",
+        "status": "OPEN",
+        "types": [
+          "Getting a role"
+        ],
+        "instructions": [
+          "There is a system of roles in the project's Discord that can be obtained for creating content and other social activities.",
+          "1. Join [Discord](https://discord.gg/eRbYYFzwfm), familiarize yourself with the available roles, and try to obtain them:"
+        ]
+      },
+      {
+        "id": 3477,
+        "title": "World Cup 2026",
+        "status": "CLOSED",
+        "types": [
+          "Predictions"
+        ],
+        "startDate": "2026-06-08",
+        "endDate": "2026-07-20",
+        "instructions": [
+          "42 [announced](https://x.com/42space/status/2066445675429241216) the launch of the Go for Goals campaign, timed to coincide with the 2026 FIFA World Cup. You can complete trading tasks and participate in team or solo activities to earn tickets, climb the leaderboard, and compete for a share of the $50,000 USDT prize pool.",
+          "Tickets are used to determine your rank on the leaderboard",
+          "Only trades worth more than 1 USDT on designated World Cup markets count",
+          "Ticket Earnings System:",
+          "First trade >$1 USDT: +2 tickets",
+          "Trading volume: +1 ticket for every $50 in volume",
+          "Matches of the Day: up to 5x multiplier during the bonus window",
+          "Top 200 traders of the day by PnL: +10 tickets",
+          "Winning trade streak: from +5 to +40 tickets",
+          "Social tasks: from +10 to +20 tickets",
+          "1. Go to the [website](https://42.space/join/DeeVWR6a) and connect your wallet",
+          "2. Go to the World Cup 2026 section, select the expected match outcome, and place your bet"
+        ]
+      },
+      {
+        "id": 3370,
+        "title": "Ambassador Program",
+        "status": "CLOSED",
+        "types": [
+          "Ambassador program"
+        ],
+        "startDate": "2026-05-13",
+        "endDate": "2026-05-20",
+        "instructions": [
+          "42 [announced](https://x.com/42space/status/2054486820340269119?s=20) the launch of the Global Ambassador program. You can get involved and apply to gain access to new markets, participate in joint marketing efforts with the project, and earn rewards for community growth",
+          "1. Go to the [website](https://amb.42.space/) and take the survey"
+        ]
+      },
+      {
+        "id": 2993,
+        "title": "Filling out the mandatory form",
+        "status": "CLOSED",
+        "types": [
+          "Fill The Form"
+        ],
+        "startDate": "2026-02-16",
+        "endDate": "2026-02-23",
+        "instructions": [
+          "42 [announced](https://discord.com/channels/805807766886940692/1422137584175550546/1472828424337887387)(to see the announcement, you must join the project's Discord) that you must fill out a mandatory form to transfer points for completed activities. You can fill out the form to save your progress.",
+          "1. Go to [Discord](https://discord.com/channels/805807766886940692/1422137584175550546/1472828424337887387), click on the button, and fill out the form."
+        ]
+      },
+      {
+        "id": 2674,
+        "title": "Galxe Tasks (2)",
+        "status": "CLOSED",
+        "types": [
+          "Bounty Platforms"
+        ],
+        "startDate": "2025-11-12",
+        "endDate": "2025-11-24",
+        "instructions": [
+          "42 launched a campaign on Galxe. We can complete tasks and earn 25 points.",
+          "1. Go to the [Galxe](https://app.galxe.com/quest/42space/GCwQCt8HPe) and connect your wallet (or social account).",
+          "2. Complete tasks and earn points:"
+        ]
+      },
+      {
+        "id": 2673,
+        "title": "Galxe Tasks (1)",
+        "status": "CLOSED",
+        "types": [
+          "Bounty Platforms"
+        ],
+        "startDate": "2025-11-13",
+        "endDate": "2025-11-28",
+        "instructions": [
+          "42 launched a campaign on Galxe. We can complete tasks and earn 60 points.",
+          "1. Go to the [Galxe](https://app.galxe.com/quest/42space/GCdG3t8RzX) and connect your wallet (or social account).",
+          "2. Complete tasks and earn points:"
+        ]
+      },
+      {
+        "id": 2671,
+        "title": "Waitlist",
+        "status": "CLOSED",
+        "types": [
+          "Social"
+        ],
+        "startDate": "2025-11-13",
+        "instructions": [
+          "Since the last activity was published, Alkimiya [has rebranded](https://x.com/42space/status/1988757323163267373) and is now called 42. The project is building a new prediction market. We can enter a wallet address and X username to get early access to 42.",
+          "1. Go to the [website](https://www.42.space/), enter any code, and then your wallet address and X username:",
+          "2. Periodically check if you have gained access to the platform by clicking Verify my Beta entry.",
+          "3. You can gain access to the platform faster by participating in events on [Discord](https://discord.gg/eRbYYFzwfm):"
+        ]
+      },
+      {
+        "id": 2061,
+        "title": "Galxe Tasks (roles)",
+        "status": "CLOSED",
+        "types": [
+          "Bounty Platforms",
+          "Getting a role"
+        ],
+        "startDate": "2025-07-13",
+        "endDate": "2025-08-23",
+        "instructions": [
+          "If you have completed tasks on Galxe and earned points, be sure to claim your roles!",
+          "Bronze : 1 - 99 points",
+          "Silver : 100 - 299 points",
+          "Gold : >300 points",
+          "1. Go to the [Galxe](https://app.galxe.com/quest/Alkimiya/GCmrFtf53h) and connect your wallet (or social account).",
+          "2. Grab the roles:"
+        ]
+      },
+      {
+        "id": 2060,
+        "title": "Galxe Tasks",
+        "status": "CLOSED",
+        "types": [
+          "Bounty Platforms"
+        ],
+        "startDate": "2025-07-13",
+        "endDate": "2025-07-26",
+        "instructions": [
+          "Alkimiya [has launched](https://x.com/alkimiya_io/status/1944594006672871494) a campaign on Galxe! We can trade on the platform and earn points. Exclusive roles on Discord are available to users with points. Details about the trading platform can be found [here](https://alkimiya.notion.site/trading-competition-rule-book).",
+          "1. Go to the [Galxe](https://app.galxe.com/quest/Alkimiya/GCxnFtfsNJ?referral_code=GRFr2J7lpmm7031hptqaM6Vhn6SjAz8L988lN3Iyonce5wR) and connect your wallet (or social account).",
+          "2. Complete tasks and earn points:"
+        ]
+      },
+      {
+        "id": 1749,
+        "title": "Social rewards program",
+        "status": "CLOSED",
+        "types": [
+          "Social"
+        ],
+        "startDate": "2025-05-08",
+        "instructions": [
+          "Alkimiya [has launched](https://x.com/alkimiya_io/status/1920462572890857972) Social rewards program! We can complete tasks, get new tiers (Bronze, Silver, Gold) and earn points. The more points you earn, the more rewards you will get!",
+          "1. Go to the [site](https://kazm.com/s/membership/c5c005e4-31b7-4e53-a705-f950a4d8074b?referralId=18874a9a-59bd-4171-a0cc-3c78f02edfe6) and connect your wallet:",
+          "2. Complete the first tasks ( Member role should be given automatically in Discord, but at the time of writing the guide bot is broken. The role will be given within 24 hours. Or you can ask the admins for it):",
+          "3. Click See All and complete the new available quests. Invite friends to earn extra points:"
+        ]
+      }
+    ],
+    "id": 7,
+    "firstSeenAt": "2026-09-22T23:49:34.711Z"
+  },
+  {
+    "source": "CryptoRank",
+    "slug": "pado-labs",
+    "name": "Primus Labs (prev. PADO)",
+    "logo": "https://images.cryptorank.io/coins/60x60.primus_labs_prev_pado1740127612636.png",
+    "chain": "Multiple",
+    "event": "Airdrop",
+    "costToFarm": "$1",
+    "timeToFarm": "47 min",
+    "status": "Potential",
+    "date": "2026-10-22",
+    "description": "zk-infrastructure and zkTLS protocol for verifiable data, AI agents, and privacy.",
+    "sourceUrl": "https://cryptorank.io/drophunting/pado-labs-activity698",
+    "rating": 66,
+    "activityTypes": [],
+    "isAuthProtected": true,
+    "funding": "$7000000",
+    "investorCount": 18,
+    "topInvestors": [
+      {
+        "name": "VanEck",
+        "tier": 1,
+        "category": "Venture",
+        "is_lead": true
+      },
+      {
+        "name": "YZi Labs (Prev. Binance Labs)",
+        "tier": 1,
+        "category": "Incubator",
+        "is_lead": false
+      },
+      {
+        "name": "Amber Group",
+        "tier": 2,
+        "category": "Venture",
+        "is_lead": false
+      },
+      {
+        "name": "Samsung Next",
+        "tier": 2,
+        "category": "Venture",
+        "is_lead": false
+      },
+      {
+        "name": "Symbolic Capital",
+        "tier": 3,
+        "category": "Venture",
+        "is_lead": true
+      }
+    ],
+    "twitterScore": 647,
+    "lifeCycle": "funding",
+    "category": "Infrastructure",
+    "website": "https://www.primuslabs.xyz/",
+    "x": "https://x.com/primus_labs?hzet=dszqupsbol",
+    "telegram": "https://t.me/primuslabs",
+    "extraLinks": [
+      {
+        "label": "github",
+        "url": "https://github.com/primus-labs"
+      },
+      {
+        "label": "medium",
+        "url": "https://medium.com/@primuslabs"
+      },
+      {
+        "label": "whitepaper",
+        "url": "https://docs.primuslabs.xyz/"
+      },
+      {
+        "label": "blog",
+        "url": "https://www.primuslabs.xyz/blog"
+      },
+      {
+        "label": "linkedin",
+        "url": "https://www.linkedin.com/company/primus_labs/"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 2502,
+        "title": "Primus AlphaNet",
+        "status": "OPEN",
+        "types": [
+          "Social"
+        ],
+        "startDate": "2025-10-16",
+        "instructions": [
+          "Primus [has launched](https://x.com/primus_labs/status/1978717588185342081) a new activity called AlphaNet! It is similar to farming points in the extension. Here, we can connect social media accounts and invite others. If you start now, you will receive an Early Bird badge.",
+          "1. Go to the [website](https://app.primuslabs.xyz?ref=RG64XKU) and connect your wallet.",
+          "2. Install the [extension](https://chromewebstore.google.com/detail/primus-prev-pado/oeiomhmbaapihbilkfkhmlajkeegnjhe) (if you haven't interacted with the project before).",
+          "3. Follow the project on X and repost it.",
+          "4. Connect your social media accounts:",
+          "5. Copy your referral link and invite friends:"
+        ]
+      },
+      {
+        "id": 3762,
+        "title": "Kaito",
+        "status": "OPEN",
+        "types": [
+          "Social"
+        ],
+        "startDate": "2026-09-21",
+        "endDate": "2026-10-22",
+        "isNew": true,
+        "instructions": [
+          "Primus Labs [have launched](https://x.com/primus_labs/status/2102370522692722842)a campaign for content creators on Kaito. You can create educational content about the project on X to be eligible for rewards from a dedicated pool of 0.3 per cent of the total $PRIM supply",
+          "0.24% of the $PRIM supply will be distributed amongst 450 creators, with a further 0.06% earmarked for Kaito stakers",
+          "• You can submit up to 10 posts per stage, but the ranking is calculated based on the four best-matching posts",
+          "• The final result depends on Kaito Mindshare and the referral multiplier for inviting users",
+          "• Content must focus on institutional finance, privacy, verification or the application of Primus technologies within the BNB ecosystem",
+          "1. Go to the [website](https://kaito.ai/) and log in",
+          "2. Open the [campaign page](https://kaito.ai/studio/camp_8dbabb6dfb8e). Read the campaign info and confirm your participation",
+          "3. Post content about the project on X and send a link to your post for review"
+        ]
+      },
+      {
+        "id": 1435,
+        "title": "Point farming in the extension",
+        "status": "OPEN",
+        "types": [
+          "Social"
+        ],
+        "instructions": [
+          "On February 21, Primus Labs [raised](https://cryptorank.io/ico/pado-labs#funding-rounds) $6.5M investment. The project has an expansion. You can launch it and earn points for attesting your accounts and completing social tasks. At the moment only 40,000 users have installed the extension. Perhaps in the future these points will be converted into project tokens.",
+          "1. Install the [extension](https://chromewebstore.google.com/detail/primus-prev-pado/oeiomhmbaapihbilkfkhmlajkeegnjhe).",
+          "2. Open the extension and enter the code 02W79TY to get the rewards bonus:",
+          "3. Connect your wallet:",
+          "4. Open the Data Source tab and attest your accounts. By clicking on a data source card, you'll be taken to the source website's login page. Once logged in, a small pop-up window will appear in the bottom right corner. Clicking \"Start\" initiates the data fetching process, which occurs entirely locally on your device.",
+          "5. Additional points can be earned by completing tasks in the Events tab:",
+          "6. Get rewards for achievements and invite friends:"
+        ]
+      },
+      {
+        "id": 3697,
+        "title": "Kaito",
+        "status": "CLOSED",
+        "types": [
+          "Social",
+          "Bounty Platforms"
+        ],
+        "startDate": "2026-08-25",
+        "endDate": "2026-09-08",
+        "instructions": [
+          "Primus Labs [announced](https://x.com/primus_labs/status/2092249748023722411) the launch of the Primus Warm Up Campaign on KaitoAI. By creating content and helping to promote the project, you can earn a share of the $8,000 USDC prize pool.",
+          "• Your final score is calculated using the following formula: Kaito Mindshare Score x Multiplier.",
+          "The multiplier depends on your completion of verification tasks and the TVL attracted through your referral link",
+          "The content should cover Primus Confidential Finance and Confidential Vault. You may submit up to 6 posts.",
+          "1. Go to [Kaito](https://kaito.ai/studio) and log in",
+          "2. Create content covering the specified topics, sign up for the [campaign,](https://kaito.ai/studio/camp_b508d8653e4e) and then submit links to your X posts for review"
+        ]
+      }
+    ],
+    "id": 8,
+    "firstSeenAt": "2026-09-22T23:49:34.711Z"
+  },
+  {
+    "source": "CryptoRank",
+    "slug": "action-model",
+    "name": "Action Model",
+    "logo": "https://images.cryptorank.io/coins/60x60.action_model1770728109409.png",
+    "chain": "Multiple",
+    "event": "Airdrop",
+    "timeToFarm": "53 min",
+    "status": "Potential",
+    "date": "2026-02-10",
+    "description": "ActionModel is a community-owned Large Action Model for GUI-based AI automation.",
+    "sourceUrl": "https://cryptorank.io/drophunting/action-model-activity1092",
+    "rating": 80,
+    "activityTypes": [],
+    "isAuthProtected": true,
+    "investorCount": 0,
+    "topInvestors": [],
+    "twitterScore": 576,
+    "lifeCycle": "scheduled",
+    "category": "DeFi",
+    "website": "https://join.actionmodel.com/GETBONUS",
+    "x": "https://x.com/actionmodelai?hzet=dszqupsbol",
+    "telegram": "https://t.me/actionmodelupdates",
+    "discord": "https://discord.com/invite/actionmodelai",
+    "extraLinks": [
+      {
+        "label": "youtube",
+        "url": "https://www.youtube.com/@ActionModelAI"
+      },
+      {
+        "label": "gitbook",
+        "url": "https://docs.actionmodel.com/"
+      },
+      {
+        "label": "facebook",
+        "url": "https://www.facebook.com/getactionmodel"
+      },
+      {
+        "label": "linkedin",
+        "url": "https://www.linkedin.com/company/actionmodelai/"
+      },
+      {
+        "label": "reddit",
+        "url": "https://www.reddit.com/r/ActionModel/"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 2935,
+        "title": "Point Farming",
+        "status": "OPEN",
+        "types": [
+          "Social",
+          "Testnet"
+        ],
+        "startDate": "2026-02-02",
+        "instructions": [
+          "Action Model [announced](https://x.com/ActionModelAI/status/2018304575791398938)the launch of an extension and platform for training AI agents. You can participate in training by simply installing a browser extension and doing your usual online activities.",
+          "On the Action Model platform, in the ActionFI section, you can complete tasks on various platforms and earn points for doing so.",
+          "Update 22 September 2026",
+          "Action Model [has announced](https://x.com/ActionModelAI/status/2102410479935136100) a temporary increase in rewards for SIXR tasks. You can complete daily tasks and earn double points to climb the leaderboard and compete for a share of the $100,000 prize pool.",
+          "Rewards will be distributed amongst the top 200",
+          "1. Go to the [website](https://join.actionmodel.com/GETBONUS)and register using your email address.",
+          "2. Open the \"Get Started\" tab, complete the available tasks, and install the extension.",
+          "3. Go to the \"Quests\" [tab](https://train.actionmodel.com/quests) and complete the available tasks.",
+          "There is a daily check-in in this tab",
+          "4. Complete tasks in the \"ActionFi\" [tab](https://train.actionmodel.com/actionfi).",
+          "For completing tasks from this tab, you will receive points with a multiplier"
+        ]
+      },
+      {
+        "id": 3601,
+        "title": "Ambassador Program",
+        "status": "OPEN",
+        "types": [
+          "Ambassador program"
+        ],
+        "startDate": "2026-07-31",
+        "instructions": [
+          "Action Model [has announced](https://x.com/ActionModelAI/status/2083179607105155180) that it is now accepting applications for its ambassador program. You can contribute to the project’s growth by building the community and creating content, and earn rewards in return.",
+          "What ambassadors will receive:",
+          "• Exclusive rewards",
+          "• Early access to new products and campaigns",
+          "• Unique roles within the community",
+          "• The opportunity to work closely with the team",
+          "• Access to a network of builders",
+          "1. Go to the [form](https://actionmodel.com/ambassadors) and fill it out. Submit your application"
+        ]
+      },
+      {
+        "id": 3423,
+        "title": "Action Model Creator Program",
+        "status": "OPEN",
+        "types": [
+          "Social",
+          "Ambassador program",
+          "Fill The Form"
+        ],
+        "startDate": "2026-05-27",
+        "instructions": [
+          "Action Model has [announced](https://x.com/ActionModelAI/status/2059579566612435380)that it is seeking content creators. You can apply to join the private Action Model Creator Circle group to help develop the project and receive compensation",
+          "By participating, you can receive:",
+          "Paid activities in USD + tokens",
+          "Project token allocation at the TGE",
+          "Early access to ActionFi campaigns",
+          "Additional rewards within the ecosystem",
+          "1. Go to the [form](https://docs.google.com/forms/d/e/1FAIpQLSeGD0O1lUH0DG9izTBA-mDrnHVYbOv0t6jNhX48K8k0-5WQ3g/viewform), fill it out, and submit your application to participate in the program"
+        ]
+      },
+      {
+        "id": 3210,
+        "title": "Discord",
+        "status": "OPEN",
+        "types": [
+          "Social"
+        ],
+        "instructions": [
+          "Roles are available on the project's Discord server. You can be active by participating in games and creating content, thereby earning EP, which can be used to purchase roles.",
+          "You can also earn AP for high-quality communication. AP is later converted into $LAM tokens",
+          "Action Points",
+          "1 meaningful post = 1 AP.",
+          "Posts in the [proof-of-work](https://discord.com/channels/1352314173111140374/1401877009629446206) thread can earn you 1 to 10 AP",
+          "The @LAM Fueler role grants a 3x AP multiplier",
+          "Engage Points",
+          "Roles are unlocked solely by accumulating Engage Points",
+          "Engage Points are earned by interacting with content in the [task-feed](https://discord.com/channels/1352314173111140374/1401985675770986516) and participating in [games](https://discord.com/channels/1352314173111140374/1475814435061764096)",
+          "1. Join [Discord](https://discord.gg/Y8tdcwuxfF) and actively participate in building the community"
+        ]
+      },
+      {
+        "id": 2951,
+        "title": "TaskOn",
+        "status": "OPEN",
+        "types": [
+          "Social"
+        ],
+        "instructions": [
+          "The TaskOn platform offers campaigns with quests for learning and content creation.",
+          "By completing quests, you earn LAM points. These points reflect your contribution to the development of the project and can later be converted into tokens or influence the size of your allocation when the airdrop is distributed.",
+          "1. Go to the [website](https://taskon.xyz/ActionModel) and connect your wallet. Start completing quests."
+        ]
+      }
+    ],
+    "id": 9,
+    "firstSeenAt": "2026-09-22T23:49:34.711Z"
+  },
+  {
+    "source": "Airdrops.io",
+    "slug": "gyndore",
+    "name": "Gyndore",
+    "symbol": "GYND",
+    "logo": "https://airdrops.io/wp-content/uploads/2026/09/Gyndore-logo.jpg.webp",
+    "chain": "Base",
+    "event": "Airdrop",
+    "status": "Confirmed",
+    "date": "2026-08-27",
+    "description": "Looking to claim GYND tokens from the Gyndore airdrop? Follow our step-by-step guide with eligibility details, official links and safety notes.",
+    "sourceUrl": "https://airdrops.io/gyndore/",
+    "rating": 17,
+    "activityTypes": [],
+    "isAuthProtected": true,
+    "claimUrl": "https://app.gyndore.com",
+    "investorCount": 0,
+    "topInvestors": [],
+    "twitterScore": 283,
+    "lifeCycle": "scheduled",
+    "category": "DeFi",
+    "ecosystems": [
+      "Base Ecosystem"
+    ],
+    "website": "https://gyndore.com",
+    "x": "https://x.com/Gyndore",
+    "telegram": "https://t.me/gyndore",
+    "extraLinks": [
+      {
+        "label": "gitbook",
+        "url": "https://docs.gyndore.com/"
+      },
+      {
+        "label": "github",
+        "url": "https://github.com/Ayeteasea"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 3695,
+        "title": "Wallet Verification",
+        "status": "CLOSED",
+        "types": [
+          "Wallet Airdrop Status"
+        ],
+        "startDate": "2026-09-02",
+        "endDate": "2026-09-09",
+        "instructions": [
+          "Gyndore [announced](https://x.com/Gyndore/status/2094928347335929998)the conclusion of Season 1 of the DropWave campaign. You can verify your X profile and connect wallet to receive an allocation from the dedicated pool of 300,000 $bGYND, as well as earn 10,000 points",
+          "1. Go to the [website](https://app.gyndore.com/gynd) and follow the steps"
+        ]
+      },
+      {
+        "id": 3663,
+        "title": "DropWave",
+        "status": "CLOSED",
+        "types": [
+          "Bounty Platforms"
+        ],
+        "instructions": [
+          "The DropWave campaign has been launched on the project. In this campaign, you can collect badges and earn points, which will determine your position on the leaderboard and your share of the $GYND token airdrop",
+          "1. Go to the [website](https://app.gyndore.com/dropwave). Connect wallet and X",
+          "2. Scroll down. Complete the requirements to earn badges and claim the available ones"
+        ]
+      },
+      {
+        "id": 3662,
+        "title": "Testnet",
+        "status": "CLOSED",
+        "types": [
+          "Testnet"
+        ],
+        "startDate": "2026-08-24",
+        "instructions": [
+          "Gyndore [has announced](https://x.com/Gyndore/status/2091935415561580970)the launch of its testnet. You can test the platform by making swaps, providing liquidity, and staking tokens to be eligible for rewards",
+          "1. Request test tokens from the [faucet](https://www.alchemy.com/faucets/base-sepolia)",
+          "2. Go to the [website](https://testnet.gyndore.com/swap) and connect wallet. Click Next",
+          "3. Mint test tokens",
+          "4. Go to the [Swap section](https://testnet.gyndore.com/swap). Select a pair, then enter the number of tokens you want to swap and confirm the transaction",
+          "5. Open the [Pools section](https://testnet.gyndore.com/pools). Select your preferred pool.",
+          "6. Enter the number of tokens you want to deposit into the pool and confirm the action",
+          "7. In the [Gynd section](https://testnet.gyndore.com/gynd), send your tokens to staking",
+          "8. Switch to \"Withdraw\" and withdraw some of your staked tokens",
+          "9. Click the \"Unbond\" tab and swap $bGYND for $GYND",
+          "10. Join [Telegram](https://t.me/GyndoreHQ) and leave some feedback"
+        ]
+      }
+    ],
+    "difficulty": "Beginner",
+    "costToFarm": "Free",
+    "requirements": [
+      "Twitter / X"
+    ],
+    "actions": [
+      "Step 1: Open the DropWave Reservation Portal Go to the [Gyndore reservation portal](LINK). The old DropWave campaign page now redirects here, so any saved bookmark should land in the same place.",
+      "Step 2: Connect the Wallet You Used in Season One Reservations attach to existing Season One profiles. Connect the same wallet that collected Chips during the campaign, since a fresh wallet has no allocation tied to it.",
+      "Step 3: Authenticate Your DropWave Profile The portal verifies the X account you linked during the campaign before it shows a balance. Approve the sign-in request so your GynPoints can be matched to the connected wallet.",
+      "Step 4: Confirm Your Base Receiving Address Set the Base address that should receive bGYND. Use an address you hold the keys to, because exchange deposit addresses often reject tokens they have not listed.",
+      "Step 5: Submit Before September 9 Confirm the reservation and check that the portal shows it as reserved. Gyndore has not announced a fallback for allocations left unreserved after 09.09.26, so treat the date as final."
+    ],
+    "isLive": true,
+    "id": 10,
+    "firstSeenAt": "2026-09-19T00:00:44.749Z"
+  },
+  {
+    "slug": "andrena",
+    "name": "Andrena (DAWN)",
+    "chain": "Solana",
+    "event": "Airdrop",
+    "status": "Potential",
+    "date": "2024-08-08",
+    "description": "Andrena is the developer of a Solana-based physical infrastructure network (DePIN) protocol aimed at providing decentralized internet services.",
+    "funding": "$48500000",
+    "logo": "https://images.cryptorank.io/coins/60x60.andrena_dawn1745583654467.png",
+    "source": "CryptoRank",
+    "sourceUrl": "https://cryptorank.io/drophunting/andrena-activity328",
+    "activityTypes": [],
+    "rating": 417,
+    "twitterFollowers": 531350,
+    "twitterScore": 3361,
+    "isAuthProtected": true,
+    "investorCount": 28,
+    "topInvestors": [
+      {
+        "name": "Polychain Capital",
+        "tier": 1,
+        "category": "Venture",
+        "is_lead": true
+      },
+      {
+        "name": "Dragonfly",
+        "tier": 1,
+        "category": "Venture",
+        "is_lead": true
+      },
+      {
+        "name": "VanEck",
+        "tier": 1,
+        "category": "Venture",
+        "is_lead": false
+      },
+      {
+        "name": "CMT Digital",
+        "tier": 2,
+        "category": "Venture",
+        "is_lead": false
+      },
+      {
+        "name": "Robot Ventures",
+        "tier": 2,
+        "category": "Venture",
+        "is_lead": false
+      }
+    ],
+    "timeToFarm": "4 min",
+    "category": "DePIN",
+    "ecosystems": [
+      "Solana Ecosystem"
+    ],
+    "website": "https://www.dawninternet.com/",
+    "x": "https://x.com/dawninternet?hzet=dszqupsbol",
+    "telegram": "https://t.me/dawninternet",
+    "extraLinks": [
+      {
+        "label": "whitepaper",
+        "url": "https://cdn.prod.website-files.com/665dc8eb8d9f8c4764608070/66c3c22442580dcd5962c723_DAWN%20Whitepaper%20July%2025%2C%202024%20(1).pdf"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 2415,
+        "title": "Browser Node (new)",
+        "status": "OPEN",
+        "types": [
+          "DePIN"
+        ],
+        "startDate": "2025-09-24",
+        "instructions": [
+          "Dawn [has announced](https://x.com/dawninternet/status/1970880962834665614) a new and improved version of the extension! If you have already been farming project points, delete the old extension and install the new one. If you are a new user, simply install the new extension and start earning points. In the new version, points may not display correctly, but the devs are already fixing this issue.",
+          "Updated on January 14. Please update the extension to version 3.0.7.",
+          "1. Install the new [extension](https://chromewebstore.google.com/detail/dawn-validator-chrome-ext/fpdkjdnhkakefebpekbdhillbhonfjjp) and log in to your old account (or create a new one if you don't have it)",
+          "2. Enter the code YFUW7YJO to get a bonus to points farming.",
+          "3. Earn points for using your browser, invite friends, and track your progress in the dashboard:"
+        ]
+      },
+      {
+        "id": 1873,
+        "title": "Dawn Dashboard",
+        "status": "CLOSED",
+        "types": [
+          "DePIN"
+        ],
+        "instructions": [
+          "Previously, the Dawn extension did not display earned points. The project team has now fixed this and added a web version of the dashboard (currently not working correctly).",
+          "1. Open the [extension](https://chromewebstore.google.com/detail/dawn-validator-chrome-ext/fpdkjdnhkakefebpekbdhillbhonfjjp) and track your points:",
+          "2. Continue earning points or install the extension according to our guide (if you haven't installed it before)."
+        ]
+      },
+      {
+        "id": 633,
+        "title": "Browser Node (old)",
+        "status": "CLOSED",
+        "types": [
+          "DePIN"
+        ],
+        "startDate": "2024-08-07",
+        "instructions": [
+          "DAWN aims to transform internet access similarly to how solar panels transformed electricity, enabling consumers to own, generate, and sell their own internet service. Now DAWN has launched a testnet, where we can use the Internet in normal mode and get points for it. [Grass](https://cryptorank.io/drophunting/grass-activity51) and [Nodepay](https://cryptorank.io/drophunting/nodepay-activity199) have a similar activity.",
+          "1. Install the Dawn [extension](https://chromewebstore.google.com/detail/dawn-validator-chrome-ext/fpdkjdnhkakefebpekbdhillbhonfjjp).",
+          "2. Click the Register button in the extension and enter the code h71kzy (you won't be able to log into the app without it):",
+          "3. confirm your registration by e-mail.",
+          "4. Open the extension again and log in to your account. If everything was successful, you will see a similar window:",
+          "For more rewards, click Boost rewards. Here you can invite friends and complete tasks."
+        ]
+      }
+    ],
+    "lifeCycle": "funding",
+    "id": 11,
+    "firstSeenAt": "2026-09-19T12:37:51.512Z"
+  },
+  {
+    "source": "CryptoRank",
+    "slug": "melee",
+    "name": "Melee",
+    "logo": "https://images.cryptorank.io/coins/60x60.melee1758751686611.png",
+    "chain": "Solana",
+    "event": "Airdrop",
+    "timeToFarm": "25 min",
+    "status": "Potential",
+    "date": "2025-09-25",
+    "description": "Melee is a decentralized prediction platform where anyone can create markets on any topic.",
+    "sourceUrl": "https://cryptorank.io/drophunting/melee-activity946",
+    "rating": 169,
+    "activityTypes": [],
+    "isAuthProtected": true,
+    "funding": "$3500000",
+    "investorCount": 2,
+    "topInvestors": [
+      {
+        "name": "Variant",
+        "tier": 2,
+        "category": "Venture",
+        "is_lead": false
+      },
+      {
+        "name": "DBA",
+        "tier": 3,
+        "category": "Venture",
+        "is_lead": false
+      }
+    ],
+    "twitterScore": 4161,
+    "lifeCycle": "funding",
+    "category": "DeFi",
+    "ecosystems": [
+      "Solana Ecosystem"
+    ],
+    "website": "https://alpha.melee.markets/",
+    "x": "https://x.com/meleemarkets?hzet=dszqupsbol",
+    "tasks": [
+      {
+        "id": 3728,
+        "title": "Beta",
+        "status": "OPEN",
+        "types": [
+          "Testnet",
+          "Predictions"
+        ],
+        "startDate": "2026-09-08",
+        "instructions": [
+          "Melee [has announced](https://x.com/meleemarkets/status/2097369654805119326) the launch of its beta. You can trade on prediction markets, create your own markets, up your Melee Score, and claim daily cases",
+          "Update 22 September 2026",
+          "Melee [has announced](https://x.com/meleemarkets/status/2102398700987568233) https://x.com/meleemarkets/status/2102398700987568233the launch of memecoin markets. You can participate in the 5-minute $ANSEM markets and climb the leaderboard to reach the top 2,500 and receive a limited-edition Black Bull badge.",
+          "The beta is divided into 3 phases:",
+          "• Trade: Claiming daily cases and trading on cryptocurrency price markets, as well as on markets created by the Melee team",
+          "• Claim: Launching markets based on current topics and earning Melee Score boosts based on trading volume on those markets",
+          "• Create: Unlocking full functionality for creating markets",
+          "Badges and Score:",
+          "• Melee Score: Successful trades increase your score; unsuccessful ones decrease it. The accuracy of your predictions is more important than the total volume traded.",
+          "• Badges provide multipliers for your accumulated Melee Score",
+          "Your earned rank and score will be transferred to the mainnet",
+          "1. Go to the [platform](https://beta.melee.markets/) and log in",
+          "2. Wait for it to load, then open the welcome case",
+          "3. Select the expected outcome",
+          "4. Select the amount to open a trade",
+          "5. Wait for the trade to close, then open a new one. Make accurate predictions and increase your Score"
+        ]
+      },
+      {
+        "id": 3670,
+        "title": "OG Badge",
+        "status": "OPEN",
+        "types": [
+          "Social"
+        ],
+        "startDate": "2026-08-27",
+        "instructions": [
+          "Melee [has announced](https://x.com/meleemarkets/status/2092975483822469335) the launch of its beta. You can create a profile and claim an OG badge, which may affect airdrop allocation in the future.",
+          "1. Go to the [website](https://t.co/dUZaLxG8Ws) and log in. Create a profile and connect X again to get the OG badge"
+        ]
+      },
+      {
+        "id": 2414,
+        "title": "Waitlist",
+        "status": "OPEN",
+        "types": [
+          "Social"
+        ],
+        "startDate": "2025-09-24",
+        "instructions": [
+          "Yesterday (September 24), Melee raised $3.5 million in investments. There is a waitlist on the project website. We can submit an application and get early access to future products.",
+          "1. Go to the [website](https://alpha.melee.markets/) and connect your X account:"
+        ]
+      }
+    ],
+    "id": 12,
+    "firstSeenAt": "2026-09-22T23:49:34.711Z"
+  },
+  {
+    "source": "CryptoRank",
+    "slug": "prisma-x",
+    "name": "PrismaX",
+    "logo": "https://images.cryptorank.io/coins/60x60.prisma_x1750144566189.png",
+    "chain": "Multiple",
+    "event": "Airdrop",
+    "timeToFarm": "39 min",
+    "status": "Potential",
+    "date": "2025-06-17",
+    "description": "PrismaX is a company that is developing generative AI models for visual and robotic applications to support robotics adoption.",
+    "sourceUrl": "https://cryptorank.io/drophunting/prisma-x-activity847",
+    "rating": 146,
+    "activityTypes": [],
+    "isAuthProtected": true,
+    "funding": "$11000000",
+    "investorCount": 5,
+    "topInvestors": [
+      {
+        "name": "a16z CSX",
+        "tier": 1,
+        "category": "Incubator",
+        "is_lead": true
+      },
+      {
+        "name": "Volt Capital",
+        "tier": 3,
+        "category": "Venture",
+        "is_lead": false
+      },
+      {
+        "name": "Blockchain Builders Fund",
+        "tier": 4,
+        "category": "Venture",
+        "is_lead": false
+      },
+      {
+        "name": "Stanford Blockchain Accelerator (SBA)",
+        "tier": 4,
+        "category": "Incubator",
+        "is_lead": false
+      },
+      {
+        "name": "Virtuals Protocol",
+        "tier": null,
+        "category": "Corporation",
+        "is_lead": false
+      }
+    ],
+    "twitterScore": 1945,
+    "lifeCycle": "funding",
+    "twitterFollowers": 17312,
+    "category": "AI",
+    "website": "https://gateway.prismax.ai/",
+    "x": "https://x.com/PrismaXai?hzet=dszqupsbol",
+    "telegram": "https://t.me/PrismaX_News",
+    "extraLinks": [
+      {
+        "label": "youtube",
+        "url": "https://www.youtube.com/@PrismaX-AI"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 1921,
+        "title": "Point Farming",
+        "status": "OPEN",
+        "types": [
+          "Mainnet"
+        ],
+        "startDate": "2025-06-03",
+        "instructions": [
+          "PrismaX [has announced](https://x.com/PrismaXai/status/1929946800770756689) an early version of the app. We will be able to earn points for simple activity. The more points you can earn, the better!",
+          "1. Go to the [website](https://app.prismax.ai/), connect your Solana wallet.",
+          "2. You will receive 1000 points and Prisma X Explorer status after your first login.",
+          "3. Log in daily to earn 10 points. Fill in your personal information. To earn 3 times more points upgrade to Amplifier Member for $99.",
+          "Please note that this is an early version. There may be new activities in future updates."
+        ]
+      },
+      {
+        "id": 3761,
+        "title": "Discord Roles",
+        "status": "OPEN",
+        "types": [
+          "Getting a role"
+        ],
+        "isNew": true,
+        "instructions": [
+          "PrismaX [have published](https://discord.com/channels/1288096476706242560/1394919165432959056/1550410510447677460) a link (you need to join [Discord](https://discord.gg/JzFWkQ7NHj) to view the announcement) to a [detailed guide](https://app.notion.com/p/PrismaX-Role-Progression-Guide-EN-3679646a007a8054937cc7f8124ac4b5) on Discord roles. You can get involved by being active in the community, creating content, helping other users and taking part in testing. The roles you earn may guarantee you an airdrop.",
+          "• Holders of the top-tier Groundbreaker role receive up to 60 minutes of exclusive teleoperations time per week and priority in the ambassador programme",
+          "• To retain the Groundbreaker role, you must use at least 180 minutes of teleoperations per month or maintain a high level of alternative contribution; otherwise, you may be demoted to Navigational",
+          "Role hierarchy from the first to the highest role:",
+          "• @Reactive",
+          "• @Assistive",
+          "• @Proactive",
+          "• @Exploratory",
+          "• @Stabilized",
+          "• @Navigational",
+          "• @Groundbreaker",
+          "The number of participants in each role is limited by a percentage ratio. For example, the approximate ratio of those with the @Groundbreaker role to participants at the @Reactive level is between 1 and 5,000–10,000",
+          "Quantitative activity benchmarks by role:",
+          "• The first two roles, @ Reactive and @ Assistive , are awarded for basic participation in the community",
+          "• Proactive: 4 or more posts about PrismaX + participation in 2 events.",
+          "• Stabilised: 6 or more posts about PrismaX + participation in 3 events + helping newcomers in the channels",
+          "• Navigational: 8 or more posts + 5 internal events + organising/assisting with an external event and completing the report form.",
+          "• Groundbreaker is awarded manually",
+          "1. Go to [Discord](https://discord.gg/JzFWkQ7NHj) and get actively involved in the community to earn roles"
+        ]
+      },
+      {
+        "id": 3157,
+        "title": "Connecting Accounts",
+        "status": "OPEN",
+        "types": [
+          "Social"
+        ],
+        "startDate": "2026-03-26",
+        "instructions": [
+          "PrismaX [has announced](https://x.com/PrismaXai/status/2037047657886343290) an update to the account page. You can link your social media accounts so that the project team can see your posts about the project",
+          "1. Go to the [website](https://app.prismax.ai/) and connect your wallet",
+          "2. Open your account [settings](https://app.prismax.ai/account), fill in the details, and link your accounts"
+        ]
+      },
+      {
+        "id": 3539,
+        "title": "Teleop Cup Arm",
+        "status": "CLOSED",
+        "types": [
+          "Bounty Platforms"
+        ],
+        "startDate": "2026-07-13",
+        "endDate": "2026-07-22",
+        "instructions": [
+          "PrismaX [has announced](https://x.com/PrismaXai/status/2076684527456641233)the launch of the Teleop Cup Arm event. You can complete tasks involving controlling a robotic arm, score goals with soccer balls, and earn Prisma Points",
+          "Daily game limits:",
+          "Amplifier: 3 attempts per day",
+          "Innovator: 6 attempts per day",
+          "1. Go to the [website](https://app.prismax.ai/) and set up your wallet",
+          "2. Go to [Robot Control Center,](https://app.prismax.ai/robots-center) wait for the livestream to start, and join the event"
+        ]
+      },
+      {
+        "id": 3524,
+        "title": "Galxe: The First 100 Validators",
+        "status": "CLOSED",
+        "types": [
+          "Bounty Platforms"
+        ],
+        "startDate": "2026-07-01",
+        "endDate": "2026-08-01",
+        "instructions": [
+          "PrismaX [announced](https://x.com/PrismaXai/status/2072343450218037348) the launch of \"The First 100 Validators\" campaign on the Galxe platform. You can complete quests to share in a $2,500 USDC prize pool and earn up to 35,000 Prisma Points",
+          "1. Go to the [website](https://app.galxe.com/quest/fio5HZ84aWwVzHDLHQZwop/GCYmEtZN5R), connect your wallet, and start completing tasks"
+        ]
+      },
+      {
+        "id": 3366,
+        "title": "Regional Ambassador Program",
+        "status": "CLOSED",
+        "types": [
+          "Ambassador program"
+        ],
+        "startDate": "2026-05-12",
+        "endDate": "2026-05-24",
+        "instructions": [
+          "PrismaX [has announced](https://x.com/PrismaXai/status/2054223893272187153)the launch of a regional ambassador program. You can apply to help develop local communities in your language and represent the project in your region.",
+          "You will receive:",
+          "A unique regional ambassador badge",
+          "Access to private ambassador channels, direct communication with the PrismaX team, and AMAs exclusively for ambassadors",
+          "Rewards based on performance",
+          "1. Quote the [post](https://x.com/PrismaXai/status/2054223893272187153) on X and explain why you want to become an ambassador and what you've contributed to the growth of the PrismaX community. Also, include your ideas for growing the local community in your quote.",
+          "2. Fill out the [form](https://docs.google.com/forms/d/e/1FAIpQLSf4XCn9BhDwfD_q2wn4RVW7xyRte-2ZkzwwpMd9GOW0csbcaQ/viewform)"
+        ]
+      },
+      {
+        "id": 2787,
+        "title": "Pre Ambassador Program",
+        "status": "CLOSED",
+        "types": [
+          "Fill The Form"
+        ],
+        "startDate": "2025-11-27",
+        "instructions": [
+          "PrismaX [has announced](https://discord.com/channels/1288096476706242560/1288097373989371965/1443512309816492074) feedback on the ambassador program in Discord! You can fill out the form and share your feedback about the launch of the ambassador program.",
+          "1. Open the [form](https://forms.gle/Gk5Wkmxv78ARsrJU8) and fill it out."
+        ]
+      }
+    ],
+    "id": 13,
+    "firstSeenAt": "2026-09-22T23:49:34.711Z"
+  },
+  {
+    "source": "CryptoRank",
+    "slug": "frontier-traders",
+    "name": "Frontier Traders",
+    "logo": "https://images.cryptorank.io/coins/60x60.frontier_traders1789983495161.png",
+    "chain": "Solana",
+    "event": "Airdrop",
+    "timeToFarm": "3 min",
+    "status": "Potential",
+    "date": "2026-09-21",
+    "description": "Frontier Traders is a profile and rewards program for active Solana traders.",
+    "sourceUrl": "https://cryptorank.io/drophunting/frontier-traders-activity1317",
+    "rating": 3,
+    "activityTypes": [],
+    "isAuthProtected": true,
+    "investorCount": 0,
+    "topInvestors": [],
+    "twitterScore": 1115,
+    "lifeCycle": "scheduled",
+    "category": "Social",
+    "ecosystems": [
+      "Solana Ecosystem"
+    ],
+    "website": "https://www.frontiertraders.com/",
+    "x": "https://x.com/joinfrontier?hzet=dszqupsbol",
+    "tasks": [
+      {
+        "id": 3760,
+        "title": "Trader Profile",
+        "status": "OPEN",
+        "types": [
+          "Social",
+          "Wallet Airdrop Status"
+        ],
+        "startDate": "2026-09-14",
+        "isNew": true,
+        "instructions": [
+          "Frontier Traders have announced the launch of the [trader profile](https://x.com/joinfrontier/status/2099564513599136057). You can take part by verifying your profile to gain access to rewards and the VIP program",
+          "1. Go to the [website](https://www.frontiertraders.com/), enter your wallet address and click the button",
+          "2. Log in",
+          "3. Go to [profile settings](https://www.frontiertraders.com/dashboard) and connect your wallet",
+          "4. Sign up to the [VIP program](https://www.frontiertraders.com/vip)"
+        ]
+      }
+    ],
+    "id": 14,
+    "firstSeenAt": "2026-09-22T23:49:34.711Z"
+  },
+  {
+    "source": "CryptoRank",
+    "slug": "travix",
+    "name": "Travix",
+    "logo": "https://images.cryptorank.io/coins/60x60.travix1789981867482.png",
+    "chain": "Multiple",
+    "event": "Airdrop",
+    "timeToFarm": "1 min",
+    "status": "Potential",
+    "date": "2026-09-21",
+    "description": "Perpetuals exchange with AI strategies for crypto and real-world markets.",
+    "sourceUrl": "https://cryptorank.io/drophunting/travix-activity1316",
+    "rating": 3,
+    "activityTypes": [],
+    "isAuthProtected": true,
+    "investorCount": 1,
+    "topInvestors": [
+      {
+        "name": "Amber Group",
+        "tier": 2,
+        "category": "Venture",
+        "is_lead": false
+      }
+    ],
+    "twitterScore": 88,
+    "lifeCycle": "funding",
+    "category": "Exchange",
+    "website": "https://www.travix.finance/",
+    "x": "https://x.com/Travix_fi?hzet=dszqupsbol",
+    "extraLinks": [
+      {
+        "label": "linkedin",
+        "url": "https://www.linkedin.com/company/travixfi/"
+      },
+      {
+        "label": "whitepaper",
+        "url": "https://www.travix.finance/with_paper/travix_wite_paper.pdf"
+      },
+      {
+        "label": "medium",
+        "url": "https://medium.com/@travix_fi"
+      }
+    ],
+    "tasks": [
+      {
+        "id": 3759,
+        "title": "Waitlist",
+        "status": "OPEN",
+        "types": [
+          "Fill The Form"
+        ],
+        "isNew": true,
+        "instructions": [
+          "Travix [has announced](https://x.com/Travix_fi/status/2101915054392385877) the closure of its [seed funding round](https://cryptorank.io/ico/travix). You can provide your email address to gain early access to the trading platform in the future and start increasing your trading volume in the event that a points program is introduced",
+          "1. Go to the [website](https://www.travix.finance/) and enter your email"
+        ]
+      }
+    ],
+    "id": 15,
+    "firstSeenAt": "2026-09-22T23:49:34.711Z"
+  },
+  {
+    "slug": "voice",
+    "name": "VOICE",
+    "chain": "Solana",
+    "event": "Airdrop",
+    "status": "Confirmed",
+    "date": "2026-08-31",
+    "description": "Looking for the confirmed VOICE airdrop? Follow our step-by-step guide to qualify for the ongoing airdrop before it ends.",
+    "logo": "https://airdrops.io/wp-content/uploads/2026/08/VOICE-logo.jpg.webp",
+    "source": "Airdrops.io",
+    "sourceUrl": "https://airdrops.io/voice/",
+    "activityTypes": [],
+    "rating": 14,
+    "twitterScore": 787,
+    "isAuthProtected": true,
+    "investorCount": 0,
+    "topInvestors": [],
+    "costToFarm": "Free",
+    "timeToFarm": "75 min",
+    "category": "Social",
+    "ecosystems": [
+      "Solana Ecosystem"
+    ],
+    "website": "https://voice.fun",
+    "x": "https://x.com/voicehavefun",
+    "discord": "https://discord.gg/MDKCRdAWaZ",
+    "tasks": [
+      {
+        "id": 3676,
+        "title": "Point Farming",
+        "status": "OPEN",
+        "types": [
+          "Bounty Platforms",
+          "Social"
+        ],
+        "startDate": "2026-04-07",
+        "instructions": [
+          "VOICE [announced](https://x.com/voicehavefun/status/2041400605361438785) the launch of the Social Camp campaign. By completing tasks and participating in daily votes, you will earn CLOUT points",
+          "• Your CLOUT score determines your influence within the community and your level. Higher levels grant guaranteed spots on the waitlist, NFT drops, and a larger token allocation at launch",
+          "1. Go to the [website](https://voice.cc/) and log in using X",
+          "2. Start completing the tasks that interest you and earn points"
+        ]
+      },
+      {
+        "id": 3747,
+        "title": "Required SBT Voicy Pass",
+        "status": "OPEN",
+        "types": [
+          "Mint NFT",
+          "Bounty Platforms"
+        ],
+        "startDate": "2026-09-16",
+        "isNew": true,
+        "instructions": [
+          "VOICE [has announced](https://x.com/voicecc/status/2100259662150930517) the launch of the VOICY Pass mint. You can mint SBT to confirm your participation in the project and complete verification to receive the upcoming airdrop",
+          "This is a mandatory SBT",
+          "The SBT tier system:",
+          "• Echo: Requires 10% CLOUT and grants a base allocation",
+          "• Chorus: To unlock, you need to reach 60% CLOUT and complete 100 tasks. Your allocation is doubled",
+          "• Resonance: Maximum level. Unlocked at 100% CLOUT and 250 completed tasks. Allocation is multiplied by 4",
+          "1. Go to the [website](https://voice.cc/)and log in",
+          "2. Open the [Mint section](https://voice.cc/mint) and mint pass"
+        ]
+      },
+      {
+        "id": 3729,
+        "title": "Ambassador Program",
+        "status": "OPEN",
+        "types": [
+          "Ambassador program"
+        ],
+        "instructions": [
+          "You can participate by joining the first cohort of ambassadors and applying for a share of the allocated pool",
+          "Requirements for ambassadors:",
+          "• The program is aimed at active X users with an engaged audience. Content must be published in English only",
+          "• Posts must be published daily",
+          "Rewards System:",
+          "• The prize pool is $3,000 and will be distributed among top-performing ambassadors",
+          "• Program participants receive an allocation of $VOICE tokens",
+          "• Performance is evaluated based on KPIs: posts, threads, memes, referrals, mentions, and co-hosting Spaces on X",
+          "1. Go to the [program page](https://amb.voice.cc/) and submit your application"
+        ]
+      },
+      {
+        "id": 3723,
+        "title": "Voice Pulse",
+        "status": "OPEN",
+        "types": [
+          "Bounty Platforms"
+        ],
+        "startDate": "2026-09-09",
+        "instructions": [
+          "VOICE [announced](https://x.com/voicecc/status/2097632695274631483) the launch of Voice Pulse. You can take part in surveys and enter a drawing for 5 Genesis NFTs",
+          "1. Go to the [website](https://voice.cc/)and connect your wallet",
+          "2. Open the [Voice Pulse section](https://voice.cc/voicepulse). Select a poll and vote",
+          "Complete all polls to increase your chances of receiving an NFT"
+        ]
+      },
+      {
+        "id": 3712,
+        "title": "VOICY NFT",
+        "status": "OPEN",
+        "types": [
+          "Social",
+          "Bounty Platforms"
+        ],
+        "startDate": "2026-09-07",
+        "instructions": [
+          "VOICE [has announced](https://x.com/voicecc/status/2096951536140132495)the launch of the VOICY NFT collection. You can complete tasks in the Social Camp campaign, climb the leaderboard, and earn a spot on the whitelist for a free mint pass, which will entitle you to an airdrop",
+          "• The collection consists of 10,000 NFTs: passes are tied to a wallet and cannot be transferred",
+          "• There are 2 tiers in total:",
+          "Earned Tier: a free tier for active VOICE users who participate in Social Camp",
+          "Top Tier: a rare tier limited to just 300 tokens. The free way to obtain one is by participating in raffles",
+          "• Possession of a pass grants a CLOUT multiplier, which ultimately affects the size of the airdrop allocation",
+          "1. Go to the [website](https://voice.cc/) and log in",
+          "2. In the [Social Camp section](https://voice.cc/socialcamp), complete the available tasks"
+        ]
+      },
+      {
+        "id": 3707,
+        "title": "Arkada Quest",
+        "status": "OPEN",
+        "types": [
+          "Bounty Platforms"
+        ],
+        "startDate": "2026-09-03",
+        "instructions": [
+          "The VOICE: Turn Your Opinions Into Onchain Value quest has launched on the Arkada platform. You can complete it to earn Arkada points and Pyramid SBTs, which will give you the chance to share in the seasonal reward pool. You’ll also receive 1 spin on the wheel of fortune.",
+          "By completing the quest, you will receive:",
+          "• Points and a Pyramid SBT, which acts as a multiplier when seasonal rewards are distributed",
+          "• Attempts to spin the wheel of fortune. By spinning the wheel, you can win up to 0.01 $ETH, project tokens, Shogun NFTs, and points",
+          "• After completing the quest, you’ll have a chance to earn $ETH when minting Pyramid",
+          "1. Go to the [website](https://app.arkada.gg/campaign/voice-social-camp?utm_source=cryptorank&ref=Cryptorank) and connect wallet",
+          "2. Complete tasks to earn points and get a chance to win $ETH"
+        ]
+      },
+      {
+        "id": 3677,
+        "title": "Discord Roles",
+        "status": "OPEN",
+        "types": [
+          "Getting a role"
+        ],
+        "startDate": "2026-04-03",
+        "instructions": [
+          "VOICE [announced](https://discord.com/channels/1418579076536598571/1489428164492132523/1489556690155081871) (you must join [Discord](https://discord.gg/2JumddtMyC) to see the announcement) the launch of a roles and levels system on Discord. You can get involved by chatting on the server and participating in weekly activities to level up and earn exclusive roles",
+          "• @VOICE OG. This role was awarded to the project’s earliest participants",
+          "• The @Shill Veteran Medal and the limited-edition roles @Day-One VOICE, @INFECTED, and @Taco Lover are awarded for actively promoting the project on X and participating in the community",
+          "• @Ambassador and @TOP Ambassador - roles for those who help the project grow and develop",
+          "• @Community Gamer and @Born For Victory - awarded for participation and victories in community games or weekly events",
+          "1. Join [Discord](https://discord.gg/2JumddtMyC) and start actively participating in the community"
+        ]
+      }
+    ],
+    "lifeCycle": "scheduled",
+    "symbol": "VOICE",
+    "claimUrl": "https://voice.fun",
+    "difficulty": "Easy",
+    "requirements": [
+      "Twitter / X",
+      "Email"
+    ],
+    "actions": [
+      "Step 1: Visit the VOICE Social Camp Go to the [VOICE Social Camp](https://airdrops.io/visit/rxa3/) page. This is the pre-launch hub where quests, leaderboards, and CLOUT tracking live.",
+      "Step 2: Sign in with your X account Connect your X account, since most quests track posts, quotes, and mentions there. You can also continue with a Google account or a Solana wallet.",
+      "Step 3: Complete Core, Daily, and Burst tasks Clear the Core tasks first, then return for the Daily set. Burst tasks are shorter, higher-value entries announced in the [VOICE Discord](https://discord.gg/MDKCRdAWaZ), so keep an eye there for drops.",
+      "Step 4: Vote in polls and Opinion Cup battles Cast votes on active polls and in Opinion Cup matchups. Each vote earns CLOUT, and the Cup runs creator battles with USDT prize pools on top.",
+      "Step 5: Join the Voice Pulse campaign Enter the Voice Pulse campaign for extra CLOUT and rewards. This round closes on September 1, so finish its tasks before the deadline.",
+      "Step 6: Complete the Layer3 VOICE campaign Head to the separate [VOICE campaign on Layer3](/visit/lab3/?k=8eb55b13ca), which carries an advertised $2,000 reward pool. Complete the listed quests to qualify for a share.",
+      "Step 7: Enter partner clusters Join the partner clusters inside Social Camp. These bundle quests from partner projects and carry their own USDT and NFT pools alongside CLOUT.",
+      "Step 8: Invite friends through FRENS Share your FRENS invite link. You earn a permanent 10% boost on the CLOUT your invitees generate, so early invites keep paying through the rest of the campaign."
+    ],
+    "telegram": "https://t.me/airdrops_io",
+    "isLive": true,
+    "id": 16,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -205,22 +2713,16 @@ export const generatedProjects: Project[] = [
     "logo": "https://images.cryptorank.io/coins/60x60.rep1788375355853.png",
     "chain": "Multiple",
     "event": "Airdrop",
-    "rewardType": "Airdrop",
     "costToFarm": "$1",
     "timeToFarm": "10 min",
-    "status": "Confirmed",
-    "date": "2026-09-21",
+    "status": "Potential",
+    "date": "2026-09-07",
     "description": "REP builds the Unified Coordination Graph for AI agents and portable, provable context.",
     "sourceUrl": "https://cryptorank.io/drophunting/rep-hq-activity1293",
-    "rating": 6,
-    "activityTypes": [
-      "Bounty Platforms",
-      "Social"
-    ],
-    "activityPoints": 0,
-    "noActiveTask": false,
-    "isAuthProtected": false,
-    "investorCount": 19,
+    "rating": 7,
+    "activityTypes": [],
+    "isAuthProtected": true,
+    "investorCount": 18,
     "topInvestors": [
       {
         "name": "Anton Bukov",
@@ -311,36 +2813,28 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 3,
+    "id": 17,
     "firstSeenAt": "2026-09-21T14:10:06.388Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "fermah",
     "name": "Fermah",
-    "logo": "https://images.cryptorank.io/coins/60x60.fermah1726576106766.png",
     "chain": "Multiple",
     "event": "Airdrop",
-    "rewardType": "Airdrop",
+    "status": "Potential",
+    "date": "2024-10-02",
+    "description": "Fermah is a platform that provides affordable and reliable infrastructure for generating zero-knowledge (ZK) proofs.",
+    "funding": "$5200000",
+    "logo": "https://images.cryptorank.io/coins/60x60.fermah1726576106766.png",
+    "source": "CryptoRank",
+    "sourceUrl": "https://cryptorank.io/drophunting/fermah-activity447",
     "costToFarm": "$3",
     "timeToFarm": "50 min",
-    "status": "Potential",
-    "date": "2026-09-18",
-    "description": "Fermah is a platform that provides affordable and reliable infrastructure for generating zero-knowledge (ZK) proofs.",
-    "sourceUrl": "https://cryptorank.io/drophunting/fermah-activity447",
-    "rating": 78,
-    "activityTypes": [
-      "Fill The Form",
-      "Predictions",
-      "Testnet",
-      "Getting a role",
-      "Social",
-      "Mint NFT"
-    ],
-    "activityPoints": 79.3,
-    "noActiveTask": false,
-    "isAuthProtected": false,
-    "funding": "$5200000",
+    "activityTypes": [],
+    "rating": 79,
+    "twitterFollowers": 90894,
+    "twitterScore": 960,
+    "isAuthProtected": true,
     "investorCount": 14,
     "topInvestors": [
       {
@@ -374,9 +2868,6 @@ export const generatedProjects: Project[] = [
         "is_lead": false
       }
     ],
-    "twitterScore": 960,
-    "lifeCycle": "funding",
-    "twitterFollowers": 90894,
     "category": "Infrastructure",
     "website": "https://www.fermah.xyz/",
     "x": "https://x.com/fermah_xyz?hzet=dszqupsbol",
@@ -521,35 +3012,28 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 4,
+    "lifeCycle": "funding",
+    "id": 18,
     "firstSeenAt": "2026-09-19T12:37:51.512Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "mindgames-ai",
     "name": "MindGamesAI",
-    "logo": "https://images.cryptorank.io/coins/60x60.mind_games_ai1789752341685.png",
-    "chain": "Robinhood Ecosystem",
+    "chain": "Robinhood",
     "event": "Airdrop",
-    "rewardType": "Airdrop",
-    "costToFarm": "$0",
-    "timeToFarm": "20 min",
-    "status": "Confirmed",
+    "status": "Potential",
     "date": "2026-09-18",
     "description": "MindGamesAI is a Robinhood-based competition platform for configurable AI Minds.",
+    "logo": "https://images.cryptorank.io/coins/60x60.mind_games_ai1789752341685.png",
+    "source": "CryptoRank",
     "sourceUrl": "https://cryptorank.io/drophunting/mindgames-ai-activity1315",
+    "timeToFarm": "20 min",
+    "activityTypes": [],
     "rating": 5,
-    "activityTypes": [
-      "Bounty Platforms",
-      "Contract Deployment"
-    ],
-    "activityPoints": 0,
-    "noActiveTask": false,
-    "isAuthProtected": false,
+    "isAuthProtected": true,
     "investorCount": 0,
     "topInvestors": [],
-    "twitterScore": 288,
-    "lifeCycle": "scheduled",
+    "twitterScore": 299,
     "category": "GameFi",
     "ecosystems": [
       "Robinhood ecosystem"
@@ -583,28 +3067,28 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 5,
+    "lifeCycle": "scheduled",
+    "id": 19,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "bitx-ai",
     "name": "BitX",
-    "logo": "https://images.cryptorank.io/coins/60x60.bit_x1789752374645.png",
     "chain": "Multiple",
     "event": "Airdrop",
-    "timeToFarm": "2 min",
     "status": "Potential",
     "date": "2026-09-18",
     "description": "BitX is an AI assistant for Bitcoin data, on-chain metrics, charts and research.",
+    "logo": "https://images.cryptorank.io/coins/60x60.bit_x1789752374645.png",
+    "source": "CryptoRank",
     "sourceUrl": "https://cryptorank.io/drophunting/bitx-ai-activity1314",
-    "rating": 16,
+    "timeToFarm": "2 min",
     "activityTypes": [],
+    "rating": 17,
     "isAuthProtected": true,
     "investorCount": 0,
     "topInvestors": [],
-    "twitterScore": 932,
-    "lifeCycle": "scheduled",
+    "twitterScore": 949,
     "category": "AI",
     "website": "https://www.bxdx.io/",
     "x": "https://x.com/bitx2100?hzet=dszqupsbol",
@@ -632,28 +3116,28 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 6,
+    "lifeCycle": "scheduled",
+    "id": 20,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "catalyst-markets",
     "name": "Catalyst Markets",
-    "logo": "https://images.cryptorank.io/coins/60x60.catalyst_markets1789739187568.png",
     "chain": "Multiple",
     "event": "Airdrop",
-    "timeToFarm": "2 min",
     "status": "Potential",
     "date": "2026-09-18",
     "description": "Catalyst Markets is an event-market platform for time-sensitive outcomes.",
+    "logo": "https://images.cryptorank.io/coins/60x60.catalyst_markets1789739187568.png",
+    "source": "CryptoRank",
     "sourceUrl": "https://cryptorank.io/drophunting/catalyst-markets-activity1313",
-    "rating": 5,
     "activityTypes": [],
+    "rating": 5,
     "isAuthProtected": true,
     "investorCount": 0,
     "topInvestors": [],
-    "twitterScore": 498,
-    "lifeCycle": "scheduled",
+    "twitterScore": 515,
+    "timeToFarm": "2 min",
     "category": "Prediction Markets",
     "website": "https://catalyst.markets/",
     "x": "https://x.com/CatalystMkts_?hzet=dszqupsbol",
@@ -674,145 +3158,29 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 7,
+    "lifeCycle": "scheduled",
+    "id": 21,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
-    "source": "CryptoRank",
-    "slug": "andrena",
-    "name": "Andrena (DAWN)",
-    "logo": "https://images.cryptorank.io/coins/60x60.andrena_dawn1745583654467.png",
-    "chain": "Solana Ecosystem",
-    "event": "Airdrop",
-    "timeToFarm": "4 min",
-    "status": "Potential",
-    "date": "2024-08-08",
-    "description": "Andrena is the developer of a Solana-based physical infrastructure network (DePIN) protocol aimed at providing decentralized internet services.",
-    "sourceUrl": "https://cryptorank.io/drophunting/andrena-activity328",
-    "rating": 415,
-    "activityTypes": [],
-    "isAuthProtected": true,
-    "funding": "$48500000",
-    "investorCount": 28,
-    "topInvestors": [
-      {
-        "name": "Polychain Capital",
-        "tier": 1,
-        "category": "Venture",
-        "is_lead": true
-      },
-      {
-        "name": "Dragonfly",
-        "tier": 1,
-        "category": "Venture",
-        "is_lead": true
-      },
-      {
-        "name": "VanEck",
-        "tier": 1,
-        "category": "Venture",
-        "is_lead": false
-      },
-      {
-        "name": "CMT Digital",
-        "tier": 2,
-        "category": "Venture",
-        "is_lead": false
-      },
-      {
-        "name": "Robot Ventures",
-        "tier": 2,
-        "category": "Venture",
-        "is_lead": false
-      }
-    ],
-    "twitterScore": 3361,
-    "lifeCycle": "funding",
-    "twitterFollowers": 531350,
-    "category": "DePIN",
-    "ecosystems": [
-      "Solana Ecosystem"
-    ],
-    "website": "https://www.dawninternet.com/",
-    "x": "https://x.com/dawninternet?hzet=dszqupsbol",
-    "telegram": "https://t.me/dawninternet",
-    "extraLinks": [
-      {
-        "label": "whitepaper",
-        "url": "https://cdn.prod.website-files.com/665dc8eb8d9f8c4764608070/66c3c22442580dcd5962c723_DAWN%20Whitepaper%20July%2025%2C%202024%20(1).pdf"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 2415,
-        "title": "Browser Node (new)",
-        "status": "OPEN",
-        "types": [
-          "DePIN"
-        ],
-        "startDate": "2025-09-24",
-        "instructions": [
-          "Dawn [has announced](https://x.com/dawninternet/status/1970880962834665614) a new and improved version of the extension! If you have already been farming project points, delete the old extension and install the new one. If you are a new user, simply install the new extension and start earning points. In the new version, points may not display correctly, but the devs are already fixing this issue.",
-          "Updated on January 14. Please update the extension to version 3.0.7.",
-          "1. Install the new [extension](https://chromewebstore.google.com/detail/dawn-validator-chrome-ext/fpdkjdnhkakefebpekbdhillbhonfjjp) and log in to your old account (or create a new one if you don't have it)",
-          "2. Enter the code YFUW7YJO to get a bonus to points farming.",
-          "3. Earn points for using your browser, invite friends, and track your progress in the dashboard:"
-        ]
-      },
-      {
-        "id": 1873,
-        "title": "Dawn Dashboard",
-        "status": "CLOSED",
-        "types": [
-          "DePIN"
-        ],
-        "instructions": [
-          "Previously, the Dawn extension did not display earned points. The project team has now fixed this and added a web version of the dashboard (currently not working correctly).",
-          "1. Open the [extension](https://chromewebstore.google.com/detail/dawn-validator-chrome-ext/fpdkjdnhkakefebpekbdhillbhonfjjp) and track your points:",
-          "2. Continue earning points or install the extension according to our guide (if you haven't installed it before)."
-        ]
-      },
-      {
-        "id": 633,
-        "title": "Browser Node (old)",
-        "status": "CLOSED",
-        "types": [
-          "DePIN"
-        ],
-        "startDate": "2024-08-07",
-        "instructions": [
-          "DAWN aims to transform internet access similarly to how solar panels transformed electricity, enabling consumers to own, generate, and sell their own internet service. Now DAWN has launched a testnet, where we can use the Internet in normal mode and get points for it. [Grass](https://cryptorank.io/drophunting/grass-activity51) and [Nodepay](https://cryptorank.io/drophunting/nodepay-activity199) have a similar activity.",
-          "1. Install the Dawn [extension](https://chromewebstore.google.com/detail/dawn-validator-chrome-ext/fpdkjdnhkakefebpekbdhillbhonfjjp).",
-          "2. Click the Register button in the extension and enter the code h71kzy (you won't be able to log into the app without it):",
-          "3. confirm your registration by e-mail.",
-          "4. Open the extension again and log in to your account. If everything was successful, you will see a similar window:",
-          "For more rewards, click Boost rewards. Here you can invite friends and complete tasks."
-        ]
-      }
-    ],
-    "id": 8,
-    "firstSeenAt": "2026-09-19T12:37:51.512Z"
-  },
-  {
-    "source": "CryptoRank",
     "slug": "yield-fields",
     "name": "Yield Fields",
-    "logo": "https://images.cryptorank.io/coins/60x60.yield_fields1789724844779.png",
-    "chain": "Robinhood Ecosystem",
+    "chain": "Robinhood",
     "event": "Airdrop",
-    "costToFarm": "$1",
-    "timeToFarm": "30 min",
     "status": "Potential",
     "date": "2026-09-18",
     "description": "Yield Fields is a farming game on the Robinhood network with Founding Deeds NFTs.",
+    "logo": "https://images.cryptorank.io/coins/60x60.yield_fields1789724844779.png",
+    "source": "CryptoRank",
     "sourceUrl": "https://cryptorank.io/drophunting/yield-fields-activity1312",
-    "rating": 3,
     "activityTypes": [],
+    "rating": 3,
+    "twitterScore": 3048,
     "isAuthProtected": true,
     "investorCount": 0,
     "topInvestors": [],
-    "twitterScore": 3003,
-    "lifeCycle": "scheduled",
+    "costToFarm": "$1",
+    "timeToFarm": "30 min",
     "category": "GameFi",
     "ecosystems": [
       "Robinhood ecosystem"
@@ -846,26 +3214,26 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 9,
+    "lifeCycle": "scheduled",
+    "id": 22,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "arc-chain",
     "name": "Arc",
-    "logo": "https://images.cryptorank.io/coins/60x60.arc1755596336233.png",
     "chain": "Multiple",
     "event": "Airdrop",
-    "costToFarm": "$20",
-    "timeToFarm": "88 min",
     "status": "Potential",
     "date": "2025-08-19",
     "description": "ARC is an EVM-compatible Layer-1 blockchain by Circle for stablecoin finance, featuring USDC as a gas token and a built-in FX engine.",
-    "sourceUrl": "https://cryptorank.io/drophunting/arc-chain-activity911",
-    "rating": 232,
-    "activityTypes": [],
-    "isAuthProtected": true,
     "funding": "$222000000",
+    "logo": "https://images.cryptorank.io/coins/60x60.arc1755596336233.png",
+    "source": "CryptoRank",
+    "sourceUrl": "https://cryptorank.io/drophunting/arc-chain-activity911",
+    "activityTypes": [],
+    "rating": 233,
+    "twitterScore": 8655,
+    "isAuthProtected": true,
     "investorCount": 13,
     "topInvestors": [
       {
@@ -899,8 +3267,8 @@ export const generatedProjects: Project[] = [
         "is_lead": false
       }
     ],
-    "twitterScore": 8618,
-    "lifeCycle": "funding",
+    "costToFarm": "$20",
+    "timeToFarm": "88 min",
     "category": "Blockchain",
     "website": "https://arcnetwork.xyz/",
     "x": "https://x.com/arc?hzet=dszqupsbol",
@@ -1056,28 +3424,28 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 10,
+    "lifeCycle": "funding",
+    "id": 23,
     "firstSeenAt": "2026-09-19T12:37:51.512Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "wick-xyz",
     "name": "Wick",
-    "logo": "https://images.cryptorank.io/coins/60x60.wick1789655756845.png",
     "chain": "Multiple",
     "event": "Airdrop",
-    "timeToFarm": "2 min",
     "status": "Potential",
     "date": "2026-09-17",
     "description": "Wick is a Lighter trading platform with an AMM, strategy vaults and liquid staking products.",
+    "logo": "https://images.cryptorank.io/coins/60x60.wick1789655756845.png",
+    "source": "CryptoRank",
     "sourceUrl": "https://cryptorank.io/drophunting/wick-xyz-activity1311",
-    "rating": 5,
     "activityTypes": [],
+    "rating": 6,
+    "twitterScore": 401,
     "isAuthProtected": true,
     "investorCount": 0,
     "topInvestors": [],
-    "twitterScore": 401,
-    "lifeCycle": "scheduled",
+    "timeToFarm": "2 min",
     "category": "Exchange",
     "website": "https://www.wick.fi/",
     "x": "https://x.com/wick_xyz?hzet=dszqupsbol",
@@ -1103,28 +3471,28 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 11,
+    "lifeCycle": "scheduled",
+    "id": 24,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "raycash",
     "name": "Raycash",
-    "logo": "https://images.cryptorank.io/coins/60x60.raycash1789655675067.png",
-    "chain": "Polygon Ecosystem",
+    "chain": "Polygon",
     "event": "Airdrop",
-    "timeToFarm": "3 min",
     "status": "Potential",
     "date": "2026-09-17",
     "description": "Raycash is a self-custodial stablecoin account with private transfers, yield and card spending.",
+    "logo": "https://images.cryptorank.io/coins/60x60.raycash1789655675067.png",
+    "source": "CryptoRank",
     "sourceUrl": "https://cryptorank.io/drophunting/raycash-activity1310",
-    "rating": 4,
     "activityTypes": [],
+    "rating": 4,
+    "twitterScore": 302,
     "isAuthProtected": true,
     "investorCount": 0,
     "topInvestors": [],
-    "twitterScore": 302,
-    "lifeCycle": "scheduled",
+    "timeToFarm": "3 min",
     "category": "Payments",
     "ecosystems": [
       "Polygon Ecosystem"
@@ -1149,206 +3517,29 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 12,
-    "firstSeenAt": "2026-09-19T00:00:44.749Z"
-  },
-  {
-    "source": "Airdrops.io",
-    "slug": "voice",
-    "name": "VOICE",
-    "logo": "https://airdrops.io/wp-content/uploads/2026/08/VOICE-logo.jpg.webp",
-    "chain": "Solana",
-    "event": "Airdrop",
-    "costToFarm": "Free",
-    "timeToFarm": "75 min",
-    "status": "Confirmed",
-    "date": "2026-08-31",
-    "description": "Looking for the confirmed VOICE airdrop? Follow our step-by-step guide to qualify for the ongoing airdrop before it ends.",
-    "sourceUrl": "https://airdrops.io/voice/",
-    "rating": 15,
-    "activityTypes": [],
-    "isAuthProtected": true,
-    "investorCount": 0,
-    "topInvestors": [],
-    "twitterScore": 787,
     "lifeCycle": "scheduled",
-    "category": "Social",
-    "ecosystems": [
-      "Solana Ecosystem"
-    ],
-    "website": "https://voice.fun",
-    "x": "https://x.com/voicehavefun",
-    "discord": "https://discord.gg/MDKCRdAWaZ",
-    "tasks": [
-      {
-        "id": 3676,
-        "title": "Point Farming",
-        "status": "OPEN",
-        "types": [
-          "Bounty Platforms",
-          "Social"
-        ],
-        "startDate": "2026-04-07",
-        "instructions": [
-          "VOICE [announced](https://x.com/voicehavefun/status/2041400605361438785) the launch of the Social Camp campaign. By completing tasks and participating in daily votes, you will earn CLOUT points",
-          "• Your CLOUT score determines your influence within the community and your level. Higher levels grant guaranteed spots on the waitlist, NFT drops, and a larger token allocation at launch",
-          "1. Go to the [website](https://voice.cc/) and log in using X",
-          "2. Start completing the tasks that interest you and earn points"
-        ]
-      },
-      {
-        "id": 3747,
-        "title": "Required SBT Voicy Pass",
-        "status": "OPEN",
-        "types": [
-          "Mint NFT",
-          "Bounty Platforms"
-        ],
-        "startDate": "2026-09-16",
-        "isNew": true,
-        "instructions": [
-          "VOICE [has announced](https://x.com/voicecc/status/2100259662150930517) the launch of the VOICY Pass mint. You can mint SBT to confirm your participation in the project and complete verification to receive the upcoming airdrop",
-          "This is a mandatory SBT",
-          "The SBT tier system:",
-          "• Echo: Requires 10% CLOUT and grants a base allocation",
-          "• Chorus: To unlock, you need to reach 60% CLOUT and complete 100 tasks. Your allocation is doubled",
-          "• Resonance: Maximum level. Unlocked at 100% CLOUT and 250 completed tasks. Allocation is multiplied by 4",
-          "1. Go to the [website](https://voice.cc/)and log in",
-          "2. Open the [Mint section](https://voice.cc/mint) and mint pass"
-        ]
-      },
-      {
-        "id": 3729,
-        "title": "Ambassador Program",
-        "status": "OPEN",
-        "types": [
-          "Ambassador program"
-        ],
-        "instructions": [
-          "You can participate by joining the first cohort of ambassadors and applying for a share of the allocated pool",
-          "Requirements for ambassadors:",
-          "• The program is aimed at active X users with an engaged audience. Content must be published in English only",
-          "• Posts must be published daily",
-          "Rewards System:",
-          "• The prize pool is $3,000 and will be distributed among top-performing ambassadors",
-          "• Program participants receive an allocation of $VOICE tokens",
-          "• Performance is evaluated based on KPIs: posts, threads, memes, referrals, mentions, and co-hosting Spaces on X",
-          "1. Go to the [program page](https://amb.voice.cc/) and submit your application"
-        ]
-      },
-      {
-        "id": 3723,
-        "title": "Voice Pulse",
-        "status": "OPEN",
-        "types": [
-          "Bounty Platforms"
-        ],
-        "startDate": "2026-09-09",
-        "instructions": [
-          "VOICE [announced](https://x.com/voicecc/status/2097632695274631483) the launch of Voice Pulse. You can take part in surveys and enter a drawing for 5 Genesis NFTs",
-          "1. Go to the [website](https://voice.cc/)and connect your wallet",
-          "2. Open the [Voice Pulse section](https://voice.cc/voicepulse). Select a poll and vote",
-          "Complete all polls to increase your chances of receiving an NFT"
-        ]
-      },
-      {
-        "id": 3712,
-        "title": "VOICY NFT",
-        "status": "OPEN",
-        "types": [
-          "Social",
-          "Bounty Platforms"
-        ],
-        "startDate": "2026-09-07",
-        "instructions": [
-          "VOICE [has announced](https://x.com/voicecc/status/2096951536140132495)the launch of the VOICY NFT collection. You can complete tasks in the Social Camp campaign, climb the leaderboard, and earn a spot on the whitelist for a free mint pass, which will entitle you to an airdrop",
-          "• The collection consists of 10,000 NFTs: passes are tied to a wallet and cannot be transferred",
-          "• There are 2 tiers in total:",
-          "Earned Tier: a free tier for active VOICE users who participate in Social Camp",
-          "Top Tier: a rare tier limited to just 300 tokens. The free way to obtain one is by participating in raffles",
-          "• Possession of a pass grants a CLOUT multiplier, which ultimately affects the size of the airdrop allocation",
-          "1. Go to the [website](https://voice.cc/) and log in",
-          "2. In the [Social Camp section](https://voice.cc/socialcamp), complete the available tasks"
-        ]
-      },
-      {
-        "id": 3707,
-        "title": "Arkada Quest",
-        "status": "OPEN",
-        "types": [
-          "Bounty Platforms"
-        ],
-        "startDate": "2026-09-03",
-        "instructions": [
-          "The VOICE: Turn Your Opinions Into Onchain Value quest has launched on the Arkada platform. You can complete it to earn Arkada points and Pyramid SBTs, which will give you the chance to share in the seasonal reward pool. You’ll also receive 1 spin on the wheel of fortune.",
-          "By completing the quest, you will receive:",
-          "• Points and a Pyramid SBT, which acts as a multiplier when seasonal rewards are distributed",
-          "• Attempts to spin the wheel of fortune. By spinning the wheel, you can win up to 0.01 $ETH, project tokens, Shogun NFTs, and points",
-          "• After completing the quest, you’ll have a chance to earn $ETH when minting Pyramid",
-          "1. Go to the [website](https://app.arkada.gg/campaign/voice-social-camp?utm_source=cryptorank&ref=Cryptorank) and connect wallet",
-          "2. Complete tasks to earn points and get a chance to win $ETH"
-        ]
-      },
-      {
-        "id": 3677,
-        "title": "Discord Roles",
-        "status": "OPEN",
-        "types": [
-          "Getting a role"
-        ],
-        "startDate": "2026-04-03",
-        "instructions": [
-          "VOICE [announced](https://discord.com/channels/1418579076536598571/1489428164492132523/1489556690155081871) (you must join [Discord](https://discord.gg/2JumddtMyC) to see the announcement) the launch of a roles and levels system on Discord. You can get involved by chatting on the server and participating in weekly activities to level up and earn exclusive roles",
-          "• @VOICE OG. This role was awarded to the project’s earliest participants",
-          "• The @Shill Veteran Medal and the limited-edition roles @Day-One VOICE, @INFECTED, and @Taco Lover are awarded for actively promoting the project on X and participating in the community",
-          "• @Ambassador and @TOP Ambassador - roles for those who help the project grow and develop",
-          "• @Community Gamer and @Born For Victory - awarded for participation and victories in community games or weekly events",
-          "1. Join [Discord](https://discord.gg/2JumddtMyC) and start actively participating in the community"
-        ]
-      }
-    ],
-    "symbol": "VOICE",
-    "claimUrl": "https://voice.fun",
-    "difficulty": "Easy",
-    "requirements": [
-      "Twitter / X",
-      "Email"
-    ],
-    "actions": [
-      "Step 1: Visit the VOICE Social Camp Go to the [VOICE Social Camp](https://airdrops.io/visit/rxa3/) page. This is the pre-launch hub where quests, leaderboards, and CLOUT tracking live.",
-      "Step 2: Sign in with your X account Connect your X account, since most quests track posts, quotes, and mentions there. You can also continue with a Google account or a Solana wallet.",
-      "Step 3: Complete Core, Daily, and Burst tasks Clear the Core tasks first, then return for the Daily set. Burst tasks are shorter, higher-value entries announced in the [VOICE Discord](https://discord.gg/MDKCRdAWaZ), so keep an eye there for drops.",
-      "Step 4: Vote in polls and Opinion Cup battles Cast votes on active polls and in Opinion Cup matchups. Each vote earns CLOUT, and the Cup runs creator battles with USDT prize pools on top.",
-      "Step 5: Join the Voice Pulse campaign Enter the Voice Pulse campaign for extra CLOUT and rewards. This round closes on September 1, so finish its tasks before the deadline.",
-      "Step 6: Complete the Layer3 VOICE campaign Head to the separate [VOICE campaign on Layer3](/visit/lab3/?k=052c1bc159), which carries an advertised $2,000 reward pool. Complete the listed quests to qualify for a share.",
-      "Step 7: Enter partner clusters Join the partner clusters inside Social Camp. These bundle quests from partner projects and carry their own USDT and NFT pools alongside CLOUT.",
-      "Step 8: Invite friends through FRENS Share your FRENS invite link. You earn a permanent 10% boost on the CLOUT your invitees generate, so early invites keep paying through the rest of the campaign."
-    ],
-    "telegram": "https://t.me/airdrops_io",
-    "isLive": true,
-    "id": 13,
+    "id": 25,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "note-systems",
     "name": "Note Systems",
     "symbol": "NOTE",
-    "logo": "https://images.cryptorank.io/coins/60x60.note_systems1789428183735.png",
-    "chain": "Robinhood Ecosystem",
+    "chain": "Robinhood",
     "event": "Airdrop",
-    "timeToFarm": "30 min",
     "status": "Potential",
     "date": "2026-09-16",
     "description": "Note Systems is a Robinhood protocol for collateralized notes linked to tokenized stocks.",
+    "logo": "https://images.cryptorank.io/coins/60x60.note_systems1789428183735.png",
+    "source": "CryptoRank",
     "sourceUrl": "https://cryptorank.io/drophunting/note-systems-activity1309",
-    "rating": 16,
     "activityTypes": [],
+    "rating": 19,
+    "twitterScore": 500,
     "isAuthProtected": true,
     "investorCount": 0,
     "topInvestors": [],
-    "twitterScore": 500,
-    "lifeCycle": "traded",
+    "timeToFarm": "30 min",
     "category": "DeFi",
     "ecosystems": [
       "Robinhood ecosystem"
@@ -1386,144 +3577,26 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 14,
+    "lifeCycle": "traded",
+    "id": 26,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
-    "source": "CryptoRank",
-    "slug": "miden",
-    "name": "Miden",
-    "logo": "https://images.cryptorank.io/coins/60x60.miden1745928072450.png",
-    "chain": "Polygon Ecosystem",
-    "event": "Airdrop",
-    "timeToFarm": "21 min",
-    "status": "Potential",
-    "date": "2025-04-30",
-    "description": "Miden is a ZK-rollup L2 blockchain built on top of Ethereum enabling private, scalable smart contracts.",
-    "sourceUrl": "https://cryptorank.io/drophunting/miden-activity785",
-    "rating": 166,
-    "activityTypes": [],
-    "isAuthProtected": true,
-    "funding": "$25000000",
-    "investorCount": 18,
-    "topInvestors": [
-      {
-        "name": "Andreessen Horowitz (a16z crypto)",
-        "tier": 1,
-        "category": "Venture",
-        "is_lead": true
-      },
-      {
-        "name": "Sandeep Nailwal",
-        "tier": 1,
-        "category": "Angel Investor",
-        "is_lead": false
-      },
-      {
-        "name": "1kx",
-        "tier": 2,
-        "category": "Venture",
-        "is_lead": true
-      },
-      {
-        "name": "Hack VC",
-        "tier": 2,
-        "category": "Venture",
-        "is_lead": true
-      },
-      {
-        "name": "P2 Ventures (Polygon Ventures)",
-        "tier": 2,
-        "category": "Venture",
-        "is_lead": false
-      }
-    ],
-    "twitterScore": 2881,
-    "lifeCycle": "funding",
-    "twitterFollowers": 18915,
-    "category": "Blockchain",
-    "ecosystems": [
-      "Polygon Ecosystem"
-    ],
-    "website": "https://miden.xyz/",
-    "x": "https://x.com/0xMiden?hzet=dszqupsbol",
-    "telegram": "https://t.me/BuildOnMiden",
-    "extraLinks": [
-      {
-        "label": "github",
-        "url": "https://github.com/0xPolygonMiden"
-      }
-    ],
-    "tasks": [
-      {
-        "id": 2894,
-        "title": "Playground platform testing",
-        "status": "OPEN",
-        "types": [
-          "Testnet"
-        ],
-        "startDate": "2025-10-24",
-        "instructions": [
-          "Miden [shared](https://x.com/0xMiden/status/1981468313562861971)a link to the Playground platform, which offers lessons on on-chain interaction, from creating a wallet to creating smart contracts.",
-          "Update 16 September 2026",
-          "Miden [has announced](https://x.com/0xMiden/status/2099518055160205794) the latest version of the testnet ahead of the mainnet launch",
-          "1. Go to the [website](https://playground.miden.xyz/) and connect your wallet.",
-          "2. Click on the \"Start tutorial\" button for the lesson you like.",
-          "3. Follow the instructions to complete the steps on the platform and move on to the next lessons."
-        ]
-      },
-      {
-        "id": 2896,
-        "title": "Domain registration",
-        "status": "OPEN",
-        "types": [
-          "Testnet",
-          "Mint Domain"
-        ],
-        "instructions": [
-          "Miden has [announced](https://x.com/0xMiden/status/2003533643445338361)the launch of domain names. [Miden.name](https://x.com/midenname) allows you to receive and send assets via a domain name.",
-          "The website is unstable, so registering a domain may be difficult.",
-          "1. Go to the [website](https://miden.name/) and connect your wallet",
-          "2. Enter your preferred name and, if it is available, register it"
-        ]
-      },
-      {
-        "id": 1700,
-        "title": "Testnet (first activities)",
-        "status": "OPEN",
-        "types": [
-          "Testnet"
-        ],
-        "startDate": "2025-04-29",
-        "instructions": [
-          "Yesterday (April 29) Miden [raised](https://cryptorank.io/price/miden) $25M! The project will launch a testnet soon, but we can already perform the first activities and become early users. The faucet is not working at the moment. Keep an eye on [Telegram](https://t.me/BuildOnMiden) for announcements.",
-          "1. [Install](https://chromewebstore.google.com/detail/miden-wallet/ablmompanofnodfdkgchkpmphailefpb)Miden wallet.",
-          "2. Request test tokens from the [faucet](https://faucet.testnet.miden.io/) (at the time of writing this guide it does not work):",
-          "3. Or you can create your own faucet [here](https://miden.leo.app/faucet):",
-          "4. Then request tokens from it (if tokens are not credited to your wallet, click Receive -> Claim):",
-          "5. Send test tokens to any wallet (you can use yours or this one: 0x14d1d09e92a82a823131000008118ed54a9 ). In the Faucet ID field, enter the ID of your previously created faucet:"
-        ]
-      }
-    ],
-    "id": 15,
-    "firstSeenAt": "2026-09-19T12:37:51.512Z"
-  },
-  {
-    "source": "Airdrops.io",
     "slug": "vangrid",
     "name": "Vangrid",
-    "logo": "https://airdrops.io/wp-content/uploads/2026/09/Vangrid-logo.jpg.webp",
     "chain": "Base",
     "event": "Airdrop",
-    "timeToFarm": "55 min",
     "status": "Potential",
     "date": "2026-08-10",
     "description": "Looking for a potential Vangrid airdrop? Follow our step-by-step guide to improve your chances if they launch a retroactive airdrop.",
-    "sourceUrl": "https://airdrops.io/vangrid/",
-    "rating": 27,
-    "activityTypes": [],
-    "isAuthProtected": true,
     "funding": "$9000000",
+    "logo": "https://airdrops.io/wp-content/uploads/2026/09/Vangrid-logo.jpg.webp",
+    "source": "Airdrops.io",
+    "sourceUrl": "https://airdrops.io/vangrid/",
+    "activityTypes": [],
+    "rating": 27,
+    "twitterScore": 440,
+    "isAuthProtected": true,
     "investorCount": 7,
     "topInvestors": [
       {
@@ -1557,8 +3630,6 @@ export const generatedProjects: Project[] = [
         "is_lead": false
       }
     ],
-    "twitterScore": 427,
-    "lifeCycle": "funding",
     "category": "DePIN",
     "website": "https://vangrid.io",
     "x": "https://x.com/vangrid_io",
@@ -1647,6 +3718,8 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
+    "timeToFarm": "55 min",
+    "lifeCycle": "funding",
     "symbol": "VAN",
     "claimUrl": "https://hub.vangrid.io",
     "difficulty": "Easy",
@@ -1655,39 +3728,36 @@ export const generatedProjects: Project[] = [
       "Twitter / X"
     ],
     "actions": [
-      "Step 1: Install the Vangrid App Download the [Vangrid App](/visit/7cb3/?k=172d031174) on Android, or open the browser capture tool if you are on iOS. Allow camera and location access, since captures without location data cannot be verified.",
+      "Step 1: Install the Vangrid App Download the [Vangrid App](/visit/7cb3/?k=db0afe2575) on Android, or open the browser capture tool if you are on iOS. Allow camera and location access, since captures without location data cannot be verified.",
       "Step 2: Record a Capture That Meets the Spec Film a location a robot would realistically need to cross. Vangrid accepts: Sidewalks and pedestrian paths Stairs and stairwells Alleys and service lanes Public squares and plazas Skip roads, crowds of people, and private indoor spaces. Recording requirements: Hold the phone vertically at chest level, using both hands Walk at a steady pace and pan smoothly from side to side Record 30 to 60 seconds in daylight",
       "Step 3: Enter an Invite Code and Upload Uploads are gated behind an invite code. Enter GRID-01 before uploading. Uploading daily adds a 50-point bonus, with further bonuses at 5, 10, and 50 total videos.",
-      "Step 4: Connect Your Wallet to the Loyalty Hub Open the [Vangrid Loyalty Hub](/visit/6cb3/?k=7c4aff5414) and connect an EVM wallet. Your first login credits PTC on its own.",
+      "Step 4: Connect Your Wallet to the Loyalty Hub Open the [Vangrid Loyalty Hub](/visit/6cb3/?k=9678ecbd21) and connect an EVM wallet. Your first login credits PTC on its own.",
       "Step 5: Complete Loyalty Hub Quests Work through the quest list: follow Vangrid on X, join the Discord, connect LinkedIn, engage with posts, and publish weekly X posts. Reach Discord through the Hub quest link rather than a forwarded invite. No legitimate verification asks you to sign a wallet transaction, so close any page that does.",
       "Step 6: Unlock Grid Operator Status Follow Vangrid on X, join the Discord, and submit one in-app video to earn the Grid Operator role and badge, which applies a 1.5x multiplier to your PTC.",
       "Step 7: Submit to Funded Bounties Browse open requests at the Vangrid bounty portal. These are location-specific asks from buyers, and selected submissions pay USDC on Base. Browsing requires no invite code.",
       "Step 8: Refer Other Contributors Share your Hub referral link. You earn 10% of the PTC your referrals generate, and each new user who joins through a link starts with a 50 PTC bonus."
     ],
     "telegram": "https://t.me/airdrops_io",
-    "id": 16,
+    "id": 27,
     "firstSeenAt": "2026-09-19T12:37:51.512Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "deriverse",
     "name": "Deriverse",
-    "logo": "https://images.cryptorank.io/coins/60x60.deriverse1789583763757.png",
-    "chain": "Solana Ecosystem",
+    "chain": "Solana",
     "event": "Airdrop",
-    "costToFarm": "$30",
-    "timeToFarm": "20 min",
     "status": "Potential",
     "date": "2026-09-16",
     "description": "Deriverse is a fully on-chain Solana exchange for spot and perpetual markets.",
+    "logo": "https://images.cryptorank.io/coins/60x60.deriverse1789583763757.png",
+    "source": "CryptoRank",
     "sourceUrl": "https://cryptorank.io/drophunting/deriverse-activity1308",
-    "rating": 2,
     "activityTypes": [],
+    "rating": 2,
+    "twitterScore": 545,
     "isAuthProtected": true,
     "investorCount": 0,
     "topInvestors": [],
-    "twitterScore": 545,
-    "lifeCycle": "scheduled",
     "category": "Exchange",
     "ecosystems": [
       "Solana Ecosystem"
@@ -1724,28 +3794,30 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 17,
+    "costToFarm": "$30",
+    "timeToFarm": "20 min",
+    "lifeCycle": "scheduled",
+    "id": 28,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "jumper-exchange",
     "name": "Jumper",
-    "logo": "https://images.cryptorank.io/coins/60x60.jumper1716544712025.png",
+    "symbol": "JUMP",
     "chain": "Multiple",
     "event": "Airdrop",
-    "timeToFarm": "2 min",
     "status": "Potential",
     "date": "2026-09-16",
     "description": "Jumper is a multi-chain liquidity aggregator powered by LI.FI.",
+    "logo": "https://images.cryptorank.io/coins/60x60.jumper1716544712025.png",
+    "source": "CryptoRank",
     "sourceUrl": "https://cryptorank.io/drophunting/jumper-exchange-activity1306",
-    "rating": 7,
     "activityTypes": [],
+    "rating": 9,
+    "twitterScore": 5348,
     "isAuthProtected": true,
     "investorCount": 0,
     "topInvestors": [],
-    "twitterScore": 5332,
-    "lifeCycle": "scheduled",
     "category": "DeFi",
     "website": "https://jumper.exchange/",
     "x": "https://x.com/jumperapp?hzet=dszqupsbol",
@@ -1777,29 +3849,75 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 18,
+    "timeToFarm": "2 min",
+    "lifeCycle": "scheduled",
+    "id": 29,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
     "source": "CryptoRank",
-    "slug": "risex",
-    "name": "RISEx",
-    "logo": "https://images.cryptorank.io/coins/60x60.ris_ex1779361458147.png",
-    "chain": "Multiple",
+    "slug": "fanta-top",
+    "name": "Fanta.Top",
+    "logo": "https://images.cryptorank.io/coins/60x60.fanta_top1789427396400.png",
+    "chain": "Robinhood",
     "event": "Airdrop",
-    "costToFarm": "$30",
-    "timeToFarm": "35 min",
+    "timeToFarm": "2 min",
     "status": "Potential",
-    "date": "2025-12-24",
-    "description": "RISEx is a decentralized spot & perpetuals trading powered by Risechain.",
-    "sourceUrl": "https://cryptorank.io/drophunting/risex-activity1043",
-    "rating": 77,
+    "date": "2026-09-15",
+    "description": "Fanta.Top is a fantasy sports platform based on the performance of on-chain traders.",
+    "sourceUrl": "https://cryptorank.io/drophunting/fanta-top-activity1305",
+    "rating": 0,
     "activityTypes": [],
     "isAuthProtected": true,
     "investorCount": 0,
     "topInvestors": [],
-    "twitterScore": 3253,
+    "twitterScore": 1095,
     "lifeCycle": "scheduled",
+    "category": "GameFi",
+    "ecosystems": [
+      "Robinhood ecosystem"
+    ],
+    "website": "https://fanta.top/",
+    "x": "https://x.com/fantadottop?hzet=dszqupsbol",
+    "tasks": [
+      {
+        "id": 3739,
+        "title": "Waitlist",
+        "status": "OPEN",
+        "types": [
+          "Fill The Form"
+        ],
+        "startDate": "2026-09-14",
+        "instructions": [
+          "Fanta.Top [has announced](https://x.com/fantadottop/status/2099255127920283754) the opening of a waitlist for fantasy trading platform. You can sign up to the waitlist to gain early access to the game",
+          "Mechanics of the future platform:",
+          "• The project converts on-chain wallet activity into fantasy points: every purchase and sale made by traders is assessed based on PnL",
+          "• Each Hero card is linked to a single real, trackable wallet belonging to top traders",
+          "• Cards will be divided into Common, Rare, Epic and Legendary categories, each with its own points multiplier",
+          "1. Go to the [website](https://fanta.top/) and join the waitlist"
+        ]
+      }
+    ],
+    "id": 30,
+    "firstSeenAt": "2026-09-23T16:00:37.049Z"
+  },
+  {
+    "slug": "risex",
+    "name": "RISEx",
+    "chain": "Multiple",
+    "event": "Airdrop",
+    "status": "Potential",
+    "date": "2025-12-24",
+    "description": "RISEx is a decentralized spot & perpetuals trading powered by Risechain.",
+    "logo": "https://images.cryptorank.io/coins/60x60.ris_ex1779361458147.png",
+    "source": "CryptoRank",
+    "sourceUrl": "https://cryptorank.io/drophunting/risex-activity1043",
+    "activityTypes": [],
+    "rating": 77,
+    "twitterScore": 3253,
+    "isAuthProtected": true,
+    "investorCount": 0,
+    "topInvestors": [],
     "category": "Exchange",
     "website": "https://www.rise.trade/invite/cryptorank",
     "x": "https://x.com/risextrade?hzet=dszqupsbol",
@@ -1853,27 +3971,29 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 19,
+    "costToFarm": "$30",
+    "timeToFarm": "35 min",
+    "lifeCycle": "scheduled",
+    "id": 31,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "apyx",
     "name": "Apyx",
     "symbol": "APYX",
-    "logo": "https://images.cryptorank.io/coins/60x60.apyx1772137834608.png",
-    "chain": "Ethereum Ecosystem",
+    "chain": "Ethereum",
     "event": "Airdrop",
-    "costToFarm": "$30",
-    "timeToFarm": "5 min",
     "status": "Potential",
     "date": "2026-02-27",
     "description": "Apyx is a stablecoin protocol backed by preferred shares of Digital Asset Treasuries (DATs).",
-    "sourceUrl": "https://cryptorank.io/drophunting/apyx-activity1111",
-    "rating": 44,
-    "activityTypes": [],
-    "isAuthProtected": true,
     "funding": "$3000000",
+    "logo": "https://images.cryptorank.io/coins/60x60.apyx1772137834608.png",
+    "source": "CryptoRank",
+    "sourceUrl": "https://cryptorank.io/drophunting/apyx-activity1111",
+    "activityTypes": [],
+    "rating": 44,
+    "twitterScore": 1716,
+    "isAuthProtected": true,
     "investorCount": 1,
     "topInvestors": [
       {
@@ -1883,8 +4003,6 @@ export const generatedProjects: Project[] = [
         "is_lead": false
       }
     ],
-    "twitterScore": 1716,
-    "lifeCycle": "funding",
     "category": "Stablecoin",
     "ecosystems": [
       "Ethereum Ecosystem"
@@ -1941,29 +4059,30 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 20,
+    "costToFarm": "$30",
+    "timeToFarm": "5 min",
+    "lifeCycle": "funding",
+    "id": 32,
     "firstSeenAt": "2026-09-19T12:37:51.512Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "perk-money",
     "name": "perk.money",
     "symbol": "PERK",
-    "logo": "https://images.cryptorank.io/coins/60x60.perk1789490330693.png",
     "chain": "Solana Ecosystem",
     "event": "Airdrop",
-    "timeToFarm": "1 min",
     "status": "Potential",
     "date": "2026-09-15",
     "description": "perk.money is a Solana rewards platform where PERK holders earn credits redeemable for packs and collectibles.",
+    "logo": "https://images.cryptorank.io/coins/60x60.perk1789490330693.png",
+    "source": "CryptoRank",
     "sourceUrl": "https://cryptorank.io/drophunting/perk-money-activity1304",
-    "rating": 9,
     "activityTypes": [],
+    "rating": 9,
+    "twitterScore": 190,
     "isAuthProtected": true,
     "investorCount": 0,
     "topInvestors": [],
-    "twitterScore": 190,
-    "lifeCycle": "traded",
     "ecosystems": [
       "Solana Ecosystem"
     ],
@@ -1986,23 +4105,25 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 21,
+    "timeToFarm": "1 min",
+    "lifeCycle": "traded",
+    "id": 33,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "4-d-labs",
     "name": "4DLabs",
-    "logo": "https://images.cryptorank.io/coins/60x60.4_d_labs1789128698618.png",
     "chain": "Multiple",
     "event": "Airdrop",
-    "timeToFarm": "24 min",
     "status": "Potential",
     "date": "2026-09-29",
     "description": "3D/4D data infrastructure for physical AI and robotics.",
+    "logo": "https://images.cryptorank.io/coins/60x60.4_d_labs1789128698618.png",
+    "source": "CryptoRank",
     "sourceUrl": "https://cryptorank.io/drophunting/4-d-labs-activity1303",
-    "rating": 4,
     "activityTypes": [],
+    "rating": 4,
+    "twitterScore": 34,
     "isAuthProtected": true,
     "investorCount": 1,
     "topInvestors": [
@@ -2013,8 +4134,6 @@ export const generatedProjects: Project[] = [
         "is_lead": false
       }
     ],
-    "twitterScore": 34,
-    "lifeCycle": "funding",
     "category": "AI",
     "website": "https://4dlabs.space/",
     "x": "https://x.com/4Dlabs_Official?hzet=dszqupsbol",
@@ -2068,27 +4187,28 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 22,
+    "timeToFarm": "24 min",
+    "lifeCycle": "funding",
+    "id": 34,
     "firstSeenAt": "2026-09-19T12:37:51.512Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "your-game-studio",
     "name": "Your Game Studio",
-    "logo": "https://images.cryptorank.io/coins/60x60.your_game_studio1789440663688.png",
     "chain": "Arc Ecosystem",
     "event": "Airdrop",
     "status": "Potential",
     "date": "2026-09-15",
     "description": "Your Game Studio is an Arc-based management game about building and growing a game studio.",
+    "logo": "https://images.cryptorank.io/coins/60x60.your_game_studio1789440663688.png",
+    "source": "CryptoRank",
     "sourceUrl": "https://cryptorank.io/drophunting/your-game-studio-activity1302",
-    "rating": 7,
     "activityTypes": [],
+    "rating": 7,
+    "twitterScore": 0,
     "isAuthProtected": true,
     "investorCount": 0,
     "topInvestors": [],
-    "twitterScore": 0,
-    "lifeCycle": "scheduled",
     "category": "GameFi",
     "ecosystems": [
       "Arc Ecosystem"
@@ -2114,25 +4234,27 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 23,
+    "lifeCycle": "scheduled",
+    "id": 35,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "cambria",
     "name": "Cambria",
     "symbol": "RSGP",
-    "logo": "https://images.cryptorank.io/coins/60x60.cambria1772522739755.png",
     "chain": "Blast Ecosystem",
     "event": "Airdrop",
     "status": "Potential",
     "date": "2026-07-23",
     "description": "Cambria is an interactive game offering high-stakes 1v1 duels.",
-    "sourceUrl": "https://cryptorank.io/drophunting/cambria-activity1251",
-    "rating": 6,
-    "activityTypes": [],
-    "isAuthProtected": true,
     "funding": "$3500000",
+    "logo": "https://images.cryptorank.io/coins/60x60.cambria1772522739755.png",
+    "source": "CryptoRank",
+    "sourceUrl": "https://cryptorank.io/drophunting/cambria-activity1251",
+    "activityTypes": [],
+    "rating": 6,
+    "twitterScore": 6157,
+    "isAuthProtected": true,
     "investorCount": 9,
     "topInvestors": [
       {
@@ -2166,8 +4288,6 @@ export const generatedProjects: Project[] = [
         "is_lead": false
       }
     ],
-    "twitterScore": 6157,
-    "lifeCycle": "crowdsale",
     "category": "GameFi",
     "ecosystems": [
       "Blast Ecosystem"
@@ -2192,26 +4312,26 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 24,
+    "lifeCycle": "crowdsale",
+    "id": 36,
     "firstSeenAt": "2026-09-19T12:37:51.512Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "entropy-2",
     "name": "entropy",
-    "logo": "https://images.cryptorank.io/coins/60x60.entropy1786974332081.png",
     "chain": "Multiple",
     "event": "Airdrop",
-    "costToFarm": "$20",
-    "timeToFarm": "15 min",
     "status": "Potential",
     "date": "2026-08-18",
     "description": "Entropy is a platform for trading perpetuals on crypto, equities, commodities and pre-IPO markets.",
-    "sourceUrl": "https://cryptorank.io/drophunting/entropy-2-activity1276",
-    "rating": 8,
-    "activityTypes": [],
-    "isAuthProtected": true,
     "funding": "$14000000",
+    "logo": "https://images.cryptorank.io/coins/60x60.entropy1786974332081.png",
+    "source": "CryptoRank",
+    "sourceUrl": "https://cryptorank.io/drophunting/entropy-2-activity1276",
+    "activityTypes": [],
+    "rating": 8,
+    "twitterScore": 3379,
+    "isAuthProtected": true,
     "investorCount": 1,
     "topInvestors": [
       {
@@ -2221,8 +4341,6 @@ export const generatedProjects: Project[] = [
         "is_lead": true
       }
     ],
-    "twitterScore": 3379,
-    "lifeCycle": "funding",
     "category": "Exchange",
     "website": "https://entropy.io/?r=alphatornado2040",
     "x": "https://x.com/entropyIO?hzet=dszqupsbol",
@@ -2252,27 +4370,29 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 25,
+    "costToFarm": "$20",
+    "timeToFarm": "15 min",
+    "lifeCycle": "funding",
+    "id": 37,
     "firstSeenAt": "2026-09-19T12:37:51.512Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "tina",
     "name": "TINA",
     "symbol": "TINA",
-    "logo": "https://images.cryptorank.io/coins/60x60.tina1789139261474.png",
     "chain": "Solana Ecosystem",
     "event": "Airdrop",
-    "costToFarm": "$1",
-    "timeToFarm": "5 min",
     "status": "Potential",
     "date": "2026-09-14",
     "description": "Geo-DePIN network for collecting, verifying, and rewarding geospatial data.",
-    "sourceUrl": "https://cryptorank.io/drophunting/tina-activity1301",
-    "rating": 4,
-    "activityTypes": [],
-    "isAuthProtected": true,
     "funding": "$3000000",
+    "logo": "https://images.cryptorank.io/coins/60x60.tina1789139261474.png",
+    "source": "CryptoRank",
+    "sourceUrl": "https://cryptorank.io/drophunting/tina-activity1301",
+    "activityTypes": [],
+    "rating": 4,
+    "twitterScore": 104,
+    "isAuthProtected": true,
     "investorCount": 4,
     "topInvestors": [
       {
@@ -2300,8 +4420,6 @@ export const generatedProjects: Project[] = [
         "is_lead": false
       }
     ],
-    "twitterScore": 104,
-    "lifeCycle": "traded",
     "category": "DePIN",
     "ecosystems": [
       "Solana Ecosystem"
@@ -2355,23 +4473,26 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 26,
+    "costToFarm": "$1",
+    "timeToFarm": "5 min",
+    "lifeCycle": "traded",
+    "id": 38,
     "firstSeenAt": "2026-09-19T12:37:51.512Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "morfi-markets",
-    "name": "Morfi Markets",
-    "logo": "https://images.cryptorank.io/coins/60x60.morfi_markets1789388890095.png",
-    "chain": "Solana Ecosystem",
+    "name": "Morfi",
+    "chain": "Solana",
     "event": "Airdrop",
-    "timeToFarm": "15 min",
-    "status": "Potential",
-    "date": "2026-09-14",
-    "description": "On-chain opinion markets where crowd conviction determines outcomes on Solana.",
-    "sourceUrl": "https://cryptorank.io/drophunting/morfi-markets-activity1300",
-    "rating": 8,
+    "status": "Upcoming",
+    "date": "2026-09-22",
+    "description": "Morfi Markets is a Solana opinion-market platform for trading subjective debates. Trade on devnet and complete quests to earn Morfi Points 🪂",
+    "logo": "https://i0.wp.com/airdropalert.com/wp-content/uploads/2026/09/Morfi-Markets-LOGO.jpg?resize=50%2C50&#038;quality=50&#038;ssl=1",
+    "source": "AirdropAlert",
+    "sourceUrl": "https://airdropalert.com/airdrops/morfi-markets/",
     "activityTypes": [],
+    "rating": 8,
+    "twitterScore": 119,
     "isAuthProtected": true,
     "investorCount": 1,
     "topInvestors": [
@@ -2382,14 +4503,12 @@ export const generatedProjects: Project[] = [
         "is_lead": false
       }
     ],
-    "twitterScore": 119,
-    "lifeCycle": "funding",
     "category": "Prediction Markets",
     "ecosystems": [
       "Solana Ecosystem"
     ],
-    "website": "https://morfi.markets/",
-    "x": "https://x.com/morfimarkets?hzet=dszqupsbol",
+    "website": "https://morfi.markets/r/medi0x1111",
+    "x": "https://x.com/morfimarkets",
     "telegram": "https://t.me/morfimarkets",
     "extraLinks": [
       {
@@ -2427,26 +4546,35 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 27,
+    "timeToFarm": "15 min",
+    "lifeCycle": "funding",
+    "claimUrl": "https://morfi.markets/r/medi0x1111",
+    "actions": [
+      "Create your account Visit the official [Morfi.markets](https://morfi.markets/r/medi0x1111) app and sign up with  or email. в†’ Verify the code sent to your email. в†’ Head to the Rewards page to view quests and milestones.  Morfi automatically creates an embedded Solana wallet for your account, so you don't need to connect a separate wallet.",
+      "Earn Points through quests, trading and referrals Complete the available tasks and use the free devnet funds to build your Points balance. в†’ Finish social and content quests from the Rewards page. в†’ Go to Trade, select Faucet from the account menu and claim $1,000 in free test cash . в†’ Trade on devnet to build your streak and unlock milestone rewards. в†’ Copy your referral link from your Profile and invite genuine users.  Raffle entries are weighted at 1 ticket per 100 eligible Points , subject to a cap, and winners must complete KYC.  Looking for more testnet airdrops? Explore our updated [List of Testnets 2026](https://airdropalert.com/blogs/list-of-new-testnet-airdrops/) for more early-stage projects and potential airdrop opportunities to farm before mainnet.",
+      "Build your referral network before mainnet Referrals will matter beyond the current Points campaign. в†’ Morfi's official docs describe a [two-tier referral system](https://docs.morfi.markets/guides/referrals). When people who signed up through your link trade, you automatically earn a share of the fees they pay. You can also earn a smaller share from users they refer.  So inviting genuine users now can both earn Points today and establish your referral network ahead of mainnet ."
+    ],
+    "id": 39,
     "firstSeenAt": "2026-09-19T12:37:51.512Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "chain-gpt",
     "name": "ChainGPT",
     "symbol": "CGPT",
-    "logo": "https://images.cryptorank.io/coins/60x60.chain_gpt1696259545167.png",
     "chain": "BNB Chain Ecosystem",
     "event": "Airdrop",
-    "timeToFarm": "10 min",
     "status": "Potential",
     "date": "2026-09-24",
     "description": "ChainGPT is an advanced AI model that assists individuals and businesses.",
-    "sourceUrl": "https://cryptorank.io/drophunting/chain-gpt-activity688",
-    "rating": 54,
-    "activityTypes": [],
-    "isAuthProtected": true,
     "funding": "$2173991",
+    "logo": "https://images.cryptorank.io/coins/60x60.chain_gpt1696259545167.png",
+    "source": "CryptoRank",
+    "sourceUrl": "https://cryptorank.io/drophunting/chain-gpt-activity688",
+    "activityTypes": [],
+    "rating": 54,
+    "twitterFollowers": 882909,
+    "twitterScore": 3279,
+    "isAuthProtected": true,
     "investorCount": 22,
     "topInvestors": [
       {
@@ -2480,9 +4608,6 @@ export const generatedProjects: Project[] = [
         "is_lead": false
       }
     ],
-    "twitterScore": 3279,
-    "lifeCycle": "traded",
-    "twitterFollowers": 882909,
     "category": "AI",
     "ecosystems": [
       "BNB Chain Ecosystem"
@@ -2564,28 +4689,28 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 28,
+    "timeToFarm": "10 min",
+    "lifeCycle": "traded",
+    "id": 40,
     "firstSeenAt": "2026-09-19T12:37:51.512Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "umbrella-capital",
     "name": "Umbrella",
-    "logo": "https://images.cryptorank.io/coins/60x60.umbrella1789131618528.png",
     "chain": "Robinhood Ecosystem",
     "event": "Airdrop",
-    "timeToFarm": "2 min",
     "status": "Potential",
     "date": "2026-09-14",
     "description": "Umbrella is a pandemic simulation game with treasury backing linked to Pfizer stock.",
+    "logo": "https://images.cryptorank.io/coins/60x60.umbrella1789131618528.png",
+    "source": "CryptoRank",
     "sourceUrl": "https://cryptorank.io/drophunting/umbrella-capital-activity1299",
-    "rating": 8,
     "activityTypes": [],
+    "rating": 8,
+    "twitterScore": 927,
     "isAuthProtected": true,
     "investorCount": 0,
     "topInvestors": [],
-    "twitterScore": 927,
-    "lifeCycle": "scheduled",
     "category": "GameFi",
     "ecosystems": [
       "Robinhood ecosystem"
@@ -2612,29 +4737,29 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 29,
+    "timeToFarm": "2 min",
+    "lifeCycle": "scheduled",
+    "id": 41,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
-    "source": "CryptoRank",
     "slug": "quip-network",
     "name": "Quip Network",
     "symbol": "QUIP",
-    "logo": "https://images.cryptorank.io/coins/60x60.quip_network1770813552953.png",
     "chain": "Multiple",
     "event": "Airdrop",
-    "timeToFarm": "40 min",
     "status": "Potential",
     "date": "2026-09-21",
     "description": "Quip is a post-quantum security layer and shared quantum compute network for blockchains.",
+    "logo": "https://images.cryptorank.io/coins/60x60.quip_network1770813552953.png",
+    "source": "CryptoRank",
     "sourceUrl": "https://cryptorank.io/drophunting/quip-network-activity1093",
-    "rating": 99,
     "activityTypes": [],
+    "rating": 99,
+    "twitterScore": 872,
     "isAuthProtected": true,
     "investorCount": 0,
     "topInvestors": [],
-    "twitterScore": 872,
-    "lifeCycle": "scheduled",
     "category": "Infrastructure",
     "website": "https://quest.quip.network/airdrop?referral_code=H6IJRMCR",
     "x": "https://x.com/quipnetwork?hzet=dszqupsbol",
@@ -2723,7 +4848,9 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 30,
+    "timeToFarm": "40 min",
+    "lifeCycle": "scheduled",
+    "id": 42,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -2763,8 +4890,79 @@ export const generatedProjects: Project[] = [
         ]
       }
     ],
-    "id": 31,
+    "id": 43,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
+  },
+  {
+    "slug": "czr",
+    "name": "CZR",
+    "symbol": "CZR",
+    "chain": "Ethereum",
+    "event": "Airdrop",
+    "status": "Confirmed",
+    "description": "Looking for the confirmed CZR airdrop? Follow our step-by-step guide to qualify for the ongoing airdrop before it ends.",
+    "logo": "https://airdrops.io/wp-content/uploads/2026/09/CZR-logo.jpg.webp",
+    "source": "Airdrops.io",
+    "sourceUrl": "https://airdrops.io/czr/",
+    "claimUrl": "https://airdrop.czrex.com",
+    "difficulty": "Easy",
+    "costToFarm": "Free",
+    "requirements": [
+      "Telegram",
+      "Twitter / X",
+      "Email"
+    ],
+    "actions": [
+      "Step 1: Visit the CZR Genesis Airdrop Page Open the official [CZR Genesis Airdrop page](/visit/pgb3/?k=be9a098117).",
+      "Step 2: Connect Your Wallet Click “Connect” on the Connect Wallet task to earn 20 points. Use an Ethereum wallet you control, as CZR is an ERC-20 token.",
+      "Step 3: Register on CZR Exchange Click “[Register](/visit/3hb3/?k=aefef8355d)” to create an account on the CZR Exchange sign-up page for 30 points. The exchange is also where CZR/USDT trading opens first.",
+      "Step 4: Follow CZR on X Click “Go to Account” and follow @czrexchange for 20 points.",
+      "Step 5: Post About CZR on X Every Day Write a post about CZR Token on X, then paste the link using the “Submit Post” button. Each day’s post earns 30 points, and your first submission unlocks one of the locked quests.",
+      "Step 6: Complete the Extra Tasks Once the four required actions are done, the Extra Tasks section unlocks: Connect Discord : Link your Discord account for 10 points, then join the CZR Discord server Connect X : Link your X account for 10 points Follow CZR on TG : Follow the official CZR Telegram channel for 20 points Join TG Channel : Join the official CZR Token Telegram channel for 20 points",
+      "Step 7: Refer Friends Copy your referral link from the Refer a Friend task and share it. Referral points are not credited instantly; the dashboard shows a countdown until the next points update.",
+      "Step 8: Keep Posting Until September 30 Return daily to submit a new X post. The campaign closes on September 30, one day before CZR goes live."
+    ],
+    "telegram": "https://t.me/airdrops_io",
+    "isLive": true,
+    "x": "https://x.com/czrexchange",
+    "id": 44,
+    "firstSeenAt": "2026-09-23T14:00:05.507Z"
+  },
+  {
+    "slug": "powerx-onewallet",
+    "name": "PowerX OneWallet",
+    "symbol": "PX1",
+    "chain": "OwnChain",
+    "event": "Airdrop",
+    "status": "Confirmed",
+    "description": "Looking for the confirmed PowerX OneWallet airdrop? Follow our step-by-step guide to qualify for the ongoing airdrop before it ends.",
+    "logo": "https://airdrops.io/wp-content/uploads/2026/09/PowerX-One-logo.jpg.webp",
+    "source": "Airdrops.io",
+    "sourceUrl": "https://airdrops.io/powerx-onewallet/",
+    "claimUrl": "https://airdrops.io/powerx-onewallet/",
+    "difficulty": "Beginner",
+    "costToFarm": "Free",
+    "requirements": [
+      "Telegram",
+      "Twitter / X",
+      "Phone"
+    ],
+    "actions": [
+      "Step 1: Open the PowerX Airdrop Bot Open the [PowerX Airdrop Bot](https://t.me/PowerXOneAirdropBot?start=1o65z7) on Telegram and tap Start. The bot lists your tasks and tracks which ones you’ve finished.",
+      "Step 2: Join the PowerX Telegram Community Join the [PowerX Telegram group](https://t.me/PowerXOne) from the bot’s task list.",
+      "Step 3: Follow the Announcement Channel Follow the [PowerX announcement channel](https://t.me/PowerXOneAnnouncement) on Telegram, where the team posts project updates.",
+      "Step 4: Follow PowerX on X Follow [PowerX One on X](https://x.com/Powerxonewallet) and engage with the pinned post as the bot instructs.",
+      "Step 5: Download PowerX OneWallet Once the tasks above are done, the bot unlocks the download link. Android users install the app from Google Play. iPhone users join the beta through Apple TestFlight, so install the TestFlight app first.",
+      "Step 6: Create or Import a Wallet Open the app and create a new wallet, or import one you already use. If you create a new one, write the recovery phrase down offline. It’s generated on your phone and PowerX has no way to restore it.",
+      "Step 7: Verify and Claim Your PX1 Complete the verification in the app to secure your 500 PX1. The tokens go to the wallet you verified with at TGE, so keep access to it.",
+      "Step 8: Invite Friends for Extra PX1 Share your referral link from the PowerX Airdrop Bot to earn additional PX1 on top of the 500 PX1 base reward. This step is optional."
+    ],
+    "telegram": "https://t.me/PowerXOne",
+    "isLive": true,
+    "website": "https://powerx.one",
+    "x": "https://x.com/Powerxonewallet",
+    "id": 45,
+    "firstSeenAt": "2026-09-22T23:40:44.595Z"
   },
   {
     "slug": "memebook",
@@ -2787,10 +4985,10 @@ export const generatedProjects: Project[] = [
     ],
     "actions": [
       "Step 1: Fund a Solana Wallet Install Phantom or Solflare and keep a small amount of SOL in it for network fees, tips, and any paid Pass tier. You can buy SOL on [Bybit](https://airdrops.io/goto/bybit/) and withdraw straight to your Solana address.",
-      "Step 2: Connect Your Wallet to the Mint Page Open the [Memebook mint page](/visit/rbb3/?k=6b9512ccfe), connect the wallet you just funded, and sign the verification message. Use this same wallet throughout, since XP is tied to the address rather than a username.",
+      "Step 2: Connect Your Wallet to the Mint Page Open the [Memebook mint page](/visit/rbb3/?k=f19f0f4d27), connect the wallet you just funded, and sign the verification message. Use this same wallet throughout, since XP is tied to the address rather than a username.",
       "Step 3: Verify Your X and Telegram Accounts Link both accounts on the mint page. Verification is required before minting and includes following the Memebook X account and joining the Telegram channel.",
       "Step 4: Mint Your Memebook Pass Bronze is free and gets you into the app. Paid tiers raise your XP multiplier and daily limits, which compounds across every post. The Pass is soulbound, so it stays attached to the minting wallet and cannot be resold.",
-      "Step 5: Install the Android App Download Memebook from [Google Play](/visit/sbb3/?k=33182f09bb) and sign in with the wallet holding your Pass. There is no iOS build, so an Android device is required for the in-app half of the campaign.",
+      "Step 5: Install the Android App Download Memebook from [Google Play](/visit/sbb3/?k=7e13f6a824) and sign in with the wallet holding your Pass. There is no iOS build, so an Android device is required for the in-app half of the campaign.",
       "Step 6: Post and Engage Daily Publish photos or reels, like and comment on other creators, and complete the daily check-in. Spreading activity across days earns more than dumping the same volume into one session.",
       "Step 7: Tip Creators and Share Your Invite Code Send SOL tips to posts you like, which is an on-chain action and counts toward your activity. Then share your invite link from the app to earn XP when someone you referred mints a Pass."
     ],
@@ -2798,7 +4996,7 @@ export const generatedProjects: Project[] = [
     "isLive": true,
     "website": "https://memebook.app",
     "x": "https://x.com/memebookapp",
-    "id": 32,
+    "id": 46,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -2816,20 +5014,20 @@ export const generatedProjects: Project[] = [
     "difficulty": "Easy",
     "costToFarm": "Free",
     "actions": [
-      "Step 1: Connect Your Wallet to the Tasks Portal Open the [Kryvora Quests & Points Portal](/visit/0fb3/?k=0a5f618db0) and connect an EVM wallet. Add Kryvora Network to your wallet when prompted (Chain ID 73829164).",
+      "Step 1: Connect Your Wallet to the Tasks Portal Open the [Kryvora Quests & Points Portal](/visit/0fb3/?k=8840cf727d) and connect an EVM wallet. Add Kryvora Network to your wallet when prompted (Chain ID 73829164).",
       "Step 2: Claim a Daily Check-In Check in on the portal for +50 PTS. Daily check-ins build your streak, so return every day.",
       "Step 3: Link Your Socials and Join Discord Connect your X and Discord accounts, then complete the social quests: Follow, repost, and quote @KryvoraNetwork on X Join the Kryvora Discord server For tips on earning server roles, see our [Discord role farming guide](https://airdrops.io/blog/discord-role-farming-2026/).",
-      "Step 4: Get Testnet ETH Request test ETH from the [Kryvora faucet](/visit/1fb3/?k=433fe89f9c). You can also bridge Sepolia ETH to the Kryvora testnet.",
+      "Step 4: Get Testnet ETH Request test ETH from the [Kryvora faucet](/visit/1fb3/?k=1a494b83f4). You can also bridge Sepolia ETH to the Kryvora testnet.",
       "Step 5: Complete Onchain Tasks Go to the Kryvora dApps page and work through the onchain quests: Swap tokens Add liquidity to a pool Supply assets to the lending market Deploy a smart contract",
       "Step 6: Mint a Testnet NFT Visit the Kryvora NFT page and mint a Nuke Genesis or Verdant Core NFT to complete the NFT quest.",
       "Step 7: Invite Friends Share your referral link from the portal. Three active invites earn +200 PTS.",
-      "Step 8: Run a Genesis Node (Optional) This is the only paid step. A Genesis Node Key costs about 10 USDC on [Arbitrum](https://airdrops.io/speculative/arbitrum/) and can be minted at the [Kryvora Node page](/visit/2fb3/?k=7e786929f3). After minting, self-host the node or use the 1-click cloud option on [Node Hub](/visit/3fb3/?k=9f8acdb76b). You can buy USDC on [Bybit](https://airdrops.io/goto/bybit/). If your funds sit on another chain, move them to Arbitrum with the widget below."
+      "Step 8: Run a Genesis Node (Optional) This is the only paid step. A Genesis Node Key costs about 10 USDC on [Arbitrum](https://airdrops.io/speculative/arbitrum/) and can be minted at the [Kryvora Node page](/visit/2fb3/?k=d6b548f754). After minting, self-host the node or use the 1-click cloud option on [Node Hub](/visit/3fb3/?k=8ed7a64dc9). You can buy USDC on [Bybit](https://airdrops.io/goto/bybit/). If your funds sit on another chain, move them to Arbitrum with the widget below."
     ],
     "telegram": "https://t.me/airdrops_io",
     "isLive": true,
     "website": "https://kryvora.network",
     "x": "https://x.com/KryvoraNetwork",
-    "id": 33,
+    "id": 47,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -2846,19 +5044,19 @@ export const generatedProjects: Project[] = [
     "difficulty": "Easy",
     "costToFarm": "Medium",
     "actions": [
-      "Step 1: Visit the BaiBai App Go to the [BaiBai app](/visit/nfb3/?k=4f0aa90ad7) and click “Connect Wallet.” Switch your wallet to the Base network if it isn’t there already.",
+      "Step 1: Visit the BaiBai App Go to the [BaiBai app](/visit/nfb3/?k=b4776a847c) and click “Connect Wallet.” Switch your wallet to the Base network if it isn’t there already.",
       "Step 2: Fund Your Wallet With USDC or ETH on Base You need USDC or ETH on Base to trade. You can buy either asset on [Bybit](https://airdrops.io/goto/bybit/) and withdraw directly to Base. Holding funds on another chain? Move them over with the bridge widget below.",
       "Step 3: Make Your First Swap Pick the token you want to sell and the one you want to buy, enter an amount, and review the quote. Click “Trade,” approve the token if prompted, and sign. No gas is needed.",
       "Step 4: Trade Regularly to Build Points Points are based on trading volume and activity. Spread trades across different days and token pairs instead of placing one large swap, and check the app for any active multipliers before you trade.",
       "Step 5: Trade Tokenized Stocks for Boosted Points If tokenized stocks are available in your jurisdiction, swap into them on BaiBai. These trades have earned a temporary 2x points boost, so confirm the multiplier is still running first.",
-      "Step 6: Share Your Rekt Receipt Visit the [BaiBai Rekt page](/visit/ofb3/?k=fc0d98ff55), generate your receipt, and share it to collect bonus points.",
+      "Step 6: Share Your Rekt Receipt Visit the [BaiBai Rekt page](/visit/ofb3/?k=52f2fe0145), generate your receipt, and share it to collect bonus points.",
       "Step 7: Invite Friends With Your Referral Link Open the Points page and copy your referral link. You earn 10% of the points your referrals generate, and they receive a 10% points boost."
     ],
     "telegram": "https://t.me/airdrops_io",
     "discord": "https://discord.gg/UNnSJjWRBq",
     "website": "https://baibai.cx",
     "x": "https://x.com/baibai_cx",
-    "id": 34,
+    "id": 48,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -2878,7 +5076,7 @@ export const generatedProjects: Project[] = [
     "actions": [
       "Step 1: Add Robinhood Chain to Your Wallet Robinhood Wallet supports the chain by default (see our [Robinhood Chain guide](https://airdrops.io/robinhood/) for setup basics). For MetaMask, Rabby, or another EVM wallet, add Robinhood Chain manually (chain ID 4663, ETH for gas).",
       "Step 2: Fund Your Wallet With ETH or USDG You need ETH for gas and either ETH or USDG to provide liquidity. Buy ETH on [Bybit](https://airdrops.io/goto/bybit/) and withdraw it to your wallet, then move it onto Robinhood Chain or swap into USDG with the bridge widget below.",
-      "Step 3: Connect Your Wallet to Fables Open [Fables](/visit/xeb3/?k=4564c9cd0b) and connect your wallet. Using this link applies a referral, which does not reduce your own points.",
+      "Step 3: Connect Your Wallet to Fables Open [Fables](/visit/xeb3/?k=3c9fcb00d5) and connect your wallet. Using this link applies a referral, which does not reduce your own points.",
       "Step 4: Deposit Liquidity Into a Fables Market Go to the deposit section and choose an eligible market: ETH/USDG: crypto pair with round-the-clock trading SPY/USDG: tokenized S&P 500 ETF GLD/USDG: tokenized gold ETF TSLA/USDG: tokenized Tesla stock Pick a price range, enter your ETH or USDG amount, and confirm the transaction. Other supported tokens work too.",
       "Step 5: Keep Your Position in Range Positions earn swap fees, and therefore points, only while the price sits inside your range. Check your position regularly and adjust the range when the price moves out.",
       "Step 6: Claim Weekly USDG Rewards Open the rewards panel on Fables each week and claim your USDG. Rewards are based on the swap fees your positions earned that week.",
@@ -2888,7 +5086,7 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/QgeEq2rSv7",
     "website": "https://fables.fi",
     "x": "https://x.com/fablesfi",
-    "id": 35,
+    "id": 49,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -2909,17 +5107,17 @@ export const generatedProjects: Project[] = [
       "Twitter / X"
     ],
     "actions": [
-      "Step 1: Join the Wick Waitlist Go to the [Wick waitlist](/visit/eeb3/?k=a62089210b) and connect your EVM wallet. Approve the connection request, and the page adds your wallet to the list.",
+      "Step 1: Join the Wick Waitlist Go to the [Wick waitlist](/visit/eeb3/?k=21bad48afe) and connect your EVM wallet. Approve the connection request, and the page adds your wallet to the list.",
       "Step 2: Share Wick on X Complete the X share task to post about Wick from your account. Follow [Wick on X](https://x.com/wick_xyz) while you’re there, since the team posts its launch news there.",
       "Step 3: Join the Wick Discord Join the [Wick Discord](https://discord.gg/wickxyz) to follow announcements and ask questions.",
       "Step 4: Claim Your Referral Link Open the referral section on the waitlist page, enter a name, and claim your personal referral link. This option only unlocks after your wallet is registered in Step 1.",
-      "Step 5: Explore the Wick Docs Read through the [Wick docs](/visit/feb3/?k=7dded356e7) to learn how wAMM, wLIT, wLLP, and sWICK work. Knowing the products in advance helps you act quickly once deposits open on Lighter EVM."
+      "Step 5: Explore the Wick Docs Read through the [Wick docs](/visit/feb3/?k=06a830a48b) to learn how wAMM, wLIT, wLLP, and sWICK work. Knowing the products in advance helps you act quickly once deposits open on Lighter EVM."
     ],
     "telegram": "https://t.me/wick_xyz",
     "discord": "https://discord.gg/wickxyz",
     "website": "https://wick.xyz",
     "x": "https://x.com/wick_xyz",
-    "id": 36,
+    "id": 50,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -2940,7 +5138,7 @@ export const generatedProjects: Project[] = [
       "Twitter / X"
     ],
     "actions": [
-      "Step 1: Visit the Worldie Early Access Page Go to the [Worldie early access page](/visit/5eb3/?k=b05514ad93) and click “Join early.” Sign in with your X account or Google.",
+      "Step 1: Visit the Worldie Early Access Page Go to the [Worldie early access page](/visit/5eb3/?k=858e5d4a61) and click “Join early.” Sign in with your X account or Google.",
       "Step 2: Join the Worldie Discord Use the Discord icon on the early access page to join the official Worldie Discord. The +400 World Points bonus is added once you’re in the server.",
       "Step 3: Connect Your X Account and Wallet Open the “Get your invite” panel and connect X (if you signed in with Google) along with a wallet. Connecting both locks your referral link. There is no deposit step.",
       "Step 4: Claim Your Invite Link Claim your personal invite link from the same panel. Worldie ties the link to your name.",
@@ -2950,7 +5148,7 @@ export const generatedProjects: Project[] = [
     "telegram": "https://t.me/worldiedotworld",
     "website": "https://worldie.world",
     "x": "https://x.com/worldiedotworld",
-    "id": 37,
+    "id": 51,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -2970,7 +5168,7 @@ export const generatedProjects: Project[] = [
       "Twitter / X"
     ],
     "actions": [
-      "Step 1: Join the Blackboard Waitlist Go to the [Blackboard waitlist page](/visit/odb3/?k=536b7daef7) and sign up with a Google or X account. Your rank updates live, and higher ranked users reach Alpha sooner.",
+      "Step 1: Join the Blackboard Waitlist Go to the [Blackboard waitlist page](/visit/odb3/?k=5bb8b1752b) and sign up with a Google or X account. Your rank updates live, and higher ranked users reach Alpha sooner.",
       "Step 2: Follow Blackboard and Post the Referral Tweet Link your X account in the waitlist task list, follow [Blackboard](https://x.com/BlackboardFi), and then post the referral tweet the page generates. Blackboard verifies both before crediting the task, which is worth 60 points.",
       "Step 3: Share Your Invite Link Copy the invite link from your waitlist dashboard. Every friend who joins through it adds 30 points to your score. Invite codes also circulate through partners and selected communities.",
       "Step 4: Create Your Blackboard Account When access opens, sign in at the Blackboard terminal with Google, Apple or email, or connect a wallet you already use. Social login creates an embedded self-custodial wallet, so you hold the keys either way.",
@@ -2981,7 +5179,7 @@ export const generatedProjects: Project[] = [
     "telegram": "https://t.me/blackboard_official",
     "website": "https://blackboard.fi",
     "x": "https://x.com/BlackboardFi",
-    "id": 38,
+    "id": 52,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3002,8 +5200,8 @@ export const generatedProjects: Project[] = [
     ],
     "actions": [
       "Step 1: Add GIWA Sepolia to your wallet Open MetaMask or another EVM wallet and add GIWA Sepolia, chain ID 91342.",
-      "Step 2: Claim GIWA Sepolia test ETH Request test ETH from the [Lambda256 faucet](/visit/wdb3/?k=6a38000571) linked on Ammora’s mission page. The liquidity mission has a 0.001 ETH minimum and gas on GIWA is negligible, so you need very little.",
-      "Step 3: Join the Ammora waitlist Go to the [Ammora waitlist](/visit/vdb3/?k=2983ee77fb), connect your wallet, sign the message and register an email. Every mission stays locked until this is done, and the wallet you use will be publicly tied to the leaderboard.",
+      "Step 2: Claim GIWA Sepolia test ETH Request test ETH from the [Lambda256 faucet](/visit/wdb3/?k=a4d94a1245) linked on Ammora’s mission page. The liquidity mission has a 0.001 ETH minimum and gas on GIWA is negligible, so you need very little.",
+      "Step 3: Join the Ammora waitlist Go to the [Ammora waitlist](/visit/vdb3/?k=49256ebe24), connect your wallet, sign the message and register an email. Every mission stays locked until this is done, and the wallet you use will be publicly tied to the leaderboard.",
       "Step 4: Follow @AmmoraHQ on X Follow the [official Ammora account](https://x.com/AmmoraHQ) from the X account you want credited, then return to the dashboard to verify for 100 AP.",
       "Step 5: Retweet the pinned post Repost the pinned campaign post from the same X account for another 100 AP.",
       "Step 6: Publish the daily X post The dashboard fills in the post text for you, so this takes seconds. At 200 AP it is the highest paying repeatable mission.",
@@ -3014,7 +5212,7 @@ export const generatedProjects: Project[] = [
     "telegram": "https://t.me/airdrops_io",
     "website": "https://ammora.org",
     "x": "https://x.com/AmmoraHQ",
-    "id": 39,
+    "id": 53,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3045,7 +5243,7 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/acepyr",
     "website": "https://acepyr.com",
     "x": "https://x.com/acepyr",
-    "id": 40,
+    "id": 54,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3066,7 +5264,7 @@ export const generatedProjects: Project[] = [
       "Twitter / X"
     ],
     "actions": [
-      "Step 1: Log In With Your X Account Go to the [REP app](/visit/hdb3/?k=3504c64607) and sign in with X. This becomes the anchor identity for your profile, and REP reads public metrics like follower quality to seed your first badges.",
+      "Step 1: Log In With Your X Account Go to the [REP app](/visit/hdb3/?k=5d1644c5e1) and sign in with X. This becomes the anchor identity for your profile, and REP reads public metrics like follower quality to seed your first badges.",
       "Step 2: Connect Your Wallets Open your profile and bind your wallets. REP supports roughly five addresses per account, EVM and others. Use the wallets with the deepest history, since an empty wallet produces no achievements. You only sign a message to prove ownership, with no approvals or transfers.",
       "Step 3: Link Your Other Social Accounts Add Telegram, Farcaster, Discord, and any other supported platform from the profile page. Each one widens the pool of achievements you qualify for.",
       "Step 4: Claim Your Achievements Open the achievements list and claim every badge you qualify for. Values range from a few hundred REP points for social milestones up to 3,000 for top-percentile DeFi activity. Some claims charge a small on-chain fee, so keep a little of the relevant gas token in your connected wallet. You can buy it on [Bybit](https://airdrops.io/goto/bybit/) and withdraw it directly, or move assets you already hold with the widget below to bridge or swap onto the chain you need.",
@@ -3077,7 +5275,7 @@ export const generatedProjects: Project[] = [
     "telegram": "https://t.me/airdrops_io",
     "website": "https://app.r3p.xyz",
     "x": "https://x.com/rep_hq",
-    "id": 41,
+    "id": 55,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3094,7 +5292,7 @@ export const generatedProjects: Project[] = [
     "difficulty": "Easy",
     "costToFarm": "Low",
     "actions": [
-      "Step 1: Create a Reels Account Go to the [Reels sign-up page](/visit/dcb3/?k=8d87b83c35) and register with email, X, Google, or Telegram. Registration takes under a minute and does not require a deposit.",
+      "Step 1: Create a Reels Account Go to the [Reels sign-up page](/visit/dcb3/?k=0f09ca792b) and register with email, X, Google, or Telegram. Registration takes under a minute and does not require a deposit.",
       "Step 2: Apply the Promo Code Open the deposit page and enter the code AIRDROPS before confirming your deposit. The code has to be applied before the deposit goes through; it cannot be added afterward.",
       "Step 3: Make a Qualifying Deposit Deposit at least 20 USD in BTC, ETH, USDT, USDC, TON, SOL, or another supported coin. If you need to pick up crypto first, [Bybit](https://airdrops.io/goto/bybit/) is a straightforward option for buying BTC, ETH, or USDT before sending it over. If you’re holding funds on a different chain, use the widget below to swap or bridge to whatever coin you plan to deposit.",
       "Step 4: Play Across the Casino, Sportsbook, or Prediction Markets Once the bonus lands, it’s available across slots, live dealer tables, sports betting, and prediction markets from the same balance. Track your wagering progress on the promotions page so you know when the bonus and any winnings from it become withdrawable."
@@ -3103,7 +5301,7 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/reelsio",
     "website": "https://reels.io",
     "x": "https://x.com/Reelsio",
-    "id": 42,
+    "id": 56,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3120,16 +5318,16 @@ export const generatedProjects: Project[] = [
     "difficulty": "Easy",
     "costToFarm": "Low",
     "actions": [
-      "Create your Entropy account Head to [Entropy](https://entropy.io/?r=airdropalert) and create your account. → Log in with email or connect your EVM [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/). → Choose a username for your Entropy account. → Enter the referral code airdropalert to pay 25% less in trading fees . → Review and accept the Trading Access Attestation if you meet the geographic, sanctions, and legal requirements shown by Entropy.  Entropy is not available to users in restricted jurisdictions, including the United States, Canada, Panama, and the United Kingdom , and its Terms prohibit using VPNs or similar tools to bypass these restrictions. The Privacy Policy also states that Entropy may collect your IP address, public wallet address, device, and usage data when you use the interface.",
-      "Fund your trading balance Deposit supported crypto into your Entropy account. → Select the token and network you want to use, then follow the deposit instructions shown in the app. → Use the Bridge option if you need to move assets from another supported network.  Entropy supports deposits in multiple tokens and networks, then uses $[USDC](https://airdropalert.com/currencies/usd-coin/)as collateral for trading positions. Always check the selected asset and network before sending funds.",
-      "Trade Entropy markets Choose a market, review the trading conditions, and place your position. → Build trading history across pre-IPOs, stocks, commodities, FX, indices, rates, and/or crypto. → Choose long or short, then set your order type, position size, and leverage before confirming the trade.  Leverage depends on the market and can reach 50x on selected contracts . Funding accrues continuously and is paid hourly, so a position can either pay or receive funding depending on market conditions.  Pre-IPO contracts provide synthetic exposure rather than ownership of company shares. If a company remains private, Entropy follows its documented No-IPO Resolution process.",
-      "Connect your  account Go to the Leaderboard page and connect your X account. → Select Leaderboard from the Entropy menu. → Connect  and return once Entropy makes the rankings live.  The leaderboard currently shows Coming Soon . Entropy has not announced leaderboard prizes or confirmed that leaderboard activity will count toward a future airdrop."
+      "Create your Entropy account Head to [Entropy](https://entropy.io/?r=airdropalert) and create your account. в†’ Log in with email or connect your EVM [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/). в†’ Choose a username for your Entropy account. в†’ Enter the referral code airdropalert to pay 25% less in trading fees . в†’ Review and accept the Trading Access Attestation if you meet the geographic, sanctions, and legal requirements shown by Entropy.  Entropy is not available to users in restricted jurisdictions, including the United States, Canada, Panama, and the United Kingdom , and its Terms prohibit using VPNs or similar tools to bypass these restrictions. The Privacy Policy also states that Entropy may collect your IP address, public wallet address, device, and usage data when you use the interface.",
+      "Fund your trading balance Deposit supported crypto into your Entropy account. в†’ Select the token and network you want to use, then follow the deposit instructions shown in the app. в†’ Use the Bridge option if you need to move assets from another supported network.  Entropy supports deposits in multiple tokens and networks, then uses $[USDC](https://airdropalert.com/currencies/usd-coin/)as collateral for trading positions. Always check the selected asset and network before sending funds.",
+      "Trade Entropy markets Choose a market, review the trading conditions, and place your position. в†’ Build trading history across pre-IPOs, stocks, commodities, FX, indices, rates, and/or crypto. в†’ Choose long or short, then set your order type, position size, and leverage before confirming the trade.  Leverage depends on the market and can reach 50x on selected contracts . Funding accrues continuously and is paid hourly, so a position can either pay or receive funding depending on market conditions.  Pre-IPO contracts provide synthetic exposure rather than ownership of company shares. If a company remains private, Entropy follows its documented No-IPO Resolution process.",
+      "Connect your  account Go to the Leaderboard page and connect your X account. в†’ Select Leaderboard from the Entropy menu. в†’ Connect  and return once Entropy makes the rankings live.  The leaderboard currently shows Coming Soon . Entropy has not announced leaderboard prizes or confirmed that leaderboard activity will count toward a future airdrop."
     ],
     "telegram": "https://t.me/airdrops_io",
     "website": "https://entropy.io/?r=airdropalert",
     "x": "https://x.com/entropyIO",
     "date": "2026-09-04",
-    "id": 43,
+    "id": 57,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3151,7 +5349,7 @@ export const generatedProjects: Project[] = [
       "Twitter / X"
     ],
     "actions": [
-      "Step 1: Connect Your Wallet to the Loyalty Dashboard Open the [Beldex Loyalty Program](/visit/lbb3/?k=14fc1cd306) and connect an EVM wallet. Your points and rank attach to that address, so use a wallet you intend to keep.",
+      "Step 1: Connect Your Wallet to the Loyalty Dashboard Open the [Beldex Loyalty Program](/visit/lbb3/?k=1266f604c4) and connect an EVM wallet. Your points and rank attach to that address, so use a wallet you intend to keep.",
       "Step 2: Link Your X Account Connect X from the dashboard before starting tasks. Rewards do not pay out without an X connection, and the same applies to anyone you refer.",
       "Step 3: Clear the Community Tasks One-time actions that you need to complete from the airdrop page that cover most of your opening balance: Follow Beldex on X (100 points) Follow Beldex on LinkedIn (100 points) Join the Discord server (100 points) Subscribe to the YouTube channel (100 points) Join the Telegram community group (50 points) Join the Telegram announcement channel (50 points) Join the X Community (50 points)",
       "Step 4: Complete the Limited-Time and Collab Tasks The dashboard rotates timed partner tasks, usually a follow or a like. Some run for days, others expire in under eight hours, so clear them on sight.",
@@ -3163,7 +5361,7 @@ export const generatedProjects: Project[] = [
     "isLive": true,
     "website": "https://beldex.io",
     "x": "https://x.com/BeldexCoin",
-    "id": 44,
+    "id": 58,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3185,7 +5383,7 @@ export const generatedProjects: Project[] = [
       "Email"
     ],
     "actions": [
-      "Step 1: Sign Up for UPTIME with Your Email Go to the [UPTIME campaign page](/visit/wbb3/?k=a089c7d34f) and enter the email address you want tied to your points. Balances are held on the waitlist server, so the same address works from any device.",
+      "Step 1: Sign Up for UPTIME with Your Email Go to the [UPTIME campaign page](/visit/wbb3/?k=8b3cd51b4d) and enter the email address you want tied to your points. Balances are held on the waitlist server, so the same address works from any device.",
       "Step 2: Confirm the 6-Digit Code Check your inbox for the code and enter it. The same code signs you in later, so there is no password to store.",
       "Step 3: Reserve Your Queue Position Open the statement view to see your balance and queue position. A countdown runs to the opening date, when partners are announced and first-access positions open.",
       "Step 4: Share Your Referral Link Copy your link from the Referrals panel. Campaign materials put a referral at 750 points once that person joins and links X, and your own X connection at 250 points.",
@@ -3196,7 +5394,7 @@ export const generatedProjects: Project[] = [
     "telegram": "https://t.me/dualmint",
     "website": "https://dualmint.com",
     "x": "https://x.com/DualMintRWA",
-    "id": 45,
+    "id": 59,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3218,7 +5416,7 @@ export const generatedProjects: Project[] = [
       "Twitter / X"
     ],
     "actions": [
-      "Step 1: Create Your C8ntinuum Account Open the [C8ntinuum dashboard](/visit/1cb3/?k=a4921cc7e3) and sign in with email, a wallet or a social account. p8ints accrue to the account itself, not to any single wallet.",
+      "Step 1: Create Your C8ntinuum Account Open the [C8ntinuum dashboard](/visit/1cb3/?k=0e40a42f0d) and sign in with email, a wallet or a social account. p8ints accrue to the account itself, not to any single wallet.",
       "Step 2: Claim Your Legacy p8ints Waitlist entries, and OG status campaign entries are credited in the dashboard.",
       "Step 3: Complete the Social Tasks Connect and verify your X, Discord and Telegram accounts, then follow and join the official channels. Each task pays once at a fixed rate, and the verified X follow counts toward qualification.",
       "Step 4: Check In Daily and Spin the Wheel The check-in runs through days 1 to 7 of Season 0 and stands in for a qualifying day if you have not bought $CTM yet. The wheel gives one spin per UTC day and never subtracts.",
@@ -3232,72 +5430,8 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/c8ntinuum",
     "website": "https://c8ntinuum.com",
     "x": "https://x.com/c8ntinuum",
-    "id": 46,
-    "firstSeenAt": "2026-09-19T00:00:44.749Z"
-  },
-  {
-    "slug": "amadeus-protocol",
-    "name": "Amadeus Protocol",
-    "symbol": "AMA",
-    "chain": "OwnChain",
-    "event": "Airdrop",
-    "status": "Potential",
-    "description": "Looking for a potential Amadeus Protocol airdrop? Follow our step-by-step guide to improve your chances if they launch a retroactive airdrop.",
-    "logo": "https://airdrops.io/wp-content/uploads/2026/08/Amadeus-Protocol-logo.jpg.webp",
-    "source": "Airdrops.io",
-    "sourceUrl": "https://airdrops.io/amadeus-protocol/",
-    "claimUrl": "https://amahub.ama.one",
-    "difficulty": "Easy",
-    "costToFarm": "Free",
-    "requirements": [
-      "Twitter / X"
-    ],
-    "actions": [
-      "Step 1: Connect a Wallet Open the [AMA Hub quests page](/visit/fab3/?k=f169ca6a3f) and connect an EVM wallet such as MetaMask, Rabby, or Trust. This is the address your PRIME Points are paid to.",
-      "Step 2: Create Your Amadeus Wallet Install the Amadeus Wallet browser extension and set it up. This wallet holds $AMA and runs your sealed agents, and creating it is one of the larger one-off point rewards in the season.",
-      "Step 3: Link Both Wallets Sign once from each wallet to connect them. The link tells the season that your chain address and Amadeus account belong to the same person, and quests stay locked until both are added.",
-      "Step 4: Complete the Daily Check-In Return each day and claim the check-in on the quests page. Daily points reset and do not carry over, so steady visits matter more than any single session.",
-      "Step 5: Build and Deploy an Agent Create an agent on AMA Hub and put it to work. These build quests are read directly from the chain, so nothing needs to be submitted. To earn across more of them: Add a skill to your agent so it can act Run an agent trade or swap on the network Claim a username for your account",
-      "Step 6: Finish the Social Quests Complete the social tasks, which the campaign verifies within a few minutes: Follow Amadeus on X Join the Amadeus Discord Engage with the pinned launch post Record a short video explainer for the largest social reward",
-      "Step 7: Invite Referrals Share your referral link from the quests page. You earn 20% of the PRIME Points your invitees collect, which compounds as they stay active."
-    ],
-    "telegram": "https://t.me/airdrops_io",
-    "website": "https://ama.one",
-    "x": "https://x.com/ama_protocol",
-    "id": 47,
-    "firstSeenAt": "2026-09-19T00:00:44.749Z"
-  },
-  {
-    "slug": "neosoul",
-    "name": "NeoSoul",
-    "chain": "Bsc",
-    "event": "Airdrop",
-    "status": "Potential",
-    "description": "Looking for a potential NeoSoul airdrop? Follow our step-by-step guide to improve your chances if they launch a retroactive airdrop.",
-    "logo": "https://airdrops.io/wp-content/uploads/2026/08/NeoSoul-logo.png.webp",
-    "source": "Airdrops.io",
-    "sourceUrl": "https://airdrops.io/neosoul/",
-    "claimUrl": "https://event.neosoul.ai",
-    "difficulty": "Easy",
-    "costToFarm": "Low",
-    "requirements": [
-      "Telegram",
-      "Twitter / X"
-    ],
-    "actions": [
-      "Step 1: Connect Your Wallet on the NeoSoul Questboard Go to the [NeoSoul Questboard](/visit/8ab3/?k=6f0a74458d) and connect an EVM wallet. Complete the Newbie Tasks to bind your X account, follow the official profile, and join the Telegram and Discord groups. These one-time tasks open up the rest of the point system.",
-      "Step 2: Create an AI Agent on EvoEvo Open [EvoEvo](/visit/9ab3/?k=31fdbf9e7b), create your agent, and bind its ERC-8004 identity on BNB Smart Chain. This registration needs a small amount of BNB for gas. You can buy BNB on [Bybit](https://airdrops.io/goto/bybit/) and withdraw it to BNB Chain, or move funds you already hold using the widget below to bridge or swap into BNB.",
-      "Step 3: Train Your Agent With Predictions Have your agent predict real-world events, record its reasoning, and assign a confidence score. Once an outcome settles, review the result, keep or reject the reasoning, and add the lesson to your agent’s memory. Consistent prediction and review activity is the main PTS driver on EvoEvo.",
-      "Step 4: Complete the Daily Questboard Tasks Return to the Questboard for the repeatable daily tasks. They reset on a day-based cycle, so checking in regularly builds PTS steadily over time.",
-      "Step 5: Finish the NeoSoul Quests on Galxe NeoSoul runs a separate quest campaign on [Galxe](/visit/bab3/?k=a8ddf2fac9). Open the NeoSoul quest page and complete whatever tasks are active there to earn extra entries and points.",
-      "Step 6: Invite Friends With Your Referral Link Share your referral link from the Questboard. You earn 100 PTS per friend who completes the Newbie Tasks, plus passive PTS from their ongoing activity, and reaching five invites raises your base rate."
-    ],
-    "telegram": "https://t.me/airdrops_io",
-    "discord": "https://discord.gg/neosoul",
-    "website": "https://neosoul.ai",
-    "x": "https://x.com/NeoSoulAI",
-    "id": 48,
-    "firstSeenAt": "2026-09-21T14:10:06.388Z"
+    "id": 60,
+    "firstSeenAt": "2026-09-23T16:00:37.049Z"
   },
   {
     "slug": "vibe-vibe",
@@ -3316,19 +5450,19 @@ export const generatedProjects: Project[] = [
       "Telegram"
     ],
     "actions": [
-      "Step 1: Claim Test ETH from the Faucet Open the [Robinhood Chain Testnet Faucet](/visit/tf83/?k=4ddc053b83), enter your wallet address, and request test ETH. You need it for gas and for trading on the testnet.",
-      "Step 2: Connect Your Wallet to Vibe Vibe Go to the [Vibe Vibe testnet](/visit/7fb3/?k=80d2df7b02) and connect your EVM wallet. If your wallet asks you to add or switch to Robinhood Chain Testnet, approve it.",
+      "Step 1: Claim Test ETH from the Faucet Open the [Robinhood Chain Testnet Faucet](/visit/tf83/?k=8432fcc9e3), enter your wallet address, and request test ETH. You need it for gas and for trading on the testnet.",
+      "Step 2: Connect Your Wallet to Vibe Vibe Go to the [Vibe Vibe testnet](/visit/7fb3/?k=b18c65ac3e) and connect your EVM wallet. If your wallet asks you to add or switch to Robinhood Chain Testnet, approve it.",
       "Step 3: Create a Testnet Token Click the launch option and fill in the details: Token name and ticker Token image (required) A short description of the project Put some effort into it, because the team says quality launches count.",
       "Step 4: Buy and Sell Testnet Tokens Trade tokens launched by other users. Buy early on the bonding curve and sell into strength, since high PnL is one of the listed eligibility criteria.",
       "Step 5: Join the Telegram Raiding Channel Join the [Vibe Vibe Telegram](https://t.me/vibevibefun) and take part in raids on X. You need a verified X account, and the top 250 raiders qualify for a free Vibe Vibers NFT.",
-      "Step 6: Apply for a Vibe Vibers Whitelist Follow the [Vibe Vibers page](/visit/8fb3/?k=010eef3f4b) for mint updates. Creators who make memes or other content can apply for collab spots when the form opens, with free mint whitelists awarded based on quality."
+      "Step 6: Apply for a Vibe Vibers Whitelist Follow the [Vibe Vibers page](/visit/8fb3/?k=6d440a91c6) for mint updates. Creators who make memes or other content can apply for collab spots when the form opens, with free mint whitelists awarded based on quality."
     ],
     "telegram": "https://t.me/vibevibefun",
     "discord": "https://discord.gg/vibevibebuilders",
     "isLive": true,
     "website": "https://testnet.vibevibe.fun",
     "x": "https://x.com/vibevibefun",
-    "id": 49,
+    "id": 61,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3350,8 +5484,8 @@ export const generatedProjects: Project[] = [
     ],
     "actions": [
       "Step 1: Identify Which Cohort You Fall Under Work out which of the three groups applies to you first. Substack and Channel 5 recipients claim by email through the official portal. TRUMP loss recipients never use it, since those tokens move through exchanges.",
-      "Step 2: Verify the Contract Address and Domain The project lists its official Base contract as 0xB095274743941e953c746F9C228DA9c18Bb6ec29 . Verify it on the [official LAPTOP website](/visit/kdb3/?k=ddfc2e499f) rather than a screener or a search result. Our [crypto safety guide](https://airdrops.io/stay-safe/) explains how fake claim pages work.",
-      "Step 3: Open the Official Claim Portal Go to the [LAPTOP claim portal](/visit/jdb3/?k=f1479961c2) and enter the email tied to your Substack or Channel 5 subscription. It shows your eligibility and allocation before you commit.",
+      "Step 2: Verify the Contract Address and Domain The project lists its official Base contract as 0xB095274743941e953c746F9C228DA9c18Bb6ec29 . Verify it on the [official LAPTOP website](/visit/kdb3/?k=4a5fb4a495) rather than a screener or a search result. Our [crypto safety guide](https://airdrops.io/stay-safe/) explains how fake claim pages work.",
+      "Step 3: Open the Official Claim Portal Go to the [LAPTOP claim portal](/visit/jdb3/?k=0167f2e9a2) and enter the email tied to your Substack or Channel 5 subscription. It shows your eligibility and allocation before you commit.",
       "Step 4: Connect an Email and Create an Embedded Wallet Connect an eligble Email adress, connect wallet if you have an allocation. With an embedded wallet, export your keys or move the tokens out afterwards, since access depends on that service staying up.",
       "Step 5: Fund the Wallet With ETH on Base A self-custody claim needs a little ETH on Base for gas. Buy ETH on [Bybit](https://airdrops.io/goto/bybit/) and withdraw straight to Base, or move some across from another network using the widget below.",
       "Step 6: Claim Within the 30-Day Window Sign the claim transaction and confirm the tokens arrive. Read what you sign. A legitimate claim never asks for a seed phrase and never asks you to send funds first.",
@@ -3361,38 +5495,7 @@ export const generatedProjects: Project[] = [
     "isLive": true,
     "website": "https://laptoptoken.com",
     "x": "https://x.com/HunterBiden",
-    "id": 50,
-    "firstSeenAt": "2026-09-19T00:00:44.749Z"
-  },
-  {
-    "slug": "gyndore",
-    "name": "Gyndore",
-    "symbol": "GYND",
-    "chain": "Base",
-    "event": "Airdrop",
-    "status": "Confirmed",
-    "description": "Looking to claim GYND tokens from the Gyndore airdrop? Follow our step-by-step guide with eligibility details, official links and safety notes.",
-    "logo": "https://airdrops.io/wp-content/uploads/2026/09/Gyndore-logo.jpg.webp",
-    "source": "Airdrops.io",
-    "sourceUrl": "https://airdrops.io/gyndore/",
-    "claimUrl": "https://app.gyndore.com",
-    "difficulty": "Beginner",
-    "costToFarm": "Free",
-    "requirements": [
-      "Twitter / X"
-    ],
-    "actions": [
-      "Step 1: Open the DropWave Reservation Portal Go to the [Gyndore reservation portal](LINK). The old DropWave campaign page now redirects here, so any saved bookmark should land in the same place.",
-      "Step 2: Connect the Wallet You Used in Season One Reservations attach to existing Season One profiles. Connect the same wallet that collected Chips during the campaign, since a fresh wallet has no allocation tied to it.",
-      "Step 3: Authenticate Your DropWave Profile The portal verifies the X account you linked during the campaign before it shows a balance. Approve the sign-in request so your GynPoints can be matched to the connected wallet.",
-      "Step 4: Confirm Your Base Receiving Address Set the Base address that should receive bGYND. Use an address you hold the keys to, because exchange deposit addresses often reject tokens they have not listed.",
-      "Step 5: Submit Before September 9 Confirm the reservation and check that the portal shows it as reserved. Gyndore has not announced a fallback for allocations left unreserved after 09.09.26, so treat the date as final."
-    ],
-    "telegram": "https://t.me/gyndore",
-    "isLive": true,
-    "website": "https://gyndore.com",
-    "x": "https://x.com/Gyndore",
-    "id": 51,
+    "id": 62,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3415,7 +5518,7 @@ export const generatedProjects: Project[] = [
     "actions": [
       "Step 1: Follow Flop Labs on X Follow the [official Flop Labs X account](https://x.com/flop_labs) and turn on notifications. This is the only requirement the project has published for eligibility, and it is where testnet dates will land first.",
       "Step 2: Follow Arthur Hayes for early terms Follow [CryptoHayes](https://x.com/cryptohayes) and subscribe to his Substack. His essays have carried more detail than the project account, including the 20% testnet figure, and more are coming. Terms tend to surface there first.",
-      "Step 3: Apply for a network role Open the [Flop website](/visit/49b3/?k=c8ef252bb8) and submit the form matching what you can deliver. Three of the four roles are open: GPU provider or miner: for anyone with hardware that can run inference. Miners earn block rewards plus payment per job. No minimum specifications have been published, so treat any circulating hardware requirement as unverified. Validator: confirms miners completed their assigned work and stores agent memory. Suited to people comfortable running nodes. KOL or creator: the lowest barrier of the three. A few solid posts plus the form is the entry price, and Substack counts, which helps if your X account is weak. The fourth role, Agents, is the demand side: they spend $FLOP rather than earn it, so there is nothing to apply for.",
+      "Step 3: Apply for a network role Open the [Flop website](/visit/49b3/?k=f308074c81) and submit the form matching what you can deliver. Three of the four roles are open: GPU provider or miner: for anyone with hardware that can run inference. Miners earn block rewards plus payment per job. No minimum specifications have been published, so treat any circulating hardware requirement as unverified. Validator: confirms miners completed their assigned work and stores agent memory. Suited to people comfortable running nodes. KOL or creator: the lowest barrier of the three. A few solid posts plus the form is the entry price, and Substack counts, which helps if your X account is weak. The fourth role, Agents, is the demand side: they spend $FLOP rather than earn it, so there is nothing to apply for.",
       "Step 4: Start publishing $FLOP content now If you took the creator route, post before the program formally opens. There is no leaderboard yet, and if scoring ends up mindshare-based it will likely be applied retroactively. Stay on theme: decentralized inference, GPU economics, Hayes’ argument that the AI buildout is a debt problem rather than a technology one.",
       "Step 5: Get ready for the Q4 testnet The 20% allocation is earned on the testnet, which has not opened. Hold off on configuring a wallet for a specific network, because Flop Labs has not named the chain. Watch the official account and be ready to onboard when it goes live."
     ],
@@ -3423,7 +5526,7 @@ export const generatedProjects: Project[] = [
     "isLive": true,
     "website": "https://flop.finance",
     "x": "https://x.com/Flop_Labs",
-    "id": 52,
+    "id": 63,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3441,11 +5544,11 @@ export const generatedProjects: Project[] = [
     "difficulty": "Easy",
     "costToFarm": "Low",
     "actions": [
-      "Step 1: Build Your Incentive Passport Install a Sui wallet first. Slush and Nabox both work across TBook’s products, and you will want a little SUI for gas. Then open the [TBook engagement portal](/visit/f9b3/?k=0c812c635c), connect the wallet, and link your X account and Discord. The Passport is the container every score writes into, so an incomplete profile caps everything downstream.",
+      "Step 1: Build Your Incentive Passport Install a Sui wallet first. Slush and Nabox both work across TBook’s products, and you will want a little SUI for gas. Then open the [TBook engagement portal](/visit/f9b3/?k=f4a6eec48a), connect the wallet, and link your X account and Discord. The Passport is the container every score writes into, so an incomplete profile caps everything downstream.",
       "Step 2: Mint Your WISE Credit Score Mint your WISE Credit Score from the same portal. It reads your linked wallets and accounts and grades you across four dimensions. Mint early, because the score accrues history and a profile built weeks before a snapshot outweighs one created that day.",
       "Step 3: Complete Campaigns and Collect SBTs Work through the active campaigns on the portal. Each issues a soulbound token on completion, and SBT holdings are a named eligibility category. Types rotate weekly: Prediction campaigns, where you commit to an outcome and mint an SBT on resolution X Spaces attendance drops and Engagement Basecamp quests Partner project campaigns run through TBook for other protocols",
       "Step 4: Fund Your Wallet with USDC The vault takes USDC on Sui. [Bybit](https://airdrops.io/goto/bybit/) lists USDC and supports direct Sui withdrawals, which skips bridging entirely. Already holding USDC elsewhere? Move it across with the widget below.",
-      "Step 5: Deposit into the rcUSD Vault Open the [TBook Vault](/visit/h9b3/?k=5a33386dba) and pick the rcUSD Vault, which routes deposits into the R25 Protocol. Deposits run from 1 USDC to 1 million with no fee, settlement is T+1, and you receive shares that appreciate as yield accrues rather than paying out separately. APY has recently sat above 8%.",
+      "Step 5: Deposit into the rcUSD Vault Open the [TBook Vault](/visit/h9b3/?k=0ee391f154) and pick the rcUSD Vault, which routes deposits into the R25 Protocol. Deposits run from 1 USDC to 1 million with no fee, settlement is T+1, and you receive shares that appreciate as yield accrues rather than paying out separately. APY has recently sat above 8%.",
       "Step 6: Mint a Bookies NFT Bookies NFTs live on Sui at TBook’s NFT page. Holding one raises your Wealth Score and puts you in the airdrop category reserved for early supporters, the most direct eligibility upgrade here."
     ],
     "telegram": "https://t.me/airdrops_io",
@@ -3453,7 +5556,7 @@ export const generatedProjects: Project[] = [
     "isLive": true,
     "website": "https://tbook.com",
     "x": "https://x.com/realtbook",
-    "id": 53,
+    "id": 64,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3470,7 +5573,7 @@ export const generatedProjects: Project[] = [
     "difficulty": "Easy",
     "costToFarm": "Free",
     "actions": [
-      "Step 1: Visit the Olympus Aptos claim page Go to the [Olympus Aptos page](/visit/loa3/?k=b5f0eceadf). The claim tab sits directly on the dashboard.",
+      "Step 1: Visit the Olympus Aptos claim page Go to the [Olympus Aptos page](/visit/loa3/?k=91da79dfeb). The claim tab sits directly on the dashboard.",
       "Step 2: Connect your wallet Use a wallet such as Petra or Pontem. Approve the connection request when it pops up.",
       "Step 3: Fund your wallet with a small amount of APT You need APT to cover gas plus the $0.20 anti-sybil fee per claim. You can buy APT on [Bybit](https://airdrops.io/goto/bybit/) and withdraw it straight to your Aptos address. If you also plan to use Olympus on its other chains, the widget below lets you bridge or swap funds to the network you need.",
       "Step 4: Claim your pOmega and the NFT Open the Claim tab, tap Claim pOmega, and confirm the transaction. You receive 100 pOmega per claim, and early Aptos users get the exclusive NFT on top.",
@@ -3481,7 +5584,7 @@ export const generatedProjects: Project[] = [
     "isLive": true,
     "website": "https://olympus.omeganetwork.co",
     "x": "https://x.com/omega_netw0rk",
-    "id": 54,
+    "id": 65,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3499,8 +5602,8 @@ export const generatedProjects: Project[] = [
     "difficulty": "Easy",
     "costToFarm": "Low",
     "actions": [
-      "Step 1: Create your MINT account Register on the [MINT website](/visit/wsa3/?k=980df83048). An account is required before any play counts toward Season 1 XP.",
-      "Step 2: Fund your MINT wallet Deposit USDT, USDC or ETH into your MINT wallet on one of the supported networks. Make sure the network selected on MINT matches the one used by your sending wallet or exchange, since deposits sent over the wrong network can be lost. Alternatively, you can pick up any of these assets directly through the [Mint cashier](/visit/wsa3/?k=980df83048) tab cash on-ramp.",
+      "Step 1: Create your MINT account Register on the [MINT website](/visit/wsa3/?k=317c86a798). An account is required before any play counts toward Season 1 XP.",
+      "Step 2: Fund your MINT wallet Deposit USDT, USDC or ETH into your MINT wallet on one of the supported networks. Make sure the network selected on MINT matches the one used by your sending wallet or exchange, since deposits sent over the wrong network can be lost. Alternatively, you can pick up any of these assets directly through the [Mint cashier](/visit/wsa3/?k=317c86a798) tab cash on-ramp.",
       "Step 3: Play casino games and sportsbook markets Every eligible play earns Season 1 XP. You need at least $50 wagered cumulatively to qualify for the airdrop, so smaller regular sessions count just as much as one large bet.",
       "Step 4: Climb the XP leaderboard Your XP sets your position on the live leaderboard. A higher rank at the snapshot means a larger potential share of the $125,000 pool. Qualifying referrals, available boosts and selected quests add XP on top of your own play.",
       "Step 5: Keep earning XP until the snapshot The Season 1 snapshot happens shortly before the TGE in Q4 2026, with the exact date announced through MINT’s official channels. Your verified XP at that moment locks in your allocation.",
@@ -3510,7 +5613,7 @@ export const generatedProjects: Project[] = [
     "isLive": true,
     "website": "https://mint.io",
     "x": "https://x.com/Mintcasino",
-    "id": 55,
+    "id": 66,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3527,10 +5630,10 @@ export const generatedProjects: Project[] = [
     "difficulty": "Easy",
     "costToFarm": "Medium",
     "actions": [
-      "Complete the HertzFlow onboarding   Visit [HertzFlow](http://www.hertzflow.xyz/referral?ref=AALERT) and start the Mainnet onboarding flow. → Connect your EVM wallet and complete the onboarding process. → Accept the terms and trading acknowledgement when prompted.  Using the AirdropAlert referral link gives you up to a 5% trading-fee rebate .",
-      "Trade and earn Merit   Go to the Trade section and complete Mainnet trades to earn Merit. → Choose an available market such as BTC, ETH, or BNB and start trading. → Use the Merits page to track the Merit earned from your trading activity.  HertzFlow uses Pyth Network as its preferred oracle, with Binance, OKX, and Bybit pricing available as fallback sources when needed.",
-      "Provide liquidity and earn Merit   Go to Pools or Vaults and provide liquidity to earn Merit from LP activity. → Review the available liquidity options before choosing where to deposit. → Deposit $USD1 into the Mainnet Vault if you also want to join the current $WLFI campaign.  HertzFlow allocated an additional 390,000 $WLFI to the $USD1 Vault through August 31. This limited-time campaign is separate from the ongoing Merit system.",
-      "Refer traders and earn more   Copy your referral code, and invite new traders to HertzFlow. → Earn Merit plus up to 20% commission from Tier 1 referrals and up to 5% from Tier 2. → Referred traders can receive up to a 5% trading-fee rebate .  Existing Testnet referrals carry over to Mainnet, so previous referral activity continues into the mainnet platform."
+      "Complete the HertzFlow onboarding   Visit [HertzFlow](http://www.hertzflow.xyz/referral?ref=AALERT) and start the Mainnet onboarding flow. в†’ Connect your EVM wallet and complete the onboarding process. в†’ Accept the terms and trading acknowledgement when prompted.  Using the AirdropAlert referral link gives you up to a 5% trading-fee rebate .",
+      "Trade and earn Merit   Go to the Trade section and complete Mainnet trades to earn Merit. в†’ Choose an available market such as BTC, ETH, or BNB and start trading. в†’ Use the Merits page to track the Merit earned from your trading activity.  HertzFlow uses Pyth Network as its preferred oracle, with Binance, OKX, and Bybit pricing available as fallback sources when needed.",
+      "Provide liquidity and earn Merit   Go to Pools or Vaults and provide liquidity to earn Merit from LP activity. в†’ Review the available liquidity options before choosing where to deposit. в†’ Deposit $USD1 into the Mainnet Vault if you also want to join the current $WLFI campaign.  HertzFlow allocated an additional 390,000 $WLFI to the $USD1 Vault through August 31. This limited-time campaign is separate from the ongoing Merit system.",
+      "Refer traders and earn more   Copy your referral code, and invite new traders to HertzFlow. в†’ Earn Merit plus up to 20% commission from Tier 1 referrals and up to 5% from Tier 2. в†’ Referred traders can receive up to a 5% trading-fee rebate .  Existing Testnet referrals carry over to Mainnet, so previous referral activity continues into the mainnet platform."
     ],
     "telegram": "https://t.me/hertzflow",
     "isLive": true,
@@ -3538,7 +5641,7 @@ export const generatedProjects: Project[] = [
     "x": "https://twitter.com/Hertzflow_xyz",
     "date": "2026-08-26",
     "discord": "https://discord.gg/qXHe2Rnf8z",
-    "id": 56,
+    "id": 67,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3560,7 +5663,7 @@ export const generatedProjects: Project[] = [
       "Twitter / X"
     ],
     "actions": [
-      "Step 1: Open the Nowa Farming Page Go to the [Nowa Farming page](/visit/s6b3/?k=5c8072adb5). Access is invite-only at this stage, so have a code ready before you start. The public code is NOWA.",
+      "Step 1: Open the Nowa Farming Page Go to the [Nowa Farming page](/visit/s6b3/?k=724fd10ea9). Access is invite-only at this stage, so have a code ready before you start. The public code is NOWA.",
       "Step 2: Connect Your Wallet Click Connect Wallet and pick your wallet. Nowa supports MetaMask, Trust Wallet, WalletConnect, Phantom, Keplr, Solflare, and Typhon. Sign the connection request when prompted.",
       "Step 3: Enter Your Invite Code Type NOWA into the invite field. Once accepted, you land on the Nowa Farming dashboard showing your balances, badge tier, and leaderboard rank.",
       "Step 4: Complete the Three Mandatory Tasks Farming stays locked until all three are done: Follow [Nowa on X](https://x.com/NowaFinance) and join the [Telegram community](https://t.me/NowaFinance) Invite at least one friend using your personal invite code Click Request Funds to claim your free Devnet-value tokens The Request Funds drop includes NUSC, NOWA, ETH, BTC, BNB, TRX, USDC, USDT, XRP, and SOL, covering every activity in the program without a deposit from you.",
@@ -3573,7 +5676,7 @@ export const generatedProjects: Project[] = [
     "isLive": true,
     "website": "https://nowa.finance",
     "x": "https://x.com/NowaFinance",
-    "id": 57,
+    "id": 68,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3595,25 +5698,25 @@ export const generatedProjects: Project[] = [
       "Email"
     ],
     "actions": [
-      "Step 1: Sign Up at Yakkamon Create your account with an email address on the [Yakkamon pre-registration page](/visit/w0b3/?k=543d14a627). No wallet is needed at this stage. Enter the referral code YAKKA-52UCFU during sign-up.",
+      "Step 1: Sign Up at Yakkamon Create your account with an email address on the [Yakkamon pre-registration page](/visit/1hb3/?k=6381334aa0). No wallet is needed at this stage. Enter the referral code YAKKA-52UCFU during sign-up.",
       "Step 2: Nurture Your Egg Daily Tap your egg three times each day for +6 points. Daily streaks add bonuses, and a missed day resets the streak.",
       "Step 3: Connect Discord and X Link your Discord and X accounts for +10 points each. Helpful posts in the Discord earn extra points through community reactions, and the weekly share quest pays +20 points per week once X is connected.",
       "Step 4: Link and Verify a Wallet Connect a wallet and sign a message to prove ownership for +10 points. A verified wallet is also required for the free mint whitelist, so complete this well before October 1, 2026.",
-      "Step 5: Refer Friends Each verified friend who joins earns you +30 points. Your first five referrals count instantly; after that, invitees must verify Discord and X and reach 100 points before the bonus lands. Multi-accounting gets filtered out on review.",
+      "Step 5: Refer Friends Each verified friend who joins earns you +75 points. Your first five referrals count instantly; after that, invitees must verify Discord and X and reach 100 points before the bonus lands. Multi-accounting gets filtered out on review.",
       "Step 6: Mint the Free Monster NFT on October 1 Join the free mint of 10,000 Monster NFTs on Ronin using your verified wallet. It costs nothing beyond a small gas fee, is limited to one mint per trainer, and minting adds points to your leaderboard total."
     ],
     "telegram": "https://t.me/airdrops_io",
     "isLive": true,
     "website": "https://yakkamon.com",
     "x": "https://x.com/yakkamon_game",
-    "id": 58,
+    "id": 69,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
     "slug": "sweep-finance",
     "name": "Sweep Finance",
     "symbol": "SWEEP",
-    "chain": "Bsc",
+    "chain": "BNB Chain",
     "event": "Airdrop",
     "status": "Confirmed",
     "description": "Looking for the confirmed Sweep airdrop? Follow our step-by-step guide to qualify for the ongoing airdrop before it ends.",
@@ -3624,7 +5727,7 @@ export const generatedProjects: Project[] = [
     "difficulty": "Easy",
     "costToFarm": "Free",
     "actions": [
-      "Step 1: Sign Up on the Sweep Airdrop Page Visit the [Sweep airdrop page](/visit/r0b3/?k=8c5c63f485) and create an account using Google, X, email, or a connected wallet. Registration is free and takes under a minute.",
+      "Step 1: Sign Up on the Sweep Airdrop Page Visit the [Sweep airdrop page](/visit/r0b3/?k=624dd40df5) and create an account using Google, X, email, or a connected wallet. Registration is free and takes under a minute.",
       "Step 2: Verify Your Account Complete email, and KYC verification from your dashboard. Each verification level awards XP on its own, and a verified account keeps you eligible for the final distribution.",
       "Step 3: Complete the Social Media Tasks Work through the social tasks in the campaign dashboard, such as following Sweep’s official channels. Finished tasks credit XP automatically, though some rewards take a short while to appear.",
       "Step 4: Play Sweepbird Every Day Open Sweepbird and play at least one round daily. A single game keeps your streak alive, and streak milestones unlock Bird Tier badges that add XP to your account permanently. You can also earn additional XP by finishing in the Top 100 of the Sweepbird leaderboard, which refreshes daily.",
@@ -3636,14 +5739,14 @@ export const generatedProjects: Project[] = [
     "isLive": true,
     "website": "https://sweep.finance",
     "x": "https://x.com/sweepglobal",
-    "id": 59,
+    "id": 70,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
     "slug": "wager-predict",
     "name": "Wager Predict",
     "symbol": "WP",
-    "chain": "Bsc",
+    "chain": "BNB Chain",
     "event": "Airdrop",
     "status": "Confirmed",
     "description": "Looking for the confirmed Wager Predict airdrop? Follow our step-by-step guide to qualify for the ongoing airdrop before it ends.",
@@ -3654,7 +5757,7 @@ export const generatedProjects: Project[] = [
     "difficulty": "Easy",
     "costToFarm": "Free",
     "actions": [
-      "Step 1: Connect Your Wallet to the Wager Predict Testnet Visit the [Wager Predict app](/visit/ata3/?k=22d57c3adc) and connect MetaMask or any WalletConnect wallet. Grab free tBNB for gas by clicking the faucet button.",
+      "Step 1: Connect Your Wallet to the Wager Predict Testnet Visit the [Wager Predict app](/visit/ata3/?k=ea677f5c90) and connect MetaMask or any WalletConnect wallet. Grab free tBNB for gas by clicking the faucet button.",
       "Step 2: Claim 10,000 Testnet USDC Open the in-app faucet and claim. The claim sends 10,000 test USDC straight to your wallet.",
       "Step 3: Approve USDC and Place Your First Trade Pick a live market, choose YES or NO, and enter an amount. Your first trade needs a one-time approval transaction before the buy confirms. Fees are 2% per trade, and selling works like buying, so you can exit any position up to one hour before expiry.",
       "Step 4: Trade Across Markets and Test Leverage Spread bets across categories rather than parking everything in one market. Then try a leveraged position; 5x and 10x tiers unlock on higher-volume markets. Liquidations use a 30-minute average of the odds rather than spot, so one erratic trade will not instantly close you out.",
@@ -3666,74 +5769,8 @@ export const generatedProjects: Project[] = [
     "isLive": true,
     "website": "https://wagerpredict.com",
     "x": "https://x.com/Wager_Predict",
-    "id": 60,
-    "firstSeenAt": "2026-09-19T00:00:44.749Z"
-  },
-  {
-    "slug": "allox",
-    "name": "AlloX",
-    "symbol": "ALLOX",
-    "chain": "Base,Bsc",
-    "event": "Airdrop",
-    "status": "Confirmed",
-    "description": "Looking for the confirmed AlloX airdrop? Follow our step-by-step guide to qualify for the ongoing airdrop before it ends.",
-    "logo": "https://airdrops.io/wp-content/uploads/2026/07/AlloX-logo.jpg.webp",
-    "source": "Airdrops.io",
-    "sourceUrl": "https://airdrops.io/allox/",
-    "claimUrl": "https://app.allox.ai",
-    "difficulty": "Easy",
-    "costToFarm": "Low",
-    "actions": [
-      "Step 1: Connect Your Wallet to AlloX Go to the [AlloX app](/visit/3ra3/?k=34a84d5ddd) and click “Connect Wallet”. MetaMask, Coinbase Wallet, and most major wallets work. Connecting earns you your one-time 5,000 point welcome bonus.",
-      "Step 2: Fund Your Wallet on BNB Chain Portfolios execute on BNB Chain, so you need BNB for gas plus capital to invest.",
-      "Step 3: Create Your First AI Portfolio Pick a narrative, choose a risk tier, and set your investment amount. The AI generates the basket, you review it, and you execute it on-chain. Each portfolio you create earns 250 points, and you can edit the basket through the chat before executing.",
-      "Step 4: Claim the Daily Bonus Log in every day and claim the 500 point daily bonus from the Earning Opportunities dashboard. Streaks are the cheapest points on the platform, so set a reminder.",
-      "Step 5: Complete the Social Tasks Finish the X based social tasks in your dashboard for another 500 points. These are one time tasks and take a few minutes.",
-      "Step 6: Join the Prove Your Portfolio Campaign Build one on-chain portfolio per day and share your portfolio card on X. This earns guaranteed Gem rewards from the $100,000 pool and stacks with the points you already earn per portfolio.",
-      "Step 7: Activate Your Referral Link Open the Referrals tab and click “Activate”. Referrals pay dollar rewards on top of points, and your network’s trading counts toward your Gems."
-    ],
-    "telegram": "https://t.me/alloxai",
-    "isLive": true,
-    "website": "https://allox.ai",
-    "x": "https://x.com/alloxdotai",
-    "id": 61,
-    "firstSeenAt": "2026-09-19T00:00:44.749Z"
-  },
-  {
-    "slug": "push-chain",
-    "name": "Push Chain",
-    "symbol": "PC",
-    "chain": "OwnChain",
-    "event": "Airdrop",
-    "status": "Confirmed",
-    "description": "Looking for the confirmed Push Chain airdrop? Follow our step-by-step guide to qualify for the ongoing airdrop before it ends.",
-    "logo": "https://airdrops.io/wp-content/uploads/2026/07/Push-Chain-logo.jpg.webp",
-    "source": "Airdrops.io",
-    "sourceUrl": "https://airdrops.io/push-chain/",
-    "claimUrl": "https://portal.push.org",
-    "difficulty": "Easy",
-    "costToFarm": "Free",
-    "requirements": [
-      "Twitter / X",
-      "Email"
-    ],
-    "actions": [
-      "Step 1: Visit the Push Portal Go to the [Push Portal rewards page](/visit/dra3/?k=db6de202c4) and log in with a wallet or a social account. If you farmed Season 1 or 2, use the same wallet so your earlier points carry over.",
-      "Step 2: Verify your social accounts Follow [PushChain on X](https://x.com/PushChain) and join the [Push Chain Discord](/visit/era3/?k=3d10f85d19), then complete verification inside the portal. This unlocks the quest board and referral link.",
-      "Step 3: Claim testnet PC from the faucet Click the wallet icon inside the portal to open the faucet and claim 1 free PC token. The faucet resets every 6 hours, so grab it a few times a day to keep enough gas for the onchain quests.",
-      "Step 4: Complete the universal app challenges Work through the quests attached to each app in the weekly rotation: play, or predict, depending on the app. These challenges are the main XP source in Season 3.",
-      "Step 5: Check in daily Hit the daily check-in whenever you open the portal. Streaks stack a bonus on top of the base reward, and a missed day resets it.",
-      "Step 6: Use the daily spin The Spin 2 Win wheel pays out Rare Passes, testnet $PC, and other rewards once per day. It takes a few seconds and is one of the few pass sources outside of leveling.",
-      "Step 7: Collect Rare Passes Stack as many Rare Passes as you can through level ups and spins. All passes get burned at TGE for a shot at a Shiny Pass, and the bigger your stash, the better your odds.",
-      "Step 8: Invite friends Share your referral link from the portal. You earn 16% of the points your invites generate and another 8% from the people they invite. Extra invite slots unlock as your referrals reach level 7, so help your invites stay active.",
-      "Step 9: Climb the leaderboard Leaderboards are live and track actual network usage. A higher rank heading into TGE positions you for a larger share of the season allocation."
-    ],
-    "telegram": "https://t.me/epnsproject",
-    "isLive": true,
-    "website": "https://push.org",
-    "x": "https://x.com/PushChain",
-    "id": 62,
-    "firstSeenAt": "2026-09-19T00:00:44.749Z"
+    "id": 71,
+    "firstSeenAt": "2026-09-23T16:00:37.049Z"
   },
   {
     "slug": "touch-grass",
@@ -3750,10 +5787,10 @@ export const generatedProjects: Project[] = [
     "website": "https://www.touchgrass.family",
     "x": "https://x.com/TouchGrassRWA",
     "actions": [
-      "Create your account and get ready to catch Go to the [Touch Grass app](https://www.touchgrass.family/app), sign in with Google or , and enable location. → Touch Grass creates a Robinhood Chain wallet for your account, and the map shows nearby live U.S. Stock Token drops. → Set up your profile with a name, handle, picture and bio, or keep it private if you prefer.  Before your first catch, you need a few dollars worth of $GRASS in the app wallet for the refundable caution. Touch Grass does not publish a fixed token amount for this requirement. The caution is locked, not spent, and is returned after one week.   New to Robinhood Chain? Read our [Robinhood Chain guide](https://airdropalert.com/airdrops/robinhood-chain/) to learn how to bridge assets, fund your wallet, and move funds onto the network.",
-      "Find U.S. Stock Token drops and collect your rewards Pick any live U.S. Stock Token drop on the map, go to the location, and tap Catch once the app confirms you are within range. → Complete any location or photo check shown in the app, then collect the U.S. Stock Token after a successful catch. Your first fragment can initially appear as ripening and is released after you return for another qualifying catch at least a day later. → Keep hunting eligible U.S. Stock Token drops, bring a qualifying friend for a Duo catch with a 50% larger combined payout , or film an eligible catch through Tape for a 3x total reward .  Legendary hunts put one full Stock Token at an announced location for one eligible winner. The reward, location, and countdown appear in the Legendary section, and your app wallet must hold at least 5,000 $GRASS for 24 hours before you can claim. The tokens stay in your wallet and are not spent."
+      "Create your account and get ready to catch Go to the [Touch Grass app](https://www.touchgrass.family/app), sign in with Google or , and enable location. в†’ Touch Grass creates a Robinhood Chain wallet for your account, and the map shows nearby live U.S. Stock Token drops. в†’ Set up your profile with a name, handle, picture and bio, or keep it private if you prefer.  Before your first catch, you need a few dollars worth of $GRASS in the app wallet for the refundable caution. Touch Grass does not publish a fixed token amount for this requirement. The caution is locked, not spent, and is returned after one week.   New to Robinhood Chain? Read our [Robinhood Chain guide](https://airdropalert.com/airdrops/robinhood-chain/) to learn how to bridge assets, fund your wallet, and move funds onto the network.",
+      "Find U.S. Stock Token drops and collect your rewards Pick any live U.S. Stock Token drop on the map, go to the location, and tap Catch once the app confirms you are within range. в†’ Complete any location or photo check shown in the app, then collect the U.S. Stock Token after a successful catch. Your first fragment can initially appear as ripening and is released after you return for another qualifying catch at least a day later. в†’ Keep hunting eligible U.S. Stock Token drops, bring a qualifying friend for a Duo catch with a 50% larger combined payout , or film an eligible catch through Tape for a 3x total reward .  Legendary hunts put one full Stock Token at an announced location for one eligible winner. The reward, location, and countdown appear in the Legendary section, and your app wallet must hold at least 5,000 $GRASS for 24 hours before you can claim. The tokens stay in your wallet and are not spent."
     ],
-    "id": 63,
+    "id": 72,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3772,13 +5809,13 @@ export const generatedProjects: Project[] = [
     "telegram": "https://t.me/BybitEnglish",
     "x": "https://twitter.com/Bybit_Official",
     "actions": [
-      "Register and verify your account Create your [Bybit](https://partner.bybit.com/b/airdropaa) account and complete Identity Verification. → New users can earn up to 100 USDT in Welcome Gifts through the Rewards Hub by completing onboarding tasks such as Identity Verification, depositing at least 100 USDT, and placing qualifying trades, while a separate 1,025 USDT Referral Task rewards users for inviting friends who complete the required deposit and trading activity.  If you prefer completing KYC without sharing traditional documents, you can use the [Palau Digital ID e-Residency](https://airdropalert.com/blogs/kyc-crypto-palau-id/), an alternative identity supported by several crypto platforms.  If you're based in Europe , register on [Bybit EU](https://partner.bybit.eu/b/aaeu) for EUregulated trading services, complete identity verification. New users earn a 30 BTC Welcome Gift through the Rewards Hub after topping up 100 or the equivalent, and 25 worth of BTC for each invited friend who tops up at least 100 within 7 days of signing up.",
-      "Complete the xStocks Puzzle Hunt Join the [xStocks Puzzle Hunt](https://announcements.bybit.com/en/article/join-xstocks-xstocks-puzzle-hunt-and-win-a-share-of-100-000-usdt--artcb885d5388dd/?ref=RLV7P) and collect puzzle pieces through Bybit activities to unlock NIGHT and USDT rewards. → Earn pieces through daily check-ins, deposits, Spot trading, referrals, Convert, Alpha, TradeGPT, and social missions. Duplicate pieces can also be gifted to friends. → Complete three connected pieces to unlock a NIGHT lucky draw with a stated 100% win rate , while completing the full puzzle can qualify for a 60 USDT grand prize .  Puzzle pieces are assigned randomly. End date: September 30, 2026 at 12:00 PM UTC",
-      "Trade XAUT and Share 20 XAUT, Worth ~$88,000 Join the [XAUT Token Splash](https://announcements.bybit.com/en/article/xaut-token-splash-grab-a-share-of-the-20-xaut-prize-pool--arte4d31f9f0aa7/?ref=RLV7P) and trade XAUT on Spot to earn a proportional share of the 20 XAUT prize pool, worth roughly $88,000 at current prices. → Reach at least 500 USDT in XAUT Spot trading volume during the campaign to qualify. → Higher eligible trading volume earns a larger proportional share, with rewards capped at 0.10 XAUT per participant , worth roughly $440 at current prices.  Each [XAUT](https://airdropalert.com/blogs/guide-tether-gold-xaut/) represents ownership of one fine troy ounce of physical gold. End date: September 19, 2026 at 11:00 AM UTC",
-      "Trade Apple Perpetuals in Stock Buzz Join [Stock Buzz Apple](https://announcements.bybit.com/en/article/stock-buzz-trade-apple-to-earn-a-share-of-100-000--art105d4f6bfacb/?ref=RLV7P) and trade AAPLUSDT perpetuals to compete for a prize pool that can grow to $100,000. → Accumulate at least $5,000 in AAPLUSDT trading volume during the campaign to qualify for the leaderboard. → The top 200 traders share the unlocked prize pool, with first place earning up to $10,000.  The final prize pool grows with total community trading volume. End date: September 22, 2026 at 10:00 AM UTC",
-      "MENA only: Join the Monthly Draw If you're based in an eligible MENA country, register for the [MENA Monthly Draw](https://announcements.bybit.com/en/article/mena-monthly-draw-deposit-trade-to-share-1-btc-this-september--art48429b05fe47/?ref=RLV7P) and complete deposit or trading tasks to collect lucky draw entries. → New users can earn a 5 USDT bonus from eligible deposit tasks, while trading activity and higher VIP volume unlock more entries. → Rewards include BTC, SOL, PUMP, XRP, XAUT, NVDAX, SPCX , and trading bonuses worth up to 100 USDT , with the total campaign prize pool worth 1 BTC .  This campaign is only for eligible MENA participants. End date: October 5, 2026"
+      "Register and verify your account Create your [Bybit](https://partner.bybit.com/b/airdropaa) account and complete Identity Verification. в†’ New users can earn up to 100 USDT in Welcome Gifts through the Rewards Hub by completing onboarding tasks such as Identity Verification, depositing at least 100 USDT, and placing qualifying trades, while a separate 1,025 USDT Referral Task rewards users for inviting friends who complete the required deposit and trading activity.  If you prefer completing KYC without sharing traditional documents, you can use the [Palau Digital ID e-Residency](https://airdropalert.com/blogs/kyc-crypto-palau-id/), an alternative identity supported by several crypto platforms.  If you're based in Europe , register on [Bybit EU](https://partner.bybit.eu/b/aaeu) for EUregulated trading services, complete identity verification. New users earn a 30 BTC Welcome Gift through the Rewards Hub after topping up 100 or the equivalent, and 25 worth of BTC for each invited friend who tops up at least 100 within 7 days of signing up.",
+      "Complete the xStocks Puzzle Hunt Join the [xStocks Puzzle Hunt](https://announcements.bybit.com/en/article/join-xstocks-xstocks-puzzle-hunt-and-win-a-share-of-100-000-usdt--artcb885d5388dd/?ref=RLV7P) and collect puzzle pieces through Bybit activities to unlock NIGHT and USDT rewards. в†’ Earn pieces through daily check-ins, deposits, Spot trading, referrals, Convert, Alpha, TradeGPT, and social missions. Duplicate pieces can also be gifted to friends. в†’ Complete three connected pieces to unlock a NIGHT lucky draw with a stated 100% win rate , while completing the full puzzle can qualify for a 60 USDT grand prize .  Puzzle pieces are assigned randomly. End date: September 30, 2026 at 12:00 PM UTC",
+      "Trade XAUT and Share 20 XAUT, Worth ~$88,000 Join the [XAUT Token Splash](https://announcements.bybit.com/en/article/xaut-token-splash-grab-a-share-of-the-20-xaut-prize-pool--arte4d31f9f0aa7/?ref=RLV7P) and trade XAUT on Spot to earn a proportional share of the 20 XAUT prize pool, worth roughly $88,000 at current prices. в†’ Reach at least 500 USDT in XAUT Spot trading volume during the campaign to qualify. в†’ Higher eligible trading volume earns a larger proportional share, with rewards capped at 0.10 XAUT per participant , worth roughly $440 at current prices.  Each [XAUT](https://airdropalert.com/blogs/guide-tether-gold-xaut/) represents ownership of one fine troy ounce of physical gold. End date: September 19, 2026 at 11:00 AM UTC",
+      "Trade Apple Perpetuals in Stock Buzz Join [Stock Buzz Apple](https://announcements.bybit.com/en/article/stock-buzz-trade-apple-to-earn-a-share-of-100-000--art105d4f6bfacb/?ref=RLV7P) and trade AAPLUSDT perpetuals to compete for a prize pool that can grow to $100,000. в†’ Accumulate at least $5,000 in AAPLUSDT trading volume during the campaign to qualify for the leaderboard. в†’ The top 200 traders share the unlocked prize pool, with first place earning up to $10,000.  The final prize pool grows with total community trading volume. End date: September 22, 2026 at 10:00 AM UTC",
+      "MENA only: Join the Monthly Draw If you're based in an eligible MENA country, register for the [MENA Monthly Draw](https://announcements.bybit.com/en/article/mena-monthly-draw-deposit-trade-to-share-1-btc-this-september--art48429b05fe47/?ref=RLV7P) and complete deposit or trading tasks to collect lucky draw entries. в†’ New users can earn a 5 USDT bonus from eligible deposit tasks, while trading activity and higher VIP volume unlock more entries. в†’ Rewards include BTC, SOL, PUMP, XRP, XAUT, NVDAX, SPCX , and trading bonuses worth up to 100 USDT , with the total campaign prize pool worth 1 BTC .  This campaign is only for eligible MENA participants. End date: October 5, 2026"
     ],
-    "id": 64,
+    "id": 73,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3796,11 +5833,11 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/fomofamily",
     "x": "https://x.com/fomo",
     "actions": [
-      "Create and Fund Your Fomo Account   Head to the [Fomo web app](https://fomo.family/r/FairSaltySquid) and create your account in seconds. → Use our referral link to get 10% off your trading fees. → Click Login and continue with Apple or Google . → Deposit $[USDC](https://airdropalert.com/currencies/usd-coin/) from your EVM crypto wallet. →  Once your account is funded, you can trade across many networks including Ethereum, Solana, Base, BNB Chain, Monad, and Robinhood Chain, from one unified balance. This means you do not need to bridge funds to catch an opportunity on another chain.  Need crypto? Check our [top exchanges list](https://airdropalert.com/exchanges/) and pick what fits you. We recommend [Bybit](https://partner.bybit.com/b/airdropaa) as a standout choice for its all-in-one setup spanning crypto, stocks, and commodities, while [Bybit EU](https://www.bybit.eu/en-EU/exclusive-user-campaign/?campaign_id=59372&affiliate_id=14557) is the MiCA-regulated branch for EU / EEA users. If you prefer no mandatory KYC, [BloFin](https://partner.blofin.com/d/airdrops) and [Bitunix](https://www.bitunix.com/register?vipCode=airdropalert) stand out. For a deeper look, read our honest [Exchange Reviews](https://airdropalert.com/blogs/tag/exchange-review/).",
-      "Explore the Trading App   The app has different market tabs for different trading styles. → Browse Crypto , Trending , Most held , Graduated , or Bonding lists → Open a token page to check the chart, holders, swaps, liquidity, volume, and theses. → Follow traders you want to track. → Set alerts for tokens or traders. → Trade from your Fomo balance when you find something interesting.  Note: Newly graduated and bonding tokens are highly volatile. These tokens can be launched by anyone, including bad actors. Bonding tokens may never graduate. Use caution and do your own research before trading.  For a sharper edge, read our [Trading Fundamentals](https://airdropalert.com/blogs/tag/trading-fundamentals/) series and [Mental Trading](https://airdropalert.com/blogs/mental-side-of-trading/) article to improve discipline, decision making and long-term consistency across every market cycle.",
-      "Invite Friends and Earn Fees   Share your referral link and earn 25% of your friends' fees → Open the referral section in the app. → Copy your personal referral link. → Invite friends to trade on Fomo. → Earn 25% of their trading fees when they trade.  Fomo plans to expand beyond spot crypto trading into perps, pre-IPO assets, equities, indices, and commodities. More products could mean more referral earnings upside."
+      "Create and Fund Your Fomo Account   Head to the [Fomo web app](https://fomo.family/r/FairSaltySquid) and create your account in seconds. в†’ Use our referral link to get 10% off your trading fees. в†’ Click Login and continue with Apple or Google . в†’ Deposit $[USDC](https://airdropalert.com/currencies/usd-coin/) from your EVM crypto wallet. в†’  Once your account is funded, you can trade across many networks including Ethereum, Solana, Base, BNB Chain, Monad, and Robinhood Chain, from one unified balance. This means you do not need to bridge funds to catch an opportunity on another chain.  Need crypto? Check our [top exchanges list](https://airdropalert.com/exchanges/) and pick what fits you. We recommend [Bybit](https://partner.bybit.com/b/airdropaa) as a standout choice for its all-in-one setup spanning crypto, stocks, and commodities, while [Bybit EU](https://www.bybit.eu/en-EU/exclusive-user-campaign/?campaign_id=59372&affiliate_id=14557) is the MiCA-regulated branch for EU / EEA users. If you prefer no mandatory KYC, [BloFin](https://partner.blofin.com/d/airdrops) and [Bitunix](https://www.bitunix.com/register?vipCode=airdropalert) stand out. For a deeper look, read our honest [Exchange Reviews](https://airdropalert.com/blogs/tag/exchange-review/).",
+      "Explore the Trading App   The app has different market tabs for different trading styles. в†’ Browse Crypto , Trending , Most held , Graduated , or Bonding lists в†’ Open a token page to check the chart, holders, swaps, liquidity, volume, and theses. в†’ Follow traders you want to track. в†’ Set alerts for tokens or traders. в†’ Trade from your Fomo balance when you find something interesting.  Note: Newly graduated and bonding tokens are highly volatile. These tokens can be launched by anyone, including bad actors. Bonding tokens may never graduate. Use caution and do your own research before trading.  For a sharper edge, read our [Trading Fundamentals](https://airdropalert.com/blogs/tag/trading-fundamentals/) series and [Mental Trading](https://airdropalert.com/blogs/mental-side-of-trading/) article to improve discipline, decision making and long-term consistency across every market cycle.",
+      "Invite Friends and Earn Fees   Share your referral link and earn 25% of your friends' fees в†’ Open the referral section in the app. в†’ Copy your personal referral link. в†’ Invite friends to trade on Fomo. в†’ Earn 25% of their trading fees when they trade.  Fomo plans to expand beyond spot crypto trading into perps, pre-IPO assets, equities, indices, and commodities. More products could mean more referral earnings upside."
     ],
-    "id": 65,
+    "id": 74,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3819,9 +5856,9 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/alignedlayer",
     "x": "https://x.com/alignedlayer",
     "actions": [
-      "Check Your $ALIGN Airdrop Eligibility Go to the official [Aligned community portal](https://community.alignedlayer.com/?utm_source=AirdropListing&utm_medium=Airdropalert&utm_campaign=July-August): → Connect the wallet you used for eligible activity → Check your Genesis Drop or ZK Arcade eligibility → Review your allocation if eligible → Claim only through the official portal if the claim is available  Eligibility and claim status appear after you connect your wallet. If you used multiple wallets across Aligned, ZK Arcade, quests, or eligible ecosystem activity, check them separately."
+      "Check Your $ALIGN Airdrop Eligibility Go to the official [Aligned community portal](https://community.alignedlayer.com/?utm_source=AirdropListing&utm_medium=Airdropalert&utm_campaign=July-August): в†’ Connect the wallet you used for eligible activity в†’ Check your Genesis Drop or ZK Arcade eligibility в†’ Review your allocation if eligible в†’ Claim only through the official portal if the claim is available  Eligibility and claim status appear after you connect your wallet. If you used multiple wallets across Aligned, ZK Arcade, quests, or eligible ecosystem activity, check them separately."
     ],
-    "id": 66,
+    "id": 75,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3838,11 +5875,11 @@ export const generatedProjects: Project[] = [
     "claimUrl": "https://ecash.com",
     "website": "https://ecash.com",
     "actions": [
-      "Hold BTC in self-custody Keep your $[BTC](https://airdropalert.com/currencies/bitcoin/) in a wallet where you control the private keys ahead of the hard fork. → The rollout has three stages: Alpha on August 23, 2026 at block 963,648, Beta on September 20 at block 967,680, and the full launch on October 31 at block 973,728. → No registration, deposit, or claim task is required. Nearly every BTC holder is credited with an equal amount of ECX.  After the relevant launch block has passed, move your $BTC to a new address for safety, but keep access to the old private key because that is what you will use to access the corresponding ECX.  Extra Resource: Want the full breakdown of the fork, launch stages, replay protection, and claim safety? Read our [ECX Airdrop and Bitcoin Hard Fork guide](https://airdropalert.com/blogs/ecx-airdrop-bitcoin-hard-fork/).",
-      "Claim ECX safely Use the official [eCash wallet](https://ecash.com) software to split your coins after the snapshot. → The wallet handles coin splitting and lets you apply replay protection. → Replay protection is opt-in, so if you move BTC before properly splitting the coins, the same transaction can also be replayed on the ECX chain and your ECX may move with it.   Watch out for phishing sites offering fake ECX claims. Never enter your seed phrase or connect your wallet to these sites; use only the official ECX wallet software.",
-      "eCash Mining If you want to mine eCash from day one, [download the BitWindow test software](https://layertwolabs.com/download) and get familiar with the setup. → Prepare suitable mining hardware, as eCash will use SHA-256d, the same proof-of-work algorithm as Bitcoin. → The network is expected to launch with a difficulty reset that should make early blocks easier to mine before difficulty adjusts.  Watch the [BIP300 whiteboard video](https://youtu.be/JwIoTaJQNi0?list=PLw8-6ARlyVciMH79ZyLOpImsMug3LgNc4) for a visual explanation of how Drivechains connect Bitcoin L1 with sidechains."
+      "Hold BTC in self-custody Keep your $[BTC](https://airdropalert.com/currencies/bitcoin/) in a wallet where you control the private keys ahead of the hard fork. в†’ The rollout has three stages: Alpha on August 23, 2026 at block 963,648, Beta on September 20 at block 967,680, and the full launch on October 31 at block 973,728. в†’ No registration, deposit, or claim task is required. Nearly every BTC holder is credited with an equal amount of ECX.  After the relevant launch block has passed, move your $BTC to a new address for safety, but keep access to the old private key because that is what you will use to access the corresponding ECX.  Extra Resource: Want the full breakdown of the fork, launch stages, replay protection, and claim safety? Read our [ECX Airdrop and Bitcoin Hard Fork guide](https://airdropalert.com/blogs/ecx-airdrop-bitcoin-hard-fork/).",
+      "Claim ECX safely Use the official [eCash wallet](https://ecash.com) software to split your coins after the snapshot. в†’ The wallet handles coin splitting and lets you apply replay protection. в†’ Replay protection is opt-in, so if you move BTC before properly splitting the coins, the same transaction can also be replayed on the ECX chain and your ECX may move with it.   Watch out for phishing sites offering fake ECX claims. Never enter your seed phrase or connect your wallet to these sites; use only the official ECX wallet software.",
+      "eCash Mining If you want to mine eCash from day one, [download the BitWindow test software](https://layertwolabs.com/download) and get familiar with the setup. в†’ Prepare suitable mining hardware, as eCash will use SHA-256d, the same proof-of-work algorithm as Bitcoin. в†’ The network is expected to launch with a difficulty reset that should make early blocks easier to mine before difficulty adjusts.  Watch the [BIP300 whiteboard video](https://youtu.be/JwIoTaJQNi0?list=PLw8-6ARlyVciMH79ZyLOpImsMug3LgNc4) for a visual explanation of how Drivechains connect Bitcoin L1 with sidechains."
     ],
-    "id": 67,
+    "id": 76,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3860,11 +5897,11 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/Ew6u8utWW7",
     "x": "https://x.com/BitunixOfficial",
     "actions": [
-      "Create or log in to your Bitunix account → Head to the [Bitunix x AirdropAlert](https://www.bitunix.com/register?vipCode=jcMy1864) registration page → Sign up with email, phone number, Google, or Apple → Go to your profile and secure the account with 2FA  KYC is not compulsory to create an account and start trading, but it may be required for rewards or higher account limits. Users who prefer KYC without traditional documents can explore [Palau Digital ID e-Residency](https://airdropalert.com/blogs/kyc-crypto-palau-id/), an alternative supported by several crypto platforms.  Watch the [Bitunix KYC video guide](https://www.youtube.com/watch?v=2JvBmmCneXc) for a quick walkthrough",
-      "Claim new-user rewards worth up to 10,000 USDT  → Go to the Promotions section and enter the Task Center → Complete the available deposit and first-trade tasks → Claim Mystery Boxes and other available rewards  Deposit at least 50 USDT to unlock a Mystery Box worth up to 100 USDT, then make a first spot or futures trade to unlock another Mystery Box worth up to 50 USDT.",
-      "Trade to earn up to 1,000 USDT in Futures Bonuses Go to the Promotions section and check Token Splash, Campaign Center, Task Center, and VIP Program for active and upcoming reward campaigns → Trade spot or futures during the campaign period → Reach 20,000 USDT in volume to qualify for the first 5 USDT → Reach 10,000,000 USDT in volume to earn up to 1,000 USDT  Higher volume unlocks higher Futures Bonuses.  Watch the [Bitunix platform walkthrough](https://www.youtube.com/watch?v=PsCW8bhnt8o) for a quick overview  For a sharper edge, read our [Trading Fundamentals](https://airdropalert.com/blogs/tag/trading-fundamentals/) series and [Mental Trading](https://airdropalert.com/blogs/mental-side-of-trading/) article to improve discipline, decision making and long-term consistency across every market cycle."
+      "Create or log in to your Bitunix account в†’ Head to the [Bitunix x AirdropAlert](https://www.bitunix.com/register?vipCode=jcMy1864) registration page в†’ Sign up with email, phone number, Google, or Apple в†’ Go to your profile and secure the account with 2FA  KYC is not compulsory to create an account and start trading, but it may be required for rewards or higher account limits. Users who prefer KYC without traditional documents can explore [Palau Digital ID e-Residency](https://airdropalert.com/blogs/kyc-crypto-palau-id/), an alternative supported by several crypto platforms.  Watch the [Bitunix KYC video guide](https://www.youtube.com/watch?v=2JvBmmCneXc) for a quick walkthrough",
+      "Claim new-user rewards worth up to 10,000 USDT  в†’ Go to the Promotions section and enter the Task Center в†’ Complete the available deposit and first-trade tasks в†’ Claim Mystery Boxes and other available rewards  Deposit at least 50 USDT to unlock a Mystery Box worth up to 100 USDT, then make a first spot or futures trade to unlock another Mystery Box worth up to 50 USDT.",
+      "Trade to earn up to 1,000 USDT in Futures Bonuses Go to the Promotions section and check Token Splash, Campaign Center, Task Center, and VIP Program for active and upcoming reward campaigns в†’ Trade spot or futures during the campaign period в†’ Reach 20,000 USDT in volume to qualify for the first 5 USDT в†’ Reach 10,000,000 USDT in volume to earn up to 1,000 USDT  Higher volume unlocks higher Futures Bonuses.  Watch the [Bitunix platform walkthrough](https://www.youtube.com/watch?v=PsCW8bhnt8o) for a quick overview  For a sharper edge, read our [Trading Fundamentals](https://airdropalert.com/blogs/tag/trading-fundamentals/) series and [Mental Trading](https://airdropalert.com/blogs/mental-side-of-trading/) article to improve discipline, decision making and long-term consistency across every market cycle."
     ],
-    "id": 68,
+    "id": 77,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3883,12 +5920,12 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.com/invite/qaQa6M6mN2",
     "x": "https://x.com/bonk_inu",
     "actions": [
-      "Create your BONKplay account Visit the official [BONKplay](https://BONKplay.com) website. → Sign up with Google, email, Phantom, or another wallet. → Complete your profile, verify your email, and choose your username.  BONKplay is a BONK-branded crypto casino by Betmode x BONK. You must be 18+ and allowed to use it in your region.",
-      "Check promotions, missions, and rewards → Open the Promotions, Missions, Leaderboard, Rakeback, and VIP Club sections. → Review the welcome bonus, BONK points, cash prizes, and free spin rewards. → Read the rules before claiming any bonus or joining a campaign.  Promotions can include wagering requirements, expiry dates, and eligibility restrictions.",
-      "Deposit and play → Deposit supported crypto from your account. → Play eligible games, complete missions, and collect rewards.  Casino gameplay involves risk. Only deposit what you can afford to lose.",
-      "Track campaigns and leaderboards → Check the leaderboard for cash prize and free spin competitions.  Leaderboard rewards depend on campaign rules, wagering volume, and eligibility."
+      "Create your BONKplay account Visit the official [BONKplay](https://BONKplay.com) website. в†’ Sign up with Google, email, Phantom, or another wallet. в†’ Complete your profile, verify your email, and choose your username.  BONKplay is a BONK-branded crypto casino by Betmode x BONK. You must be 18+ and allowed to use it in your region.",
+      "Check promotions, missions, and rewards в†’ Open the Promotions, Missions, Leaderboard, Rakeback, and VIP Club sections. в†’ Review the welcome bonus, BONK points, cash prizes, and free spin rewards. в†’ Read the rules before claiming any bonus or joining a campaign.  Promotions can include wagering requirements, expiry dates, and eligibility restrictions.",
+      "Deposit and play в†’ Deposit supported crypto from your account. в†’ Play eligible games, complete missions, and collect rewards.  Casino gameplay involves risk. Only deposit what you can afford to lose.",
+      "Track campaigns and leaderboards в†’ Check the leaderboard for cash prize and free spin competitions.  Leaderboard rewards depend on campaign rules, wagering volume, and eligibility."
     ],
-    "id": 69,
+    "id": 78,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3905,10 +5942,10 @@ export const generatedProjects: Project[] = [
     "website": "https://agg.market/",
     "x": "https://x.com/Agg_Market",
     "actions": [
-      "Log in → Go to [Agg Market's World Cup Extra Time campaign portal](https://worldcup.agg.market/loyalty?referral_code=LN9WHLM3) and sign in with your [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) (MetaMask, Rabby, Phantom, or 740+ supported), email, or phone number.  Follow [@Agg_Market](https://x.com/Agg_Market) on  and complete quests to earn XP  Refer friends and earn 20% of the points they earn, while they get 200 points  Mint a free [Extra Time SBT](https://worldcup.agg.market/extratime) by winning an allow list spot or joining a blue chip community for a 2x multiplier on all contributions  The campaign runs through the World Cup and ends July 19",
-      "Connect to the App and Trade → Go to [Agg Market](https://agg.market/), sign in with your [EVM wallet](https://airdropalert.com/crypto-resources/crypto-wallets) or a social account (Google, Apple, , or email) — social logins create a non-custodial wallet automatically, no seed phrases needed.  Click Deposit, select your network — Ethereum, Base, Polygon, Arbitrum, BNB Chain, Hyperliquid, or Solana — and send [USDC](https://airdropalert.com/currencies/usd-coin/) or [USDT](https://airdropalert.com/currencies/tether/) to your deposit address  Browse markets by category or switch to Matched view to see aggregated liquidity across all venues for the same event  Select a market and place your position — the routing engine checks all venues in real time and fills your order at the best available odds  Every deposit, trade, and winning position earns XP toward campaign rewards — the more active you are, the more raffles you enter."
+      "Log in в†’ Go to [Agg Market's World Cup Extra Time campaign portal](https://worldcup.agg.market/loyalty?referral_code=LN9WHLM3) and sign in with your [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) (MetaMask, Rabby, Phantom, or 740+ supported), email, or phone number.  Follow [@Agg_Market](https://x.com/Agg_Market) on  and complete quests to earn XP  Refer friends and earn 20% of the points they earn, while they get 200 points  Mint a free [Extra Time SBT](https://worldcup.agg.market/extratime) by winning an allow list spot or joining a blue chip community for a 2x multiplier on all contributions  The campaign runs through the World Cup and ends July 19",
+      "Connect to the App and Trade в†’ Go to [Agg Market](https://agg.market/), sign in with your [EVM wallet](https://airdropalert.com/crypto-resources/crypto-wallets) or a social account (Google, Apple, , or email) — social logins create a non-custodial wallet automatically, no seed phrases needed.  Click Deposit, select your network — Ethereum, Base, Polygon, Arbitrum, BNB Chain, Hyperliquid, or Solana — and send [USDC](https://airdropalert.com/currencies/usd-coin/) or [USDT](https://airdropalert.com/currencies/tether/) to your deposit address  Browse markets by category or switch to Matched view to see aggregated liquidity across all venues for the same event  Select a market and place your position — the routing engine checks all venues in real time and fills your order at the best available odds  Every deposit, trade, and winning position earns XP toward campaign rewards — the more active you are, the more raffles you enter."
     ],
-    "id": 70,
+    "id": 79,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3926,12 +5963,12 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/2FeH8KgB3w",
     "x": "https://x.com/okx",
     "actions": [
-      "Onboarding → Visit the exclusive [OKX Г— AirdropAlert hub](https://www.okx.com/campaigns/airdrop-alert-2026), create or log in to your OKX account, and complete the required verification if needed.",
-      "Explore Rewards → Browse the active promotions, trading campaigns, referral opportunities, giveaways, and special reward events available through the OKX campaign page.",
-      "Access Pre-IPO Futures → Search for [SPACEX](https://www.okx.com/trade-swap/spacex-usdt-swap)USDT, [OPENAI](https://www.okx.com/trade-swap/openai-usdt-swap)USDT, or [ANTHROPIC](http://www.okx.com/trade-swap/anthropic-usdt-swap)USDT on OKX and review the chart, mark price, funding rate, leverage settings, order book, and [risk details](https://www.okx.com/help/pre-ipo-perpetual-futures).  Choose your position size, manage leverage responsibly, and remember that Pre-IPO futures provide synthetic valuation exposure rather than direct ownership in private companies.",
-      "Explore the Wider OKX Ecosystem → Trade crypto, tokenized stocks, ETFs, commodities, perpetuals, and Options while using Trading Bots, Earn, Copy Trading, Jumpstart, and the Web3 Wallet to access broader market opportunities.  Pre-IPO futures are advanced trading products. Share count assumptions, IPO timing, liquidity conditions, volatility, and settlement mechanics may change during the Pre-IPO phase, so users should carefully review the OKX risk documentation before entering positions."
+      "Onboarding в†’ Visit the exclusive [OKX Г— AirdropAlert hub](https://www.okx.com/campaigns/airdrop-alert-2026), create or log in to your OKX account, and complete the required verification if needed.",
+      "Explore Rewards в†’ Browse the active promotions, trading campaigns, referral opportunities, giveaways, and special reward events available through the OKX campaign page.",
+      "Access Pre-IPO Futures в†’ Search for [SPACEX](https://www.okx.com/trade-swap/spacex-usdt-swap)USDT, [OPENAI](https://www.okx.com/trade-swap/openai-usdt-swap)USDT, or [ANTHROPIC](http://www.okx.com/trade-swap/anthropic-usdt-swap)USDT on OKX and review the chart, mark price, funding rate, leverage settings, order book, and [risk details](https://www.okx.com/help/pre-ipo-perpetual-futures).  Choose your position size, manage leverage responsibly, and remember that Pre-IPO futures provide synthetic valuation exposure rather than direct ownership in private companies.",
+      "Explore the Wider OKX Ecosystem в†’ Trade crypto, tokenized stocks, ETFs, commodities, perpetuals, and Options while using Trading Bots, Earn, Copy Trading, Jumpstart, and the Web3 Wallet to access broader market opportunities.  Pre-IPO futures are advanced trading products. Share count assumptions, IPO timing, liquidity conditions, volatility, and settlement mechanics may change during the Pre-IPO phase, so users should carefully review the OKX risk documentation before entering positions."
     ],
-    "id": 71,
+    "id": 80,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -3950,13 +5987,50 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/bUadTCYmbm",
     "x": "https://twitter.com/MEXC_Official",
     "actions": [
-      "Sign Up & Verify → Head to [MEXC](https://www.mexc.com/register?inviteCode=mexc-airdropaler), create your account, and complete KYC verification to unlock full access to trading, rewards, and platform features.  MEXC is well known as the go-to exchang for spotting early high-upside opportunities ",
-      "Claim Your Rewards  → Once registered, head to the Rewards Hub to claim your $20 USDT for free, then complete deposit and trading milestones to unlock up to $10,000 in bonuses.  Share your referral link and earn up to $60 USDT per referral.",
-      "Deposit & Explore the Platform → Fund your account and start exploring everything MEXC offers, including Crypto, Futures, U.S. stocks, commodities, and precious metals, along with Copy Trading, Alpha, Launchpad, Earn products, and Crypto Loans.  Explore the new [VVIP system powered by M-Score](https://www.mexc.com/user/m-score?inviteCode=mexc-airdropaler), where your activity moves you through tiers and unlocks premium services over time. No whale status required ",
-      "Join the 8th Anniversary Trading Event → Register for the limited-time [MEXCmize 8eyond Infinity competition](https://www.mexc.com/futures-activity/team-competition/8thanniversary?inviteCode=mexc-airdropaler) and start trading to earn your share of the 10,000,000 USDT prize pool."
+      "Sign Up & Verify в†’ Head to [MEXC](https://www.mexc.com/register?inviteCode=mexc-airdropaler), create your account, and complete KYC verification to unlock full access to trading, rewards, and platform features.  MEXC is well known as the go-to exchang for spotting early high-upside opportunities ",
+      "Claim Your Rewards  в†’ Once registered, head to the Rewards Hub to claim your $20 USDT for free, then complete deposit and trading milestones to unlock up to $10,000 in bonuses.  Share your referral link and earn up to $60 USDT per referral.",
+      "Deposit & Explore the Platform в†’ Fund your account and start exploring everything MEXC offers, including Crypto, Futures, U.S. stocks, commodities, and precious metals, along with Copy Trading, Alpha, Launchpad, Earn products, and Crypto Loans.  Explore the new [VVIP system powered by M-Score](https://www.mexc.com/user/m-score?inviteCode=mexc-airdropaler), where your activity moves you through tiers and unlocks premium services over time. No whale status required ",
+      "Join the 8th Anniversary Trading Event в†’ Register for the limited-time [MEXCmize 8eyond Infinity competition](https://www.mexc.com/futures-activity/team-competition/8thanniversary?inviteCode=mexc-airdropaler) and start trading to earn your share of the 10,000,000 USDT prize pool."
     ],
-    "id": 72,
+    "id": 81,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
+  },
+  {
+    "slug": "trueo-prediction-market",
+    "name": "Trueo",
+    "chain": "Ethereum",
+    "event": "Airdrop",
+    "status": "Upcoming",
+    "date": "2026-09-23",
+    "description": "$TRUE airdrop — Added Sept 23 . Prediction Market — user created markets ",
+    "logo": "https://i0.wp.com/airdropalert.com/wp-content/uploads/2026/09/Trueo-LOGO.png?resize=50%2C50&#038;quality=50&#038;ssl=1",
+    "source": "AirdropAlert",
+    "sourceUrl": "https://airdropalert.com/airdrops/trueo-prediction-market/",
+    "claimUrl": "https://airdropalert.com/airdrops/trueo-prediction-market/",
+    "id": 82,
+    "firstSeenAt": "2026-09-23T16:00:37.049Z"
+  },
+  {
+    "slug": "dohm-finance-testnet",
+    "name": "DOHM Finance",
+    "chain": "Bitcoin",
+    "event": "Airdrop",
+    "status": "Upcoming",
+    "date": "2026-09-21",
+    "description": "DOHM Finance is a Bitcoin-native reserve currency protocol using Alkanes smart contracts. Explore the DOHM Airdrop, Bonding Week and testnet.",
+    "logo": "https://i0.wp.com/airdropalert.com/wp-content/uploads/2026/09/DOHM-Finance-LOGO.jpg?resize=50%2C50&#038;quality=50&#038;ssl=1",
+    "source": "AirdropAlert",
+    "sourceUrl": "https://airdropalert.com/airdrops/dohm-finance-testnet/",
+    "claimUrl": "https://dohm.finance",
+    "website": "https://dohm.finance",
+    "telegram": "https://t.me/DohmFi",
+    "x": "https://x.com/DohmFinance",
+    "actions": [
+      "Qualify through DOHM Bonding Week Head to the official [DOHM Bonding portal](https://bond.dohm.finance/) on desktop to complete the Bonding requirement for the $DOHM airdrop. в†’ Connect the Bitcoin wallet you want to use for Bonding and make sure you are using a Taproot address you control . Avoid sending directly from an exchange because the Bonding allocation is linked to the contributing address. в†’ The portal currently shows a minimum Bonding contribution of 0.00012408 BTC, roughly $10 . The minimum is calculated dynamically, so confirm the displayed amount before contributing. The $5 figure is the price per $DOHM , not the minimum contribution. в†’ Choose the pool that matches the asset you want to contribute:  Flex: BTC and frBTC on Bitcoin, plus USDT and USDC from Ethereum. frBTC is Subfrost's programmable Bitcoin asset backed 1:1 by BTC. The pool targets 15 BTC equivalent .  Diesel: $DIESEL, Subfrost's native emission token. The pool targets 5 BTC equivalent .  Fire: $FIRE, Subfrost's governance and rewards token. The pool targets 1 BTC equivalent . в†’ Review the pool, contribution amount and transaction details, then complete Bonding from the same wallet connected to the portal . Do not use the separate wallet created inside the DOHM testnet. в†’ Complete Bonding before September 24, 2026 at 12:00 UTC , or before the selected pool reaches capacity. Bonding allocations have no vesting and are fully claimable at TGE, with the TGE date to be announced after the sale closes.  Bonding involves real assets. Review the protocol documentation, Bonding terms and available security information, and always DYOR before committing funds .",
+      "Earn DOHM Testnet Points Head to the official [DOHM testnet](https://testnet.dohm.finance/app) to test the protocol with free assets and accumulate Points. в†’ Create the built-in testnet wallet to earn 1 Point once , then claim test BTC and frBTC. Faucet claims themselves earn 0 Points . в†’ Earn Points through eligible activity including Bonding, Bond LP, staking, unstaking, bond redemption, swaps and liquidity . Swapping into at least 0.0001 frBTC can earn 1 Point per wallet per UTC day , while liquidity activity can earn 1 Point per pool per UTC day . в†’ Verify a mainnet Bitcoin wallet to earn 1 Point once . Holding eligible $FIRE, $DIESEL or frBTC activates a +10% Points boost , which does not stack across multiple eligible assets. в†’ Follow your total on the leaderboard and check the [DOHM Points page](https://docs.dohm.finance/points) for the full scoring rules and daily limits.  Points are not $DOHM , and no formula has been published showing how a Points balance translates into a $DOHM allocation.  Interested in exploring the wider Alkanes ecosystem? Our [Subfrost Airdrop guide](https://airdropalert.com/airdrops/subfrost/) covers frBTC, frUSD, $DIESEL, $FIRE and the PERMAFROST $FUEL farming campaign.  Looking for more testnet opportunities? Explore our list of latest [Testnet Airdrops](https://airdropalert.com/blogs/list-of-new-testnet-airdrops/) for more active campaigns and early-stage reward opportunities."
+    ],
+    "id": 83,
+    "firstSeenAt": "2026-09-22T23:40:44.595Z"
   },
   {
     "slug": "minds-games",
@@ -3973,11 +6047,11 @@ export const generatedProjects: Project[] = [
     "website": "https://minds.games/?ref=908E76D0",
     "x": "https://x.com/MindGames_AI",
     "actions": [
-      "Claim your seat and complete the first quests Go to [Minds Games](https://minds.games/?ref=908E76D0), enter your email, accept the campaign rules, and claim your seat. → Complete your profile and connect . → Work through the available social and campaign quests.  Check the dashboard for the latest actions and point values.",
-      "Create and map your Mind Follow the HelloMinds link provided in your account and create your AI agent. → Shape its role, behavior, and strategy. → Map the Mind to your Minds Games seat using the requested agent details.  Complete your first three conversations with the Mind to receive $5 in HelloMinds credits.",
-      "Invite friends and link your wallet Share your personal referral link and connect a wallet to take part in the wider campaign flow. → Earn additional points as referred participants complete qualifying actions. → Link your EVM [wallet](https://airdropalert.com/crypto-resources/crypto-wallets) to qualify for rewards, including an allowlist place. → Hold qualifying tokens such as [Pons](https://airdropalert.com/?s=Pons&et_pb_searchform_submit=et_search_proccess&et_pb_include_posts=yes&et_pb_include_pages=yes) and [Cashcat](https://airdropalert.com/blogs/what-is-cashcat/), among others, to receive a 1.5Г— multiplier on contributor points.  Campaign mechanics are still subject to change, so check the latest [campaign rules](https://minds.games/rules). No seed phrase, private key, token approval, or gas payment is required to qualify."
+      "Claim your seat and complete the first quests Go to [Minds Games](https://minds.games/?ref=908E76D0), enter your email, accept the campaign rules, and claim your seat. в†’ Complete your profile and connect . в†’ Work through the available social and campaign quests.  Check the dashboard for the latest actions and point values.",
+      "Create and map your Mind Follow the HelloMinds link provided in your account and create your AI agent. в†’ Shape its role, behavior, and strategy. в†’ Map the Mind to your Minds Games seat using the requested agent details.  Complete your first three conversations with the Mind to receive $5 in HelloMinds credits.",
+      "Invite friends and link your wallet Share your personal referral link and connect a wallet to take part in the wider campaign flow. в†’ Earn additional points as referred participants complete qualifying actions. в†’ Link your EVM [wallet](https://airdropalert.com/crypto-resources/crypto-wallets) to qualify for rewards, including an allowlist place. в†’ Hold qualifying tokens such as [Pons](https://airdropalert.com/blogs/what-is-pons-token/) and [Cashcat](https://airdropalert.com/blogs/what-is-cashcat/), among others, to receive a 1.5Г— multiplier on contributor points.  Campaign mechanics are still subject to change, so check the latest [campaign rules](https://minds.games/rules). No seed phrase, private key, token approval, or gas payment is required to qualify."
     ],
-    "id": 73,
+    "id": 84,
     "firstSeenAt": "2026-09-21T14:46:46.199Z"
   },
   {
@@ -3995,12 +6069,12 @@ export const generatedProjects: Project[] = [
     "website": "https://hashcats.fun",
     "x": "https://x.com/hashcats_rh",
     "actions": [
-      "Mine a Hashcat NFT Go to the [Hashcats Mine](https://hashcats.fun/mine) page, connect your wallet, and start mining. → Choose CPU or GPU . If you use CPU, select how many processor cores you want to run, then click Mine . → Your device repeatedly tests different nonces through proof of work using your wallet address, the previous cat's work, and a recent Robinhood Chain block anchor. Because your wallet address is included, a successful solution cannot be copied and used by another wallet.  Finding a valid solution does not mint the NFT for free. You still pay the current epoch price plus gas to mint the cat. For standard mints, 70% of the entry price becomes $ETH rent for eligible earlier cats, while 30% goes to the HashHook . The winning work is then combined with the mint-time bucket to generate the cat's seed. See [how it works](https://hashcats.fun/docs).  New to Robinhood Chain? Follow our [Robinhood Chain guide](https://airdropalert.com/airdrops/robinhood-chain/) to learn how to set up your wallet and bridge funds before you start mining.",
-      "Hold for $ETH rent or sell your Hashcat Keep your living Hashcat to accumulate $[ETH](https://airdropalert.com/currencies/ethereum/) rent from later epochs, or sell it on the secondary market. → Eligible cats can earn $ETH rent without being staked. Check [Hashcats Stats](https://stats.hashcats.fun) for live mints, burns, rent, $[HASH](https://dexscreener.com/robinhood/0x42b009f327076bc462dc1725c29221938f8f96307f356121a8445b889d036ea7) supply, and protocol buybacks. → Check [DefiLlama](https://enterprise.defillama.com/protocol/hashcats) for TVL, fees, protocol revenue, and holder revenue, or trade your NFT through the [Hashcats collection on OpenSea](https://opensea.io/collection/hash-cats). At the time of our review,  Unclaimed rent stays attached to the NFT. If you sell your cat before claiming it, the right to that accumulated rent transfers to the new owner. Official $HASH [contract](https://robin.etherscan.io/token/0xCA75082b85bb7Bec8325d513F615b16BDa260020#transactions) address: 0xCA75082b85bb7Bec8325d513F615b16BDa260020",
-      "Stake your Hashcat for $HASH and $ETH rewards Claim any rent you want to keep first, then stake your cat through the [Hashcats Stake](https://hashcats.fun/stake) page. → Choose 7 days at 1x weight, 30 days at 2x, or 90 days at 4x . Higher status can increase the cat's staking weight further, giving it a larger relative share of incoming rewards. → Stakers currently share $HASH from status purchases and $ETH left behind by early reward claims , with each cat earning according to its weight compared with the total pool.  The $HASH distributed to stakers is not newly minted. It comes from what other participants spend to increase their cats' status, with half distributed to stakers and half permanently burned. There is no early unstake , so your cat remains locked for the full term.",
-      "Increase status or burn your Hashcat NFT Use $HASH to increase your cat's status or permanently burn the NFT to receive $HASH. → Increasing status can improve future staking weight and unlock extra customization. $HASH can also be traded on Uniswap and OpenSea. → Burning a Hashcat NFT creates $HASH according to its current burn rate. A cat burned in its own epoch can return 1,000 $HASH , with the amount declining as later epochs pass.  Burning is permanent and removes the NFT along with its future rent, staking, and resale utility. At least 10 minutes must pass after minting and at least one newer cat must exist before a cat can be burned."
+      "Mine a Hashcat NFT Go to the [Hashcats Mine](https://hashcats.fun/mine) page, connect your wallet, and start mining. в†’ Choose CPU or GPU . If you use CPU, select how many processor cores you want to run, then click Mine . в†’ Your device repeatedly tests different nonces through proof of work using your wallet address, the previous cat's work, and a recent Robinhood Chain block anchor. Because your wallet address is included, a successful solution cannot be copied and used by another wallet.  Finding a valid solution does not mint the NFT for free. You still pay the current epoch price plus gas to mint the cat. For standard mints, 70% of the entry price becomes $ETH rent for eligible earlier cats, while 30% goes to the HashHook . The winning work is then combined with the mint-time bucket to generate the cat's seed. See [how it works](https://hashcats.fun/docs).  New to Robinhood Chain? Follow our [Robinhood Chain guide](https://airdropalert.com/airdrops/robinhood-chain/) to learn how to set up your wallet and bridge funds before you start mining.",
+      "Hold for $ETH rent or sell your Hashcat Keep your living Hashcat to accumulate $[ETH](https://airdropalert.com/currencies/ethereum/) rent from later epochs, or sell it on the secondary market. в†’ Eligible cats can earn $ETH rent without being staked. Check [Hashcats Stats](https://stats.hashcats.fun) for live mints, burns, rent, $[HASH](https://dexscreener.com/robinhood/0x42b009f327076bc462dc1725c29221938f8f96307f356121a8445b889d036ea7) supply, and protocol buybacks. в†’ Check [DefiLlama](https://enterprise.defillama.com/protocol/hashcats) for TVL, fees, protocol revenue, and holder revenue, or trade your NFT through the [Hashcats collection on OpenSea](https://opensea.io/collection/hash-cats). At the time of our review,  Unclaimed rent stays attached to the NFT. If you sell your cat before claiming it, the right to that accumulated rent transfers to the new owner. Official $HASH [contract](https://robin.etherscan.io/token/0xCA75082b85bb7Bec8325d513F615b16BDa260020#transactions) address: 0xCA75082b85bb7Bec8325d513F615b16BDa260020",
+      "Stake your Hashcat for $HASH and $ETH rewards Claim any rent you want to keep first, then stake your cat through the [Hashcats Stake](https://hashcats.fun/stake) page. в†’ Choose 7 days at 1x weight, 30 days at 2x, or 90 days at 4x . Higher status can increase the cat's staking weight further, giving it a larger relative share of incoming rewards. в†’ Stakers currently share $HASH from status purchases and $ETH left behind by early reward claims , with each cat earning according to its weight compared with the total pool.  The $HASH distributed to stakers is not newly minted. It comes from what other participants spend to increase their cats' status, with half distributed to stakers and half permanently burned. There is no early unstake , so your cat remains locked for the full term.",
+      "Increase status or burn your Hashcat NFT Use $HASH to increase your cat's status or permanently burn the NFT to receive $HASH. в†’ Increasing status can improve future staking weight and unlock extra customization. $HASH can also be traded on Uniswap and OpenSea. в†’ Burning a Hashcat NFT creates $HASH according to its current burn rate. A cat burned in its own epoch can return 1,000 $HASH , with the amount declining as later epochs pass.  Burning is permanent and removes the NFT along with its future rent, staking, and resale utility. At least 10 minutes must pass after minting and at least one newer cat must exist before a cat can be burned."
     ],
-    "id": 74,
+    "id": 85,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4020,11 +6094,11 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.com/invite/pD9hSXbZHM",
     "x": "https://x.com/4Dlabs_Official",
     "actions": [
-      "Complete the Alpha quests and mint the OAT Go to the official [4Dlabs \"Alpha is assembling\" campaign](https://app.galxe.com/quest/4Dlabs/GCJxRtZjhh) on Galxe, sign in, and complete the quests before September 29, 2026. → Follow [@4Dlabs_Official](https://x.com/4Dlabs_Official) on , repost the required post, join the [Discord](https://discord.com/invite/pD9hSXbZHM), and click the green check in the #verify-here channel to receive the Navigator role. → Visit the [4Dlabs website](https://4dlabs.space), complete all quest checks, and mint 1 Alpha OAT on BNB Chain.  You'll need a small amount of $[BNB](https://airdropalert.com/currencies/bnb/) to mint the Alpha OAT.",
-      "Claim the ALPHA Discord role After minting the Alpha OAT, go to the official [\"Claim Your ALPHA Role\" campaign](https://app.galxe.com/quest/4Dlabs/GCreitZxYT) on Galxe. → Complete the Alpha OAT holder check. → Click to claim the role, and it will be automatically added to your 4Dlabs Discord.  The Alpha Badge is an important key to the 4D space with a significant role in the future.",
-      "Earn $4D by contributing 3D data When the 4Dlabs iOS and Android apps launch, phone users will be able to scan real-world spaces, upload the resulting 3D models, and earn $4D rewards for their contributions. → Scan homes, factories, storefronts, and other environments using your phone. → Upload qualifying 3D data, with rewards influenced by data quality and scarcity.  A single 3D model of a home could fetch $10+ on the 4Dlabs marketplace. The token economy also includes $4D burns on data usage and buyback mechanics."
+      "Complete the Alpha quests and mint the OAT Go to the official [4Dlabs \"Alpha is assembling\" campaign](https://app.galxe.com/quest/4Dlabs/GCJxRtZjhh) on Galxe, sign in, and complete the quests before September 29, 2026. в†’ Follow [@4Dlabs_Official](https://x.com/4Dlabs_Official) on , repost the required post, join the [Discord](https://discord.com/invite/pD9hSXbZHM), and click the green check in the #verify-here channel to receive the Navigator role. в†’ Visit the [4Dlabs website](https://4dlabs.space), complete all quest checks, and mint 1 Alpha OAT on BNB Chain.  You'll need a small amount of $[BNB](https://airdropalert.com/currencies/bnb/) to mint the Alpha OAT.",
+      "Claim the ALPHA Discord role After minting the Alpha OAT, go to the official [\"Claim Your ALPHA Role\" campaign](https://app.galxe.com/quest/4Dlabs/GCreitZxYT) on Galxe. в†’ Complete the Alpha OAT holder check. в†’ Click to claim the role, and it will be automatically added to your 4Dlabs Discord.  The Alpha Badge is an important key to the 4D space with a significant role in the future.",
+      "Earn $4D by contributing 3D data When the 4Dlabs iOS and Android apps launch, phone users will be able to scan real-world spaces, upload the resulting 3D models, and earn $4D rewards for their contributions. в†’ Scan homes, factories, storefronts, and other environments using your phone. в†’ Upload qualifying 3D data, with rewards influenced by data quality and scarcity.  A single 3D model of a home could fetch $10+ on the 4Dlabs marketplace. The token economy also includes $4D burns on data usage and buyback mechanics."
     ],
-    "id": 75,
+    "id": 86,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4043,11 +6117,11 @@ export const generatedProjects: Project[] = [
     "telegram": "https://t.me/asentum",
     "x": "https://x.com/asentum",
     "actions": [
-      "Set up your Asentum testnet account Go to the official [Asentum airdrop](https://airdrop.asentum.com/?r=ARQDLTWE) portal and click Sign In. → Sign in with a wallet or one of the available social options. If you use a wallet, use a dedicated wallet for testnet activity instead of your main wallet. → Install the [Asentum extension](https://www.asentum.com/download), or use the official [Telegram Wallet bot](https://t.me/AsentumBot) to create your Asentum wallet and follow the instructions to pair it with the dashboard.  XP earning begins on September 17, 2026 at 16:00 UTC. Wait until the campaign is live before starting testnet activity, and keep your recovery seed private.",
-      "Earn XP on the testnet Complete the activities outlined in the official [Incentivized Testnet & Airdrop](https://www.asentum.com/docs/investors/airdrop) guide once the campaign is live to earn XP. → Claim test $ASE from the faucet, then use those test tokens to send transactions, swap on Auras and add liquidity. Transactions earn 1 XP up to 50 per day , transfers earn 10 XP , swaps earn 25 XP up to 150 per day , and adding liquidity earns 45 XP . → Link your  account and stay active to earn more XP. Eligible posts, replies, mentions and airdrop shares add XP, while activity streaks increase your multiplier from 1.1x after 3 days to 2x after 30 days . → Invite friends with your referral link and earn 10% of their XP for their first 30 days.  You can optionally stake real $ASE on Ethereum to boost your XP multiplier, from 2x at 15,000 $ASE up to 10x at 1.5 million $ASE . Staking comes with a 30-day lock .",
-      "Run an Asentum consensus validator Set up a consensus validator to earn the highest recurring XP rewards. → Asentum supports four [node types](https://www.asentum.com/docs/getting-started/node-types?utm_source=chatgpt.com): full node, consensus validator, service node and light client. For the incentivized testnet, choose a consensus validator , which bonds stake, produces blocks and signs finality votes. → Follow the official [validator guide](https://www.asentum.com/docs/getting-started/validator?utm_source=chatgpt.com), claim 500 test $ASE from the faucet and bond your validator to earn 200 XP . Keep it online to earn up to 300 XP per day , plus 250, 1,000, 3,000 and 6,000 XP at the published signing milestones.  Full nodes currently earn no rewards, while service-node micro-fees are planned but not active yet. A consensus validator uses test $ASE , not the tradable token, and requires at least a 2-core CPU, 4 GB RAM, 10 GB free storage and broadband internet."
+      "Set up your Asentum testnet account Go to the official [Asentum airdrop](https://airdrop.asentum.com/?r=ARQDLTWE) portal and click Sign In. в†’ Sign in with a wallet or one of the available social options. If you use a wallet, use a dedicated wallet for testnet activity instead of your main wallet. в†’ Install the [Asentum extension](https://www.asentum.com/download), or use the official [Telegram Wallet bot](https://t.me/AsentumBot) to create your Asentum wallet and follow the instructions to pair it with the dashboard.  XP earning begins on September 17, 2026 at 16:00 UTC. Wait until the campaign is live before starting testnet activity, and keep your recovery seed private.",
+      "Earn XP on the testnet Complete the activities outlined in the official [Incentivized Testnet & Airdrop](https://www.asentum.com/docs/investors/airdrop) guide once the campaign is live to earn XP. в†’ Claim test $ASE from the faucet, then use those test tokens to send transactions, swap on Auras and add liquidity. Transactions earn 1 XP up to 50 per day , transfers earn 10 XP , swaps earn 25 XP up to 150 per day , and adding liquidity earns 45 XP . в†’ Link your  account and stay active to earn more XP. Eligible posts, replies, mentions and airdrop shares add XP, while activity streaks increase your multiplier from 1.1x after 3 days to 2x after 30 days . в†’ Invite friends with your referral link and earn 10% of their XP for their first 30 days.  You can optionally stake real $ASE on Ethereum to boost your XP multiplier, from 2x at 15,000 $ASE up to 10x at 1.5 million $ASE . Staking comes with a 30-day lock .",
+      "Run an Asentum consensus validator Set up a consensus validator to earn the highest recurring XP rewards. в†’ Asentum supports four [node types](https://www.asentum.com/docs/getting-started/node-types?utm_source=chatgpt.com): full node, consensus validator, service node and light client. For the incentivized testnet, choose a consensus validator , which bonds stake, produces blocks and signs finality votes. в†’ Follow the official [validator guide](https://www.asentum.com/docs/getting-started/validator?utm_source=chatgpt.com), claim 500 test $ASE from the faucet and bond your validator to earn 200 XP . Keep it online to earn up to 300 XP per day , plus 250, 1,000, 3,000 and 6,000 XP at the published signing milestones.  Full nodes currently earn no rewards, while service-node micro-fees are planned but not active yet. A consensus validator uses test $ASE , not the tradable token, and requires at least a 2-core CPU, 4 GB RAM, 10 GB free storage and broadband internet."
     ],
-    "id": 76,
+    "id": 87,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4065,12 +6139,12 @@ export const generatedProjects: Project[] = [
     "website": "https://midasmarkets.xyz/r/airdropalert",
     "x": "https://x.com/midasmarketsxyz",
     "actions": [
-      "Create and personalize your account Open the official [Midas Markets app](https://midasmarkets.xyz/r/airdropalert) and complete the account setup. → Sign in with email, phone, or X, accept the Terms of Service and Privacy Policy, then choose your username and avatar. → Select the markets you want to follow, including crypto spot, perpetual futures, stocks and equities, commodities, forex, ETFs and indices, then optionally add assets to your watchlist.  The app gives you a short walkthrough of the news feed, The Wire, trading from asset cards, and Ask Midas before taking you to the main dashboard.",
-      "Explore the platform or fund your account Enter the dashboard and either explore first or add funds when you are ready to trade. → Browse the News Feed, First Take, Markets and Portfolio, or use Ask Midas to search assets, headlines and market information. → Deposit funds when you want to trade spot markets or perpetuals through Hyperliquid.  Funding is not required to finish onboarding. Midas lets you choose \"I'll explore first\" and enter the platform without depositing immediately.",
-      "Trade to earn points and USDC cashback Complete trades to earn Midas Points and cashback from your own activity. → The live Rewards page states that every $1 traded earns 1 point , with your season points and recent activity tracked directly in the dashboard. → Cashback returns 15%-30% of the Midas trading fee , depending on your rolling trading volume, and is paid in USDC to your Solana [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/).  Midas currently says it will share how season points can be redeemed for rewards, so check the Rewards page for updated redemption details.",
-      "Invite traders and earn referral commissions Open the Referrals page and share your personal link to earn from traders you invite. → Earn 15% at Bronze below $10,000 referred 30-day volume, 20% at Silver from $10,000 to $49,999.99, and 30% at Gold from $50,000.  Anyone who signs up through your link is permanently attributed to you, and all referral codes you own count together toward your tier."
+      "Create and personalize your account Open the official [Midas Markets app](https://midasmarkets.xyz/r/airdropalert) and complete the account setup. в†’ Sign in with email, phone, or X, accept the Terms of Service and Privacy Policy, then choose your username and avatar. в†’ Select the markets you want to follow, including crypto spot, perpetual futures, stocks and equities, commodities, forex, ETFs and indices, then optionally add assets to your watchlist.  The app gives you a short walkthrough of the news feed, The Wire, trading from asset cards, and Ask Midas before taking you to the main dashboard.",
+      "Explore the platform or fund your account Enter the dashboard and either explore first or add funds when you are ready to trade. в†’ Browse the News Feed, First Take, Markets and Portfolio, or use Ask Midas to search assets, headlines and market information. в†’ Deposit funds when you want to trade spot markets or perpetuals through Hyperliquid.  Funding is not required to finish onboarding. Midas lets you choose \"I'll explore first\" and enter the platform without depositing immediately.",
+      "Trade to earn points and USDC cashback Complete trades to earn Midas Points and cashback from your own activity. в†’ The live Rewards page states that every $1 traded earns 1 point , with your season points and recent activity tracked directly in the dashboard. в†’ Cashback returns 15%-30% of the Midas trading fee , depending on your rolling trading volume, and is paid in USDC to your Solana [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/).  Midas currently says it will share how season points can be redeemed for rewards, so check the Rewards page for updated redemption details.",
+      "Invite traders and earn referral commissions Open the Referrals page and share your personal link to earn from traders you invite. в†’ Earn 15% at Bronze below $10,000 referred 30-day volume, 20% at Silver from $10,000 to $49,999.99, and 30% at Gold from $50,000.  Anyone who signs up through your link is permanently attributed to you, and all referral codes you own count together toward your tier."
     ],
-    "id": 77,
+    "id": 88,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4089,11 +6163,11 @@ export const generatedProjects: Project[] = [
     "telegram": "https://t.me/askORO_AI",
     "x": "https://x.com/Ask_ORO",
     "actions": [
-      "Create your account Go to the [ORO app](https://app.askoro.ai/) and set up your account. → Sign in with an available login method and connect your preferred wallet. → Complete any account or wallet setup required by the active campaigns you want to join.  ORO restricts access from the United States, Canada, and several other jurisdictions. Check the [Terms](https://www.askoro.ai/terms/) before participating.",
-      "Earn ORE Points and track your rewards Complete active learning campaigns and check your ORE through the [airdrop portal](https://airdrop.askoro.ai/). → Work through the required modules, knowledge checks, and completion tasks to earn the ORE reward attached to each active campaign. → Review your ORE balance in the rewards portal and follow the latest account or wallet instructions shown there.  Campaigns, tasks, supported networks, reward amounts, and wallet requirements can change, so always check the latest details before participating.",
-      "Use AI commands for DeFi actions Use AI commands to swap, stake, lend, borrow, bridge assets, and manage positions, or visit the [Vaults section](https://app.askoro.ai/vaults) to compare available yield opportunities. → Describe the action you want to take in plain language and review the route ORO prepares. → Compare vaults by asset, deposits, exposure, and net APY before choosing a strategy.  ORO currently charges a 0.3% fee on transaction volume, while network and protocol fees may also apply. No independent third-party audit was found at the time of writing."
+      "Create your account Go to the [ORO app](https://app.askoro.ai/) and set up your account. в†’ Sign in with an available login method and connect your preferred wallet. в†’ Complete any account or wallet setup required by the active campaigns you want to join.  ORO restricts access from the United States, Canada, and several other jurisdictions. Check the [Terms](https://www.askoro.ai/terms/) before participating.",
+      "Earn ORE Points and track your rewards Complete active learning campaigns and check your ORE through the [airdrop portal](https://airdrop.askoro.ai/). в†’ Work through the required modules, knowledge checks, and completion tasks to earn the ORE reward attached to each active campaign. в†’ Review your ORE balance in the rewards portal and follow the latest account or wallet instructions shown there.  Campaigns, tasks, supported networks, reward amounts, and wallet requirements can change, so always check the latest details before participating.",
+      "Use AI commands for DeFi actions Use AI commands to swap, stake, lend, borrow, bridge assets, and manage positions, or visit the [Vaults section](https://app.askoro.ai/vaults) to compare available yield opportunities. в†’ Describe the action you want to take in plain language and review the route ORO prepares. в†’ Compare vaults by asset, deposits, exposure, and net APY before choosing a strategy.  ORO currently charges a 0.3% fee on transaction volume, while network and protocol fees may also apply. No independent third-party audit was found at the time of writing."
     ],
-    "id": 78,
+    "id": 89,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4113,83 +6187,19 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/qmsnetwork",
     "x": "https://x.com/QMSnetwork",
     "actions": [
-      "Join the QMS waitlist Go to the [QMS waitlist](https://qms.finance/#waitlist) and register for early access. → Connect your  account and add your name, email and Telegram. → Choose whether you want to participate as a Miner, Builder, Client or Investor , then submit the form.  The waitlist gives access to launch announcements, testnet invites and ecosystem opportunities before the public launch. QMS is currently pre-testnet v0.1.",
-      "Join the QMS community and earn Quanta Enter the official [QMS Discord](https://discord.gg/qmsnetwork) and follow the latest Quanta activities. → Complete the available community challenges and quizzes. → Check the current Discord instructions as new Quanta activities are added.  Early Access Pass holders can claim the Pioneer role for a Quanta multiplier.",
-      "Follow the public testnet rollout Stay active as QMS moves toward its first public network phase. → Watch for official testnet access, wallets, faucets and miner participation. → Check future campaigns for new Quanta, testnet and network reward opportunities.  QMS has not confirmed a Quanta-to-token conversion or airdrop allocation, but future token rewards remain possible as the network develops."
+      "Join the QMS waitlist Go to the [QMS waitlist](https://qms.finance/#waitlist) and register for early access. в†’ Connect your  account and add your name, email and Telegram. в†’ Choose whether you want to participate as a Miner, Builder, Client or Investor , then submit the form.  The waitlist gives access to launch announcements, testnet invites and ecosystem opportunities before the public launch. QMS is currently pre-testnet v0.1.",
+      "Join the QMS community and earn Quanta Enter the official [QMS Discord](https://discord.gg/qmsnetwork) and follow the latest Quanta activities. в†’ Complete the available community challenges and quizzes. в†’ Check the current Discord instructions as new Quanta activities are added.  Early Access Pass holders can claim the Pioneer role for a Quanta multiplier.",
+      "Follow the public testnet rollout Stay active as QMS moves toward its first public network phase. в†’ Watch for official testnet access, wallets, faucets and miner participation. в†’ Check future campaigns for new Quanta, testnet and network reward opportunities.  QMS has not confirmed a Quanta-to-token conversion or airdrop allocation, but future token rewards remain possible as the network develops."
     ],
-    "id": 79,
+    "id": 90,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
-  },
-  {
-    "slug": "rep-reputation-network",
-    "name": "REP",
-    "chain": "Ethereum",
-    "event": "Claim",
-    "status": "Potential",
-    "date": "2026-09-10",
-    "description": "REP is a decentralized reputation network that turns past activity into a portable profile that can lead to rewards and opportunities ⭐",
-    "logo": "https://i0.wp.com/airdropalert.com/wp-content/uploads/2026/09/REP-App-LOGO.jpg?resize=50%2C50&#038;quality=50&#038;ssl=1",
-    "source": "AirdropAlert",
-    "sourceUrl": "https://airdropalert.com/airdrops/rep-reputation-network/",
-    "claimUrl": "https://app.r3p.xyz/u/TQLMAF",
-    "website": "https://app.r3p.xyz/u/TQLMAF",
-    "x": "https://x.com/rep_hq",
-    "actions": [
-      "Create your REP profile Go to the [REP app](https://app.r3p.xyz/u/TQLMAF) and sign in with . → Connect your EVM wallets so REP can check your onchain history. → Add the accounts you want included in your reputation profile.  You can connect up to five wallets, and existing activity may already unlock achievements. Some account and wallet connections can also earn bonus REP.",
-      "Claim your achievements Review the achievements REP finds across your connected accounts. → Claim achievements that verify what you have already done across trading, DeFi, NFTs, social platforms, airdrops, and protocols. → Your achievements add to your REP score and determine your position on the leaderboard.  Claiming achievements requires an onchain transaction and a gas fee.",
-      "Use your reputation and invite others Check which communities and opportunities your profile unlocks. → Join gated Chats and browse Matches that fit your experience and activity. → Share your invite link if you want to earn more REP from referrals.  REP tracks referrals across four levels, so you can earn REP from people who join through your link and from additional users they later invite. Higher-ranked referrals pay more REP."
-    ],
-    "id": 80,
-    "firstSeenAt": "2026-09-19T00:00:44.749Z"
-  },
-  {
-    "slug": "forecast-whitelist",
-    "name": "Forecast",
-    "chain": "Base",
-    "event": "Airdrop",
-    "status": "Potential",
-    "date": "2026-09-08",
-    "description": "Forecast is a leveraged prediction market protocol on Base. Join the mainnet whitelist for early access and potential future airdrop 🪂",
-    "logo": "https://i0.wp.com/airdropalert.com/wp-content/uploads/2026/09/Forecast-Protocol-LOGO.jpg?resize=50%2C50&#038;quality=50&#038;ssl=1",
-    "source": "AirdropAlert",
-    "sourceUrl": "https://airdropalert.com/airdrops/forecast-whitelist/",
-    "claimUrl": "https://forecastprotocol.xyz",
-    "website": "https://forecastprotocol.xyz",
-    "x": "https://x.com/ForecastFDN",
-    "actions": [
-      "Join the mainnet whitelist Visit the official [Forecast whitelist](https://forecastprotocol.xyz/mainnet-whitelist/) page and submit your EVM [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/). → Enter the wallet address you want to use. → Submit it to register for early mainnet access.  Forecast has described this as its final whitelist opening before launch.",
-      "Use Forecast after launch Explore Forecast once mainnet access becomes available. → Check the available leveraged prediction markets. → Understand the leverage and funding mechanics before using real funds.  Early activity may matter if Forecast later rewards early participants, although no token or airdrop have been announced."
-    ],
-    "id": 81,
-    "firstSeenAt": "2026-09-19T00:00:44.749Z"
-  },
-  {
-    "slug": "hunter-biden-laptop-memecoin",
-    "name": "$LAPTOP",
-    "chain": "Base",
-    "event": "Airdrop",
-    "status": "Potential",
-    "date": "2026-09-07",
-    "description": "Hunter Biden, son of former President Joe Biden, launches $LAPTOP with 20% of supply allocated to airdrops for $TRUMP losers & subscribers 💥",
-    "logo": "https://i0.wp.com/airdropalert.com/wp-content/uploads/2026/09/LAPTOP-Airdrop-Hunter-Biden-memecoin-LOGO.jpg?resize=50%2C50&#038;quality=50&#038;ssl=1",
-    "source": "AirdropAlert",
-    "sourceUrl": "https://airdropalert.com/airdrops/hunter-biden-laptop-memecoin/",
-    "claimUrl": "https://www.laptoptoken.com/",
-    "website": "https://www.laptoptoken.com/",
-    "x": "https://x.com/Laptoptoken",
-    "actions": [
-      "Claim the LAPTOP airdrop Visit the official [LAPTOP Airdrop claim](https://claim.laptoptoken.com) portal to check your eligibility and allocation. → Hunter Biden's Substack allocation is 40 million $LAPTOP, or 4% of supply. Eligible subscribers needed to join before September 6, with allocations weighted by subscription tier. → Channel 5 receives another 40 million $LAPTOP, or 4% of supply. Eligible subscribers needed to join before August 21, with tokens divided equally among qualifying recipients. → A separate 20 million $LAPTOP allocation, or 2% of supply, is reserved for people who lost money on the [Trump](https://airdropalert.com/blogs/tag/trump/) memecoin. This distribution is handled at the discretion of participating exchanges rather than through the subscriber claim process. The FAQ does not explain whether self-custody $TRUMP wallets qualify. → Substack and Channel 5 recipients can create a Coinbase embedded wallet using their email address, with gas fees covered, or connect an external wallet and pay their own gas fees.  Claims remain open for 30 days from launch. Any unclaimed Day 1 tokens are permanently burned and cannot be recovered or reissued.",
-      "$LAPTOP Trading Goes Live on September 9, 2026 LAPTOP will trade through [Pump.fun](https://airdropalert.com/blogs/guide-to-pump-fun/) and [Fomo Family](https://airdropalert.com/airdrops/fomo-memecoin-trading-app/). Fomo is the most convenient option because you can use one balance across all supported networks, including Ethereum, Solana, Base, BNB Chain, Monad, and [Robinhood Chain](https://airdropalert.com/airdrops/robinhood-chain/), so there is no need to manually bridge funds between networks. → Make sure the contract address matches the official $LAPTOP contract on Base: 0xB095274743941e953c746F9C228DA9c18Bb6ec29 → Another 100 million $LAPTOP, equal to 10% of the total supply, is reserved for future airdrops. The project has not announced who will qualify yet, so it is still unclear whether holding $LAPTOP will play a role in the next distribution.  [Memecoins](https://airdropalert.com/blogs/tag/Memecoins/) are highly speculative & volatile. Prices can move sharply and may fall to zero.  For a sharper edge, read our [Trading Fundamentals](https://airdropalert.com/blogs/tag/trading-fundamentals/) series and [Mental Trading](https://airdropalert.com/blogs/mental-side-of-trading/) article to improve discipline, decision making and long-term consistency across every market cycle."
-    ],
-    "id": 82,
-    "firstSeenAt": "2026-09-21T14:46:46.199Z"
   },
   {
     "slug": "subfrost",
     "name": "SUBFROST ",
     "chain": "Bitcoin",
     "event": "Airdrop",
-    "status": "Upcoming",
+    "status": "Potential",
     "date": "2026-09-21",
     "description": "Subfrost is a Bitcoin-native DeFi platform built on the Alkanes. Explore the PERMAFROST airdrop campaign to earn $FIRE and $FUEL 🪂",
     "logo": "https://i0.wp.com/airdropalert.com/wp-content/uploads/2026/09/SUBFROST-LOGO.jpg?resize=50%2C50&#038;quality=50&#038;ssl=1",
@@ -4200,11 +6210,11 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/VvU7vStXmq",
     "x": "https://x.com/subfrostp2p",
     "actions": [
-      "Set up Subfrost and your Bitcoin wallet Head to the official [Subfrost app](https://app.subfrost.io/) to access the PERMAFROST $FUEL farming campaign . → Create a new Bitcoin wallet with one of the wallet options shown in the interface, such as Subfrost, Oyl, OKX, UniSat or Xverse . → Save the recovery phrase securely offline, and use this wallet specifically for Subfrost , and do not send Ordinals, Runes or BRC-20 assets to it .  Important wallet warning: Subfrost explicitly warns that using a wallet containing Ordinals, Runes or BRC-20 assets will result in burning them because transactions may spend the Bitcoin UTXOs carrying those assets. → Transfer the $[BTC](https://airdropalert.com/currencies/bitcoin/) you plan to use, and keep some BTC aside for Bitcoin network fees.  Before transferring funds: check [Subfrost on DefiLlama](https://defillama.com/protocol/subfrost) for the latest TVL, and review the latest frBTC signer setup and audit information in the [official documentation](https://docs.subfrost.io/). Subfrost currently documents nine signers whose identities are not yet public, while its frBTC documentation states that the complete end-to-end protocol has not undergone a formal audit. These details can change, so verify the latest status before depositing.  Security history: In July 2026, an Alkanes indexer bug created phantom $DIESEL and allowed an attacker to obtain 82.3 frBTC in the corrupted indexed state. According to Subfrost's [official incident post-mortem](https://subfrost.io/articles/july-2-failed-incident), the signer layer rejected the attempted unwraps and no reserve BTC left the protocol .",
-      "Earn $FIRE through the FIRE Vault Provide $DIESEL/frBTC liquidity and deposit the LP into the FIRE Vault to earn $FIRE. → Swap for $DIESEL and frBTC , and add both to the DIESEL/frBTC pool to receive LP. → Deposit the LP into the FIRE Vault and choose a lock period. Reward weight ranges from 1Г— with no lock to 3Г— for a one-year lock . Longer locks increase reward weight but prevent withdrawal until the lock expires. → If you prefer FIRE Bonding , permanently transfer DIESEL/frBTC LP to the treasury in exchange for $FIRE at the displayed discount. The documented discount is 10% to market price , with $FIRE vesting over approximately 2,100 Bitcoin blocks, or 14 days . The discount can change, and the bonded LP is not returned . → If you already hold $FIRE, you can deposit it into the cFIRE vault . When a position exits, 8% remains for participants who stay, 1% of $FIRE is burned and 1% goes to the treasury .  $FIRE has a maximum supply of 2.1 million with no premine . Its emission model allocates 85% to staking and 15% to bonding , with halving every 105,000 Bitcoin blocks.",
-      "Farm cBTCUSD, earn $FUEL Head to the [PERMAFROST Rewards](https://app.subfrost.io/rewards) section to provide frBTC/frUSD liquidity, put cBTCUSD into a Farm and earn $FUEL through the Season 1 farming airdrop campaign. → Season 1 Vault & Farm opens September 25, 2026 at 10:00 UTC , giving participants time to create a position before rewards begin at Bitcoin block 970,000 . The exact reward start time depends on Bitcoin block production. → Provide frBTC/frUSD liquidity through PERMAFROST to receive LP tokens, then deposit the LP into the vault to receive cBTCUSD . → Put cBTCUSD into a Farm to start accumulating reward weight. The amount deposited and the number of Bitcoin blocks it remains in the Farm determine its share of $FUEL rewards. → For higher multiplier, permanently bond $FIRE worth up to 4% of the Farm value . The boost scales up to 1.5Г— , and the bonded $FIRE is transferred to the treasury and is not returned . → When exiting PERMAFROST, 5% of the LP is left behind for participants who stay . Earned $FUEL is also subject to a stated 180-day vesting period .  Early participant note: Before Season 1 starts, the Rewards page displays TVL, Points, farm counts, leaderboard positions and projected rewards marked EXAMPLE DATA . These figures show how the interface works and are not actual deposits, rankings or expected earnings .  $FUEL allocation: Season 1 currently displays \"X%\" of maximum $FUEL supply , meaning the percentage allocated to the campaign has not yet been published. Full $FUEL tokenomics also remain unpublished.  Looking for another Alkanes opportunity? DOHM is an independent Bitcoin reserve protocol using ecosystem assets including frBTC, $DIESEL and $FIRE. Our [DOHM Finance Airdrop](http://airdropalert.com/airdrops/dohm-finance-testnet/) guide covers its incentivized testnet, confirmed $DOHM airdrop and the requirement to participate in DOHM Bonding with the minimum amount to qualify for the airdrop ."
+      "Set up Subfrost and your Bitcoin wallet Head to the official [Subfrost app](https://app.subfrost.io/) to access the PERMAFROST $FUEL farming campaign . в†’ Create a new Bitcoin wallet with one of the wallet options shown in the interface, such as Subfrost, Oyl, OKX, UniSat or Xverse . в†’ Save the recovery phrase securely offline, and use this wallet specifically for Subfrost , and do not send Ordinals, Runes or BRC-20 assets to it .  Important wallet warning: Subfrost explicitly warns that using a wallet containing Ordinals, Runes or BRC-20 assets will result in burning them because transactions may spend the Bitcoin UTXOs carrying those assets. в†’ Transfer the $[BTC](https://airdropalert.com/currencies/bitcoin/) you plan to use, and keep some BTC aside for Bitcoin network fees.  Before transferring funds: check [Subfrost on DefiLlama](https://defillama.com/protocol/subfrost) for the latest TVL, and review the latest frBTC signer setup and audit information in the [official documentation](https://docs.subfrost.io/). Subfrost currently documents nine signers whose identities are not yet public, while its frBTC documentation states that the complete end-to-end protocol has not undergone a formal audit. These details can change, so verify the latest status before depositing.  Security history: In July 2026, an Alkanes indexer bug created phantom $DIESEL and allowed an attacker to obtain 82.3 frBTC in the corrupted indexed state. According to Subfrost's [official incident post-mortem](https://subfrost.io/articles/july-2-failed-incident), the signer layer rejected the attempted unwraps and no reserve BTC left the protocol .",
+      "Earn $FIRE through the FIRE Vault Provide $DIESEL/frBTC liquidity and deposit the LP into the FIRE Vault to earn $FIRE. в†’ Swap for $DIESEL and frBTC , and add both to the DIESEL/frBTC pool to receive LP. в†’ Deposit the LP into the FIRE Vault and choose a lock period. Reward weight ranges from 1Г— with no lock to 3Г— for a one-year lock . Longer locks increase reward weight but prevent withdrawal until the lock expires. в†’ If you prefer FIRE Bonding , permanently transfer DIESEL/frBTC LP to the treasury in exchange for $FIRE at the displayed discount. The documented discount is 10% to market price , with $FIRE vesting over approximately 2,100 Bitcoin blocks, or 14 days . The discount can change, and the bonded LP is not returned . в†’ If you already hold $FIRE, you can deposit it into the cFIRE vault . When a position exits, 8% remains for participants who stay, 1% of $FIRE is burned and 1% goes to the treasury .  $FIRE has a maximum supply of 2.1 million with no premine . Its emission model allocates 85% to staking and 15% to bonding , with halving every 105,000 Bitcoin blocks.",
+      "Farm cBTCUSD, earn $FUEL Head to the [PERMAFROST Rewards](https://app.subfrost.io/rewards) section to provide frBTC/frUSD liquidity, put cBTCUSD into a Farm and earn $FUEL through the Season 1 farming airdrop campaign. в†’ Season 1 Vault & Farm opens September 25, 2026 at 10:00 UTC , giving participants time to create a position before rewards begin at Bitcoin block 970,000 . The exact reward start time depends on Bitcoin block production. в†’ Provide frBTC/frUSD liquidity through PERMAFROST to receive LP tokens, then deposit the LP into the vault to receive cBTCUSD . в†’ Put cBTCUSD into a Farm to start accumulating reward weight. The amount deposited and the number of Bitcoin blocks it remains in the Farm determine its share of $FUEL rewards. в†’ For higher multiplier, permanently bond $FIRE worth up to 4% of the Farm value . The boost scales up to 1.5Г— , and the bonded $FIRE is transferred to the treasury and is not returned . в†’ When exiting PERMAFROST, 5% of the LP is left behind for participants who stay . Earned $FUEL is also subject to a stated 180-day vesting period .  Early participant note: Before Season 1 starts, the Rewards page displays TVL, Points, farm counts, leaderboard positions and projected rewards marked EXAMPLE DATA . These figures show how the interface works and are not actual deposits, rankings or expected earnings .  $FUEL allocation: Season 1 currently displays \"X%\" of maximum $FUEL supply , meaning the percentage allocated to the campaign has not yet been published. Full $FUEL tokenomics also remain unpublished.  Looking for another Alkanes opportunity? DOHM is an independent Bitcoin reserve protocol using ecosystem assets including frBTC, $DIESEL and $FIRE. Our [DOHM Finance Airdrop](http://airdropalert.com/airdrops/dohm-finance-testnet/) guide covers its incentivized testnet, confirmed $DOHM airdrop and the requirement to participate in DOHM Bonding with the minimum amount to qualify for the airdrop ."
     ],
-    "id": 83,
+    "id": 91,
     "firstSeenAt": "2026-09-21T14:46:46.199Z"
   },
   {
@@ -4214,12 +6224,21 @@ export const generatedProjects: Project[] = [
     "event": "Points",
     "status": "Potential",
     "date": "2026-09-19",
-    "description": "Earn Points  — Updated Sept 19 . Perpetual Dex  — by ex-Revolut team",
+    "description": "Extended is an onchain crypto and RWA exchange built by a former Revolut team. Activity earns Points toward airdrop of 30% of the supply 🪂",
     "logo": "https://i0.wp.com/airdropalert.com/wp-content/uploads/2025/11/Extended-Exchange-LOGO.jpg?resize=50%2C50&#038;quality=50&#038;ssl=1",
     "source": "AirdropAlert",
     "sourceUrl": "https://airdropalert.com/airdrops/extended-exchange-points-program/",
-    "claimUrl": "https://airdropalert.com/airdrops/extended-exchange-points-program/",
-    "id": 84,
+    "claimUrl": "https://extended.exchange",
+    "website": "https://extended.exchange",
+    "telegram": "https://t.me/extended_updates",
+    "discord": "https://discord.gg/extendedapp",
+    "x": "https://x.com/extendedapp",
+    "actions": [
+      "Create and fund your account Visit the [Extended.exchange](https://app.extended.exchange) app and connect your EVM [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/). в†’ Check the [restricted countries list](https://docs.extended.exchange/extended-resources/legal/restricted-countries) before getting started. Extended currently restricts access from the United States, United Kingdom, Canada and several other jurisdictions. в†’ Sign Account Creation to generate your Extended account and local signing key, followed by Registration to confirm ownership and enable trading. One trading account is created automatically, with up to 10 available per wallet. в†’ Deposit supported collateral using one of the networks available in the app. EVM deposits currently support networks including Ethereum, Arbitrum, Base, BNB Chain, Avalanche and Polygon, with Starknet wallets using Starknet directly.  Need Crypto? Check our [top exchanges list](https://airdropalert.com/exchanges/) and pick what fits you. [Bybit](https://partner.bybit.com/b/airdropaa) is our favorite, while [Bybit EU](https://www.bybit.eu/en-EU/exclusive-user-campaign/?campaign_id=59372&affiliate_id=14557) is the MiCA-regulated branch for EU / EEA users. If you prefer no mandatory KYC, [BloFin](https://partner.blofin.com/d/airdrops) and [Bitunix](https://www.bitunix.com/register?vipCode=airdropalert) stand out. For a deeper look, read our honest [Exchange Reviews](https://airdropalert.com/blogs/tag/exchange-review/).",
+      "Earn Points through trading and liquidity Trade eligible markets and build genuine activity that can contribute to your [Points](https://docs.extended.exchange/extended-resources/points-program) allocation. в†’ Points are tracked automatically, so there is no separate Points claim after trading or completing qualifying activity. в†’ USDC can also be deposited into the Extended Vault for XVS, which earns variable yield and keeps 90% of its value available toward trading margin . The minimum Vault deposit is $5, with a 24-hour lockup on each deposit .  Extended does not publish a guaranteed Points rate for Vault deposits or other liquidity activity. Perpetual trading uses real funds and leveraged positions can be liquidated.",
+      "Earn Points with referrals Reach $10,000 in trading volume to activate your referral links and earn additional Points from invited traders. в†’ Receive 2.5% of the Points generated by your referrals . в†’ Referred traders get 10% off commissions on their first $50 million in trading volume.  Keep activity genuine. Self-referrals, wash trading, artificial volume and coordinated account activity can affect Points eligibility."
+    ],
+    "id": 92,
     "firstSeenAt": "2026-09-21T14:46:46.199Z"
   },
   {
@@ -4238,11 +6257,11 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/buildonarc",
     "x": "https://x.com/arc",
     "actions": [
-      "Set up your Arc wallet and fund it with $USDC Set up your EVM [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) for Arc Mainnet, then fund it with $[USDC](https://airdropalert.com/currencies/usd-coin/). → Rabby already has Arc integrated. Other EVM wallets can add the network through [Chainlist](https://chainlist.org/chain/5042), or click \"Add Arc Mainnet\" in the top-right corner of [Arc Explorer](https://explorer.arc.io/), or add the network manually using Network Name Arc , RPC URL https://rpc.mainnet.arc.io , Chain ID 5042 , Currency Symbol USDC , and Block Explorer https://explorer.arc.io . → Fund your wallet by [bridging](https://airdropalert.com/blogs/how-to-bridge-to-arc/) $USDC through the [Arc Portal](https://portal.arc.io/deposit/crypto) or [Circle $USDC Bridge](https://bridge.usdc.com/). You can also buy $USDC on supported [exchanges](https://airdropalert.com/exchanges/) including Binance, Bybit, Kraken, OKX, KuCoin, Gate and MEXC, then withdraw it directly to your wallet using the Arc network.  $USDC is the native gas token on Arc, so keep a small balance available for transaction fees. The official $ARC contract is [0xA12Cd81d0f9988E3d60c4B6a0D52D368Ef3c788d](https://explorer.arc.io/token/0xA12Cd81d0f9988E3d60c4B6a0D52D368Ef3c788d).",
-      "Explore the Arc ecosystem the [Arc Portal](https://portal.arc.io/) is the front door to the ecosystem, where you can swap assets, discover applications, track balances and activity, and access earn, borrow and lend opportunities. → Trade and provide liquidity through DEXs such as Uniswap and Aero. You can also trade the hottest Arc memecoins through [Fomo](https://fomo.family/r/FairSaltySquid). → Check the Earn section to put your $USDC to work through [Morpho](https://airdropalert.com/airdrops/morpho-labs/). As of September 17, 2026, the markets showed 0.0% estimated APY, so monitor rates as liquidity develops. → Discover apps and assets including $USDC, $EURC, cirBTC, tokenized assets and StableFX. Portal also has Agent Wallets with configurable spending limits and permissions. → Explore [Pulsar Money](https://airdropalert.com/airdrops/pulsar-money/), a Europe-focused, multi-currency stablecoin app on Arc for USD and EUR balances, up to 6% APY through DeFi strategies, and virtual Visa card spending. → Staking is not live yet, however $ARC will be used for staking and delegation when Arc transitions from Proof of Authority to Proof of Stake or delegated Proof of Stake.  Airdrop eligibility rules are still unknown, so no action guarantees a $ARC allocation. For now, use Arc as you normally use other chains and follow official updates.",
-      "Build and contribute on Arc Developers and contributors already have several ways to take part in the Arc ecosystem. → Start with [Arc Studio](https://studio.arc.io/) to build onchain apps, write smart contracts, create AI agents or import a project from GitHub. Use [Arc Docs](https://docs.arc.io/) for network and developer references, with App Kits, CCTP and Gateway available for wallets, crosschain transfers and interoperability. → Working Mainnet projects can apply for one of 20 [Arc Microgrants](https://community.arc.io/public/events/arc-microgrants-f8tijfjhyq) worth 500 $USDC each from a 10,000 $USDC pool. Submissions close October 14, 2026. → Join [Arc House](https://community.arc.io/) and participate in the Architects program through hackathons, events, product testing, content and other eligible contributions. → Explore the [Arc drone demo](https://www.arc.io/drones), where an autonomous drone pays for its own charging in $USDC, and see how eligible teams building on the network may receive up to $1M in funding.  Architect Points track participation in the Architects program, but they have no monetary value and do not represent $ARC or guarantee airdrop eligibility."
+      "Set up your Arc wallet and fund it with $USDC Set up your EVM [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) for Arc Mainnet, then fund it with $[USDC](https://airdropalert.com/currencies/usd-coin/). в†’ Rabby already has Arc integrated. Other EVM wallets can add the network through [Chainlist](https://chainlist.org/chain/5042), or click \"Add Arc Mainnet\" in the top-right corner of [Arc Explorer](https://explorer.arc.io/), or add the network manually using Network Name Arc , RPC URL https://rpc.mainnet.arc.io , Chain ID 5042 , Currency Symbol USDC , and Block Explorer https://explorer.arc.io . в†’ Fund your wallet by [bridging](https://airdropalert.com/blogs/how-to-bridge-to-arc/) $USDC through the [Arc Portal](https://portal.arc.io/deposit/crypto) or [Circle $USDC Bridge](https://bridge.usdc.com/). You can also buy $USDC on supported [exchanges](https://airdropalert.com/exchanges/) including Binance, Bybit, Kraken, OKX, KuCoin, Gate and MEXC, then withdraw it directly to your wallet using the Arc network.  $USDC is the native gas token on Arc, so keep a small balance available for transaction fees. The official $ARC contract is [0xA12Cd81d0f9988E3d60c4B6a0D52D368Ef3c788d](https://explorer.arc.io/token/0xA12Cd81d0f9988E3d60c4B6a0D52D368Ef3c788d).",
+      "Explore the Arc ecosystem the [Arc Portal](https://portal.arc.io/) is the front door to the ecosystem, where you can swap assets, discover applications, track balances and activity, and access earn, borrow and lend opportunities. в†’ Trade and provide liquidity through DEXs such as Uniswap and Aero. You can also trade the hottest Arc memecoins through [Fomo](https://fomo.family/r/FairSaltySquid). в†’ Check the Earn section to put your $USDC to work through [Morpho](https://airdropalert.com/airdrops/morpho-labs/). As of September 17, 2026, the markets showed 0.0% estimated APY, so monitor rates as liquidity develops. в†’ Discover apps and assets including $USDC, $EURC, cirBTC, tokenized assets and StableFX. Portal also has Agent Wallets with configurable spending limits and permissions. в†’ Explore [Pulsar Money](https://airdropalert.com/airdrops/pulsar-money/), a Europe-focused, multi-currency stablecoin app on Arc for USD and EUR balances, up to 6% APY through DeFi strategies, and virtual Visa card spending. в†’ Staking is not live yet, however $ARC will be used for staking and delegation when Arc transitions from Proof of Authority to Proof of Stake or delegated Proof of Stake.  Airdrop eligibility rules are still unknown, so no action guarantees a $ARC allocation. For now, use Arc as you normally use other chains and follow official updates.",
+      "Build and contribute on Arc Developers and contributors already have several ways to take part in the Arc ecosystem. в†’ Start with [Arc Studio](https://studio.arc.io/) to build onchain apps, write smart contracts, create AI agents or import a project from GitHub. Use [Arc Docs](https://docs.arc.io/) for network and developer references, with App Kits, CCTP and Gateway available for wallets, crosschain transfers and interoperability. в†’ Working Mainnet projects can apply for one of 20 [Arc Microgrants](https://community.arc.io/public/events/arc-microgrants-f8tijfjhyq) worth 500 $USDC each from a 10,000 $USDC pool. Submissions close October 14, 2026. в†’ Join [Arc House](https://community.arc.io/) and participate in the Architects program through hackathons, events, product testing, content and other eligible contributions. в†’ Explore the [Arc drone demo](https://www.arc.io/drones), where an autonomous drone pays for its own charging in $USDC, and see how eligible teams building on the network may receive up to $1M in funding.  Architect Points track participation in the Architects program, but they have no monetary value and do not represent $ARC or guarantee airdrop eligibility."
     ],
-    "id": 85,
+    "id": 93,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4251,12 +6270,20 @@ export const generatedProjects: Project[] = [
     "chain": "Robinhood",
     "event": "Airdrop",
     "status": "Potential",
-    "description": "Mainnet Live  — $HOOD Airdrop . Ethereum L2  — Wall Street Onchain",
+    "description": "Explore Robinhood Chain mainnet and learn how eligible users can earn $LIT points through Lighter while farming a potential $HOOD airdrop 🪂",
     "logo": "https://i0.wp.com/airdropalert.com/wp-content/uploads/2026/02/Robinhood-LOGO.png?resize=50%2C50&#038;quality=50&#038;ssl=1",
     "source": "AirdropAlert",
     "sourceUrl": "https://airdropalert.com/airdrops/robinhood-chain/",
-    "claimUrl": "https://airdropalert.com/airdrops/robinhood-chain/",
-    "id": 86,
+    "claimUrl": "https://robinhood.com/",
+    "website": "https://robinhood.com/",
+    "x": "https://x.com/RobinhoodCrypto",
+    "actions": [
+      "Set Up Your Wallet Add the [Robinhood Chain mainnet network](https://docs.robinhood.com/chain/add-network-to-wallet) to your wallet. в†’ Use Rabby, MetaMask, [Robinhood Wallet](https://robinhood.com/ca/en/wallet/), or another compatible EVM [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/). If using Rabby, click the network button, search Robinhood, and select the integrated network. в†’ Add Robinhood Chain through [Chainlist](https://chainlist.org/chain/4663). в†’ If needed, add the network manually.  Important note: Robinhood Wallet is optional. It may be useful for eligible users who want the native Robinhood Chain experience and 2x Lighter points.  Useful tip: Use a hardware wallet like [Ledger](https://shop.ledger.com/pages/ledger-nano-s-plus?r=182ac130faf6) , [Trezor](https://trezor.io/?transaction_id=102dd9ae2595de7be25260b30ef1db&offer_id=133&affiliate_id=34387) or [Tangem](https://tangem.com/invite/TVJPWE) for maximum security. Robinhood states ecosystem listings do not mean endorsement, partnership, warranty, safety guarantee, or suitability guarantee.",
+      "Bridge Funds to Robinhood Chain Move $[ETH](https://airdropalert.com/currencies/ethereum/) or supported assets to Robinhood Chain. в†’ Use official bridge routes from the [Robinhood Chain bridging docs](https://docs.robinhood.com/chain/bridging/?utm_source=chatgpt.com). в†’ Bridge ETH to Robinhood Chain so you can cover gas fees. в†’ Use the canonical Arbitrum bridge if you want the trustless bridging route. в†’ Use supported cross-chain routes like LayerZero / Stargate, Chainlink CCIP, Relay, Across, LiFi, or 0x where available. в†’ Always test with a small amount before larger transfers. в†’ Verify the chain, wallet address, bridge route, and token before confirming.  Important note : Canonical bridge deposits usually take around 10 minutes, while withdrawals back to Ethereum can take around 7 days because of the Arbitrum challenge period. Do not bridge funds you may need immediately.  Need Crypto? Buy the crypto you need on [Bybit](https://partner.bybit.com/b/airdropaa) , or [Bybit EU](https://www.bybit.eu/en-EU/exclusive-user-campaign/?campaign_id=59372&affiliate_id=14557) if you are in the EU / EEA. Use Buy Crypto, choose your payment method, then withdraw to your wallet.",
+      "Explore the Robinhood Chain Ecosystem Use mainnet apps and focus on useful activity across the [Robinhood ecosystem](https://robinhood.com/us/en/chain/ecosystem/). в†’ Trading: interact with trading routes such as [Lighter](https://airdropalert.com/airdrops/lighter-perpetual-dex/), [Arcus](https://airdropalert.com/airdrops/arcus-tokenized-stocks/).  Looking for Robinhood Chain memecoins? Use [Fomo](https://airdropalert.com/airdrops/fomo-memecoin-trading-app/) to discover and trade new tokens directly from one unified balance, without bridging funds between supported networks. Read our [Robinhood Memes guide](https://airdropalert.com/blogs/robinhood-memes/) to discover the main launchpads, trading apps and the hottest memecoins across the ecosystem. в†’ Lighter rewards: eligible users in selected jurisdictions can access perpetual futures on Lighter. Lighter committed $11 million of $LIT to the Robinhood community. Eligible users earn 2x points through Robinhood Wallet and 1x points through Lighter's web app. в†’ Stock Tokens: eligible users can interact with tokenized stocks and ETFs on Robinhood Chain. Stock Tokens give economic exposure to the underlying assets, but they are not real shares and do not give shareholder rights. в†’ Lending: explore supported lending apps such as [Morpho](https://airdropalert.com/airdrops/morpho-labs). Lending activity can create onchain history, but it comes with smart contract, liquidation, and market risk. в†’ Yield: check [Robinhood Earn](https://robinhood.com/crypto/earn/) if available in your region. Robinhood Earn lets users lend USDG onchain through a self-custody wallet. в†’ Bridges: use official bridge routes to move assets between Robinhood Chain and other networks. Avoid random bridge links shared in comments, DMs, or unofficial posts. в†’ Analytics: track activity with [Robinhood Chain Explorer](https://robinhoodchain.blockscout.com). в†’ Contracts: verify token contracts through the [Robinhood Chain token contracts](https://docs.robinhood.com/chain/contracts/) page before trading Stock Tokens or other assets. Fake tokens can copy real names and tickers.  Important note : Only use official ecosystem links and verified contracts. Avoid random links shared in comments, DMs, or unofficial posts.  For a sharper edge, read our [Trading Fundamentals](https://airdropalert.com/blogs/tag/trading-fundamentals/) series and [Mental Trading](https://airdropalert.com/blogs/mental-side-of-trading/) article to improve discipline, decision making and long-term consistency across every market cycle.",
+      "Advanced Users and Builders Explore the official Robinhood Chain [documentation](https://docs.robinhood.com/chain) to get started. в†’ Deploy a smart contract with Foundry or Hardhat. в†’ Test account abstraction tools for smart accounts, batched transactions, gas sponsorship, and spending policies. в†’ Use cross-chain messaging if you are building cross-chain apps в†’ Use Chainlink oracles and price feeds for crypto assets, Stock Tokens, and DeFi apps. в†’ Run a full node if you need deeper network access and independent data. в†’ Check Robinhood Chain status before large transactions, deployments, or bridge activity. в†’ Report technical issues through the Robinhood Chain docs if you find bugs.  Important note: Robinhood Chain launched with Chainlink support from day one. Chainlink CCIP, Data Streams, and Data Feeds are live on Robinhood Chain mainnet to support tokenized real-world assets, pricing, and cross-chain activity, as covered by [PRNewswire](https://www.prnewswire.com/news-releases/robinhood-chain-launches-and-adopts-chainlink-to-unlock-access-to-the-onchain-economy-for-millions-of-users-302816242.html)."
+    ],
+    "id": 94,
     "firstSeenAt": "2026-09-21T14:46:46.199Z"
   },
   {
@@ -4265,12 +6292,22 @@ export const generatedProjects: Project[] = [
     "chain": "Ethereum",
     "event": "Airdrop",
     "status": "Potential",
-    "description": "Season 6  — Earn Yield + $ENA. Yield Protocol  — Delta-hedged system",
+    "description": "Ethena is a synthetic dollar protocol that lets you stake $USDe to earn yield while also qualifying for seasonal $ENA airdrop rewards 💸💸💸",
     "logo": "https://i0.wp.com/airdropalert.com/wp-content/uploads/2024/09/ethena.png?resize=50%2C50&#038;quality=50&#038;ssl=1",
     "source": "AirdropAlert",
     "sourceUrl": "https://airdropalert.com/airdrops/ethena-season-6/",
-    "claimUrl": "https://airdropalert.com/airdrops/ethena-season-6/",
-    "id": 87,
+    "claimUrl": "http://app.ethena.fi/join/5o939",
+    "website": "http://app.ethena.fi/join/5o939",
+    "telegram": "https://t.me/ethena_labs",
+    "discord": "https://discord.com/invite/ethena",
+    "x": "https://x.com/ethena",
+    "actions": [
+      "Connect your wallet в†’ Head to the [Ethena](http://app.ethena.fi/join/5o939) web app and connect your EVM [wallet](https://airdropalert.com/crypto-resources/crypto-wallets).  If you joined previous [Ethena Airdrop Seasons](https://airdropalert.com/airdrop-projects/ethena-labs/), check the Rewards section and head to Claim to collect any eligible $ENA allocation. Gas fees apply in $ETH.",
+      "Acquire USDe and/or $ENA в†’ Use the Swap section to get [USDe](https://airdropalert.com/currencies/ethena-usde/) if you want to stake into sUSDe, and $[ENA](https://airdropalert.com/currencies/ethena/) if you want to stake and lock into sENA.",
+      "Stake USDe or lock $ENA в†’ Stake USDe to mint sUSDe and earn yield, or stake and lock $ENA to mint sENA and build stronger reward exposure through Ethena's staking layer.   You can also deploy USDe or sUSDe across Ethena-aligned integrations to deepen participation across the ecosystem.",
+      "Monitor yield and rewards в†’ Monitor your yield, Shard accumulation, and referrals directly from the Ethena dashboard. Note : USDe and $ENA become withdrawable 7 days after you unstake."
+    ],
+    "id": 95,
     "firstSeenAt": "2026-09-21T14:46:46.199Z"
   },
   {
@@ -4289,11 +6326,11 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/bktFqhQdMt",
     "x": "https://x.com/infiniFi",
     "actions": [
-      "Join infiniFi Visit [infiniFi](https://infinifi.xyz?ref=44ZF4KKT) and connect your Ethereum-compatible wallet. → Go to the Points section to compare the available earning routes and multipliers. → The protocol integrates with Pendle, Morpho, Curve, Euler, Silo, and TAU , with selected routes appearing in the Points dashboard.  Keep some $[ETH](https://airdropalert.com/currencies/ethereum/) available for Ethereum gas fees.",
-      "Deposit stablecoins and earn APY Use the Earn section to deposit supported assets and earn projected APY through the staked iUSD route. → Choose USDC, iUSD, USDT, sUSDe, or USDe , enter the amount, and confirm the deposit. → Use Mint to deposit USDC and receive iUSD if you want to hold it for points, stake or lock it later, or use it in other DeFi markets.  The displayed Projected Net APY is based on recent portfolio performance and can change. You can also get optional [Nexus Mutual insurance](https://app.nexusmutual.io/cover/product/308) for your position.",
-      "Lock iUSD for higher APY Lock iUSD to earn higher projected APY and points. → Choose an unlock period from 1 to 13 weeks . → Longer unlock periods generally display a higher projected APY.  Your position remains locked until you begin the unlock process, then becomes withdrawable after the selected waiting period."
+      "Join infiniFi Visit [infiniFi](https://infinifi.xyz?ref=44ZF4KKT) and connect your Ethereum-compatible wallet. в†’ Go to the Points section to compare the available earning routes and multipliers. в†’ The protocol integrates with Pendle, Morpho, Curve, Euler, Silo, and TAU , with selected routes appearing in the Points dashboard.  Keep some $[ETH](https://airdropalert.com/currencies/ethereum/) available for Ethereum gas fees.",
+      "Deposit stablecoins and earn APY Use the Earn section to deposit supported assets and earn projected APY through the staked iUSD route. в†’ Choose USDC, iUSD, USDT, sUSDe, or USDe , enter the amount, and confirm the deposit. в†’ Use Mint to deposit USDC and receive iUSD if you want to hold it for points, stake or lock it later, or use it in other DeFi markets.  The displayed Projected Net APY is based on recent portfolio performance and can change. You can also get optional [Nexus Mutual insurance](https://app.nexusmutual.io/cover/product/308) for your position.",
+      "Lock iUSD for higher APY Lock iUSD to earn higher projected APY and points. в†’ Choose an unlock period from 1 to 13 weeks . в†’ Longer unlock periods generally display a higher projected APY.  Your position remains locked until you begin the unlock process, then becomes withdrawable after the selected waiting period."
     ],
-    "id": 88,
+    "id": 96,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4312,12 +6349,12 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/FshXSuu879",
     "x": "https://x.com/credifi",
     "actions": [
-      "Create your Credifi account Visit [Credifi](https://credi.fi/) and sign up. → Use email, phone, social login, or a supported crypto wallet. → Complete the account registration.  You can add wallets later when checking your credit eligibility.",
-      "Check if you qualify for credit Follow the route that matches your profile. → Connect a wallet so Credifi can review your onchain activity. If that is not enough to qualify, continue with bank verification. For the standard route, you need a U.S. bank account and good credit history . → If you use Ethos Network, an Ethos Credibility Score of 1,800+ can unlock a separate route for up to $3,000 , with no collateral, liquidation, or KYC. [See Credifi's announcement](https://x.com/credifi/status/2093123503788839097).  Bank verification is currently available only in the U.S. Credifi has not stated an additional geographic requirement for the Ethos route.",
-      "Verify your financial profile Complete the verification process required for your route. → For the standard route, the Credit Karma preliminary screening currently uses a 680 threshold before Credifi decides whether to continue with a separate bureau report and bank-data review. → On iPhone, use the [Credifi iOS app](https://apps.apple.com/us/app/credifi/id6747396401). On desktop, use the [Credifi Secure Verification extension](https://chromewebstore.google.com/detail/credifi-secure-verificati/bakcdgfdodifadbflmihgmcjffpkaigj) on Chrome, Edge, or Brave.  Verification uses a soft credit check and does not affect your credit score. Passing the preliminary check does not guarantee approval, loan amount, pricing, or final terms.",
-      "Review your loan and complete the process If approved, review the loan interest rate and repayment terms before moving forward. → At the final stage of the loan flow, below \"Receive Loan,\" enter referral code FBDRC5 to support AirdropAlert and help us keep researching new opportunities. Credifi confirms a $20 reward for the referrer, and no separate reward for the borrower has been announced. → Confirm the repayment conditions before completing the loan. → Late or missed payments may be reported to major credit bureaus, which could affect your credit score and future access to credit.  Want to lend instead? Contact info@credi.fi for access and terms."
+      "Create your Credifi account Visit [Credifi](https://credi.fi/) and sign up. в†’ Use email, phone, social login, or a supported crypto wallet. в†’ Complete the account registration.  You can add wallets later when checking your credit eligibility.",
+      "Check if you qualify for credit Follow the route that matches your profile. в†’ Connect a wallet so Credifi can review your onchain activity. If that is not enough to qualify, continue with bank verification. For the standard route, you need a U.S. bank account and good credit history . в†’ If you use Ethos Network, an Ethos Credibility Score of 1,800+ can unlock a separate route for up to $3,000 , with no collateral, liquidation, or KYC. [See Credifi's announcement](https://x.com/credifi/status/2093123503788839097).  Bank verification is currently available only in the U.S. Credifi has not stated an additional geographic requirement for the Ethos route.",
+      "Verify your financial profile Complete the verification process required for your route. в†’ For the standard route, the Credit Karma preliminary screening currently uses a 680 threshold before Credifi decides whether to continue with a separate bureau report and bank-data review. в†’ On iPhone, use the [Credifi iOS app](https://apps.apple.com/us/app/credifi/id6747396401). On desktop, use the [Credifi Secure Verification extension](https://chromewebstore.google.com/detail/credifi-secure-verificati/bakcdgfdodifadbflmihgmcjffpkaigj) on Chrome, Edge, or Brave.  Verification uses a soft credit check and does not affect your credit score. Passing the preliminary check does not guarantee approval, loan amount, pricing, or final terms.",
+      "Review your loan and complete the process If approved, review the loan interest rate and repayment terms before moving forward. в†’ At the final stage of the loan flow, below \"Receive Loan,\" enter referral code FBDRC5 to support AirdropAlert and help us keep researching new opportunities. Credifi confirms a $20 reward for the referrer, and no separate reward for the borrower has been announced. в†’ Confirm the repayment conditions before completing the loan. в†’ Late or missed payments may be reported to major credit bureaus, which could affect your credit score and future access to credit.  Want to lend instead? Contact info@credi.fi for access and terms."
     ],
-    "id": 89,
+    "id": 97,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4335,11 +6372,11 @@ export const generatedProjects: Project[] = [
     "website": "https://jurassic.finance",
     "x": "https://x.com/JurassicFi",
     "actions": [
-      "Explore Tokenized Fossils Onchain Visit the [Jurassic Finance app](https://app.jurassic.finance/) and connect a Solana wallet. → Review the specimen details, including provenance, valuation, funding target, progress, token supply, and ownership terms. → Check how contributions are allocated and read the offering conditions.  The app currently supports primary specimen raises. Portfolio Dashboard and secondary-sale Auctions are still marked Coming Soon.",
-      "Contribute USDC to a Specimen Raise Choose a specimen and enter the amount of USDC you want to contribute. → The first offering is Deaton, a museum-grade Triceratops represented on Solana by $TRCH1. Its 1,000,000-token supply represents the specimen, with 1% of the supply corresponding to 1% ownership. → Review your expected token allocation and confirm the USDC contribution from your connected wallet.  Deaton has a $660,000 funding target, with $600,000 allocated to the acquisition and $60,000 to the Jurassic Finance Labs treasury. Contributions are fully refunded if the target is not met, with no oversubscript",
-      "Explore $RAWR Governance Visit [Jurassic Finance on MetaDAO](https://www.metadao.fi/projects/jurassic-finance) to view governance proposals and treasury activity. → Review active proposals affecting Jurassic Finance and its specimen SPVs. → Monitor treasury activity and governance decisions as new specimens are introduced.  $RAWR currently has no staking rewards, revenue share, or fee distributions."
+      "Explore Tokenized Fossils Onchain Visit the [Jurassic Finance app](https://app.jurassic.finance/) and connect a Solana wallet. в†’ Review the specimen details, including provenance, valuation, funding target, progress, token supply, and ownership terms. в†’ Check how contributions are allocated and read the offering conditions.  The app currently supports primary specimen raises. Portfolio Dashboard and secondary-sale Auctions are still marked Coming Soon.",
+      "Contribute USDC to a Specimen Raise Choose a specimen and enter the amount of USDC you want to contribute. в†’ The first offering is Deaton, a museum-grade Triceratops represented on Solana by $TRCH1. Its 1,000,000-token supply represents the specimen, with 1% of the supply corresponding to 1% ownership. в†’ Review your expected token allocation and confirm the USDC contribution from your connected wallet.  Deaton has a $660,000 funding target, with $600,000 allocated to the acquisition and $60,000 to the Jurassic Finance Labs treasury. Contributions are fully refunded if the target is not met, with no oversubscript",
+      "Explore $RAWR Governance Visit [Jurassic Finance on MetaDAO](https://www.metadao.fi/projects/jurassic-finance) to view governance proposals and treasury activity. в†’ Review active proposals affecting Jurassic Finance and its specimen SPVs. в†’ Monitor treasury activity and governance decisions as new specimens are introduced.  $RAWR currently has no staking rewards, revenue share, or fee distributions."
     ],
-    "id": 90,
+    "id": 98,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4358,11 +6395,11 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/wDnsHUbrX",
     "x": "https://x.com/BR1INFINITE",
     "actions": [
-      "Create your account and connect a Solana wallet Go to the [BR1 INFINITE website](https://br1game.com/signup?referral=AirdropAlert) and create your account. → Enter the 4-digit verification code sent to your email, then access the dashboard. → Go to Account Settings → Wallets and connect a Solana [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) such as Phantom or Solflare. This lets BR1 verify eligible Operatives and Weapons linked to your wallet for rewards.  New users currently receive a $5 Preseason bonus after creating an account. The bonus can only be used for in-game spawn fees, cannot be spent in the Store or withdrawn, and expires if unused.",
-      "Download BR1 INFINITE and play to earn Download [BR1 INFINITE](https://br1game.com/download) for Windows and join the Preseason playtests. → Earn BR1 Points from gameplay, with the current model giving 5 base Points per session and 10 Points per kill. Daily activity, social engagement, renting, and multipliers can add more. → Earn cash from eliminations, collect Cash Drops and extract successfully, or compete in Kill Races for leaderboard prizes.  Free spawns are available during Preseason events, while public playtest hours can change. Risk Modes and eligible BR1 assets can also increase the amount of Points earned.",
-      "Spend Points, trade assets and invite friends Use your rewards across BR1 and explore more ways to earn. → Visit the [BR1 Store](https://br1game.com/store) to spend BR1 Points on eligible items such as Operatives, Weapons, and Loot Boxes, or browse the [Marketplace](https://br1game.com/marketplace) to buy and sell BR1 assets. → Go to Account Settings → Referrals and share your personal invite link. BR1 Points are awarded when friends sign up through it, and the official guide also lists USDC referral rewards.  For more details on BR1 Points, multipliers, Cash Drops, Kill Races, renting, Operatives, Weapons, the Infinite Pass, Store, and withdrawals, read the [BR1 Game Ecosystem guide](https://litepaper.bravoready.com/br1-infinite-guide/br1-infinite-guide/br1-game-ecosystem)."
+      "Create your account and connect a Solana wallet Go to the [BR1 INFINITE website](https://br1game.com/signup?referral=AirdropAlert) and create your account. в†’ Enter the 4-digit verification code sent to your email, then access the dashboard. в†’ Go to Account Settings в†’ Wallets and connect a Solana [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) such as Phantom or Solflare. This lets BR1 verify eligible Operatives and Weapons linked to your wallet for rewards.  New users currently receive a $5 Preseason bonus after creating an account. The bonus can only be used for in-game spawn fees, cannot be spent in the Store or withdrawn, and expires if unused.",
+      "Download BR1 INFINITE and play to earn Download [BR1 INFINITE](https://br1game.com/download) for Windows and join the Preseason playtests. в†’ Earn BR1 Points from gameplay, with the current model giving 5 base Points per session and 10 Points per kill. Daily activity, social engagement, renting, and multipliers can add more. в†’ Earn cash from eliminations, collect Cash Drops and extract successfully, or compete in Kill Races for leaderboard prizes.  Free spawns are available during Preseason events, while public playtest hours can change. Risk Modes and eligible BR1 assets can also increase the amount of Points earned.",
+      "Spend Points, trade assets and invite friends Use your rewards across BR1 and explore more ways to earn. в†’ Visit the [BR1 Store](https://br1game.com/store) to spend BR1 Points on eligible items such as Operatives, Weapons, and Loot Boxes, or browse the [Marketplace](https://br1game.com/marketplace) to buy and sell BR1 assets. в†’ Go to Account Settings в†’ Referrals and share your personal invite link. BR1 Points are awarded when friends sign up through it, and the official guide also lists USDC referral rewards.  For more details on BR1 Points, multipliers, Cash Drops, Kill Races, renting, Operatives, Weapons, the Infinite Pass, Store, and withdrawals, read the [BR1 Game Ecosystem guide](https://litepaper.bravoready.com/br1-infinite-guide/br1-infinite-guide/br1-game-ecosystem)."
     ],
-    "id": 91,
+    "id": 99,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4382,12 +6419,12 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/2FNEwp2Xv3",
     "x": "https://twitter.com/PlayKintara",
     "actions": [
-      "Connect your wallet and enter the game  Launch the [Kintara game](https://kintara.gg/play) in your browser and connect your Solana [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) (e.g. Phantom). Pick a display name and choose a Server. → Inventory carry across servers, but players on different servers don't share the same world.  You need at least 1,000 $[KINS](https://www.coingecko.com/en/coins/kintara) in your wallet to enter the game — roughly $4 at current prices. Pick some up on [MEXC](https://www.mexc.com/register?inviteCode=mexc-airdropaler) or on-chain via [Meteora](https://app.meteora.ag/) or [Orca](https://www.orca.so/) before connecting.",
-      "Play to Earn Every activity in Kintara earns. Pick your path and play at your own pace: → Chop trees in Whisperwood or on the Mainland for wood, mine rocks and coal in the Mainland Mine or Wilderness zones → Fish in Whisperwood ponds or at The Pond — every catch levels your Fishing skill and carries a rare chance at a tradable Blue Whale or Gold Whale mount → Fight mobs across the Wilderness for Combat XP and mount drops → Wager loot in open PvP or enter the Arena for structured fights against other players  Every action levels one of five skills — Combat, Woodcutting, Mining, Fishing, and Cooking — each capping at level 20. Travel light in the Wilderness and bank first — dying outside the safe camp drops a tombstone with your carried loot.  Check the [game tutorial](https://kintara.gg/#how-to-play) to learn how to play — it walks you through tools, hotbar setup, and the basics before you head out.",
-      "Complete daily quests Open the quest log and work through your dailies — chop X wood, mine X stone, catch X fish, kill X mobs. → They reset every 24 hours and pay gold, XP, and occasional badges. A single fishing trip to The Pond can knock out a catch quest and a cooking quest in the same run.  Cook raw fish at the Roast Pit on The Pond for Cooking XP — the firepits you build in the field are for healing only and don't count toward the cooking skill.",
-      "Sell on the Marketplace and spin the wheel Tap the cart icon in your HUD to open the Marketplace from anywhere in the game. → List surplus resources for gold, or list gold in exchange for $KINS — when a buyer pays, 95% lands directly in your wallet. → On the Mainland near the casino, the Spinner Wheel gives one free spin every 12 hours for bonus resources and gold.  Extra spins cost ~$3 in $KINS, with half burned and half going to the treasury."
+      "Connect your wallet and enter the game  Launch the [Kintara game](https://kintara.gg/play) in your browser and connect your Solana [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) (e.g. Phantom). Pick a display name and choose a Server. в†’ Inventory carry across servers, but players on different servers don't share the same world.  You need at least 1,000 $[KINS](https://www.coingecko.com/en/coins/kintara) in your wallet to enter the game — roughly $4 at current prices. Pick some up on [MEXC](https://www.mexc.com/register?inviteCode=mexc-airdropaler) or on-chain via [Meteora](https://app.meteora.ag/) or [Orca](https://www.orca.so/) before connecting.",
+      "Play to Earn Every activity in Kintara earns. Pick your path and play at your own pace: в†’ Chop trees in Whisperwood or on the Mainland for wood, mine rocks and coal in the Mainland Mine or Wilderness zones в†’ Fish in Whisperwood ponds or at The Pond — every catch levels your Fishing skill and carries a rare chance at a tradable Blue Whale or Gold Whale mount в†’ Fight mobs across the Wilderness for Combat XP and mount drops в†’ Wager loot in open PvP or enter the Arena for structured fights against other players  Every action levels one of five skills — Combat, Woodcutting, Mining, Fishing, and Cooking — each capping at level 20. Travel light in the Wilderness and bank first — dying outside the safe camp drops a tombstone with your carried loot.  Check the [game tutorial](https://kintara.gg/#how-to-play) to learn how to play — it walks you through tools, hotbar setup, and the basics before you head out.",
+      "Complete daily quests Open the quest log and work through your dailies — chop X wood, mine X stone, catch X fish, kill X mobs. в†’ They reset every 24 hours and pay gold, XP, and occasional badges. A single fishing trip to The Pond can knock out a catch quest and a cooking quest in the same run.  Cook raw fish at the Roast Pit on The Pond for Cooking XP — the firepits you build in the field are for healing only and don't count toward the cooking skill.",
+      "Sell on the Marketplace and spin the wheel Tap the cart icon in your HUD to open the Marketplace from anywhere in the game. в†’ List surplus resources for gold, or list gold in exchange for $KINS — when a buyer pays, 95% lands directly in your wallet. в†’ On the Mainland near the casino, the Spinner Wheel gives one free spin every 12 hours for bonus resources and gold.  Extra spins cost ~$3 in $KINS, with half burned and half going to the treasury."
     ],
-    "id": 92,
+    "id": 100,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4405,15 +6442,15 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/captain-company-1049835082438946866",
     "x": "https://x.com/capncompany",
     "actions": [
-      "Create your account Visit the official [Captain & Company](https://capnco.gg/) website. → Sign up and enter the game.  You can start playing without buying an NFT or connecting a wallet.",
-      "Check your profile Open your Captain & Company profile page. → Check which ecosystem campaigns are active. → Review the current reward rules before playing for campaign rewards.  Available campaigns can change over time, so always check the profile page and official announcements first.",
-      "Play and earn Doubloons → Earn Doubloons through fishing, treasure hunting, bosses, Pillage War, and events. → Doubloons are used for progression, crafting, rankings, and campaign activity.  Doubloons are not directly tradable or withdrawable.",
-      "Use a Pirate Pass for deeper rewards → A Pirate Pass may be needed for Event Currencies, eligible item withdrawals, marketplace features, and full campaign rewards. → A supported Event Pass may also be required for some limited-time campaigns.  Do not buy a Pirate Pass only because you expect rewards to exceed the cost.",
-      "Mint eligible rewards → Return to your profile during active campaigns. → Mint eligible ecosystem rewards from your campaign activity.  Minting rules depend on the active campaign and supported ecosystem.",
-      "Join the current Enjin campaign → Mint eligible Enjin rewards during the [ENJ campaign](https://enjin.io/blog/captain-and-company-sails-into-enjin/). → Compete for the 100,000 ENJ Pirate Blob prize pool. → Five winners are selected randomly, while 45 winners come from the Piracy leaderboard.  The campaign has limited winners, and the official announcement does not show a clear closing date yet.",
-      "Follow for new campaigns → Follow Captain & Company and Enjin for campaign updates. → More campaigns can come over time, so watch for new reward events, deadlines, and partner opportunities.  Reward rules, ecosystem integrations, and withdrawal requirements can change."
+      "Create your account Visit the official [Captain & Company](https://capnco.gg/) website. в†’ Sign up and enter the game.  You can start playing without buying an NFT or connecting a wallet.",
+      "Check your profile Open your Captain & Company profile page. в†’ Check which ecosystem campaigns are active. в†’ Review the current reward rules before playing for campaign rewards.  Available campaigns can change over time, so always check the profile page and official announcements first.",
+      "Play and earn Doubloons в†’ Earn Doubloons through fishing, treasure hunting, bosses, Pillage War, and events. в†’ Doubloons are used for progression, crafting, rankings, and campaign activity.  Doubloons are not directly tradable or withdrawable.",
+      "Use a Pirate Pass for deeper rewards в†’ A Pirate Pass may be needed for Event Currencies, eligible item withdrawals, marketplace features, and full campaign rewards. в†’ A supported Event Pass may also be required for some limited-time campaigns.  Do not buy a Pirate Pass only because you expect rewards to exceed the cost.",
+      "Mint eligible rewards в†’ Return to your profile during active campaigns. в†’ Mint eligible ecosystem rewards from your campaign activity.  Minting rules depend on the active campaign and supported ecosystem.",
+      "Join the current Enjin campaign в†’ Mint eligible Enjin rewards during the [ENJ campaign](https://enjin.io/blog/captain-and-company-sails-into-enjin/). в†’ Compete for the 100,000 ENJ Pirate Blob prize pool. в†’ Five winners are selected randomly, while 45 winners come from the Piracy leaderboard.  The campaign has limited winners, and the official announcement does not show a clear closing date yet.",
+      "Follow for new campaigns в†’ Follow Captain & Company and Enjin for campaign updates. в†’ More campaigns can come over time, so watch for new reward events, deadlines, and partner opportunities.  Reward rules, ecosystem integrations, and withdrawal requirements can change."
     ],
-    "id": 93,
+    "id": 101,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4431,11 +6468,11 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/farmtown",
     "x": "https://x.com/playfarmtown",
     "actions": [
-      "Play and grow your farm → Go to the official [FarmTown](https://play.farmtown.online/) website → Connect your Solana [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) → Buy seeds → Prepare soil → Plant crops → Harvest before crops expire  FarmTown runs directly in the browser, so no download is required.  Need Crypto? Buy the crypto you need on [Bybit](https://partner.bybit.com/b/airdropaa) , or [Bybit EU](https://www.bybit.eu/en-EU/exclusive-user-campaign/?campaign_id=59372&affiliate_id=14557) if you are in the EU / EEA. Use Buy Crypto, choose your payment method, then withdraw to your wallet.",
-      "Build your play-to-earn progress Keep playing to grow your account inside the game. → Complete orders → Earn Gold and XP → Level up → Unlock better crops → Expand your land → Buy Stars with $FARM if you want to speed up crop growth  Your progress matters because Gold, Points and Levels can be used in Farmer's Pool.",
+      "Play and grow your farm в†’ Go to the official [FarmTown](https://play.farmtown.online/) website в†’ Connect your Solana [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) в†’ Buy seeds в†’ Prepare soil в†’ Plant crops в†’ Harvest before crops expire  FarmTown runs directly in the browser, so no download is required.  Need Crypto? Buy the crypto you need on [Bybit](https://partner.bybit.com/b/airdropaa) , or [Bybit EU](https://www.bybit.eu/en-EU/exclusive-user-campaign/?campaign_id=59372&affiliate_id=14557) if you are in the EU / EEA. Use Buy Crypto, choose your payment method, then withdraw to your wallet.",
+      "Build your play-to-earn progress Keep playing to grow your account inside the game. в†’ Complete orders в†’ Earn Gold and XP в†’ Level up в†’ Unlock better crops в†’ Expand your land в†’ Buy Stars with $FARM if you want to speed up crop growth  Your progress matters because Gold, Points and Levels can be used in Farmer's Pool.",
       "Compete for $FARM rewards Farmer's Pool lets players turn their in-game progress into Pool Power. Use eligible progress like Gold, Farm Points or Levels to increase your Pool Power and compete for a share of the $FARM pool. Your $FARM share depends on how much Pool Power you have compared with other players. Keep farming, building progress and following FarmTown's official announcements for new pool rounds, gameplay updates and reward changes. Note: $FARM is already tracked on [CoinGecko](https://www.coingecko.com/en/coins/farmtown) and tradable on [MEXC](https://www.mexc.com/register?inviteCode=mexc-airdropaler)."
     ],
-    "id": 94,
+    "id": 102,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4454,10 +6491,10 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/sleepagotchi",
     "x": "https://x.com/sleepagotchi",
     "actions": [
-      "Loyalty Program → Head to the [Sleepagotchi Loyalty Program](https://hub.sleepagotchi.com/loyalty?referral_code=CRK20YLY), connect your Solana [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/), and complete the available quests to earn Sleep Points:  Follow Sleepagotchi on  and engage with posts  Verify your email and finish the community quests  Check in weekly when new quests become available  Hold Dino [Gotchis NFTs](https://dinogotchis.sleepagotchi.com) to unlock point multipliers.  Invite friends through your referral link for extra rewards  Sleep Points are expected to determine airdrop allocation after TGE.",
-      "Play Sleepagotchi → Download the [Sleepagotchi app](https://store.sleepagotchi.com) on iOS or Android, then sign up with the same email connected to the Loyalty Program.  Join the vSLEEP campaign and connect your Solana wallet  Set your bedtime & wake-up time to track your sleep routine  Claim morning rewards based on your daily sleep score  Earn vSLEEP through sleep scores, streaks, and battles  Collect heroes, upgrade cards, and increase star levels  Play Hunt Mode, climb leaderboards, and grow idle rewards  You can also check the official [game guide](https://drive.google.com/file/d/1hN9KITYtoLVd7gx7GdHzIZD-iB8Z0w-y/view) for the full app walkthrough.  You can also play [Sleepagotchi LITE](https://t.me/sleepagotchiLITE_bot) on Telegram to earn additional airdrop points before TGE through hero cards, boosters, constellation challenges, clans, leaderboards, gold income, and daily rewards. You can check the official [LITE game guide](https://drive.google.com/file/d/1VxwGa9Tyi8-fGnFqzKAvM6NM-_9iHe2w/view) for the full walkthrough."
+      "Loyalty Program в†’ Head to the [Sleepagotchi Loyalty Program](https://hub.sleepagotchi.com/loyalty?referral_code=CRK20YLY), connect your Solana [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/), and complete the available quests to earn Sleep Points:  Follow Sleepagotchi on  and engage with posts  Verify your email and finish the community quests  Check in weekly when new quests become available  Hold Dino [Gotchis NFTs](https://dinogotchis.sleepagotchi.com) to unlock point multipliers.  Invite friends through your referral link for extra rewards  Sleep Points are expected to determine airdrop allocation after TGE.",
+      "Play Sleepagotchi в†’ Download the [Sleepagotchi app](https://store.sleepagotchi.com) on iOS or Android, then sign up with the same email connected to the Loyalty Program.  Join the vSLEEP campaign and connect your Solana wallet  Set your bedtime & wake-up time to track your sleep routine  Claim morning rewards based on your daily sleep score  Earn vSLEEP through sleep scores, streaks, and battles  Collect heroes, upgrade cards, and increase star levels  Play Hunt Mode, climb leaderboards, and grow idle rewards  You can also check the official [game guide](https://drive.google.com/file/d/1hN9KITYtoLVd7gx7GdHzIZD-iB8Z0w-y/view) for the full app walkthrough.  You can also play [Sleepagotchi LITE](https://t.me/sleepagotchiLITE_bot) on Telegram to earn additional airdrop points before TGE through hero cards, boosters, constellation challenges, clans, leaderboards, gold income, and daily rewards. You can check the official [LITE game guide](https://drive.google.com/file/d/1VxwGa9Tyi8-fGnFqzKAvM6NM-_9iHe2w/view) for the full walkthrough."
     ],
-    "id": 95,
+    "id": 103,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4475,12 +6512,12 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.com/invite/VJYRAuT6Dh",
     "x": "https://x.com/Showdown_TCG",
     "actions": [
-      "Sign up → Go to the [Showdown Game](https://www.showdown.game/) website, create your account with Google or email, and use the referral code 6681 to receive 1,000 Showpoints and a 10x sign-up bonus.",
-      "Play for free and Learn → Start with the tutorial and Practice mode to understand how Hands, Pocket cards, Action Cards, Chips, and the Pot work across Preflop, Flop, and River. From there, explore free matches and tournaments to get comfortable with the pacing, test decks, and understand how decisions impact outcomes across multiple rounds.  [Showpoints](https://www.showdown.game/news/showpoints) can be redeemed through the VIP Store for mystery boxes, tournament dollars, and real-life rewards, while also serving as your path toward future airdrop allocation.",
-      "Deposit USDm & play with real money (Optional) → [Deposit USDm to your Showdown wallet](https://www.showdown.game/news/how-to-deposit-usdm-to-showdown) when you are ready to enter [Money Games](http://showdown-win.vercel.app/) or paid tournaments. Use the official [RabbitHole bridge](https://rabbithole.megaeth.com/bridge) if you need to transfer funds to the MegaETH [network](https://chainlist.org/chain/4326).  Playing with real funds unlocks the full competitive layer, lets you compete for money rewards, and allows you to earn MegaETH Points toward the $MEGA airdrop.",
-      "Refer → Find your Player ID (a number, not your username) in your Player Profile, share it with new users, and earn 20% lifetime commission on all Showpoints they earn."
+      "Sign up в†’ Go to the [Showdown Game](https://www.showdown.game/) website, create your account with Google or email, and use the referral code 6681 to receive 1,000 Showpoints and a 10x sign-up bonus.",
+      "Play for free and Learn в†’ Start with the tutorial and Practice mode to understand how Hands, Pocket cards, Action Cards, Chips, and the Pot work across Preflop, Flop, and River. From there, explore free matches and tournaments to get comfortable with the pacing, test decks, and understand how decisions impact outcomes across multiple rounds.  [Showpoints](https://www.showdown.game/news/showpoints) can be redeemed through the VIP Store for mystery boxes, tournament dollars, and real-life rewards, while also serving as your path toward future airdrop allocation.",
+      "Deposit USDm & play with real money (Optional) в†’ [Deposit USDm to your Showdown wallet](https://www.showdown.game/news/how-to-deposit-usdm-to-showdown) when you are ready to enter [Money Games](http://showdown-win.vercel.app/) or paid tournaments. Use the official [RabbitHole bridge](https://rabbithole.megaeth.com/bridge) if you need to transfer funds to the MegaETH [network](https://chainlist.org/chain/4326).  Playing with real funds unlocks the full competitive layer, lets you compete for money rewards, and allows you to earn MegaETH Points toward the $MEGA airdrop.",
+      "Refer в†’ Find your Player ID (a number, not your username) in your Player Profile, share it with new users, and earn 20% lifetime commission on all Showpoints they earn."
     ],
-    "id": 96,
+    "id": 104,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4498,13 +6535,13 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/C8BSPNm3",
     "x": "https://x.com/PlayCalamity",
     "actions": [
-      "Connect Wallet → Visit the official [Calamity](https://app.calamity.online/) website and connect your [wallet](https://airdropalert.com/crypto-resources/crypto-wallets).",
-      "Download Game → Click Play on the website, choose your platform (Steam, Epic Games, Android via Google Play, or iOS via TestFlight), then download and install Calamity.",
-      "Link Account → After launching the game, go to Link Account on the website, sign in, and verify your email to link your wallet with your in-game profile.",
-      "Play the Game → Choose your class, play PvE and PvP modes, farm Gold and resources, upgrade gear using Gems, craft items, use the Armory to plan your build, and check the official [Calamity Wiki](https://wiki.calamity.online/wiki/about-calamity) to learn more about mechanics and systems.",
-      "Compete and Earn → Join active events, climb leaderboards, earn WYRM, NFTs, USDC, and in-game assets, and use the Auction House to trade items within the player-driven economy."
+      "Connect Wallet в†’ Visit the official [Calamity](https://app.calamity.online/) website and connect your [wallet](https://airdropalert.com/crypto-resources/crypto-wallets).",
+      "Download Game в†’ Click Play on the website, choose your platform (Steam, Epic Games, Android via Google Play, or iOS via TestFlight), then download and install Calamity.",
+      "Link Account в†’ After launching the game, go to Link Account on the website, sign in, and verify your email to link your wallet with your in-game profile.",
+      "Play the Game в†’ Choose your class, play PvE and PvP modes, farm Gold and resources, upgrade gear using Gems, craft items, use the Armory to plan your build, and check the official [Calamity Wiki](https://wiki.calamity.online/wiki/about-calamity) to learn more about mechanics and systems.",
+      "Compete and Earn в†’ Join active events, climb leaderboards, earn WYRM, NFTs, USDC, and in-game assets, and use the Auction House to trade items within the player-driven economy."
     ],
-    "id": 97,
+    "id": 105,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4522,15 +6559,15 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/nrnagents",
     "x": "https://x.com/aiarena_",
     "actions": [
-      "Get a Champion Fighter NFT → Purchase a fighter from the [AI Arena Champions](https://opensea.io/collection/ai-arena-champions) collection or a redeemable pass from the [AI Arena Mint Pass](https://opensea.io/collection/ai-arena-mint-pass) collection on OpenSea using an Arbitrum-compatible wallet. Owning a [Champion fighter NFT](https://docs.aiarena.io/gaming-competition/nft-makeup) unlocks access to the game.",
-      "Access the AI Arena game client  → Visit the [AI Arena game client](https://gaming.aiarena.io/) and connect the wallet holding your Champion NFT to enter the gameplay environment.",
-      "Train your chanpion  → Follow the training process explained in the [How to Play AI Arena guide](https://docs.aiarena.io/how-to-play-ai-arena), where you control the fighter manually while the AI learns your actions through imitation learning.",
-      "Enter the Battle Arena  → Submit your trained fighter to ranked matches as explained in the [Battle Arena guide](https://docs.aiarena.io/gaming-competition/battle-arena) where AI agents battle automatically against other fighters.",
-      "Stake $NRN to activate rewards  → Stake NRN on your fighter to make it eligible for the reward pool distributed during competitive rounds according to the [NRN rewards system](https://docs.aiarena.io/gaming-competition/nrn-rewards).",
-      "Climb the rankings  → Fighters gain Elo rating through victories, improving their leaderboard position and increasing their share of the reward pool as explained in the [Ranking System documentation](https://docs.aiarena.io/gaming-competition/ranking-system).",
-      "Merge fighters to strengthen agents  → Combine fighters through the [AI Arena merging system](https://docs.aiarena.io/gaming-competition/merging) to create stronger AI competitors and improve long-term performance in the arena."
+      "Get a Champion Fighter NFT в†’ Purchase a fighter from the [AI Arena Champions](https://opensea.io/collection/ai-arena-champions) collection or a redeemable pass from the [AI Arena Mint Pass](https://opensea.io/collection/ai-arena-mint-pass) collection on OpenSea using an Arbitrum-compatible wallet. Owning a [Champion fighter NFT](https://docs.aiarena.io/gaming-competition/nft-makeup) unlocks access to the game.",
+      "Access the AI Arena game client  в†’ Visit the [AI Arena game client](https://gaming.aiarena.io/) and connect the wallet holding your Champion NFT to enter the gameplay environment.",
+      "Train your chanpion  в†’ Follow the training process explained in the [How to Play AI Arena guide](https://docs.aiarena.io/how-to-play-ai-arena), where you control the fighter manually while the AI learns your actions through imitation learning.",
+      "Enter the Battle Arena  в†’ Submit your trained fighter to ranked matches as explained in the [Battle Arena guide](https://docs.aiarena.io/gaming-competition/battle-arena) where AI agents battle automatically against other fighters.",
+      "Stake $NRN to activate rewards  в†’ Stake NRN on your fighter to make it eligible for the reward pool distributed during competitive rounds according to the [NRN rewards system](https://docs.aiarena.io/gaming-competition/nrn-rewards).",
+      "Climb the rankings  в†’ Fighters gain Elo rating through victories, improving their leaderboard position and increasing their share of the reward pool as explained in the [Ranking System documentation](https://docs.aiarena.io/gaming-competition/ranking-system).",
+      "Merge fighters to strengthen agents  в†’ Combine fighters through the [AI Arena merging system](https://docs.aiarena.io/gaming-competition/merging) to create stronger AI competitors and improve long-term performance in the arena."
     ],
-    "id": 98,
+    "id": 106,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4548,11 +6585,11 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.com/invite/fableborne",
     "x": "https://x.com/PowerPrtcl",
     "actions": [
-      "Onboard → Head to [Fableborne](https://fableborne.com) website, sign up to create your account, then open your profile to link your [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) and social accounts so your activity is tracked for seasonal rewards.",
-      "Download & Play Each Season → Download the Fableborne game app on your [iOS](https://apps.apple.com/us/app/fableborne/id1623855674) or [Android](https://play.google.com/store/apps/details?id=com.PixionGames.Fableborne) device and play actively throughout seasons to progress, complete objectives, and fight for supremacy, generating ESSENCE through sustained gameplay.",
-      "Stake $POWER & NFTs → Go to the [Power Protocol staking dashboard](https://staking.powerprotocol.xyz/staking) and stake $POWER tokens and Fableborne Kingdom NFTs to generate daily staking points, which determine your share of the fixed $POWER allocation distributed each season.  [Kingdom NFTs](https://marketplace.roninchain.com/collections/fableborne-kingdoms) apply multipliers to staking output. Higher-rarity Kingdoms generate more daily points, leading to greater seasonal $POWER rewards, and can be upgraded via merge-to-mint to increase their multiplier over time.  $POWER is already tradable on [Gate](https://www.gate.com/share/AAIRDROP), [MEXC](https://www.mexc.com/register?inviteCode=mexc-airdropaler), [BingX](https://bingx.com/invite/QEHIOL), and [Bitget](https://partner.bitget.com/bg/EVS9NM)."
+      "Onboard в†’ Head to [Fableborne](https://fableborne.com) website, sign up to create your account, then open your profile to link your [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) and social accounts so your activity is tracked for seasonal rewards.",
+      "Download & Play Each Season в†’ Download the Fableborne game app on your [iOS](https://apps.apple.com/us/app/fableborne/id1623855674) or [Android](https://play.google.com/store/apps/details?id=com.PixionGames.Fableborne) device and play actively throughout seasons to progress, complete objectives, and fight for supremacy, generating ESSENCE through sustained gameplay.",
+      "Stake $POWER & NFTs в†’ Go to the [Power Protocol staking dashboard](https://staking.powerprotocol.xyz/staking) and stake $POWER tokens and Fableborne Kingdom NFTs to generate daily staking points, which determine your share of the fixed $POWER allocation distributed each season.  [Kingdom NFTs](https://marketplace.roninchain.com/collections/fableborne-kingdoms) apply multipliers to staking output. Higher-rarity Kingdoms generate more daily points, leading to greater seasonal $POWER rewards, and can be upgraded via merge-to-mint to increase their multiplier over time.  $POWER is already tradable on [Gate](https://www.gate.com/share/AAIRDROP), [MEXC](https://www.mexc.com/register?inviteCode=mexc-airdropaler), [BingX](https://bingx.com/invite/QEHIOL), and [Bitget](https://partner.bitget.com/bg/EVS9NM)."
     ],
-    "id": 99,
+    "id": 107,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4571,12 +6608,12 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/pDWdXHfXeE",
     "x": "https://x.com/NexiraDAEP",
     "actions": [
-      "Set up your account and wallet → Go to the [Nexira Airdrop](https://www.nexira.ai/airdrops?refid=bdTpn3AI) page, sign in with Google or Apple, then connect your [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) to activate your profile.",
-      "Connect socials, join campaigns, and earn rewards → Link , Discord, and Telegram to unlock Ruby Awakening, then join active campaigns such as the New Year's Campaign. Complete daily check-ins, social replies, and engagement tasks to earn Reward Boxes containing Locked Ruby, and use your referral link to increase your overall allocation.",
-      "Play games to expand allocation → Engage with Nexira-powered games such as [Heroes of Mavia](https://www.nexira.ai/games/heroes-of-mavia), [Mavia Mini](https://www.nexira.ai/games/mavia-mini), [Turbo](https://www.nexira.ai/games/turbo), [Celestial Garden](https://www.nexira.ai/games/celestial-garden), [NFT Fighter](https://www.nexira.ai/games/nft-fighter), and [Block Clans](https://www.nexira.ai/games/block-clans). Gameplay generates ecosystem activity that contributes to bonus token rewards.",
-      "Unlock and convert at TGE → Locked Ruby unlocks ahead of the Token Generation Event and converts into $NEXI tokens at launch, determining your final airdrop allocation."
+      "Set up your account and wallet в†’ Go to the [Nexira Airdrop](https://www.nexira.ai/airdrops?refid=bdTpn3AI) page, sign in with Google or Apple, then connect your [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) to activate your profile.",
+      "Connect socials, join campaigns, and earn rewards в†’ Link , Discord, and Telegram to unlock Ruby Awakening, then join active campaigns such as the New Year's Campaign. Complete daily check-ins, social replies, and engagement tasks to earn Reward Boxes containing Locked Ruby, and use your referral link to increase your overall allocation.",
+      "Play games to expand allocation в†’ Engage with Nexira-powered games such as [Heroes of Mavia](https://www.nexira.ai/games/heroes-of-mavia), [Mavia Mini](https://www.nexira.ai/games/mavia-mini), [Turbo](https://www.nexira.ai/games/turbo), [Celestial Garden](https://www.nexira.ai/games/celestial-garden), [NFT Fighter](https://www.nexira.ai/games/nft-fighter), and [Block Clans](https://www.nexira.ai/games/block-clans). Gameplay generates ecosystem activity that contributes to bonus token rewards.",
+      "Unlock and convert at TGE в†’ Locked Ruby unlocks ahead of the Token Generation Event and converts into $NEXI tokens at launch, determining your final airdrop allocation."
     ],
-    "id": 100,
+    "id": 108,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4595,14 +6632,14 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/polymarket",
     "x": "https://x.com/Polymarket",
     "actions": [
-      "Sign In → Head to [Polymarket](https://polymarket.com/?r=Medi0x) and sign in using Google, email, or a crypto [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/).   Polymarket is reportedly eyeing a valuation above $20 billion.  See what that could mean for the confirmed $POLY airdrop in our [full breakdown](https://airdropalert.com/blogs/polymarket-valuation-20b-poly-airdrop/).",
-      "Deposit Funds → Add funds using cash methods like Skrill or Neteller, or deposit crypto from your wallet or [exchange](https://airdropalert.com/exchanges/) using multiple supported assets and chains, which are converted to $[USDC](https://airdropalert.com/currencies/usd-coin/), the base currency used for trading on Polymarket.",
-      "Explore Markets → Navigate categories like Trending, Breaking, Politics, Finance, Sports, or Crypto, browse Popular markets, and review the rules and market context before trading.",
-      "Trade Real-World Events → Buy or sell YES / NO shares, or trade across multiple outcomes depending on the market, and enter or exit positions as prices fluctuates.  Prices reflect the market's estimated probability. For example, a price of $0.65 implies a 65% likelihood. If the outcome resolves in your favor, the share pays $1; if not, it pays $0.",
-      "Monitor and Claim → Track your positions, close them at any time as market conditions change, or hold until resolution to claim your winnings.",
-      "Referral Program → Create and share your referral link to earn 30% of fees from direct referrals and 10% from indirect referrals after reaching $10,000 in trading volume. Payouts are credited directly to your Polymarket balance."
+      "Sign In в†’ Head to [Polymarket](https://polymarket.com/?r=Medi0x) and sign in using Google, email, or a crypto [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/).   Polymarket is reportedly eyeing a valuation above $20 billion.  See what that could mean for the confirmed $POLY airdrop in our [full breakdown](https://airdropalert.com/blogs/polymarket-valuation-20b-poly-airdrop/).",
+      "Deposit Funds в†’ Add funds using cash methods like Skrill or Neteller, or deposit crypto from your wallet or [exchange](https://airdropalert.com/exchanges/) using multiple supported assets and chains, which are converted to $[USDC](https://airdropalert.com/currencies/usd-coin/), the base currency used for trading on Polymarket.",
+      "Explore Markets в†’ Navigate categories like Trending, Breaking, Politics, Finance, Sports, or Crypto, browse Popular markets, and review the rules and market context before trading.",
+      "Trade Real-World Events в†’ Buy or sell YES / NO shares, or trade across multiple outcomes depending on the market, and enter or exit positions as prices fluctuates.  Prices reflect the market's estimated probability. For example, a price of $0.65 implies a 65% likelihood. If the outcome resolves in your favor, the share pays $1; if not, it pays $0.",
+      "Monitor and Claim в†’ Track your positions, close them at any time as market conditions change, or hold until resolution to claim your winnings.",
+      "Referral Program в†’ Create and share your referral link to earn 30% of fees from direct referrals and 10% from indirect referrals after reaching $10,000 in trading volume. Payouts are credited directly to your Polymarket balance."
     ],
-    "id": 101,
+    "id": 109,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4622,13 +6659,13 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/hyperliquid",
     "x": "https://twitter.com/HyperliquidX",
     "actions": [
-      "Access Hyperliquid   Head to the [Hyperliquid](https://app.hyperliquid.xyz/join/AIRDROPALERT) decentralized exchange app. → Connect your EVM [wallet](https://airdropalert.com/crypto-resources/crypto-wallets) to create your account. No KYC required .  Joining through the AirdropAlert exclusive referral link gives you a 4% trading-fee discount on your first $25 million in volume.  Wondering whether Hyperliquid is legal in the U.S.? See how the rules look under Trump's crypto-friendly administration in our [full Hyperliquid legal breakdown](https://airdropalert.com/blogs/is-hyperliquid-legal-in-the-us/)  ",
-      "Deposit funds   Navigate to the Portfolio tab, click Deposit, and select your asset and deposit chain. $[USDC](https://airdropalert.com/currencies/usd-coin/) is the primary trading and margin asset used across the platform. → $[USDC](https://airdropalert.com/currencies/usd-coin/) is the primary trading and margin asset across Hyperliquid. → Transfer funds from your wallet or supported exchange before starting.  If you do not hold crypto yet, you can buy $USDC or another supported asset on [Binance](https://accounts.binance.com/en/register?ref=63956355), [Bybit](https://partner.bybit.com/b/airdropaa), [Bybit EU](https://partner.bybit.eu/b/aaeu) (for European users) , [MEXC](https://promote.mexc.com/r/wNgn869U), [Gate](https://www.gate.com/share/AAIRDROP), [Kraken](https://invite.kraken.com/JDNW/uf9p40x6), [KuCoin](https://www.kucoin.com/r/rf/QBSS48L3), or [Bitget](https://partner.bitget.com/bg/EVS9NM). For KYC-free alternatives, [BloFin](https://partner.blofin.com/d/airdrops) and [Bitunix](https://www.bitunix.com/activity/normal/AirdropAlert?vipCode=airdropalert) are two well-regarded platforms with a strong reputation.",
-      "Use Hyperliquid's core products   Use Hyperliquid's core products to earn Season 3 points. → Spot: Trade crypto assets on the spot market. → Perpetuals: Trade leveraged markets with up to 50x leverage on selected pairs. → TradFi: Trade markets linked to indices, commodities, and other traditional assets. → HIP-3: Access additional perpetual markets created by third-party deployers. → Outcome Markets: Trade binary markets on real-world events and macro outcomes. → Pre-launch Markets: Trade selected assets before their full market launch. → Earn: Put idle assets into available yield products. → Vaults: Allocate capital to onchain trading strategies. → Staking: Stake $HYPE with validators to earn staking rewards.  Your Season 3 points will determine your share of the airdrop allocation. Check More → Points to track your total points, rank, and league.",
+      "Access Hyperliquid   Head to the [Hyperliquid](https://app.hyperliquid.xyz/join/AIRDROPALERT) decentralized exchange app. в†’ Connect your EVM [wallet](https://airdropalert.com/crypto-resources/crypto-wallets) to create your account. No KYC required .  Joining through the AirdropAlert exclusive referral link gives you a 4% trading-fee discount on your first $25 million in volume.  Wondering whether Hyperliquid is legal in the U.S.? See how the rules look under Trump's crypto-friendly administration in our [full Hyperliquid legal breakdown](https://airdropalert.com/blogs/is-hyperliquid-legal-in-the-us/)  ",
+      "Deposit funds   Navigate to the Portfolio tab, click Deposit, and select your asset and deposit chain. $[USDC](https://airdropalert.com/currencies/usd-coin/) is the primary trading and margin asset used across the platform. в†’ $[USDC](https://airdropalert.com/currencies/usd-coin/) is the primary trading and margin asset across Hyperliquid. в†’ Transfer funds from your wallet or supported exchange before starting.  If you do not hold crypto yet, you can buy $USDC or another supported asset on [Binance](https://accounts.binance.com/en/register?ref=63956355), [Bybit](https://partner.bybit.com/b/airdropaa), [Bybit EU](https://partner.bybit.eu/b/aaeu) (for European users) , [MEXC](https://promote.mexc.com/r/wNgn869U), [Gate](https://www.gate.com/share/AAIRDROP), [Kraken](https://invite.kraken.com/JDNW/uf9p40x6), [KuCoin](https://www.kucoin.com/r/rf/QBSS48L3), or [Bitget](https://partner.bitget.com/bg/EVS9NM). For KYC-free alternatives, [BloFin](https://partner.blofin.com/d/airdrops) and [Bitunix](https://www.bitunix.com/activity/normal/AirdropAlert?vipCode=airdropalert) are two well-regarded platforms with a strong reputation.",
+      "Use Hyperliquid's core products   Use Hyperliquid's core products to earn Season 3 points. в†’ Spot: Trade crypto assets on the spot market. в†’ Perpetuals: Trade leveraged markets with up to 50x leverage on selected pairs. в†’ TradFi: Trade markets linked to indices, commodities, and other traditional assets. в†’ HIP-3: Access additional perpetual markets created by third-party deployers. в†’ Outcome Markets: Trade binary markets on real-world events and macro outcomes. в†’ Pre-launch Markets: Trade selected assets before their full market launch. в†’ Earn: Put idle assets into available yield products. в†’ Vaults: Allocate capital to onchain trading strategies. в†’ Staking: Stake $HYPE with validators to earn staking rewards.  Your Season 3 points will determine your share of the airdrop allocation. Check More в†’ Points to track your total points, rank, and league.",
       "Use complementary Hyperliquid apps   Extend your activity with automated trading, AI agents, market intelligence, lending, and yield strategies across the ecosystem. Automated Trading: [Tread.fi](https://airdropalert.com/airdrops/tread-fi/)  [Planemo](https://airdropalert.com/airdrops/planemo-trading/)  [HyperFlash](https://airdropalert.com/airdrops/hyperflash-perp-trading-bots/) AI Trading Agents: [Senpi AI](https://airdropalert.com/airdrops/senpi-ai-hyperliquid-trading-agents/)  [TrueNorth](https://airdropalert.com/airdrops/truenorth-ai-trading/) Trading: [HyperSignals](https://airdropalert.com/airdrops/hypersignals-trading-intelligence/)  [Markets](https://airdropalert.com/airdrops/markets/)  [Paragon](https://airdropalert.com/airdrops/paragon-markets/)  [Legend](https://airdropalert.com/airdrops/legend-trade/) Lending & Borrowing: [HyperLend](https://airdropalert.com/airdrops/hyperlend-finance/)  [Felix Protocol](https://airdropalert.com/airdrops/felix-protocol/) Yield Strategies: [Altura](https://airdropalert.com/airdrops/altura-yield-protocol/)  [Monetrix](https://airdropalert.com/airdrops/monetrix-hyperliquid-yield-protocol/)  [Hyperbeat](https://airdropalert.com/airdrops/hyperbeat/)  [Harmonix Finance](https://airdropalert.com/airdrops/harmonix-finance/)  Several of these apps also run their own points or airdrop campaigns, giving you extra reward opportunities while staying active in the Hyperliquid ecosystem.",
-      "Earn from referrals   Unlock your own referral code after reaching $10,000 in trading volume. → Referrers earn 10% of referred users' fees, less their referral discount, on each referral's first $1 billion in volume.  Referral rewards accrue across supported quote assets and can be claimed from the Referrals page once the balance exceeds $1.  Hypurr NFT holders receive $HYPE allocations and ecosystem recognition."
+      "Earn from referrals   Unlock your own referral code after reaching $10,000 in trading volume. в†’ Referrers earn 10% of referred users' fees, less their referral discount, on each referral's first $1 billion in volume.  Referral rewards accrue across supported quote assets and can be claimed from the Referrals page once the balance exceeds $1.  Hypurr NFT holders receive $HYPE allocations and ecosystem recognition."
     ],
-    "id": 102,
+    "id": 110,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4648,11 +6685,11 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/lighterxyz",
     "x": "https://x.com/Lighter_xyz",
     "actions": [
-      "Connect your wallet and deposit funds   Go to [Lighter on Robinhood Chain](https://robinhoodchain.lighter.xyz/?referral=AIRDROPALERT) and connect your EVM wallet. → Choose a Standard Account for 0% maker and taker fees, or switch to Premium for lower-latency execution. See all [account types and trading fees](https://apidocs.rh.lighter.xyz/docs/account-types). → Deposit $[USDG](https://www.coingecko.com/en/coins/global-dollar) to your Lighter trading portfolio. → Use one of the official routes in the [Robinhood Chain bridging docs](https://docs.robinhood.com/chain/bridging/) to move funds to Robinhood Chain if needed, and keep some $[ETH](https://airdropalert.com/currencies/ethereum/) in your wallet to cover gas fees.  Users located in the US, Canada, UK, China, North Korea, Russia, Ukraine, Cuba, Iran, Venezuela and Syria are restricted from using Lighter.",
-      "Trade and earn points   Choose a crypto or RWA market and start trading to earn Points. → Trade the available perpetual or spot markets on Lighter. → Check [Funding & Market Risk](https://robinhoodchain.lighter.xyz/funding-market-risk-parameters) before trading perpetuals.  Standard Accounts pay 0% maker and taker fees, while qualifying perpetual trades through [Robinhood Wallet](https://robinhood.com/wallet/) earn 2x points.",
-      "Invite friends and earn more points   Share your referral link to increase your points total. → Invite friends to trade on Lighter. → Earn 10% of the points they earn.  Read our [Lighter Perpetual DEX guide](https://airdropalert.com/airdrops/lighter-perpetual-dex/) for more on the mainnet platform, staking, public pools and the $LIT ecosystem, and see our [list of the best DEX airdrops for 2026](https://airdropalert.com/blogs/list-best-dex-airdrops-2026/)."
+      "Connect your wallet and deposit funds   Go to [Lighter on Robinhood Chain](https://robinhoodchain.lighter.xyz/?referral=AIRDROPALERT) and connect your EVM wallet. в†’ Choose a Standard Account for 0% maker and taker fees, or switch to Premium for lower-latency execution. See all [account types and trading fees](https://apidocs.rh.lighter.xyz/docs/account-types). в†’ Deposit $[USDG](https://www.coingecko.com/en/coins/global-dollar) to your Lighter trading portfolio. в†’ Use one of the official routes in the [Robinhood Chain bridging docs](https://docs.robinhood.com/chain/bridging/) to move funds to Robinhood Chain if needed, and keep some $[ETH](https://airdropalert.com/currencies/ethereum/) in your wallet to cover gas fees.  Users located in the US, Canada, UK, China, North Korea, Russia, Ukraine, Cuba, Iran, Venezuela and Syria are restricted from using Lighter.",
+      "Trade and earn points   Choose a crypto or RWA market and start trading to earn Points. в†’ Trade the available perpetual or spot markets on Lighter. в†’ Check [Funding & Market Risk](https://robinhoodchain.lighter.xyz/funding-market-risk-parameters) before trading perpetuals.  Standard Accounts pay 0% maker and taker fees, while qualifying perpetual trades through [Robinhood Wallet](https://robinhood.com/wallet/) earn 2x points.",
+      "Invite friends and earn more points   Share your referral link to increase your points total. в†’ Invite friends to trade on Lighter. в†’ Earn 10% of the points they earn.  Read our [Lighter Perpetual DEX guide](https://airdropalert.com/airdrops/lighter-perpetual-dex/) for more on the mainnet platform, staking, public pools and the $LIT ecosystem, and see our [list of the best DEX airdrops for 2026](https://airdropalert.com/blogs/list-best-dex-airdrops-2026/)."
     ],
-    "id": 103,
+    "id": 111,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4670,12 +6707,12 @@ export const generatedProjects: Project[] = [
     "telegram": "https://t.me/geniusverification",
     "x": "https://x.com/GeniusTerminal",
     "actions": [
-      "Sign in → Head to the [Genius Terminal](http://www.tradegenius.com/ref/Q1BJMI), log in with Google, Apple, or your [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/), choose your username, and enable 2FA to secure your account.",
-      "Fund your account → Go to the Deposit tab, select EVM or Solana, copy your address, and send supported assets like $[ETH](https://airdropalert.com/currencies/ethereum/), $[USDC](https://airdropalert.com/currencies/usd-coin/), or $[SOL](https://airdropalert.com/currencies/solana/). Genius supports major networks including Ethereum, Arbitrum, Optimism, Base, Polygon, Avalanche, and BNB Chain, so make sure to use the correct network when sending funds.",
-      "Start trading → Head to the Trade section, choose a pair, and execute spot trades to generate volume, as it directly drives Genius Points. Explore perps powered by Aster and HyperLiquid, and stay active across pairs to build volume and improve your fee tier.  Note → Check the Launchpads section to discover newly listed pairs early and catch opportunities as liquidity forms.",
-      "Track rewards and referrals → Head to the Reward Hub to monitor your Genius Points, total volume, and fee level, and share your referral link to earn a 35% share of the trading fees generated by your invitees."
+      "Sign in в†’ Head to the [Genius Terminal](http://www.tradegenius.com/ref/Q1BJMI), log in with Google, Apple, or your [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/), choose your username, and enable 2FA to secure your account.",
+      "Fund your account в†’ Go to the Deposit tab, select EVM or Solana, copy your address, and send supported assets like $[ETH](https://airdropalert.com/currencies/ethereum/), $[USDC](https://airdropalert.com/currencies/usd-coin/), or $[SOL](https://airdropalert.com/currencies/solana/). Genius supports major networks including Ethereum, Arbitrum, Optimism, Base, Polygon, Avalanche, and BNB Chain, so make sure to use the correct network when sending funds.",
+      "Start trading в†’ Head to the Trade section, choose a pair, and execute spot trades to generate volume, as it directly drives Genius Points. Explore perps powered by Aster and HyperLiquid, and stay active across pairs to build volume and improve your fee tier.  Note в†’ Check the Launchpads section to discover newly listed pairs early and catch opportunities as liquidity forms.",
+      "Track rewards and referrals в†’ Head to the Reward Hub to monitor your Genius Points, total volume, and fee level, and share your referral link to earn a 35% share of the trading fees generated by your invitees."
     ],
-    "id": 104,
+    "id": 112,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4693,12 +6730,12 @@ export const generatedProjects: Project[] = [
     "telegram": "https://t.me/xstocksfi",
     "x": "https://x.com/xstocksfi",
     "actions": [
-      "Onboarding → Head to the [xStocks xPoints page](https://defi.xstocks.fi/points?ref=KWHS3VCQ), connect your wallet, and click \"Secure Your Boost\" to register early and secure a permanent 20% boost on your xPoints earnings.",
-      "Earn xPoints  → Acquire tokenized stocks such as TSLAx or AAPLx onchain or through integrated markets such as [Bybit](https://partner.bybit.com/b/airdropaa), [Kraken](https://invite.kraken.com/JDNW/uf9p40x6), [Gate](https://www.gate.com/share/AAIRDROP), [OKX](https://okx.com/join/AIRDROPALERT), [Bitget](https://partner.bitget.com/bg/EVS9NM), [LBank](https://lbank.com/ref/590KQ), [BitMart](https://www.bitmart.com/register-referral/en?r=GQHlG8), [KuCoin](https://airdropalert.com/affiliate/kucoin), and more.",
-      "Complete Quests → Earn xPoints by holding xStocks, providing liquidity to specific pools, using lending and borrowing markets, and completing quests that reward targeted activity.",
-      "Invite Friends → Share your referral link and earn 20% of the xPoints earned by your referrals."
+      "Onboarding в†’ Head to the [xStocks xPoints page](https://defi.xstocks.fi/points?ref=KWHS3VCQ), connect your wallet, and click \"Secure Your Boost\" to register early and secure a permanent 20% boost on your xPoints earnings.",
+      "Earn xPoints  в†’ Acquire tokenized stocks such as TSLAx or AAPLx onchain or through integrated markets such as [Bybit](https://partner.bybit.com/b/airdropaa), [Kraken](https://invite.kraken.com/JDNW/uf9p40x6), [Gate](https://www.gate.com/share/AAIRDROP), [OKX](https://okx.com/join/AIRDROPALERT), [Bitget](https://partner.bitget.com/bg/EVS9NM), [LBank](https://lbank.com/ref/590KQ), [BitMart](https://www.bitmart.com/register-referral/en?r=GQHlG8), [KuCoin](https://airdropalert.com/affiliate/kucoin), and more.",
+      "Complete Quests в†’ Earn xPoints by holding xStocks, providing liquidity to specific pools, using lending and borrowing markets, and completing quests that reward targeted activity.",
+      "Invite Friends в†’ Share your referral link and earn 20% of the xPoints earned by your referrals."
     ],
-    "id": 105,
+    "id": 113,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4716,14 +6753,14 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/d3cgpwveyU",
     "x": "https://x.com/dango",
     "actions": [
-      "Log in → Head to [Dango Exchange](https://dango.exchange) and connect your EVM [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) to create your account.",
-      "Fund your account → Deposit $[USDC](https://airdropalert.com/currencies/usd-coin/) to use as collateral for trading and broader activity",
-      "Trade perps → Start trading perpetual futures to access the largest share of weekly rewards, with 750,000 points distributed to perps traders each week, while also building the volume that unlocks loot boxes.  Note : If you participated in the [Dango testnet](https://airdropalert.com/airdrops/dango-exchange-testnet/) campaign and hold Galxe OATs, you will benefit from a 4-week boost of up to 400%.",
-      "Put idle capital to work → Head to the Earn section and allocate idle capital to Dango's passive market-making vaults, where funds are deployed to generate yield while also qualifying for 250,000 weekly points allocated to vault depositors.",
-      "Earn through referrals → After reaching $10,000 in trading volume, activate your referral code and start earning referral commissions that can scale up to 30%.  Referrers also receive 1 point for every 5 points earned by their direct referrals, and 1 point for every 20 points earned by their indirect referrals, outside the main weekly distribution.",
-      "Track your progress → Monitor your points, loot boxes, NFTs, boosters, and leaderboard position through the Points Program dashboard."
+      "Log in в†’ Head to [Dango Exchange](https://dango.exchange) and connect your EVM [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) to create your account.",
+      "Fund your account в†’ Deposit $[USDC](https://airdropalert.com/currencies/usd-coin/) to use as collateral for trading and broader activity",
+      "Trade perps в†’ Start trading perpetual futures to access the largest share of weekly rewards, with 750,000 points distributed to perps traders each week, while also building the volume that unlocks loot boxes.  Note : If you participated in the [Dango testnet](https://airdropalert.com/airdrops/dango-exchange-testnet/) campaign and hold Galxe OATs, you will benefit from a 4-week boost of up to 400%.",
+      "Put idle capital to work в†’ Head to the Earn section and allocate idle capital to Dango's passive market-making vaults, where funds are deployed to generate yield while also qualifying for 250,000 weekly points allocated to vault depositors.",
+      "Earn through referrals в†’ After reaching $10,000 in trading volume, activate your referral code and start earning referral commissions that can scale up to 30%.  Referrers also receive 1 point for every 5 points earned by their direct referrals, and 1 point for every 20 points earned by their indirect referrals, outside the main weekly distribution.",
+      "Track your progress в†’ Monitor your points, loot boxes, NFTs, boosters, and leaderboard position through the Points Program dashboard."
     ],
-    "id": 106,
+    "id": 114,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4741,12 +6778,12 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/sqHVjUyACZ",
     "x": "https://x.com/Aster_DEX",
     "actions": [
-      "Connect Wallet  → Head to the [Aster DEX](https://www.asterdex.com/en/referral/3d3e2f) and connect a [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) on Ethereum, BNB Chain, Arbitrum (e.g. MetaMask, Rabby) or Solana (e.g. Phantom).  Stage 6 runs from February 2 to March 29, 2026, allocating 0.8% of the total $ASTER supply (~64M $ASTER), with an optional 6-month vesting lock-up.",
-      "Deposit Funds →  Add supported assets such as $[USDT](https://airdropalert.com/currencies/tether/), $[ETH](https://airdropalert.com/currencies/ethereum/). You may also enable  Auto-mint USDF , which converts deposits into Aster's stablecoin. USDF can be used as margin and staked for yield in  Trade & Earn  — though this feature is optional.  If you use  USDF  or  asBNB  as collateral, you will earn up to  ~ 11.5% APY .",
-      "Trade & Earn Rh Points → Trade spot or perpetual markets across crypto, stocks, and metals. All eligible trading activity contributes to Rh points, which determine your Stage 6 allocation.   Aster features a native Grid Bot integrated directly into the trading interface, enabling automated grid strategies without relying on external tools.   Extra Resource : For a sharper edge, explore our [Trading Fundamentals](https://airdropalert.com/blogs/tag/trading-fundamentals) series. It strengthens discipline, decision making, and improves long term consistency.",
-      "Referral System → Invite friends and earn 10% trading fee rebate from direct referrals (L1) and 5% from second-level referrals (L2). Your referrals also earn 5% from their trades."
+      "Connect Wallet  в†’ Head to the [Aster DEX](https://www.asterdex.com/en/referral/3d3e2f) and connect a [wallet](https://airdropalert.com/crypto-resources/crypto-wallets/) on Ethereum, BNB Chain, Arbitrum (e.g. MetaMask, Rabby) or Solana (e.g. Phantom).  Stage 6 runs from February 2 to March 29, 2026, allocating 0.8% of the total $ASTER supply (~64M $ASTER), with an optional 6-month vesting lock-up.",
+      "Deposit Funds в†’  Add supported assets such as $[USDT](https://airdropalert.com/currencies/tether/), $[ETH](https://airdropalert.com/currencies/ethereum/). You may also enable  Auto-mint USDF , which converts deposits into Aster's stablecoin. USDF can be used as margin and staked for yield in  Trade & Earn  — though this feature is optional.  If you use  USDF  or  asBNB  as collateral, you will earn up to  ~ 11.5% APY .",
+      "Trade & Earn Rh Points в†’ Trade spot or perpetual markets across crypto, stocks, and metals. All eligible trading activity contributes to Rh points, which determine your Stage 6 allocation.   Aster features a native Grid Bot integrated directly into the trading interface, enabling automated grid strategies without relying on external tools.   Extra Resource : For a sharper edge, explore our [Trading Fundamentals](https://airdropalert.com/blogs/tag/trading-fundamentals) series. It strengthens discipline, decision making, and improves long term consistency.",
+      "Referral System в†’ Invite friends and earn 10% trading fee rebate from direct referrals (L1) and 5% from second-level referrals (L2). Your referrals also earn 5% from their trades."
     ],
-    "id": 107,
+    "id": 115,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4764,12 +6801,12 @@ export const generatedProjects: Project[] = [
     "telegram": "https://t.me/GateCom_en",
     "x": "https://x.com/Gate",
     "actions": [
-      "Create Your Account → Sign up on [Gate](https://www.gate.com/share/AAIRDROP) , complete identity verification ([KYC](https://blogs.airdropalert.com/kyc-crypto-palau-id)), and enable 2FA to protect your account. Then deposit funds and visit the Rewards Hub to unlock the Welcome Package worth 75 USDT by completing the beginner's tasks, along with $10,000+ in new-user exclusive gifts tied to deposits, first-trade actions and advanced trading milestones.  The Rewards Hub features rotating Hot Events, offering limited-time airdrops, fee discounts, VIP rewards, GT holder benefits, Futures Mall gifts and seasonal promotions.   You can buy crypto instantly via Apple Pay, Google Pay, cards and bank transfers — or fund your account through P2P with over 400 payment methods and zero fees (0%).",
-      "Explore Gate's Core Tools & Start Trading → Spot, Futures, Options, ETF Leveraged Tokens, Launchpad and Premarket, are all at your fingertips. Trade manually or use automated bots (grid, DCA and smart strategies), or Copy Trading — depending on your style.  Note : Futures Points accumulate automatically through your futures trading activity and can be redeemed for multiple airdrop rewards and ongoing benefits.  Futures Mall adds a rewards layer where reaching trading milestones grants mileage points redeemable for premium limited-time bundles — including iPhone Pro models, AirPods Pro, iPad mini, USDT cash rewards, and even MacBook Air or Pro ",
-      "Stake, Earn & Join Reward Programs → Gate offers several ways to earn beyond trading. Simple Earn provides flexible and fixed-term yields, while Launchpool lets you stake tokens and farm rewards from new projects as they go live. You can also join CandyDrop and HODLer Airdrops to earn rewards based on qualifying missions.  You can also invite friends and earn a portion of the fees generated by their trades.  For a more structured approach to wealth building, the VIP Wealth Hub provides professionally curated portfolios including fixed-term products, quant strategies, and more.",
-      "Make Everyday Payments With Your Gate Card → The Gate Card makes everyday payments seamless by letting you spend crypto online or in stores worldwide with low fees. It's available in both virtual and physical formats, comes with zero issuance fees and zero annual fees, and delivers monthly cashback in $USDT, $BTC, $ETH or Gate's native token, $GT.  The Gate mobile app puts the full exchange in your pocket, while the Gate Web3 portal grants access to multi-chain DeFi, Perps, and Gate Fun — a social hub for memecoin launches."
+      "Create Your Account в†’ Sign up on [Gate](https://www.gate.com/share/AAIRDROP) , complete identity verification ([KYC](https://blogs.airdropalert.com/kyc-crypto-palau-id)), and enable 2FA to protect your account. Then deposit funds and visit the Rewards Hub to unlock the Welcome Package worth 75 USDT by completing the beginner's tasks, along with $10,000+ in new-user exclusive gifts tied to deposits, first-trade actions and advanced trading milestones.  The Rewards Hub features rotating Hot Events, offering limited-time airdrops, fee discounts, VIP rewards, GT holder benefits, Futures Mall gifts and seasonal promotions.   You can buy crypto instantly via Apple Pay, Google Pay, cards and bank transfers — or fund your account through P2P with over 400 payment methods and zero fees (0%).",
+      "Explore Gate's Core Tools & Start Trading в†’ Spot, Futures, Options, ETF Leveraged Tokens, Launchpad and Premarket, are all at your fingertips. Trade manually or use automated bots (grid, DCA and smart strategies), or Copy Trading — depending on your style.  Note : Futures Points accumulate automatically through your futures trading activity and can be redeemed for multiple airdrop rewards and ongoing benefits.  Futures Mall adds a rewards layer where reaching trading milestones grants mileage points redeemable for premium limited-time bundles — including iPhone Pro models, AirPods Pro, iPad mini, USDT cash rewards, and even MacBook Air or Pro ",
+      "Stake, Earn & Join Reward Programs в†’ Gate offers several ways to earn beyond trading. Simple Earn provides flexible and fixed-term yields, while Launchpool lets you stake tokens and farm rewards from new projects as they go live. You can also join CandyDrop and HODLer Airdrops to earn rewards based on qualifying missions.  You can also invite friends and earn a portion of the fees generated by their trades.  For a more structured approach to wealth building, the VIP Wealth Hub provides professionally curated portfolios including fixed-term products, quant strategies, and more.",
+      "Make Everyday Payments With Your Gate Card в†’ The Gate Card makes everyday payments seamless by letting you spend crypto online or in stores worldwide with low fees. It's available in both virtual and physical formats, comes with zero issuance fees and zero annual fees, and delivers monthly cashback in $USDT, $BTC, $ETH or Gate's native token, $GT.  The Gate mobile app puts the full exchange in your pocket, while the Gate Web3 portal grants access to multi-chain DeFi, Perps, and Gate Fun — a social hub for memecoin launches."
     ],
-    "id": 108,
+    "id": 116,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4788,12 +6825,12 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/agPJbRtpre",
     "x": "https://x.com/BloFin_Official",
     "actions": [
-      "Sign Up → Register on [BloFin Exchange](https://partner.blofin.com/d/airdropalert) using the AirdropAlert invite link . No KYC required.  New users can visit the Rewards Hub to claim up to $5,000 in welcome bonuses as they complete deposit and trading milestones.",
-      "Deposit → Fund your account via crypto transfer, bank transfer, or Quick Buy with Apple Pay, Google Pay, Visa, or Mastercard.",
-      "Trade → Execute taker orders to build trading volume and meet the tier targets that match your deposit. Only taker volume counts toward rewards.  Eligible Futures Bonuses are credited within 3 business days after each monthly cycle and remain valid for 7 days to offset fees or losses.",
-      "Earn More → Go to the Earn section , pick the plan that suits you best, and turn your idle assets into passive income ."
+      "Sign Up в†’ Register on [BloFin Exchange](https://partner.blofin.com/d/airdropalert) using the AirdropAlert invite link . No KYC required.  New users can visit the Rewards Hub to claim up to $5,000 in welcome bonuses as they complete deposit and trading milestones.",
+      "Deposit в†’ Fund your account via crypto transfer, bank transfer, or Quick Buy with Apple Pay, Google Pay, Visa, or Mastercard.",
+      "Trade в†’ Execute taker orders to build trading volume and meet the tier targets that match your deposit. Only taker volume counts toward rewards.  Eligible Futures Bonuses are credited within 3 business days after each monthly cycle and remain valid for 7 days to offset fees or losses.",
+      "Earn More в†’ Go to the Earn section , pick the plan that suits you best, and turn your idle assets into passive income ."
     ],
-    "id": 109,
+    "id": 117,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   },
   {
@@ -4811,11 +6848,11 @@ export const generatedProjects: Project[] = [
     "discord": "https://discord.gg/consensys",
     "x": "https://x.com/MetaMask",
     "actions": [
-      "Install or Update MetaMask Mobile → Head to the [MetaMask Perps](https://link.metamask.io/rewards?referral=AKMWB9) rewards portal and install the latest version of MetaMask Mobile (iOS / Android) to unlock the new Perps tab.  If you already have the app, simply update it to the latest version following MetaMask's official update [guide](https://support.metamask.io/configure/wallet/how-to-update-the-version-of-metamask).  MetaMask Perps trading through Hyperliquid is available globally except in Belgium, Ontario (Canada), U.K., U.S.A., and other sanctioned countries under applicable law.",
-      "Open the Perps Tab & Fund Your Account → Open MetaMask Mobile and tap Perps from the main dashboard to access the trading interface.  You can deposit any token on any EVM chain , which will automatically be swapped into USDC on the Hyperliquid network. The transaction may take a few minutes to process, and the minimum funding value is $10 . MetaMask does not charge any fee on these transactions.",
-      "Trade & Earn Points → Select an asset, choose Long or Short , set your parameters (including leverage up to 40Г— ), and execute your position. Over $30M USD worth of $LINEA tokens are up for grabs in Season 1! Manage it directly inside MetaMask — control limit orders, take-profit, and stop-loss levels while maintaining full self-custody of your funds. Each completed trade automatically earns MetaMask Points , contributing to your progress in the Rewards program and upcoming $MASK airdrop .  If you're new to perpetuals, read MetaMask's [How to Trade Perps](https://support.metamask.io/manage-crypto/trade/perps/how-to-trade-perps/) guide to understand leverage, liquidation, and funding rates.    Looking for the next big Airdrop? Our [DEX Airdrops 2025](https://airdropalert.com/blogs/dex-airdrops-2025) guide has you covered  "
+      "Install or Update MetaMask Mobile в†’ Head to the [MetaMask Perps](https://link.metamask.io/rewards?referral=AKMWB9) rewards portal and install the latest version of MetaMask Mobile (iOS / Android) to unlock the new Perps tab.  If you already have the app, simply update it to the latest version following MetaMask's official update [guide](https://support.metamask.io/configure/wallet/how-to-update-the-version-of-metamask).  MetaMask Perps trading through Hyperliquid is available globally except in Belgium, Ontario (Canada), U.K., U.S.A., and other sanctioned countries under applicable law.",
+      "Open the Perps Tab & Fund Your Account в†’ Open MetaMask Mobile and tap Perps from the main dashboard to access the trading interface.  You can deposit any token on any EVM chain , which will automatically be swapped into USDC on the Hyperliquid network. The transaction may take a few minutes to process, and the minimum funding value is $10 . MetaMask does not charge any fee on these transactions.",
+      "Trade & Earn Points в†’ Select an asset, choose Long or Short , set your parameters (including leverage up to 40Г— ), and execute your position. Over $30M USD worth of $LINEA tokens are up for grabs in Season 1! Manage it directly inside MetaMask — control limit orders, take-profit, and stop-loss levels while maintaining full self-custody of your funds. Each completed trade automatically earns MetaMask Points , contributing to your progress in the Rewards program and upcoming $MASK airdrop .  If you're new to perpetuals, read MetaMask's [How to Trade Perps](https://support.metamask.io/manage-crypto/trade/perps/how-to-trade-perps/) guide to understand leverage, liquidation, and funding rates.    Looking for the next big Airdrop? Our [DEX Airdrops 2025](https://airdropalert.com/blogs/dex-airdrops-2025) guide has you covered  "
     ],
-    "id": 110,
+    "id": 118,
     "firstSeenAt": "2026-09-19T00:00:44.749Z"
   }
 ];
