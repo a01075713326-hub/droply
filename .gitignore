@@ -20,3 +20,9 @@ data/projects.state.json
 *.rar
 
 tsconfig.tsbuildinfo
+
+data-backups/
+*.bak
+.env.local.save*
+data/.cryptorank-current.json
+data/.notified-slugs.json
