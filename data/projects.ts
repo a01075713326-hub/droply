@@ -1,4 +1,5 @@
 import { generatedProjects } from "./projects.generated";
+import { manualProjects } from "./manual-projects";
 
 export type ProjectTask = {
   id?: number;
@@ -158,5 +159,12 @@ const demoProjects: Project[] = [
   }
 ];
 
-export const projects: Project[] =
+const baseProjects: Project[] =
   generatedProjects.length ? generatedProjects : demoProjects;
+
+const existingSlugs = new Set(baseProjects.map((p) => p.slug));
+
+export const projects: Project[] = [
+  ...baseProjects,
+  ...manualProjects.filter((p) => !existingSlugs.has(p.slug)),
+];
