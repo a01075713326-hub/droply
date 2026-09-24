@@ -2219,6 +2219,21 @@ async function saveCryptoRankHistory(history) {
   );
 }
 
+async function loadManualProjects() {
+  const filePath = path.join(__dirname, "..", "data", "manual-projects.json");
+
+  try {
+    const content = await fs.readFile(filePath, "utf8");
+    const obj = JSON.parse(content);
+
+    return Object.entries(obj)
+      .filter(([slug]) => !slug.startsWith("_"))
+      .map(([slug, data]) => ({ ...data, slug }));
+  } catch {
+    return [];
+  }
+}
+
 async function sync() {
   const previousFirstSeen = await loadPreviousFirstSeen();
   const cryptoRankHistory = await loadCryptoRankHistory();
@@ -2235,6 +2250,7 @@ async function sync() {
   const cryptoRankProjects = a.status === "fulfilled" ? a.value : [];
   const airdropsProjects = b.status === "fulfilled" ? b.value : [];
   const airdropAlertProjects = c.status === "fulfilled" ? c.value : [];
+  const manualProjects = await loadManualProjects();
 
   // Update persistent CryptoRank history.
   // Existing projects are updated by slug, new projects are inserted.
@@ -2282,6 +2298,7 @@ async function sync() {
     ...historicalCryptoRankProjects,
     ...airdropsProjects,
     ...airdropAlertProjects,
+    ...manualProjects,
   ];
 
   const map = new Map();

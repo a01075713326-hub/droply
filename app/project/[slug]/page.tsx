@@ -151,6 +151,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const title = `${p.name} Airdrop \u2014 Guide, Steps & Rewards`;
   const ov = getOverride(p.slug);
+
   const description = ov?.summary
     ? ov.summary.length > 158
       ? ov.summary.slice(0, 155).trimEnd() + "\u2026"
@@ -204,9 +205,19 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         ? "warn"
         : "unknown";
 
+  const ov = getOverride(p.slug);
+
   const official: PanelLink[] = [
-    p.website && { kind: "website", title: "Official Website", url: p.website },
-    p.claimUrl && { kind: "claim", title: "Airdrop / Claim Page", url: p.claimUrl },
+    (ov?.website ?? p.website) && {
+      kind: "website",
+      title: "Official Website",
+      url: ov?.website ?? p.website,
+    },
+    (ov?.claimUrl ?? p.claimUrl) && {
+      kind: "claim",
+      title: "Airdrop / Claim Page",
+      url: ov?.claimUrl ?? p.claimUrl,
+    },
     p.docs && { kind: "docs", title: "Docs / Guide", url: p.docs },
     p.whitepaper && { kind: "whitepaper", title: "Whitepaper", url: p.whitepaper },
   ].filter(Boolean) as PanelLink[];
@@ -217,7 +228,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     p.discord && { kind: "discord", title: "Discord", url: p.discord },
   ].filter(Boolean) as PanelLink[];
 
-  const ov = getOverride(p.slug);
   const steps: string[] = ov?.steps?.length ? ov.steps : (p.actions ?? []);
   const timeline = await getProjectTimeline(p.slug, p.firstSeenAt);
   const allProjects = await getProjects();
@@ -339,7 +349,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         {p.claimUrl && (
           <a
-            href={p.claimUrl}
+            href={ov?.claimUrl ?? p.claimUrl}
             target="_blank"
             rel="noreferrer"
             className="primary-btn primary-btn--hero project-hero__cta"

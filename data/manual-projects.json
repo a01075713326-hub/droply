@@ -1,0 +1,36 @@
+{
+  "_readme": "Ключ = slug. Эти проекты подмешиваются в каждую сборку и не могут быть вытеснены источниками. Обязательные поля: name, chain, event, status, description.",
+  "_example": {
+    "name": "Example Project",
+    "chain": "Example Chain",
+    "event": "Points",
+    "status": "Live",
+    "description": "Короткое описание проекта.",
+    "website": "https://example.com",
+    "x": "https://x.com/example"
+  },
+  "powerx-onewallet": {
+    "name": "PowerX OneWallet",
+    "chain": "BNB Chain",
+    "event": "Airdrop",
+    "status": "Confirmed",
+    "description": "Self-custodial wallet and social app (live audio/video rooms, feed, messaging) with the PX1 utility token. The airdrop pays 500 PX1 for completing social tasks in the official Telegram bot; TGE not yet announced.",
+    "website": "https://powerx.one/en",
+    "x": "https://x.com/Powerxonewallet",
+    "sourceUrl": "https://airdrops.io/powerx-onewallet/",
+    "rewardType": "Tokens",
+    "costToFarm": "Free",
+    "timeToFarm": "10-15 min"
+  },
+  "laptop-bitvavo": {
+    "name": "LAPTOP Airdrop (Bitvavo)",
+    "chain": "Base",
+    "event": "Claim",
+    "status": "Confirmed",
+    "description": "Manual, in-account claim at the Bitvavo exchange for a share of the LAPTOP token (Hunter Biden's memecoin on Base) allocated to TRUMP holders with a documented loss above 1,000 EUR. Deadline October 10, 2026.",
+    "website": "https://bitvavo.com",
+    "rewardType": "Tokens",
+    "costToFarm": "Free",
+    "date": "2026-10-10"
+  }
+}

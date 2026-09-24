@@ -6,6 +6,10 @@ import path from "node:path";
    Server-only (uses fs): import it from server components, not client ones. */
 
 export type ProjectOverride = {
+  /** Override the primary official website shown on the project page. */
+  website?: string;
+  /** Override the primary claim/action URL shown on the project page. */
+  claimUrl?: string;
   /** Short line for the hero (replaces the generic source description). */
   tagline?: string;
   /** Your own overview. Also used as the meta description. */
@@ -13,8 +17,10 @@ export type ProjectOverride = {
   /** Real risks, one short sentence each. */
   risks?: string[];
   /** Nuances of the steps that the source guide does not mention. */
-  notes?: string[];
-  /** Your own step-by-step guide. When present it replaces the steps parsed from the source. */
+  notes?: string[];
+
+  /** Your own step-by-step guide. When present it replaces the steps parsed from the source. */
+
   steps?: string[];
   /** YYYY-MM-DD, when you last reviewed this project. */
   updatedAt?: string;
