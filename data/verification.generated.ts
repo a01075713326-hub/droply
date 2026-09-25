@@ -779,55 +779,20 @@ const entries = [
   },
   {
     "slug": "ammora",
-    "checkedAt": "2026-09-22",
+    "checkedAt": "2026-09-25",
     "links": [
       {
         "kind": "website",
-        "url": "https://ammora.org/",
-        "status": "confirmed",
-        "note": "Site is reachable",
-        "sourceUrl": "https://ammora.org/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "x",
-        "url": "https://x.com/ammorahq",
-        "status": "unverified",
-        "note": "Profile could not be read automatically",
-        "sourceUrl": "https://ammora.org/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "discord",
         "status": "not_found",
-        "sourceUrl": "https://airdrops.io/ammora/",
-        "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "telegram",
-        "url": "https://t.me/airdrops_io",
-        "status": "unverified",
-        "note": "From an aggregator listing, not found on the official site",
-        "sourceUrl": "https://airdrops.io/ammora/",
-        "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "docs",
-        "status": "not_found",
-        "sourceUrl": "https://airdrops.io/ammora/",
-        "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-22"
+        "note": "No official website in our sources",
+        "checkedAt": "2026-09-25"
       }
     ],
     "contracts": [
       {
         "status": "not_found",
         "note": "No contract address on file",
-        "checkedAt": "2026-09-22"
+        "checkedAt": "2026-09-25"
       }
     ],
     "audits": [
@@ -835,26 +800,18 @@ const entries = [
         "status": "not_found",
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
+        "checkedAt": "2026-09-25"
       }
     ],
     "funding": [],
     "signals": [
-      {
-        "code": "link_mismatch",
-        "label": "Site and listing point at the same X account",
-        "present": false,
-        "sourceUrl": "https://ammora.org/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
       {
         "code": "no_audit",
         "label": "No public audit found",
         "present": true,
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
+        "checkedAt": "2026-09-25"
       }
     ]
   },
@@ -1285,87 +1242,6 @@ const entries = [
     ]
   },
   {
-    "slug": "askoro-ai",
-    "checkedAt": "2026-09-22",
-    "links": [
-      {
-        "kind": "website",
-        "url": "https://www.askoro.ai/",
-        "status": "confirmed",
-        "note": "Site is reachable",
-        "sourceUrl": "https://www.askoro.ai/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "x",
-        "url": "https://x.com/ask_oro",
-        "status": "unverified",
-        "note": "Profile could not be read automatically",
-        "sourceUrl": "https://www.askoro.ai/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "discord",
-        "status": "not_found",
-        "sourceUrl": "https://airdropalert.com/airdrops/askoro-ai/",
-        "sourceLabel": "AirdropAlert",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "telegram",
-        "url": "https://t.me/askORO_AI",
-        "status": "confirmed",
-        "note": "Linked from the official site",
-        "sourceUrl": "https://www.askoro.ai/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "docs",
-        "status": "not_found",
-        "sourceUrl": "https://airdropalert.com/airdrops/askoro-ai/",
-        "sourceLabel": "AirdropAlert",
-        "checkedAt": "2026-09-22"
-      }
-    ],
-    "contracts": [
-      {
-        "status": "not_found",
-        "note": "No contract address on file",
-        "checkedAt": "2026-09-22"
-      }
-    ],
-    "audits": [
-      {
-        "status": "not_found",
-        "sourceUrl": "https://defillama.com",
-        "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
-      }
-    ],
-    "funding": [],
-    "signals": [
-      {
-        "code": "link_mismatch",
-        "label": "Site and listing point at the same X account",
-        "present": false,
-        "sourceUrl": "https://www.askoro.ai/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "code": "no_audit",
-        "label": "No public audit found",
-        "present": true,
-        "sourceUrl": "https://defillama.com",
-        "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
-      }
-    ]
-  },
-  {
     "slug": "aster-dex-stage-6",
     "checkedAt": "2026-09-22",
     "links": [
@@ -1405,7 +1281,7 @@ const entries = [
   },
   {
     "slug": "baibai",
-    "checkedAt": "2026-09-18",
+    "checkedAt": "2026-09-25",
     "links": [
       {
         "kind": "website",
@@ -1414,16 +1290,16 @@ const entries = [
         "note": "Site is reachable",
         "sourceUrl": "https://www.baibai.cx/",
         "sourceLabel": "Site",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "x",
         "url": "https://x.com/baibai_cx",
-        "status": "confirmed",
-        "note": "Profile links back to the official domain",
+        "status": "unverified",
+        "note": "Profile could not be read automatically",
         "sourceUrl": "https://www.baibai.cx/",
         "sourceLabel": "Site",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "discord",
@@ -1432,7 +1308,7 @@ const entries = [
         "note": "Linked from the official site",
         "sourceUrl": "https://www.baibai.cx/",
         "sourceLabel": "Site",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "telegram",
@@ -1441,7 +1317,7 @@ const entries = [
         "note": "From an aggregator listing, not found on the official site",
         "sourceUrl": "https://airdrops.io/baibai/",
         "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "docs",
@@ -1450,14 +1326,14 @@ const entries = [
         "note": "Linked from the official site",
         "sourceUrl": "https://www.baibai.cx/",
         "sourceLabel": "Site",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       }
     ],
     "contracts": [
       {
         "status": "not_found",
         "note": "No contract address on file",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       }
     ],
     "audits": [
@@ -1465,7 +1341,7 @@ const entries = [
         "status": "not_found",
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       }
     ],
     "funding": [],
@@ -1476,23 +1352,7 @@ const entries = [
         "present": false,
         "sourceUrl": "https://www.baibai.cx/",
         "sourceLabel": "Site",
-        "checkedAt": "2026-09-18"
-      },
-      {
-        "code": "domain_very_new",
-        "label": "Domain registered 8 months ago",
-        "present": false,
-        "sourceUrl": "https://rdap.org/domain/baibai.cx",
-        "sourceLabel": "RDAP",
-        "checkedAt": "2026-09-18"
-      },
-      {
-        "code": "domain_new",
-        "label": "Domain age: 253 days",
-        "present": false,
-        "sourceUrl": "https://rdap.org/domain/baibai.cx",
-        "sourceLabel": "RDAP",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       },
       {
         "code": "no_audit",
@@ -1500,7 +1360,7 @@ const entries = [
         "present": true,
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       }
     ]
   },
@@ -2040,89 +1900,6 @@ const entries = [
     ]
   },
   {
-    "slug": "c8ntinuum",
-    "checkedAt": "2026-09-22",
-    "links": [
-      {
-        "kind": "website",
-        "url": "https://c8ntinuum.com/",
-        "status": "confirmed",
-        "note": "Site is reachable",
-        "sourceUrl": "https://c8ntinuum.com/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "x",
-        "url": "https://x.com/c8ntinuum",
-        "status": "unverified",
-        "note": "Profile could not be read automatically",
-        "sourceUrl": "https://c8ntinuum.com/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "discord",
-        "url": "https://discord.gg/c8ntinuum",
-        "status": "confirmed",
-        "note": "Linked from the official site",
-        "sourceUrl": "https://c8ntinuum.com/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "telegram",
-        "url": "https://t.me/c8ntinuumANN",
-        "status": "confirmed",
-        "note": "Linked from the official site",
-        "sourceUrl": "https://c8ntinuum.com/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "docs",
-        "status": "not_found",
-        "sourceUrl": "https://airdrops.io/c8ntinuum/",
-        "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-22"
-      }
-    ],
-    "contracts": [
-      {
-        "status": "not_found",
-        "note": "No contract address on file",
-        "checkedAt": "2026-09-22"
-      }
-    ],
-    "audits": [
-      {
-        "status": "not_found",
-        "sourceUrl": "https://defillama.com",
-        "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
-      }
-    ],
-    "funding": [],
-    "signals": [
-      {
-        "code": "link_mismatch",
-        "label": "Site and listing point at the same X account",
-        "present": false,
-        "sourceUrl": "https://c8ntinuum.com/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "code": "no_audit",
-        "label": "No public audit found",
-        "present": true,
-        "sourceUrl": "https://defillama.com",
-        "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
-      }
-    ]
-  },
-  {
     "slug": "calamity-mmo-crypto-game",
     "checkedAt": "2026-09-22",
     "links": [
@@ -2611,6 +2388,93 @@ const entries = [
     ]
   },
   {
+    "slug": "crest",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "url": "https://crestapp.xyz/",
+        "status": "confirmed",
+        "note": "Site is reachable",
+        "sourceUrl": "https://crestapp.xyz/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "x",
+        "url": "https://x.com/crest_btc?hzet=dszqupsbol",
+        "status": "unverified",
+        "note": "Listed by an aggregator, not found on the official site",
+        "sourceUrl": "https://cryptorank.io/drophunting/crest-activity1322",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "discord",
+        "status": "not_found",
+        "sourceUrl": "https://cryptorank.io/drophunting/crest-activity1322",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "telegram",
+        "status": "not_found",
+        "sourceUrl": "https://cryptorank.io/drophunting/crest-activity1322",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "docs",
+        "status": "not_found",
+        "sourceUrl": "https://cryptorank.io/drophunting/crest-activity1322",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "status": "not_found",
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [],
+    "signals": [
+      {
+        "code": "domain_very_new",
+        "label": "Domain registered 16 months ago",
+        "present": false,
+        "sourceUrl": "https://rdap.org/domain/crestapp.xyz",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "domain_new",
+        "label": "Domain age: 500 days",
+        "present": false,
+        "sourceUrl": "https://rdap.org/domain/crestapp.xyz",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "no_audit",
+        "label": "No public audit found",
+        "present": true,
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ]
+  },
+  {
     "slug": "czr",
     "checkedAt": "2026-09-24",
     "links": [
@@ -2927,87 +2791,6 @@ const entries = [
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
         "checkedAt": "2026-09-24"
-      }
-    ]
-  },
-  {
-    "slug": "dualmint",
-    "checkedAt": "2026-09-22",
-    "links": [
-      {
-        "kind": "website",
-        "url": "https://www.dualmint.com/",
-        "status": "confirmed",
-        "note": "Site is reachable",
-        "sourceUrl": "https://www.dualmint.com/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "x",
-        "url": "https://x.com/dualmintrwa",
-        "status": "unverified",
-        "note": "Profile could not be read automatically",
-        "sourceUrl": "https://www.dualmint.com/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "discord",
-        "status": "not_found",
-        "sourceUrl": "https://airdrops.io/dualmint/",
-        "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "telegram",
-        "url": "https://t.me/dualmint",
-        "status": "confirmed",
-        "note": "Linked from the official site",
-        "sourceUrl": "https://www.dualmint.com/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "docs",
-        "status": "not_found",
-        "sourceUrl": "https://airdrops.io/dualmint/",
-        "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-22"
-      }
-    ],
-    "contracts": [
-      {
-        "status": "not_found",
-        "note": "No contract address on file",
-        "checkedAt": "2026-09-22"
-      }
-    ],
-    "audits": [
-      {
-        "status": "not_found",
-        "sourceUrl": "https://defillama.com",
-        "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
-      }
-    ],
-    "funding": [],
-    "signals": [
-      {
-        "code": "link_mismatch",
-        "label": "Site and listing point at the same X account",
-        "present": false,
-        "sourceUrl": "https://www.dualmint.com/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "code": "no_audit",
-        "label": "No public audit found",
-        "present": true,
-        "sourceUrl": "https://defillama.com",
-        "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
       }
     ]
   },
@@ -3636,7 +3419,7 @@ const entries = [
   },
   {
     "slug": "fables",
-    "checkedAt": "2026-09-18",
+    "checkedAt": "2026-09-25",
     "links": [
       {
         "kind": "website",
@@ -3645,7 +3428,7 @@ const entries = [
         "note": "Site is reachable",
         "sourceUrl": "https://www.fables.fi/",
         "sourceLabel": "Site",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "x",
@@ -3654,7 +3437,7 @@ const entries = [
         "note": "Listed by an aggregator, not found on the official site",
         "sourceUrl": "https://airdrops.io/fables/",
         "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "discord",
@@ -3663,7 +3446,7 @@ const entries = [
         "note": "From an aggregator listing, not found on the official site",
         "sourceUrl": "https://airdrops.io/fables/",
         "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "telegram",
@@ -3672,21 +3455,21 @@ const entries = [
         "note": "From an aggregator listing, not found on the official site",
         "sourceUrl": "https://airdrops.io/fables/",
         "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "docs",
         "status": "not_found",
         "sourceUrl": "https://airdrops.io/fables/",
         "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       }
     ],
     "contracts": [
       {
         "status": "not_found",
         "note": "No contract address on file",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       }
     ],
     "audits": [
@@ -3694,7 +3477,7 @@ const entries = [
         "status": "not_found",
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
       }
     ],
     "funding": [],
@@ -3705,7 +3488,78 @@ const entries = [
         "present": true,
         "sourceUrl": "https://defillama.com/protocol/fables",
         "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-18"
+        "checkedAt": "2026-09-25"
+      }
+    ]
+  },
+  {
+    "slug": "familiars-family",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "url": "https://familiars.family/",
+        "status": "confirmed",
+        "note": "Site is reachable",
+        "sourceUrl": "https://familiars.family/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "x",
+        "url": "https://x.com/familiarsfamily",
+        "status": "unverified",
+        "note": "Listed by an aggregator, not found on the official site",
+        "sourceUrl": "https://airdropalert.com/airdrops/familiars-family/",
+        "sourceLabel": "AirdropAlert",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "discord",
+        "status": "not_found",
+        "sourceUrl": "https://airdropalert.com/airdrops/familiars-family/",
+        "sourceLabel": "AirdropAlert",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "telegram",
+        "status": "not_found",
+        "sourceUrl": "https://airdropalert.com/airdrops/familiars-family/",
+        "sourceLabel": "AirdropAlert",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "docs",
+        "status": "not_found",
+        "sourceUrl": "https://airdropalert.com/airdrops/familiars-family/",
+        "sourceLabel": "AirdropAlert",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "status": "not_found",
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [],
+    "signals": [
+      {
+        "code": "no_audit",
+        "label": "No public audit found",
+        "present": true,
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
       }
     ]
   },
@@ -4670,6 +4524,89 @@ const entries = [
     ]
   },
   {
+    "slug": "infinifi",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "url": "https://infinifi.xyz/",
+        "status": "unverified",
+        "note": "Site did not respond (403)",
+        "sourceUrl": "https://infinifi.xyz/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "auditor": "docsend.com",
+        "reportUrl": "https://docsend.com/view/vxet6fdzgb6zhfnn",
+        "status": "confirmed",
+        "sourceUrl": "https://defillama.com/protocol/infinifi",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "auditor": "docsend.com",
+        "reportUrl": "https://docsend.com/view/qtz5tmdi35d7f5si",
+        "status": "confirmed",
+        "sourceUrl": "https://defillama.com/protocol/infinifi",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "auditor": "docsend.com",
+        "reportUrl": "https://docsend.com/view/8nw9dtr9qhssndzw",
+        "status": "confirmed",
+        "sourceUrl": "https://defillama.com/protocol/infinifi",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [
+      {
+        "round": "Total raised",
+        "amountUsd": 6000000,
+        "sourceUrl": "https://cryptorank.io/drophunting/infinifi-activity682",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "signals": [
+      {
+        "code": "domain_very_new",
+        "label": "Domain registered 29 months ago",
+        "present": false,
+        "sourceUrl": "https://rdap.org/domain/infinifi.xyz",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "domain_new",
+        "label": "Domain age: 871 days",
+        "present": false,
+        "sourceUrl": "https://rdap.org/domain/infinifi.xyz",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "no_audit",
+        "label": "3 public audit report(s) found",
+        "present": false,
+        "sourceUrl": "https://defillama.com/protocol/infinifi",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ]
+  },
+  {
     "slug": "infinifi-stablecoin-yield",
     "checkedAt": "2026-09-22",
     "links": [
@@ -5060,6 +4997,112 @@ const entries = [
     ]
   },
   {
+    "slug": "laptop-bitvavo",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "url": "https://bitvavo.com",
+        "status": "unverified",
+        "note": "Site did not respond (403)",
+        "sourceUrl": "https://bitvavo.com",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "status": "not_found",
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [],
+    "signals": [
+      {
+        "code": "no_audit",
+        "label": "No public audit found",
+        "present": true,
+        "sourceUrl": "https://defillama.com/protocol/bitvavo",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ]
+  },
+  {
+    "slug": "letscatapult",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "url": "https://catapult.trade/turbo/home",
+        "status": "unverified",
+        "note": "Site did not respond (403)",
+        "sourceUrl": "https://catapult.trade/turbo/home",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "status": "not_found",
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [
+      {
+        "round": "Total raised",
+        "amountUsd": 6600000,
+        "sourceUrl": "https://cryptorank.io/drophunting/letscatapult-activity1319",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "signals": [
+      {
+        "code": "domain_very_new",
+        "label": "Domain registered 15 months ago",
+        "present": false,
+        "sourceUrl": "https://rdap.org/domain/catapult.trade",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "domain_new",
+        "label": "Domain age: 474 days",
+        "present": false,
+        "sourceUrl": "https://rdap.org/domain/catapult.trade",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "no_audit",
+        "label": "No public audit found",
+        "present": true,
+        "sourceUrl": "https://defillama.com/protocol/catapult-trade",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ]
+  },
+  {
     "slug": "lighter-perpetual-dex-robinhood-chain",
     "checkedAt": "2026-09-22",
     "links": [
@@ -5378,81 +5421,6 @@ const entries = [
     ]
   },
   {
-    "slug": "mexc-8th-anniversary",
-    "checkedAt": "2026-09-22",
-    "links": [
-      {
-        "kind": "website",
-        "url": "https://www.mexc.com/register?inviteCode=mexc-airdropaler",
-        "status": "confirmed",
-        "note": "Site is reachable",
-        "sourceUrl": "https://www.mexc.com/register?inviteCode=mexc-airdropaler",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "x",
-        "url": "https://twitter.com/MEXC_Official",
-        "status": "unverified",
-        "note": "Listed by an aggregator, not found on the official site",
-        "sourceUrl": "https://airdropalert.com/airdrops/mexc-8th-anniversary/",
-        "sourceLabel": "AirdropAlert",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "discord",
-        "url": "https://discord.gg/bUadTCYmbm",
-        "status": "unverified",
-        "note": "From an aggregator listing, not found on the official site",
-        "sourceUrl": "https://airdropalert.com/airdrops/mexc-8th-anniversary/",
-        "sourceLabel": "AirdropAlert",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "telegram",
-        "url": "https://t.me/MEXC_Darry",
-        "status": "confirmed",
-        "note": "Linked from the official site",
-        "sourceUrl": "https://www.mexc.com/register?inviteCode=mexc-airdropaler",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      },
-      {
-        "kind": "docs",
-        "status": "not_found",
-        "sourceUrl": "https://airdropalert.com/airdrops/mexc-8th-anniversary/",
-        "sourceLabel": "AirdropAlert",
-        "checkedAt": "2026-09-22"
-      }
-    ],
-    "contracts": [
-      {
-        "status": "not_found",
-        "note": "No contract address on file",
-        "checkedAt": "2026-09-22"
-      }
-    ],
-    "audits": [
-      {
-        "status": "not_found",
-        "sourceUrl": "https://defillama.com",
-        "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
-      }
-    ],
-    "funding": [],
-    "signals": [
-      {
-        "code": "no_audit",
-        "label": "No public audit found",
-        "present": true,
-        "sourceUrl": "https://defillama.com/protocol/mexc",
-        "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
-      }
-    ]
-  },
-  {
     "slug": "midas-markets",
     "checkedAt": "2026-09-22",
     "links": [
@@ -5621,6 +5589,103 @@ const entries = [
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
         "checkedAt": "2026-09-22"
+      }
+    ]
+  },
+  {
+    "slug": "mindgames",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "url": "https://minds.games/",
+        "status": "confirmed",
+        "note": "Site is reachable",
+        "sourceUrl": "https://minds.games/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "x",
+        "url": "https://x.com/mindgames_ai",
+        "status": "unverified",
+        "note": "Profile could not be read automatically",
+        "sourceUrl": "https://minds.games/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "discord",
+        "status": "not_found",
+        "sourceUrl": "https://airdrops.io/mindgames/",
+        "sourceLabel": "Airdrops.io",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "telegram",
+        "url": "https://t.me/airdrops_io",
+        "status": "unverified",
+        "note": "From an aggregator listing, not found on the official site",
+        "sourceUrl": "https://airdrops.io/mindgames/",
+        "sourceLabel": "Airdrops.io",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "docs",
+        "status": "not_found",
+        "sourceUrl": "https://airdrops.io/mindgames/",
+        "sourceLabel": "Airdrops.io",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "status": "not_found",
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [],
+    "signals": [
+      {
+        "code": "link_mismatch",
+        "label": "Site and listing point at the same X account",
+        "present": false,
+        "sourceUrl": "https://minds.games/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "domain_very_new",
+        "label": "Domain registered 1 months ago",
+        "present": false,
+        "sourceUrl": "https://rdap.org/domain/minds.games",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "domain_new",
+        "label": "Domain age: 35 days",
+        "present": true,
+        "sourceUrl": "https://rdap.org/domain/minds.games",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "no_audit",
+        "label": "No public audit found",
+        "present": true,
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
       }
     ]
   },
@@ -5836,6 +5901,44 @@ const entries = [
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
         "checkedAt": "2026-09-22"
+      }
+    ]
+  },
+  {
+    "slug": "monetrix-usd",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "status": "not_found",
+        "note": "No official website in our sources",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "status": "not_found",
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [],
+    "signals": [
+      {
+        "code": "no_audit",
+        "label": "No public audit found",
+        "present": true,
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
       }
     ]
   },
@@ -6457,6 +6560,111 @@ const entries = [
     ]
   },
   {
+    "slug": "phantom-app",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "url": "https://phantom.com/",
+        "status": "confirmed",
+        "note": "Redirects to phantom.com",
+        "sourceUrl": "https://phantom.com/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "x",
+        "url": "https://x.com/phantom",
+        "status": "unverified",
+        "note": "Profile could not be read automatically",
+        "sourceUrl": "https://phantom.com/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "discord",
+        "status": "not_found",
+        "sourceUrl": "https://cryptorank.io/drophunting/phantom-app-activity301",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "telegram",
+        "status": "not_found",
+        "sourceUrl": "https://cryptorank.io/drophunting/phantom-app-activity301",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "docs",
+        "url": "https://docs.phantom.com/introduction",
+        "status": "confirmed",
+        "note": "Linked from the official site",
+        "sourceUrl": "https://phantom.com/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "status": "not_found",
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [
+      {
+        "round": "Total raised",
+        "amountUsd": 268000000,
+        "sourceUrl": "https://cryptorank.io/drophunting/phantom-app-activity301",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "signals": [
+      {
+        "code": "link_mismatch",
+        "label": "Site and listing point at the same X account",
+        "present": false,
+        "sourceUrl": "https://phantom.com/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "domain_very_new",
+        "label": "Domain registered 71 months ago",
+        "present": false,
+        "sourceUrl": "https://rdap.org/domain/phantom.app",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "domain_new",
+        "label": "Domain age: 2134 days",
+        "present": false,
+        "sourceUrl": "https://rdap.org/domain/phantom.app",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "no_audit",
+        "label": "No public audit found",
+        "present": true,
+        "sourceUrl": "https://defillama.com/protocol/phantom-sol",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ]
+  },
+  {
     "slug": "polymarket-prediction-market",
     "checkedAt": "2026-09-22",
     "links": [
@@ -6540,6 +6748,79 @@ const entries = [
     ]
   },
   {
+    "slug": "pons-airdrop-bybit",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "url": "https://www.bybit.com/sign-up?affiliate_id=14557&group_id=95726&group_type=1",
+        "status": "confirmed",
+        "note": "Site is reachable",
+        "sourceUrl": "https://www.bybit.com/sign-up?affiliate_id=14557&group_id=95726&group_type=1",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "x",
+        "url": "https://twitter.com/Bybit_Official",
+        "status": "unverified",
+        "note": "Listed by an aggregator, not found on the official site",
+        "sourceUrl": "https://airdropalert.com/airdrops/pons-airdrop-bybit/",
+        "sourceLabel": "AirdropAlert",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "discord",
+        "status": "not_found",
+        "sourceUrl": "https://airdropalert.com/airdrops/pons-airdrop-bybit/",
+        "sourceLabel": "AirdropAlert",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "telegram",
+        "url": "https://t.me/BybitEnglish",
+        "status": "unverified",
+        "note": "From an aggregator listing, not found on the official site",
+        "sourceUrl": "https://airdropalert.com/airdrops/pons-airdrop-bybit/",
+        "sourceLabel": "AirdropAlert",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "docs",
+        "status": "not_found",
+        "sourceUrl": "https://airdropalert.com/airdrops/pons-airdrop-bybit/",
+        "sourceLabel": "AirdropAlert",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "status": "not_found",
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [],
+    "signals": [
+      {
+        "code": "no_audit",
+        "label": "No public audit found",
+        "present": true,
+        "sourceUrl": "https://defillama.com/protocol/bybit",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ]
+  },
+  {
     "slug": "power-protocol-fableborne",
     "checkedAt": "2026-09-22",
     "links": [
@@ -6581,17 +6862,90 @@ const entries = [
     ]
   },
   {
-    "slug": "powerx-onewallet",
-    "checkedAt": "2026-09-24",
+    "slug": "powerx-one",
+    "checkedAt": "2026-09-25",
     "links": [
       {
         "kind": "website",
-        "url": "https://powerx.one/",
+        "url": "https://powerx.one/en/?ref=1d70vv",
         "status": "confirmed",
         "note": "Site is reachable",
-        "sourceUrl": "https://powerx.one/",
+        "sourceUrl": "https://powerx.one/en/?ref=1d70vv",
         "sourceLabel": "Site",
-        "checkedAt": "2026-09-24"
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "x",
+        "url": "https://x.com/Powerxonewallet",
+        "status": "unverified",
+        "note": "Listed by an aggregator, not found on the official site",
+        "sourceUrl": "https://airdropalert.com/airdrops/powerx-one/",
+        "sourceLabel": "AirdropAlert",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "discord",
+        "status": "not_found",
+        "sourceUrl": "https://airdropalert.com/airdrops/powerx-one/",
+        "sourceLabel": "AirdropAlert",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "telegram",
+        "url": "https://t.me/PowerXOne",
+        "status": "unverified",
+        "note": "From an aggregator listing, not found on the official site",
+        "sourceUrl": "https://airdropalert.com/airdrops/powerx-one/",
+        "sourceLabel": "AirdropAlert",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "docs",
+        "status": "not_found",
+        "sourceUrl": "https://airdropalert.com/airdrops/powerx-one/",
+        "sourceLabel": "AirdropAlert",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "status": "not_found",
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [],
+    "signals": [
+      {
+        "code": "no_audit",
+        "label": "No public audit found",
+        "present": true,
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ]
+  },
+  {
+    "slug": "powerx-onewallet",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "url": "https://powerx.one/en/",
+        "status": "confirmed",
+        "note": "Site is reachable",
+        "sourceUrl": "https://powerx.one/en/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "x",
@@ -6600,14 +6954,14 @@ const entries = [
         "note": "Listed by an aggregator, not found on the official site",
         "sourceUrl": "https://airdrops.io/powerx-onewallet/",
         "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-24"
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "discord",
         "status": "not_found",
         "sourceUrl": "https://airdrops.io/powerx-onewallet/",
         "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-24"
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "telegram",
@@ -6616,21 +6970,21 @@ const entries = [
         "note": "From an aggregator listing, not found on the official site",
         "sourceUrl": "https://airdrops.io/powerx-onewallet/",
         "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-24"
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "docs",
         "status": "not_found",
         "sourceUrl": "https://airdrops.io/powerx-onewallet/",
         "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-24"
+        "checkedAt": "2026-09-25"
       }
     ],
     "contracts": [
       {
         "status": "not_found",
         "note": "No contract address on file",
-        "checkedAt": "2026-09-24"
+        "checkedAt": "2026-09-25"
       }
     ],
     "audits": [
@@ -6638,34 +6992,18 @@ const entries = [
         "status": "not_found",
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-24"
+        "checkedAt": "2026-09-25"
       }
     ],
     "funding": [],
     "signals": [
-      {
-        "code": "domain_very_new",
-        "label": "Domain registered 4 months ago",
-        "present": false,
-        "sourceUrl": "https://rdap.org/domain/powerx.one",
-        "sourceLabel": "RDAP",
-        "checkedAt": "2026-09-24"
-      },
-      {
-        "code": "domain_new",
-        "label": "Domain age: 136 days",
-        "present": true,
-        "sourceUrl": "https://rdap.org/domain/powerx.one",
-        "sourceLabel": "RDAP",
-        "checkedAt": "2026-09-24"
-      },
       {
         "code": "no_audit",
         "label": "No public audit found",
         "present": true,
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-24"
+        "checkedAt": "2026-09-25"
       }
     ]
   },
@@ -6809,47 +7147,6 @@ const entries = [
         "sourceUrl": "https://defillama.com/protocol/qfex",
         "sourceLabel": "DefiLlama",
         "checkedAt": "2026-09-24"
-      }
-    ]
-  },
-  {
-    "slug": "qms-network",
-    "checkedAt": "2026-09-22",
-    "links": [
-      {
-        "kind": "website",
-        "url": "https://qms.finance/",
-        "status": "unverified",
-        "note": "Site did not respond (403)",
-        "sourceUrl": "https://qms.finance/",
-        "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
-      }
-    ],
-    "contracts": [
-      {
-        "status": "not_found",
-        "note": "No contract address on file",
-        "checkedAt": "2026-09-22"
-      }
-    ],
-    "audits": [
-      {
-        "status": "not_found",
-        "sourceUrl": "https://defillama.com",
-        "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
-      }
-    ],
-    "funding": [],
-    "signals": [
-      {
-        "code": "no_audit",
-        "label": "No public audit found",
-        "present": true,
-        "sourceUrl": "https://defillama.com",
-        "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
       }
     ]
   },
@@ -7041,6 +7338,212 @@ const entries = [
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
         "checkedAt": "2026-09-22"
+      }
+    ]
+  },
+  {
+    "slug": "reflects",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "url": "https://reflect.money/",
+        "status": "confirmed",
+        "note": "Site is reachable",
+        "sourceUrl": "https://reflect.money/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "x",
+        "url": "https://x.com/reflectmoney",
+        "status": "unverified",
+        "note": "Profile could not be read automatically",
+        "sourceUrl": "https://reflect.money/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "discord",
+        "status": "not_found",
+        "sourceUrl": "https://cryptorank.io/drophunting/reflects-activity929",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "telegram",
+        "status": "not_found",
+        "sourceUrl": "https://cryptorank.io/drophunting/reflects-activity929",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "docs",
+        "url": "https://docs.reflect.money/reflect-api/health/health-check",
+        "status": "confirmed",
+        "note": "Linked from the official site",
+        "sourceUrl": "https://reflect.money/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "auditor": "github.com",
+        "reportUrl": "https://github.com/palindrome-eng/audits",
+        "status": "confirmed",
+        "sourceUrl": "https://defillama.com/protocol/reflect-tranches",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [
+      {
+        "round": "Total raised",
+        "amountUsd": 3750000,
+        "sourceUrl": "https://cryptorank.io/drophunting/reflects-activity929",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "signals": [
+      {
+        "code": "link_mismatch",
+        "label": "Site and listing point at the same X account",
+        "present": false,
+        "sourceUrl": "https://reflect.money/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "domain_very_new",
+        "label": "Domain registered 30 months ago",
+        "present": false,
+        "sourceUrl": "https://rdap.org/domain/reflect.money",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "domain_new",
+        "label": "Domain age: 901 days",
+        "present": false,
+        "sourceUrl": "https://rdap.org/domain/reflect.money",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "no_audit",
+        "label": "1 public audit report(s) found",
+        "present": false,
+        "sourceUrl": "https://defillama.com/protocol/reflect-tranches",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ]
+  },
+  {
+    "slug": "renaiss-protocol",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "url": "https://www.renaiss.xyz/",
+        "status": "confirmed",
+        "note": "Site is reachable",
+        "sourceUrl": "https://www.renaiss.xyz/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "x",
+        "url": "https://x.com/renaissxyz?hzet=dszqupsbol",
+        "status": "unverified",
+        "note": "Listed by an aggregator, not found on the official site",
+        "sourceUrl": "https://cryptorank.io/drophunting/renaiss-protocol-activity1003",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "discord",
+        "url": "https://discord.com/invite/renaiss",
+        "status": "unverified",
+        "note": "From an aggregator listing, not found on the official site",
+        "sourceUrl": "https://cryptorank.io/drophunting/renaiss-protocol-activity1003",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "telegram",
+        "url": "https://t.me/renaissnetwork",
+        "status": "unverified",
+        "note": "From an aggregator listing, not found on the official site",
+        "sourceUrl": "https://cryptorank.io/drophunting/renaiss-protocol-activity1003",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "docs",
+        "status": "not_found",
+        "sourceUrl": "https://cryptorank.io/drophunting/renaiss-protocol-activity1003",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "status": "not_found",
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [
+      {
+        "round": "Total raised",
+        "amountUsd": 1500000,
+        "sourceUrl": "https://cryptorank.io/drophunting/renaiss-protocol-activity1003",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "signals": [
+      {
+        "code": "domain_very_new",
+        "label": "Domain registered 12 months ago",
+        "present": false,
+        "sourceUrl": "https://rdap.org/domain/renaiss.xyz",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "domain_new",
+        "label": "Domain age: 364 days",
+        "present": false,
+        "sourceUrl": "https://rdap.org/domain/renaiss.xyz",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "no_audit",
+        "label": "No public audit found",
+        "present": true,
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
       }
     ]
   },
@@ -7606,6 +8109,101 @@ const entries = [
     ]
   },
   {
+    "slug": "startale-labs",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "url": "https://app.startale.com/sign-up?code=LIZJBK16",
+        "status": "confirmed",
+        "note": "Site is reachable",
+        "sourceUrl": "https://app.startale.com/sign-up?code=LIZJBK16",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "x",
+        "url": "https://x.com/StartaleGroup?hzet=dszqupsbol",
+        "status": "unverified",
+        "note": "Listed by an aggregator, not found on the official site",
+        "sourceUrl": "https://cryptorank.io/drophunting/startale-labs-activity1141",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "discord",
+        "status": "not_found",
+        "sourceUrl": "https://cryptorank.io/drophunting/startale-labs-activity1141",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "telegram",
+        "status": "not_found",
+        "sourceUrl": "https://cryptorank.io/drophunting/startale-labs-activity1141",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "docs",
+        "status": "not_found",
+        "sourceUrl": "https://cryptorank.io/drophunting/startale-labs-activity1141",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "status": "not_found",
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [
+      {
+        "round": "Total raised",
+        "amountUsd": 70000000,
+        "sourceUrl": "https://cryptorank.io/drophunting/startale-labs-activity1141",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "signals": [
+      {
+        "code": "domain_very_new",
+        "label": "Domain registered 260 months ago",
+        "present": false,
+        "sourceUrl": "https://rdap.org/domain/startale.com",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "domain_new",
+        "label": "Domain age: 7811 days",
+        "present": false,
+        "sourceUrl": "https://rdap.org/domain/startale.com",
+        "sourceLabel": "RDAP",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "code": "no_audit",
+        "label": "No public audit found",
+        "present": true,
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ]
+  },
+  {
     "slug": "subfrost",
     "checkedAt": "2026-09-22",
     "links": [
@@ -7786,6 +8384,81 @@ const entries = [
     ]
   },
   {
+    "slug": "synthra",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "url": "https://synthra.org/",
+        "status": "confirmed",
+        "note": "Site is reachable",
+        "sourceUrl": "https://synthra.org/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "x",
+        "url": "https://x.com/synthra_finance",
+        "status": "unverified",
+        "note": "Listed by an aggregator, not found on the official site",
+        "sourceUrl": "https://airdrops.io/synthra/",
+        "sourceLabel": "Airdrops.io",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "discord",
+        "url": "https://discord.gg/eesEKPRDtd",
+        "status": "unverified",
+        "note": "From an aggregator listing, not found on the official site",
+        "sourceUrl": "https://airdrops.io/synthra/",
+        "sourceLabel": "Airdrops.io",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "telegram",
+        "url": "https://t.me/airdrops_io",
+        "status": "unverified",
+        "note": "From an aggregator listing, not found on the official site",
+        "sourceUrl": "https://airdrops.io/synthra/",
+        "sourceLabel": "Airdrops.io",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "docs",
+        "status": "not_found",
+        "sourceUrl": "https://airdrops.io/synthra/",
+        "sourceLabel": "Airdrops.io",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "status": "not_found",
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [],
+    "signals": [
+      {
+        "code": "no_audit",
+        "label": "No public audit found",
+        "present": true,
+        "sourceUrl": "https://defillama.com/protocol/synthra-v3",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ]
+  },
+  {
     "slug": "tbook",
     "checkedAt": "2026-09-22",
     "links": [
@@ -7867,6 +8540,44 @@ const entries = [
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
         "checkedAt": "2026-09-22"
+      }
+    ]
+  },
+  {
+    "slug": "tickr-co",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "status": "not_found",
+        "note": "No official website in our sources",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "status": "not_found",
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [],
+    "signals": [
+      {
+        "code": "no_audit",
+        "label": "No public audit found",
+        "present": true,
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
       }
     ]
   },
@@ -8119,20 +8830,57 @@ const entries = [
   },
   {
     "slug": "trueo-prediction-market",
-    "checkedAt": "2026-09-24",
+    "checkedAt": "2026-09-25",
     "links": [
       {
         "kind": "website",
+        "url": "https://trueo.com/",
+        "status": "confirmed",
+        "note": "Site is reachable",
+        "sourceUrl": "https://trueo.com/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "x",
+        "url": "https://x.com/trueo_",
+        "status": "unverified",
+        "note": "Profile could not be read automatically",
+        "sourceUrl": "https://trueo.com/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "discord",
+        "url": "https://discord.gg/trueo",
+        "status": "confirmed",
+        "note": "Linked from the official site",
+        "sourceUrl": "https://trueo.com/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "telegram",
         "status": "not_found",
-        "note": "No official website in our sources",
-        "checkedAt": "2026-09-24"
+        "sourceUrl": "https://airdropalert.com/airdrops/trueo-prediction-market/",
+        "sourceLabel": "AirdropAlert",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "docs",
+        "url": "https://docs.trueo.com/",
+        "status": "confirmed",
+        "note": "Linked from the official site",
+        "sourceUrl": "https://trueo.com/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
       }
     ],
     "contracts": [
       {
         "status": "not_found",
         "note": "No contract address on file",
-        "checkedAt": "2026-09-24"
+        "checkedAt": "2026-09-25"
       }
     ],
     "audits": [
@@ -8140,18 +8888,26 @@ const entries = [
         "status": "not_found",
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-24"
+        "checkedAt": "2026-09-25"
       }
     ],
     "funding": [],
     "signals": [
       {
+        "code": "link_mismatch",
+        "label": "Site and listing point at the same X account",
+        "present": false,
+        "sourceUrl": "https://trueo.com/",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
         "code": "no_audit",
         "label": "No public audit found",
         "present": true,
-        "sourceUrl": "https://defillama.com",
+        "sourceUrl": "https://defillama.com/protocol/trueo",
         "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-24"
+        "checkedAt": "2026-09-25"
       }
     ]
   },
@@ -8320,6 +9076,89 @@ const entries = [
     ]
   },
   {
+    "slug": "variational",
+    "checkedAt": "2026-09-25",
+    "links": [
+      {
+        "kind": "website",
+        "url": "https://omni.variational.io/?ref=OMNIRANK",
+        "status": "confirmed",
+        "note": "Site is reachable",
+        "sourceUrl": "https://omni.variational.io/?ref=OMNIRANK",
+        "sourceLabel": "Site",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "x",
+        "url": "https://x.com/variational_io?hzet=dszqupsbol",
+        "status": "unverified",
+        "note": "Listed by an aggregator, not found on the official site",
+        "sourceUrl": "https://cryptorank.io/drophunting/variational-activity496",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "discord",
+        "url": "https://discord.com/invite/variational",
+        "status": "unverified",
+        "note": "From an aggregator listing, not found on the official site",
+        "sourceUrl": "https://cryptorank.io/drophunting/variational-activity496",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "telegram",
+        "url": "https://t.me/variational_io",
+        "status": "unverified",
+        "note": "From an aggregator listing, not found on the official site",
+        "sourceUrl": "https://cryptorank.io/drophunting/variational-activity496",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      },
+      {
+        "kind": "docs",
+        "status": "not_found",
+        "sourceUrl": "https://cryptorank.io/drophunting/variational-activity496",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "contracts": [
+      {
+        "status": "not_found",
+        "note": "No contract address on file",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "audits": [
+      {
+        "status": "not_found",
+        "sourceUrl": "https://defillama.com",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "funding": [
+      {
+        "round": "Total raised",
+        "amountUsd": 61800000,
+        "sourceUrl": "https://cryptorank.io/drophunting/variational-activity496",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
+      }
+    ],
+    "signals": [
+      {
+        "code": "no_audit",
+        "label": "No public audit found",
+        "present": true,
+        "sourceUrl": "https://defillama.com/protocol/variational",
+        "sourceLabel": "DefiLlama",
+        "checkedAt": "2026-09-25"
+      }
+    ]
+  },
+  {
     "slug": "vibe-vibe",
     "checkedAt": "2026-09-22",
     "links": [
@@ -8396,23 +9235,23 @@ const entries = [
   },
   {
     "slug": "voice",
-    "checkedAt": "2026-09-22",
+    "checkedAt": "2026-09-25",
     "links": [
       {
         "kind": "website",
-        "url": "https://voice.fun",
+        "url": "https://voice.cc/",
         "status": "unverified",
         "note": "Site did not respond (403)",
-        "sourceUrl": "https://voice.fun",
+        "sourceUrl": "https://voice.cc/",
         "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
+        "checkedAt": "2026-09-25"
       }
     ],
     "contracts": [
       {
         "status": "not_found",
         "note": "No contract address on file",
-        "checkedAt": "2026-09-22"
+        "checkedAt": "2026-09-25"
       }
     ],
     "audits": [
@@ -8420,7 +9259,7 @@ const entries = [
         "status": "not_found",
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
+        "checkedAt": "2026-09-25"
       }
     ],
     "funding": [],
@@ -8431,61 +9270,59 @@ const entries = [
         "present": true,
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
+        "checkedAt": "2026-09-25"
       }
     ]
   },
   {
-    "slug": "wager-predict",
-    "checkedAt": "2026-09-22",
+    "slug": "vorta-markets",
+    "checkedAt": "2026-09-25",
     "links": [
       {
         "kind": "website",
-        "url": "https://wagerpredict.com/",
+        "url": "https://www.vortamarkets.com/",
         "status": "confirmed",
         "note": "Site is reachable",
-        "sourceUrl": "https://wagerpredict.com/",
+        "sourceUrl": "https://www.vortamarkets.com/",
         "sourceLabel": "Site",
-        "checkedAt": "2026-09-22"
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "x",
-        "url": "https://x.com/Wager_Predict",
+        "url": "https://x.com/VortaMarkets?hzet=dszqupsbol",
         "status": "unverified",
         "note": "Listed by an aggregator, not found on the official site",
-        "sourceUrl": "https://airdrops.io/wager-predict/",
-        "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-22"
+        "sourceUrl": "https://cryptorank.io/drophunting/vorta-markets-activity1320",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "discord",
         "status": "not_found",
-        "sourceUrl": "https://airdrops.io/wager-predict/",
-        "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-22"
+        "sourceUrl": "https://cryptorank.io/drophunting/vorta-markets-activity1320",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "telegram",
-        "url": "https://t.me/Wager_predict",
-        "status": "unverified",
-        "note": "From an aggregator listing, not found on the official site",
-        "sourceUrl": "https://airdrops.io/wager-predict/",
-        "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-22"
+        "status": "not_found",
+        "sourceUrl": "https://cryptorank.io/drophunting/vorta-markets-activity1320",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
       },
       {
         "kind": "docs",
         "status": "not_found",
-        "sourceUrl": "https://airdrops.io/wager-predict/",
-        "sourceLabel": "Airdrops.io",
-        "checkedAt": "2026-09-22"
+        "sourceUrl": "https://cryptorank.io/drophunting/vorta-markets-activity1320",
+        "sourceLabel": "CryptoRank",
+        "checkedAt": "2026-09-25"
       }
     ],
     "contracts": [
       {
         "status": "not_found",
         "note": "No contract address on file",
-        "checkedAt": "2026-09-22"
+        "checkedAt": "2026-09-25"
       }
     ],
     "audits": [
@@ -8493,26 +9330,26 @@ const entries = [
         "status": "not_found",
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
+        "checkedAt": "2026-09-25"
       }
     ],
     "funding": [],
     "signals": [
       {
         "code": "domain_very_new",
-        "label": "Domain registered 2 months ago",
-        "present": false,
-        "sourceUrl": "https://rdap.org/domain/wagerpredict.com",
+        "label": "Domain registered 24 days ago",
+        "present": true,
+        "sourceUrl": "https://rdap.org/domain/vortamarkets.com",
         "sourceLabel": "RDAP",
-        "checkedAt": "2026-09-22"
+        "checkedAt": "2026-09-25"
       },
       {
         "code": "domain_new",
-        "label": "Domain age: 69 days",
+        "label": "Domain age: 24 days",
         "present": true,
-        "sourceUrl": "https://rdap.org/domain/wagerpredict.com",
+        "sourceUrl": "https://rdap.org/domain/vortamarkets.com",
         "sourceLabel": "RDAP",
-        "checkedAt": "2026-09-22"
+        "checkedAt": "2026-09-25"
       },
       {
         "code": "no_audit",
@@ -8520,7 +9357,7 @@ const entries = [
         "present": true,
         "sourceUrl": "https://defillama.com",
         "sourceLabel": "DefiLlama",
-        "checkedAt": "2026-09-22"
+        "checkedAt": "2026-09-25"
       }
     ]
   },
