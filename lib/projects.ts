@@ -1,10 +1,11 @@
 import { projects as allProjects, type Project } from "@/data/projects";
 import { getBadges } from "@/lib/verification";
+import { getOverride } from "@/lib/overrides";
 import type { VerificationBadge } from "@/data/verification";
 
 /* ---- Source cleanup ----
    Guide text scraped from Airdrops.io contains links that do not work on our
-   domain (/visit/..., /goto/...) or that send visitors to the source's own
+   domain (/visit/..., /goto/...) or that send visitors to the source''s own
    affiliate and guide pages. They are turned into plain text here, once, so
    every page (lists, project page, sitemap) sees the same clean data. */
 
@@ -20,7 +21,7 @@ function isSourceLink(url: string): boolean {
 /* ---- Referral cleanup ----
    Source guides link to their own referral or partner URLs (the source earns the
    commission). Such links are reduced to the plain site address so the site does
-   not carry someone else's referral. */
+   not carry someone else''s referral. */
 
 const REF_KEY = /^(?:r|code|via|aff|affiliate|invite\w*|ref\w*|utm_\w+)$/i;
 const REF_PATH = /\/(?:ref|refer|referral|referrals|r|invite|join|share|u|b)(?:\/|$)/i;
@@ -73,14 +74,32 @@ function cleanStepText(text: string): string {
   return removed ? out.replace(REFERRAL_SENTENCE, "") : out;
 }
 
+/* Per-project link fixes (data/overrides.json -> linkFixes), applied on top
+   of the generic cleanup above. Lets you swap one specific URL that the
+   source scrape got wrong, without rewriting the whole guide''s text. Plain
+   substring replace so it catches the URL both inside "[label](url)" and as
+   a bare link. */
+function applyLinkFixes(text: string, fixes?: Record<string, string>): string {
+  if (typeof text !== "string" || !fixes) return text;
+  let out = text;
+  for (const [from, to] of Object.entries(fixes)) {
+    if (!from || !to) continue;
+    out = out.split(from).join(to);
+  }
+  return out;
+}
+
 function sanitizeProject(p: Project): Project {
   const out: Project = { ...p };
+  const linkFixes = getOverride(p.slug)?.linkFixes;
 
-  if (out.actions) out.actions = out.actions.map(cleanStepText);
+  if (out.actions) out.actions = out.actions.map((a) => applyLinkFixes(cleanStepText(a), linkFixes));
 
   if (out.tasks) {
     out.tasks = out.tasks.map((t) =>
-      t.instructions ? { ...t, instructions: t.instructions.map(cleanStepText) } : t
+      t.instructions
+        ? { ...t, instructions: t.instructions.map((line) => applyLinkFixes(cleanStepText(line), linkFixes)) }
+        : t
     );
   }
 
@@ -130,7 +149,7 @@ export async function getProjectsWithBadges(): Promise<ProjectWithBadge[]> {
 }
 
 /** Used by the "verified only" filter. Verified means the official site
- *  check passed — not that the project is safe. */
+ *  check passed вЂ” not that the project is safe. */
 export function isVerified(project: ProjectWithBadge) {
   return Boolean(project.verification?.linksVerified);
 }
@@ -146,8 +165,8 @@ export function initials(name: string) { return name.slice(0, 2).toUpperCase(); 
 export function truncate(text: string, max: number) {
   if (!text || text.length <= max) return text;
   const cut = text.slice(0, max);
-  const lastSpace = cut.lastIndexOf(' ');
-  return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut).trim() + '...';
+  const lastSpace = cut.lastIndexOf('' '');
+  return (lastSpace > 0 ? cut.slice(0, lastSpace) : cut).trim() + ''...'';
 }
 
 export function shortAction(text: string) {

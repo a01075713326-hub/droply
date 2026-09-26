@@ -67,7 +67,7 @@ function fmtLongDate(value?: string): string {
   });
 }
 
-// Meta description assembled from the project's own facts.
+// Meta description assembled from the project''s own facts.
 function buildDescription(p: any): string {
   const facts: string[] = [];
   if (p.status) facts.push("Status: " + p.status);
@@ -204,27 +204,30 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         ? "warn"
         : "unknown";
 
+  // Read overrides first so a manually-fixed link (data/overrides.json) can
+  // replace whatever the source API (CryptoRank/Airdrops.io/AirdropAlert)
+  // scraped, for cases where that link is wrong, dead, or missing.
+  const ov = getOverride(p.slug);
+
   const official: PanelLink[] = [
-    p.website && { kind: "website", title: "Official Website", url: p.website },
-    p.claimUrl && { kind: "claim", title: "Airdrop / Claim Page", url: p.claimUrl },
-    p.docs && { kind: "docs", title: "Docs / Guide", url: p.docs },
-    p.whitepaper && { kind: "whitepaper", title: "Whitepaper", url: p.whitepaper },
+    (ov?.website ?? p.website) && { kind: "website", title: "Official Website", url: ov?.website ?? p.website },
+    (ov?.claimUrl ?? p.claimUrl) && { kind: "claim", title: "Airdrop / Claim Page", url: ov?.claimUrl ?? p.claimUrl },
+    (ov?.docs ?? p.docs) && { kind: "docs", title: "Docs / Guide", url: ov?.docs ?? p.docs },
+    (ov?.whitepaper ?? p.whitepaper) && { kind: "whitepaper", title: "Whitepaper", url: ov?.whitepaper ?? p.whitepaper },
   ].filter(Boolean) as PanelLink[];
 
   const social: PanelLink[] = [
-    p.x && { kind: "x", title: "X (Twitter)", url: p.x },
-    p.telegram && { kind: "telegram", title: "Telegram", url: p.telegram },
-    p.discord && { kind: "discord", title: "Discord", url: p.discord },
+    (ov?.x ?? p.x) && { kind: "x", title: "X (Twitter)", url: ov?.x ?? p.x },
+    (ov?.telegram ?? p.telegram) && { kind: "telegram", title: "Telegram", url: ov?.telegram ?? p.telegram },
+    (ov?.discord ?? p.discord) && { kind: "discord", title: "Discord", url: ov?.discord ?? p.discord },
   ].filter(Boolean) as PanelLink[];
-
-  const ov = getOverride(p.slug);
   const hasOverrideSteps = Boolean(ov?.steps?.length);
   const steps: string[] = hasOverrideSteps ? ov!.steps! : (p.actions ?? []);
-  // CryptoRank's own tasks (p.tasks) are richer and more reliable than
+  // CryptoRank''s own tasks (p.tasks) are richer and more reliable than
   // p.actions merged in from other sources (Airdrops.io/AirdropAlert) by
   // slug during sync - those can be incomplete (title only, no body) even
   // when non-empty. A manual override always wins; otherwise prefer
-  // CryptoRank's tasks over the cross-source actions list.
+  // CryptoRank''s tasks over the cross-source actions list.
   const preferCryptoRankTasks =
     !hasOverrideSteps && isCryptoRank && Boolean(p.tasks && p.tasks.length);
   const timeline = await getProjectTimeline(p.slug, p.firstSeenAt);
