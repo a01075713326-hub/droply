@@ -218,7 +218,15 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   ].filter(Boolean) as PanelLink[];
 
   const ov = getOverride(p.slug);
-  const steps: string[] = ov?.steps?.length ? ov.steps : (p.actions ?? []);
+  const hasOverrideSteps = Boolean(ov?.steps?.length);
+  const steps: string[] = hasOverrideSteps ? ov!.steps! : (p.actions ?? []);
+  // CryptoRank's own tasks (p.tasks) are richer and more reliable than
+  // p.actions merged in from other sources (Airdrops.io/AirdropAlert) by
+  // slug during sync - those can be incomplete (title only, no body) even
+  // when non-empty. A manual override always wins; otherwise prefer
+  // CryptoRank's tasks over the cross-source actions list.
+  const preferCryptoRankTasks =
+    !hasOverrideSteps && isCryptoRank && Boolean(p.tasks && p.tasks.length);
   const timeline = await getProjectTimeline(p.slug, p.firstSeenAt);
   const allProjects = await getProjects();
   const related = getRelated(p, allProjects);
@@ -356,13 +364,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
       {steps.length || (isCryptoRank && p.tasks && p.tasks.length) || official.length || social.length ? (
         <div className="guide-layout">
-          {steps.length ? (
-            <section className="article-card guide-layout__steps">
-              <GuideSteps actions={steps} slug={p.slug} />
-            </section>
-          ) : isCryptoRank && p.tasks && p.tasks.length ? (
+          {preferCryptoRankTasks ? (
             <section className="article-card guide-layout__steps">
               <CryptoRankTasks tasks={p.tasks} slug={p.slug} sourceUrl={p.sourceUrl} />
+            </section>
+          ) : steps.length ? (
+            <section className="article-card guide-layout__steps">
+              <GuideSteps actions={steps} slug={p.slug} />
             </section>
           ) : null}
 
