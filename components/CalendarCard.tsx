@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { projects } from "@/data/projects";
-import { initials } from "@/lib/projects";
+import { initials } from "@/lib/project-utils";
 import FavoriteButton from "@/components/FavoriteButton";
 
 const chainLogos: Record<string, string> = {

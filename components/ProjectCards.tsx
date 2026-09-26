@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Project } from "@/data/projects";
-import { initials, cardActions, truncate } from "@/lib/projects";
+import { initials, cardActions, truncate } from "@/lib/project-utils";
 import FavoriteButton from "@/components/FavoriteButton";
 import DeadlineBadge from "@/components/DeadlineBadge";
 import ChainIcon from "@/components/ChainIcon";

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { Project } from "@/data/projects";
-import { formatDate, initials, truncate } from "@/lib/projects";
+import { formatDate, initials, truncate } from "@/lib/project-utils";
 import FavoriteButton from "@/components/FavoriteButton";
 import DeadlineBadge from "@/components/DeadlineBadge";
 

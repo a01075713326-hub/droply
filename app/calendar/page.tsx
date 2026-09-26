@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { projects } from "@/data/projects";
-import { initials } from "@/lib/projects";
+import { initials } from "@/lib/project-utils";
 import { ArrowUpRight } from "lucide-react";
 import FavoriteButton from "@/components/FavoriteButton";
 import MoniGauge from "@/components/MoniGauge";
