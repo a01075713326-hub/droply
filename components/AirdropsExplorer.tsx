@@ -107,7 +107,7 @@ export default function AirdropsExplorer({ items }: { items: Project[] }) {
   const filtered = useMemo(() => {
     const q = search.trim().toLowerCase();
 
-        return items.filter((p) => {
+        const list = items.filter((p) => {
       if (status !== "All") {
         const isLiveNow = p.status === "Live" || p.isLive === true;
         if (status === "Live" ? !isLiveNow : p.status !== status) return false;
@@ -121,6 +121,12 @@ export default function AirdropsExplorer({ items }: { items: Project[] }) {
       }
 
       return true;
+    });
+
+    return [...list].sort((a, b) => {
+      const ta = a.firstSeenAt ? new Date(a.firstSeenAt).getTime() : 0;
+      const tb = b.firstSeenAt ? new Date(b.firstSeenAt).getTime() : 0;
+      return tb - ta;
     });
   }, [items, search, status, chain, event]);
 

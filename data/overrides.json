@@ -37,21 +37,6 @@
     ],
     "updatedAt": "2026-09-20"
   },
-  "amadeus-protocol": {
-    "tagline": "A confidential Layer 1 for AI agents, with a free points beta on AMA Hub.",
-    "summary": "Amadeus Protocol is a Layer 1 aimed at AI agents that trade and transact onchain while keeping their strategies private. It uses trusted execution environments and a consensus design called useful proof of work, which points mining power at AI computation. You can join the AMA Hub beta, link wallets, check in daily, run simple agents and finish social quests to earn PRIME Points. The points program is live, but as far as we could find the team has not published how, or whether, points convert into the AMA token.",
-    "risks": [
-      "Sources disagree on whether an airdrop is confirmed. We found no official commitment to convert PRIME Points into AMA.",
-      "We found no official TGE date, so any timeline you see elsewhere should be treated as unconfirmed.",
-      "Signing in with a Google account creates a real wallet with a recovery phrase. Store it safely and never share it, because losing it means losing access.",
-      "This is a young project with a short public track record."
-    ],
-    "notes": [
-      "Quests on AMA Hub reportedly close on a rolling basis through October 2026, so check the date on each quest.",
-      "The sample agents in the Hub are described as watch-only and need your wallet signature for each transaction. Still review what an agent is allowed to do before connecting a wallet."
-    ],
-    "updatedAt": "2026-09-20"
-  },
   "yakkamon": {
     "tagline": "A creature-collecting idle farming game on Ronin from the makers of Sunflower Land, with a free Season 0 pre-registration.",
     "summary": "Yakkamon is a creature collector and idle-farming game on Ronin, built by Thought Farm, the studio behind Sunflower Land. You catch monsters and put them to work farming while you are offline, and use your online time for hunting, crafting and arena battles. Season 0 pre-registration is free and needs only an email address. Points from daily activity decide your leaderboard rank, and rank decides which early-access wave you join in Q4 2026 and who receives a Monster NFT. There is no new token: the game uses $FLOWER, the token from the studio''s other games.",
@@ -68,10 +53,496 @@
     ],
     "updatedAt": "2026-09-20"
   },
+  "amadeus": {
+    "tagline": "A confidential Layer 1 for AI agents, with a free PRIME Points beta on AMA Hub ahead of a still-unconfirmed $AMA TGE.",
+    "summary": "Amadeus Protocol is a Layer 1 built for AI agents that trade and transact onchain while keeping their strategies private, using Trusted Execution Environments and a consensus design called Useful Proof of Work that points mining power at AI computation. You can join the AMA Hub Season 1 beta, link wallets, check in daily, run simple agents and finish social quests to earn PRIME Points. In February 2026 Amadeus acquired the AI-agent platform Bitte.ai for $1.7M paid in $AMA. Some trackers report a $AMA TGE targeted for September 2026, but we found no confirmation of that date on the official site, and the PRIME-to-$AMA conversion rate has not been announced.",
+    "risks": [
+      "Sources disagree on whether an airdrop is confirmed, and on whether a September 2026 TGE date is real; treat both as unconfirmed until the official site says otherwise.",
+      "We found no official commitment to convert PRIME Points into $AMA.",
+      "Signing in with a Google account creates a real wallet with a recovery phrase. Store it safely and never share it, because losing it means losing access.",
+      "This is a young project with a short public track record."
+    ],
+    "notes": [
+      "Quests on AMA Hub run in seasons and close on a rolling basis, so check the date on each quest rather than assuming it stays open.",
+      "The sample agents in the Hub are described as watch-only and need your wallet signature for each transaction. Still review what an agent is allowed to do before connecting a wallet.",
+      "The official X account we could confirm from a company press release is @amadeusprotocol; some third-party airdrop guides reference @ama_protocol instead. Verify on the official site before following either."
+    ],
+    "updatedAt": "2026-09-24",
+    "website": "https://amahub.run",
+    "claimUrl": "https://amahub.run"
+  },
+  "gte": {
+    "tagline": "A CLOB, AMM and token-launchpad DEX built for MegaETH, now gating access through a waitlist points program ahead of a still-unannounced token.",
+    "summary": "GTE (Global Token Exchange) is a fully on-chain, non-custodial trading platform built exclusively for MegaETH, combining a central limit order book, an automated market maker and Takeoff, its token launchpad, with the goal of matching centralized-exchange speed. The project ran an open beta testnet through 2025, then moved to a waitlist: signing up earns points and a Bronze-to-Platinum rank ahead of the platform's full public launch. Liquid Labs, the team behind GTE, has raised roughly $25M from investors including Paradigm, Wintermute and GSR, and some of that funding reportedly included agreements with token warrants. No native $GTE token, TGE date, or points-to-token conversion has been officially announced.",
+    "risks": [
+      "No token, TGE date, or points-conversion rate has been confirmed; funding agreements with token warrants raise expectations but are not a commitment.",
+      "The public site currently only offers waitlist sign-up; we could not verify what access, if any, earlier testnet accounts retain.",
+      "We found no official Discord, Telegram or documentation link on the current site, so verify any community link independently before joining.",
+      "This is a fast-moving pre-launch product; guides describing the earlier open testnet may no longer reflect the current waitlist-only flow."
+    ],
+    "notes": [
+      "The waitlist ranks participants Bronze through Platinum by points; referrals are one of the ways to earn points.",
+      "MegaETH, the underlying chain, already completed its own MEGA token generation event in April 2026 — that is a separate token from any future GTE token."
+    ],
+    "updatedAt": "2026-09-24",
+    "website": "https://gte.lol",
+    "claimUrl": "https://gte.lol"
+  },
+  "flop-labs": {
+    "website": "https://flopfinance.icu",
+    "claimUrl": "https://flopfinance.icu",
+    "updatedAt": "2026-09-24"
+  },
+  "morfi-markets": {
+    "tagline": "Solana opinion-market platform — trade on devnet, earn Points, build your referral network before mainnet.",
+    "summary": "Morfi Markets is a Solana-based opinion-market platform where users trade on subjective debates rather than price feeds. The project is pre-token and currently running a Points campaign on devnet: signing up creates an embedded Solana wallet automatically, so there's no separate wallet connection needed. Activity — quests, devnet trading, and referrals — builds a Points balance that determines raffle entries (1 ticket per 100 eligible Points, capped), with KYC required for winners.",
+    "steps": [
+      "Create your account — go to morfi.markets and sign up with email. Verify the code sent to your inbox, then open the Rewards page to see available quests and milestones. No external wallet needed — Morfi creates one for you automatically.",
+      "Earn Points — complete the social/content quests on the Rewards page, claim $1,000 in free devnet test cash from the Faucet (under the account menu on the Trade page), and trade on devnet to build your streak and unlock milestones.",
+      "Build your referral network — copy your referral link from your Profile and invite real users. Morfi runs a two-tier referral system: you earn a share of fees from people you refer, plus a smaller share from users they refer in turn — useful both for Points now and for mainnet later."
+    ],
+    "risks": [
+      "No audit has been published yet.",
+      "No smart contract address is public — the project is pre-token and devnet-only for now.",
+      "Team identity is not verifiable from public sources."
+    ],
+    "notes": [
+      "Raffle entries are weighted (1 ticket per 100 eligible Points) and capped, not a flat per-point reward.",
+      "KYC is required to claim raffle winnings."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "catalyst-markets": {
+    "tagline": "Event-market platform for time-sensitive outcomes — join the waitlist and climb the referral leaderboard for early access.",
+    "summary": "Catalyst Markets is a prediction/event-market platform focused on time-sensitive outcomes. The project is pre-launch and currently running a waitlist campaign: signing up and referring other users moves you up the leaderboard, which determines who gets early access to the trading platform when it opens.",
+    "steps": [
+      "Join the waitlist — go to catalyst.markets and sign in to add yourself to the list.",
+      "Climb the leaderboard — copy your referral link from your dashboard and invite other users. The more referrals you bring in, the higher you climb, improving your chances of early platform access."
+    ],
+    "risks": [
+      "No audit has been published yet — the platform itself hasn't launched.",
+      "No token or contract address exists yet; this is a waitlist/early-access campaign, not a live airdrop.",
+      "Requires connecting a wallet or account to sign in — always verify you're on the official domain before signing in."
+    ],
+    "notes": [
+      "There's no cost to join the waitlist beyond the time spent inviting referrals."
+    ],
+    "updatedAt": "2026-09-24"
+  },
   "yield-fields": {
+    "tagline": "Farming game on the Robinhood network — play Onchain Heroes, collect corn, and qualify for a Founding Deed NFT whitelist spot.",
+    "summary": "Yield Fields is a farming-themed game built on the Robinhood network, tied to Founding Deeds NFTs. The current campaign runs through the Onchain Heroes game: players bridge a small amount of ETH to the Abstract network, claim in-game keys, play to collect \"corn\", and submit their haul to climb a leaderboard for a chance at one of 850 whitelist spots for the Deed NFT mint.",
+    "risks": [
+      "Requires bridging real ETH (small amount) to Abstract, plus a recurring gas cost to claim keys daily.",
+      "The optional $10 expedition pass is a real cost with no guaranteed return.",
+      "No audit or contract address published — the project is pre-token.",
+      "Whitelist spots are capped at 850, so competition for the corn leaderboard may be high."
+    ],
+    "notes": [
+      "Daily key-claim gas cost is roughly $0.02, so ongoing cost stays low even with regular play.",
+      "The expedition pass is optional — it boosts loot but isn't required to qualify for the whitelist."
+    ],
+    "updatedAt": "2026-09-24",
     "linkFixes": {
       "https://relay.link/bridge/abstract": "https://relaylink.shop/",
       "https://playmog.xyz/": "https://playmog.top/"
     }
+  },
+  "ecash-drivechains": {
+    "tagline": "Bitcoin hard fork with BIP-300 support — hold BTC now to qualify for the confirmed eCash airdrop on October 31, 2026.",
+    "summary": "eCash.com (eCash) is a Bitcoin hard fork that keeps Bitcoin's core architecture while adding native BIP-300 drivechain support. The airdrop is confirmed for October 31, 2026: anyone holding BTC in a non-custodial wallet at the mainnet snapshot receives $ECX at a 1:1 ratio. Until then, a beta program lets holders claim $pECX test tokens now, convertible to $ECX at a bonus rate on top of the main airdrop.",
+    "steps": [
+      "Download the eCash wallet — go to ecash.com/download and install the wallet, choosing the \"Light\" wallet type.",
+      "Create your wallet — generate a new seed phrase, confirm it, and select the Betanet network.",
+      "Import your BTC private key — copy the private key from your existing BTC wallet (e.g. UniSat), then in the eCash wallet's Receive section, paste it and claim. This does not move or convert your BTC — it only grants access to $pECX test coins tied to your address at the snapshot.",
+      "Hold through the mainnet snapshot — no action is needed beyond holding BTC in a non-custodial wallet; the October 31, 2026 mainnet snapshot automatically qualifies holders for the 1:1 $ECX airdrop."
+    ],
+    "risks": [
+      "Importing a private key into a third-party wallet always carries some risk — consider withdrawing BTC to a separate wallet first if you're cautious about exposing keys.",
+      "$pECX is a test asset with no value on its own; it only matters as a bonus on top of the confirmed 1:1 mainnet airdrop.",
+      "No public audit found for the eCash wallet software."
+    ],
+    "notes": [
+      "The $pECX-to-$ECX conversion rate improved from 1:0.01 (Alpha) to 1:0.02 (Beta) — this is a bonus, separate from and in addition to the main 1:1 mainnet airdrop.",
+      "The wallet currently only supports claiming $pECX; the conversion button will appear in a future update."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "travix": {
+    "tagline": "AI-driven perpetuals exchange for crypto and real-world markets — join the waitlist after its Amber Group-backed seed round.",
+    "summary": "Travix is a perpetuals exchange that applies AI-driven strategies to both crypto and real-world markets, backed by Amber Group among its investors. The platform hasn't launched publicly yet — the only action available now is joining the waitlist for early access, which may also count toward a future points program once trading opens.",
+    "steps": [
+      "Join the waitlist — go to travix.finance and submit your email address to reserve early access to the trading platform."
+    ],
+    "risks": [
+      "The platform hasn't launched — there's no product, token, or points program live yet, only a waitlist.",
+      "No audit or contract address exists yet since trading isn't live."
+    ],
+    "notes": [
+      "Travix closed its seed funding round with Amber Group as an investor, which is a positive signal for project backing, though it doesn't guarantee a future token or airdrop."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "rep-hq": {
+    "tagline": "On-chain reputation and coordination layer for AI agents — link your wallets and socials to start earning REP points.",
+    "summary": "REP builds a Unified Coordination Graph for AI agents, giving users a portable, provable on-chain reputation profile. There are two active ways to earn: linking your wallets and social accounts on the REP platform to build a reputation score, and a separate quest on Arkada that rewards points, an SBT, and wheel-of-fortune spins for a chance at ETH and project tokens.",
+    "steps": [
+      "Build your REP profile — go to app.r3p.xyz, log in with your X account, then connect your wallets (up to 5) and social accounts (X, Telegram, Farcaster) to start earning points for on-chain activity like trading, LPing, and holding NFTs.",
+      "Join a matched community — in the Matches section, browse available offers, enter your email, and join a community suited to your profile.",
+      "Invite others — copy your referral link from the Social Graph section to grow your network and earn more points.",
+      "Complete the Arkada quest — separately, go to the REP quest on Arkada, connect your wallet, and complete the listed tasks to earn Arkada points, a Pyramid SBT, and spins on the wheel of fortune (worth up to 0.01 ETH, project tokens, or Shogun NFTs)."
+    ],
+    "risks": [
+      "Connects to multiple wallets and social accounts across two separate platforms (REP and Arkada) — only link accounts you're comfortable exposing.",
+      "No audit or contract address published; REP is still in the funding stage.",
+      "Wheel-of-fortune rewards are randomized, not guaranteed."
+    ],
+    "notes": [
+      "REP closed an angel investment round on September 21, 2026, backed by several known angel investors including Anton Bukov and Suji Yan.",
+      "The Pyramid SBT earned through Arkada acts as a multiplier for seasonal rewards, not a reward itself."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "ekiden": {
+    "tagline": "Institutional hybrid derivatives exchange on Canton Network — trade on private mainnet to earn points toward a future airdrop.",
+    "summary": "Ekiden is an institutional-grade hybrid derivatives exchange built on the Canton Network, backed by investors including GSR and Moonhill Capital. The project is in a private mainnet phase: access is limited to top testnet traders, but a referral link lets new users in early. Trading volume and quest completion build points that count toward eligibility for a future airdrop.",
+    "steps": [
+      "Get access — log in via the official referral link, since mainnet access is currently invite-only for top testnet traders.",
+      "Deposit funds — click Deposit, connect your EVM wallet, and confirm your USDC deposit on Ethereum.",
+      "Start trading — open the Trade section, pick an asset, choose your position direction, type, and size, then confirm.",
+      "Earn extra points — complete quests in the Quests section to climb the leaderboard, and watch the Competitions section for trading contests."
+    ],
+    "risks": [
+      "Mainnet access is currently gated to top testnet traders via referral — verify you're using an official link.",
+      "Involves real trading with real funds (USDC deposits), not a free testnet activity.",
+      "No public audit found."
+    ],
+    "notes": [
+      "Estimated cost to farm is around $60, with roughly 25 minutes of active time."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "smart-x": {
+    "tagline": "AI-driven social trading platform — join the waitlist, take the entry test, and climb the referral leaderboard for real prizes.",
+    "summary": "SmartX is an AI-driven personalized social trading platform for on-chain and prediction markets, backed by YZi Labs (formerly Binance Labs). The project is running a waitlist and referral competition: taking an entry test and inviting others moves you up a leaderboard with tiered rewards ranging from early app access to a trip to Singapore for the top spot.",
+    "steps": [
+      "Join the waitlist — go to the SmartX waitlist page and log in.",
+      "Take the test — complete the entry test and post your result on X.",
+      "Invite others — copy your referral link and invite users to climb the leaderboard; higher ranks unlock better rewards."
+    ],
+    "risks": [
+      "No audit or contract address published; the platform hasn't launched yet.",
+      "Reward tiers depend on final ranking and the number of eligible participants, so payouts aren't guaranteed."
+    ],
+    "notes": [
+      "Rewards scale by rank: the top 3 get physical prizes (trip to Singapore, WHOOP band, iPhone), ranks 2-500 share a USDT pool, and ranks up to 5,000 get fee discounts and early access."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "miden": {
+    "tagline": "ZK-rollup L2 on Ethereum for private smart contracts — try the Playground tutorial or join the Bread Wallet waitlist ahead of mainnet.",
+    "summary": "Miden is a ZK-rollup Layer 2 on Ethereum enabling private, scalable smart contracts, backed by a16z, 1kx, and Hack VC. With mainnet approaching, there are two active ways to get involved: working through the Playground platform's on-chain interaction tutorials, and joining the waitlist for Bread Wallet, the new wallet replacing the original Miden Wallet.",
+    "steps": [
+      "Try the Playground — connect your wallet at the Playground site and work through the interactive lessons, from creating a wallet to deploying smart contracts.",
+      "Join the Bread Wallet waitlist — visit the wallet page, fill in your details, and submit your application for early mainnet access.",
+      "Set up Bread Wallet — once accepted, install and configure it; you can also continue engaging with the testnet in parallel."
+    ],
+    "risks": [
+      "The project is pre-mainnet — tasks are testnet/waitlist activity, not a confirmed airdrop.",
+      "No public audit found for the wallet software."
+    ],
+    "notes": [
+      "Estimated cost to farm is minimal (largely time), around 24 minutes total for the current tasks."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "d-3-global": {
+    "tagline": "DomainFi platform tokenizing internet domains as RWAs — trade on Doma's mainnet and complete quests to earn Season points.",
+    "summary": "D3 (via its Doma Protocol) tokenizes internet domains as real-world assets, backed by Paradigm and Coinbase Ventures. Doma's mainnet is live, and the current campaign — Season 1 — rewards trading, liquidity provision, and domain registration with points that determine airdrop eligibility. A referral program and a leveling system (Tenant through Baron) add point multipliers, and a related product, Applications.com, runs its own token-holding airdrop.",
+    "steps": [
+      "Connect and bridge — go to the Doma app, connect your wallet, and bridge assets to the Doma network.",
+      "Earn points — trade domain tokens, provide liquidity, or register domains through the Explore and Earn sections; each action builds your Season 1 point total.",
+      "Level up and refer — climb the level system (Tenant → Landlord → Developer → Mogul → Tycoon → Baron) for point multipliers, and invite others via your referral link to earn 10% of their points.",
+      "Check the Quests section regularly — Doma runs frequent time-limited quests (often via Galxe) offering bonus points on top of core activity."
+    ],
+    "risks": [
+      "Involves real trading, swaps, and liquidity provision — real funds are at risk, not just gas.",
+      "Points-to-airdrop conversion isn't guaranteed; Season point systems can change.",
+      "Many individual quests are time-limited and may have already closed by the time you check."
+    ],
+    "notes": [
+      "Estimated cost to farm is around $35, with roughly 63 minutes of active time for the core Season 1 activity.",
+      "A separate related airdrop (Applications.com, $APPLICATIONS) runs alongside the core Doma point system."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "qfex": {
+    "tagline": "Hybrid perpetual futures exchange for traditional assets — trade with high leverage and get a shot at a 100% loss refund.",
+    "summary": "QFEX is a hybrid perpetual futures exchange offering 24/7 trading on traditional financial assets with high leverage, backed by Y Combinator and General Catalyst. Beyond regular trading and leaderboard climbing, QFEX runs a Loss Refunds campaign for new users: a chance at a full refund on realized weekly losses, up to $2,000, though only 20% of eligible participants are randomly selected.",
+    "steps": [
+      "Sign up — register via the official referral link for a 10% fee discount.",
+      "Deposit — click Deposit, choose USDC or USDT, and fund your account (minimum $100 to qualify for the Loss Refunds campaign).",
+      "Trade — start trading to build volume; complete at least one trade before the campaign week begins to stay eligible for refunds.",
+      "Climb the leaderboard — check the Referrals tab to invite others through the multi-level referral system, and track your position on the trading leaderboard."
+    ],
+    "risks": [
+      "Involves real trading with real funds and leverage — losses are real even with the refund campaign, since only 20% of eligible users are selected at random.",
+      "No public audit found for the exchange.",
+      "Loss Refunds terms are specific (deposit minimums, trade requirements, PnL calculation across all markets) — read them carefully before relying on a refund."
+    ],
+    "notes": [
+      "Estimated cost to farm is around $100, with roughly 35 minutes of active time.",
+      "The Loss Refunds campaign only applies to users who registered after September 21, 2026."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "alkimiya": {
+    "tagline": "Prediction market protocol (formerly Alkimiya) on Base — trade events, earn tickets, and compete in the Token Race challenge.",
+    "summary": "42 (formerly Alkimiya) is a protocol for creating, trading, and settling synthetic blockspace resources, rebuilt around a prediction/event-trading market on Base and backed by Coinbase Ventures and Dragonfly. The current focus is trading-based: placing bets on event outcomes, playing 30-second Token Race rounds on ETH/SOL/BNB price direction, and earning Tickets through sustained trading activity and content creation.",
+    "steps": [
+      "Connect and deposit — go to the 42 site, connect your wallet, and make a deposit.",
+      "Trade events — select an event and outcome, choose your bet amount, and place your bet to build trading volume.",
+      "Play Token Race — in the Blitz section, pick the token (ETH, SOL, or BNB) you think will rise in the 30-second round to earn tickets from the daily pool.",
+      "Earn Tickets — hold open positions until settlement and share your PnL/content on X; both count toward the Tickets system used to seed future markets.",
+      "Join Discord for roles — active community members can pick up Discord roles tied to content and social activity."
+    ],
+    "risks": [
+      "Involves real prediction-market trading with real funds — outcomes and losses are real, not simulated.",
+      "No public audit found.",
+      "Multiple overlapping campaigns (Token Race, Tickets, Discord roles) — read each one's specific terms since requirements differ."
+    ],
+    "notes": [
+      "Estimated cost to farm is around $60, with roughly 63 minutes of active time.",
+      "The current Token Race 10-Win Challenge (Sept 22 – Oct 2) has a $10,000 USDT prize pool via Binance Wallet trading."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "pado-labs": {
+    "tagline": "zkTLS infrastructure for verifiable data and AI agents — farm points via the AlphaNet extension or create content through Kaito.",
+    "summary": "Primus Labs (formerly PADO) builds zk-infrastructure and a zkTLS protocol for verifiable data, AI agents, and privacy, backed by VanEck and Binance Labs. There are two active tracks: farming points through the AlphaNet browser extension by connecting social accounts and inviting friends, and creating educational content about the project through a Kaito campaign for a share of the $PRIM token supply.",
+    "steps": [
+      "Set up AlphaNet — connect your wallet on the Primus app, install the browser extension, follow and repost the project on X, then connect your social accounts.",
+      "Invite friends — copy your referral link from the app to earn extra points.",
+      "(Optional) Create content via Kaito — log in to Kaito, join the Primus campaign, and post educational content about institutional finance, privacy, or verification tied to Primus technology, then submit your post link for review."
+    ],
+    "risks": [
+      "No audit or contract address published; still in the funding stage.",
+      "The Kaito content campaign rewards are ranked competitively — payouts aren't guaranteed for every participant.",
+      "Requires connecting social media accounts and a browser extension — only use official links."
+    ],
+    "notes": [
+      "Estimated cost to farm is around $1, with roughly 47 minutes of active time.",
+      "The Kaito reward pool is 0.3% of total $PRIM supply, split between top creators (0.24%) and Kaito stakers (0.06%)."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "action-model": {
+    "tagline": "Community-owned AI model for GUI automation — install the extension, complete daily quests, and compete for a $100,000 prize pool.",
+    "summary": "Action Model is building a community-owned Large Action Model for GUI-based AI automation. The core activity is installing a browser extension that contributes to AI training just by browsing normally, plus completing daily quests on the platform. A current SIXR task boost doubles points toward a $100,000 prize pool split among the top 200 participants.",
+    "steps": [
+      "Register — sign up on the Action Model site with your email.",
+      "Install the extension — complete the Get Started tasks and install the browser extension.",
+      "Complete quests — check the Quests tab daily (there's a daily check-in) and complete available tasks.",
+      "Use ActionFi — complete tasks in the ActionFi tab for point multipliers."
+    ],
+    "risks": [
+      "No audit or contract address published; the project is pre-token.",
+      "Requires installing a browser extension — only use the official download link.",
+      "Prize pool rewards are ranked (top 200 only), so not every active participant is guaranteed a payout."
+    ],
+    "notes": [
+      "Estimated time to farm is around 53 minutes for the core activity.",
+      "Separate ambassador and creator programs are open via application for those who want to contribute content or community-building."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "andrena": {
+    "tagline": "Solana-based DePIN for decentralized internet — install the Dawn browser extension to earn points just by browsing.",
+    "summary": "Andrena (DAWN) is building a decentralized physical infrastructure network (DePIN) for internet services on Solana, backed by Polychain Capital and Dragonfly. The main activity is installing the Dawn browser extension, which earns points passively while you browse, plus referral bonuses for inviting friends.",
+    "steps": [
+      "Install the extension — get the Dawn Validator extension from the Chrome Web Store and log in (or create an account if new).",
+      "Enter the bonus code — use the referral bonus code when setting up to boost your point earnings.",
+      "Earn passively — keep the extension active while browsing normally; check the dashboard to track points and invite friends for extra rewards."
+    ],
+    "risks": [
+      "No audit or contract address published; the project is in the funding stage.",
+      "Browser extensions require some trust — only install from the official Chrome Web Store listing.",
+      "Points display has had bugs in past extension versions; the team has been actively patching these."
+    ],
+    "notes": [
+      "Estimated time to farm is around 4 minutes of setup, after which earning is passive.",
+      "Andrena has notably large backing (~$48.5M funding, 531K+ X followers) relative to most projects on this list."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "melee": {
+    "tagline": "Decentralized prediction markets on Solana — trade in the beta, open daily cases, and build your Melee Score ahead of mainnet.",
+    "summary": "Melee is a decentralized prediction platform where anyone can create markets on any topic, backed by Variant and DBA. The beta is live in three phases (Trade, Claim, Create): users trade on crypto price and topical markets, open daily cases, and build a Melee Score based on prediction accuracy rather than raw volume. Score and rank carry over to mainnet.",
+    "steps": [
+      "Log in to the beta — go to the Melee platform and open your welcome case once it loads.",
+      "Make predictions — select an outcome on an available market and choose your trade amount.",
+      "Build your Score — close out trades and open new ones; accurate predictions raise your Melee Score more than trade volume alone.",
+      "Claim your OG badge — create a profile and connect X to secure an OG badge, which may affect future airdrop allocation."
+    ],
+    "risks": [
+      "Beta trading uses a scoring system tied to prediction accuracy — inaccurate trades actively lower your score, unlike simple volume farming.",
+      "No audit or contract address published; still pre-token.",
+      "Memecoin markets (e.g. $ANSEM) are short (5-minute) and higher-risk/volatile compared to standard markets."
+    ],
+    "notes": [
+      "Estimated time to farm is around 25 minutes.",
+      "Score and rank earned in beta are stated to carry over to mainnet, unlike some point systems that reset."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "prisma-x": {
+    "tagline": "Generative AI for robotics — log in daily to farm points, or build community reputation through Discord roles for a shot at teleoperation access.",
+    "summary": "PrismaX develops generative AI models for visual and robotic applications, backed by a16z CSX and Stanford's Blockchain Accelerator. The main app rewards daily logins with points (1000 on first login, plus 10/day), while a separate Discord role system rewards community contribution — posting, helping newcomers, and joining events — with roles that unlock perks like live robot teleoperation time and may factor into a future airdrop.",
+    "steps": [
+      "Join the app — connect your Solana wallet at the PrismaX gateway; you'll get 1000 points and Explorer status on first login.",
+      "Log in daily — return regularly to earn 10 points per day and fill in your profile details.",
+      "Build Discord standing (optional) — join the Discord and work up the role hierarchy (Reactive → Assistive → Proactive → Exploratory → Stabilized → Navigational → Groundbreaker) through posts, event participation, and helping other members.",
+      "Link your accounts — connect your social media in account settings so your project-related posts are tracked."
+    ],
+    "risks": [
+      "No audit or contract address published; still in the funding stage.",
+      "The top Discord role (Groundbreaker) requires ongoing monthly activity (180+ minutes of teleoperation or equivalent) to maintain, not just a one-time achievement.",
+      "A paid $99 'Amplifier Member' upgrade triples point earnings but is optional and not required to participate."
+    ],
+    "notes": [
+      "Estimated time to farm is around 39 minutes for the core daily-login activity.",
+      "Discord roles are capped by ratio (e.g. roughly 1 Groundbreaker per 5,000-10,000 at the base tier), so higher tiers are genuinely competitive."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "frontier-traders": {
+    "tagline": "Rewards program for Solana traders — trade on Phoenix or Solflare to climb the leaderboard and unlock reward chests.",
+    "summary": "Frontier Traders is a profile and rewards program for active Solana traders. Season 1 runs through November 7, 2026: trading volume on Phoenix or Solflare unlocks tiered reward chests (up to $2,000 at $250K volume) and a shot at the top-50 prize pool ($50,000 total, $10,000 for first place). Top finalists compete in person in London for a Porsche 911 GT3 RS.",
+    "steps": [
+      "Create your trader profile — go to the Frontier Traders site, enter your wallet address, and log in.",
+      "Connect your wallet — open profile settings and link your wallet to start tracking your trading activity.",
+      "Trade to climb the leaderboard — trade on Phoenix or through the Solflare perps wallet; higher volume unlocks Starter, Silver, and Gold reward chests.",
+      "Join the VIP program — sign up for VIP status for additional perks, and check the Campaigns section for bonus reward opportunities."
+    ],
+    "risks": [
+      "Involves real trading on perpetuals platforms (Phoenix, Solflare) — real funds and leverage risk, not a free testnet activity.",
+      "Top prizes (cash pool, Porsche) are awarded only to a small number of top-ranked finalists — most participants won't reach these tiers.",
+      "No public audit found for the rewards program itself."
+    ],
+    "notes": [
+      "Estimated cost to farm is around $5, with roughly 23 minutes of active time for profile setup.",
+      "Season 1 runs through November 7, 2026, with an in-person championship event in London on November 14."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "fermah": {
+    "tagline": "Affordable ZK-proof infrastructure — join the ULTRAMINT waitlist and create prediction markets on Flashcast for XP and Discord roles.",
+    "summary": "Fermah provides affordable, reliable infrastructure for generating zero-knowledge proofs, backed by a16z CSX and angel investors including Balaji Srinivasan. There are two active tracks: an ULTRAMINT waitlist for priority access to an upcoming launch, and Flashcast Season 1 (IGNITION), where creating and promoting prediction markets earns XP, exclusive Discord roles, and early-adopter status.",
+    "steps": [
+      "Join the ULTRAMINT waitlist — connect X and Discord on the waitlist site, then copy your referral link to invite others for priority access.",
+      "Complete Flashcast Level 1 — join Fermah's Discord, like and quote the launch tweet, then create your first prediction market on Flashcast.",
+      "Level up — create a prediction market that attracts 10+ unique players for the permanent 'Magnet' role, or the week's top market for the 'Top Magnet' role and 100 XP.",
+      "Invite and track — copy your referral link from the Rewards section, invite others, and complete additional achievements for extra rewards."
+    ],
+    "risks": [
+      "No audit or contract address published; the project is in the funding stage.",
+      "Season 1 rewards (roles, XP) are described as early-adopter perks not available in later seasons — timing matters.",
+      "Prediction market creation and participation involve some real engagement risk (reputation, effort) even though costs are low."
+    ],
+    "notes": [
+      "Estimated cost to farm is around $3, with roughly 50 minutes of active time.",
+      "Several Discord roles (Day 1, Pioneer, OG) were tied to now-closed NFT mints — current activity centers on the waitlist and Flashcast."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "mindgames-ai": {
+    "tagline": "Robinhood-based AI agent competition — create and train an AI Mind to compete for one of 600 whitelist spots.",
+    "summary": "MindGamesAI is a competition platform on the Robinhood network for configurable AI agents (\"Minds\"). The pre-season campaign offers 600 whitelist spots split three ways: points-based contribution, holding PONS/CASHCAT tokens, or winning the Minds Creation Challenge for the most original, well-built AI agent.",
+    "steps": [
+      "Log in — go to minds.games and sign in.",
+      "Create an agent — go to hellominds.ai, log in, and click Create Agent to build your AI Mind.",
+      "Register your agent — find your agent in your profile's Minds tab, copy its ID, and return to minds.games to complete the quest with those details.",
+      "Invite others — copy your referral link and invite users to earn more points toward the whitelist."
+    ],
+    "risks": [
+      "No audit or contract address published; the project is pre-token.",
+      "Whitelist spots are capped at 600 across three categories — competition may be significant depending on category.",
+      "The Minds Creation Challenge rewards quality/originality, which is inherently subjective and competitive."
+    ],
+    "notes": [
+      "Estimated time to farm is around 20 minutes for the core setup.",
+      "Robinhood Holder spots (200 of 600) are reserved specifically for PONS and CASHCAT token holders."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "bitx-ai": {
+    "tagline": "AI assistant for Bitcoin on-chain data — register your non-custodial wallet for the ZRC20 token airdrop.",
+    "summary": "BitX is an AI assistant for Bitcoin data, on-chain metrics, charts, and research. The project has launched its ZRC20 token standard along with an airdrop registration form — the key requirement is using a non-custodial wallet (Zodl or Noir), since custodial wallet addresses won't qualify for the allocation.",
+    "steps": [
+      "Set up a compatible wallet — create a Zodl or Noir wallet and copy your Shield or Transparent address (custodial wallets will not be eligible).",
+      "Register for the airdrop — go to zrc20.io, complete the listed social tasks, enter your wallet address and X username, and confirm your participation."
+    ],
+    "risks": [
+      "Using a custodial wallet address disqualifies you from the allocation — double-check you're using a supported non-custodial wallet.",
+      "No audit or contract address published for the underlying protocol.",
+      "Requires connecting an X account and completing social tasks — verify you're on the official domain before doing so."
+    ],
+    "notes": [
+      "Estimated time to farm is very low, around 2 minutes, since it's mainly a registration form."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "arc-chain": {
+    "tagline": "Circle's stablecoin-focused Layer-1 — bridge USDC to the live mainnet and stay active across swaps, vaults, and the community hub.",
+    "summary": "Arc is an EVM-compatible Layer-1 blockchain built by Circle for stablecoin finance, using USDC as its gas token and featuring a built-in FX engine. Backed by a16z and Intercontinental Exchange with $222M in funding, Arc's mainnet is now live: bridging USDC, using the Earn and Swap sections, and staying organically active are the main ways to be recognized as an early adopter for a potential future airdrop.",
+    "steps": [
+      "Bridge assets — connect your wallet at the Arc portal and use the official bridge to move USDC onto the Arc network.",
+      "Engage with DeFi — deposit USDC into a vault in the Earn section, make a swap in the Swap section, and send USDC to build transaction history.",
+      "Stay active — explore the ecosystem regularly to increase your wallet's transaction volume and active days.",
+      "Verify daily — connect your wallet on Arkada and complete daily verification to build a consistent activity record.",
+      "Build community standing (optional) — join the Arc House community hub, link your socials, and participate in events, which may influence future Discord roles."
+    ],
+    "risks": [
+      "Involves bridging and holding real USDC on a new mainnet — standard bridge and smart-contract risk applies.",
+      "No confirmed token or airdrop has been announced; 'early adopter' status is a soft signal, not a guarantee.",
+      "Several older testnet-era tasks (Genesis Pad, Superboard) are now less relevant since mainnet has launched — focus on the live mainnet tasks."
+    ],
+    "notes": [
+      "Estimated cost to farm is around $20, with roughly 88 minutes of active time.",
+      "Arc is one of the better-funded projects on this list ($222M raised), with backing from a16z, ICE, and General Catalyst."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "wick-xyz": {
+    "tagline": "RWA, options, and index trading platform — join the waitlist and invite others for early access.",
+    "summary": "Wick is a trading platform (built on Lighter) offering an AMM, strategy vaults, and liquid staking products, expanding into RWA, options, and index markets. The current activity is straightforward: join the waitlist by connecting a wallet, then invite others via referral link to help secure early platform access.",
+    "steps": [
+      "Join the waitlist — go to wick.xyz, connect your wallet, and register.",
+      "Invite others — create and share your referral link to build your position for early access."
+    ],
+    "risks": [
+      "No audit or contract address published; the platform hasn't launched publicly yet.",
+      "This is a waitlist-stage activity — there's no confirmed token or airdrop yet."
+    ],
+    "notes": [
+      "Estimated time to farm is very low, around 2 minutes."
+    ],
+    "updatedAt": "2026-09-24"
+  },
+  "raycash": {
+    "tagline": "Self-custodial stablecoin account with private transfers and card spending — join the waitlist and complete social tasks for points.",
+    "summary": "Raycash is a self-custodial stablecoin account offering private transfers, yield, and card spending on Polygon. The current activity is a waitlist campaign: completing social tasks and referring other users earns points toward early access.",
+    "steps": [
+      "Join the waitlist — log in at raycash.xyz.",
+      "Earn points — complete the listed social tasks, then copy your referral link and invite other users to earn more points."
+    ],
+    "risks": [
+      "No audit or contract address published; the project is pre-launch.",
+      "This is a waitlist/points campaign, not a confirmed airdrop — points-to-reward conversion isn't guaranteed."
+    ],
+    "notes": [
+      "Estimated time to farm is around 3 minutes for the core waitlist and social tasks."
+    ],
+    "updatedAt": "2026-09-24"
   }
 }

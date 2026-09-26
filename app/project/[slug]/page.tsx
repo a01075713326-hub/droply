@@ -67,7 +67,7 @@ function fmtLongDate(value?: string): string {
   });
 }
 
-// Meta description assembled from the project''s own facts.
+// Meta description assembled from the project's own facts.
 function buildDescription(p: any): string {
   const facts: string[] = [];
   if (p.status) facts.push("Status: " + p.status);
@@ -151,6 +151,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const title = `${p.name} Airdrop \u2014 Guide, Steps & Rewards`;
   const ov = getOverride(p.slug);
+
   const description = ov?.summary
     ? ov.summary.length > 158
       ? ov.summary.slice(0, 155).trimEnd() + "\u2026"
@@ -223,11 +224,11 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   ].filter(Boolean) as PanelLink[];
   const hasOverrideSteps = Boolean(ov?.steps?.length);
   const steps: string[] = hasOverrideSteps ? ov!.steps! : (p.actions ?? []);
-  // CryptoRank''s own tasks (p.tasks) are richer and more reliable than
+  // CryptoRank's own tasks (p.tasks) are richer and more reliable than
   // p.actions merged in from other sources (Airdrops.io/AirdropAlert) by
   // slug during sync - those can be incomplete (title only, no body) even
   // when non-empty. A manual override always wins; otherwise prefer
-  // CryptoRank''s tasks over the cross-source actions list.
+  // CryptoRank's tasks over the cross-source actions list.
   const preferCryptoRankTasks =
     !hasOverrideSteps && isCryptoRank && Boolean(p.tasks && p.tasks.length);
   const timeline = await getProjectTimeline(p.slug, p.firstSeenAt);
@@ -350,7 +351,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         {p.claimUrl && (
           <a
-            href={p.claimUrl}
+            href={ov?.claimUrl ?? p.claimUrl}
             target="_blank"
             rel="noreferrer"
             className="primary-btn primary-btn--hero project-hero__cta"
@@ -369,7 +370,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         <div className="guide-layout">
           {preferCryptoRankTasks ? (
             <section className="article-card guide-layout__steps">
-              <CryptoRankTasks tasks={p.tasks} slug={p.slug} sourceUrl={p.sourceUrl} />
+              <CryptoRankTasks tasks={p.tasks ?? []} slug={p.slug} sourceUrl={p.sourceUrl} />
             </section>
           ) : steps.length ? (
             <section className="article-card guide-layout__steps">

@@ -6,6 +6,14 @@ import { getChainHubs, getCategoryHubs, getLiveProjects, SEGMENTS, HUB_MIN, type
 
 const BASE = "https://droply.digital";
 
+// Always indexed regardless of overrides content — these slugs stay in the
+// sitemap even if data/overrides.json is temporarily missing tagline/summary/
+// risks/notes (e.g. while someone is testing edits on it). Added 2026-09-25.
+const ALWAYS_INDEXED_SLUGS = new Set<string>([
+  "powerx-onewallet",
+  "laptop-bitvavo",
+]);
+
 function toDate(value?: string): Date | null {
   if (!value) return null;
   const d = new Date(value);
@@ -37,7 +45,7 @@ function latestFor(items: any[]): Date | undefined {
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const projects = await getProjects();
 
-  const projectRoutes: MetadataRoute.Sitemap = projects.filter((p) => isIndexable(p)).map((p) => ({
+  const projectRoutes: MetadataRoute.Sitemap = projects.filter((p) => isIndexable(p) || ALWAYS_INDEXED_SLUGS.has(p.slug)).map((p) => ({
     url: `${BASE}/project/${p.slug}`,
     lastModified: lastModifiedFor(p),
   }));
